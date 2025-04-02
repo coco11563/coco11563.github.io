@@ -742,22 +742,6 @@
 </body>
 </html>
 
-<script>
-	  let show = false;
-	  document.querySelector('#projects-show').onclick = function() {
-		if (!show) {
-		  document.querySelector('#projects-box').style.height = 'auto';
-		  document.querySelector('#projects-box').style.paddingBottom = '30px';
-		  document.querySelector('#projects-show-text').innerHTML = 'LESS';
-		  show = true;
-		} else {
-		  show = false;
-		  document.querySelector('#projects-box').style.height = '200px';
-		  document.querySelector('#projects-box').style.paddingBottom = '30px';
-		  document.querySelector('#projects-show-text').innerHTML = 'MORE';
-		}
-	  }
-</script>
 <div id="hobby-widget" style="text-align: center; margin: 20px 0;">
     <p style="margin-top: 20px; font-style: italic;">
         He is also good at brewing (🍺), bartending (☕/🍸), and Rock-N-Roll (🎸)
@@ -813,81 +797,112 @@
     </div>
 </div>
 
-<style>
-.hobby-item {
-    transition: transform 0.3s ease;
-}
-
-.hobby-item:hover {
-    transform: scale(1.1);
-}
-
-.icon {
-    transition: transform 0.3s ease;
-    -webkit-user-select: none;
-    -moz-user-select: none;
-    -ms-user-select: none;
-    user-select: none;
-}
-
-.icon:hover {
-    transform: scale(1.2);
-}
-
-.full-icon {
-    transition: opacity 0.3s ease;
-}
-
-@keyframes shake {
-    0%, 100% { transform: rotate(0deg); }
-    25% { transform: rotate(-10deg); }
-    75% { transform: rotate(10deg); }
-}
-
-@keyframes strum {
-    0%, 100% { transform: rotate(0deg); }
-    50% { transform: rotate(15deg); }
-}
-
-@keyframes pour {
-    0% { transform: translateY(0); }
-    50% { transform: translateY(-10px); }
-    100% { transform: translateY(0); }
-}
-
-.shake-animation {
-    animation: shake 0.5s ease;
-}
-
-.strum-animation {
-    animation: strum 0.5s ease;
-}
-
-.pour-animation {
-    animation: pour 0.5s ease;
-}
-
-.progress-bar {
-    transition: width 0.3s ease;
-}
-</style>
+<!-- Firebase SDK -->
+<script src="https://www.gstatic.com/firebasejs/9.6.1/firebase-app-compat.js"></script>
+<script src="https://www.gstatic.com/firebasejs/9.6.1/firebase-database-compat.js"></script>
 
 <script>
-const hobbyData = {
-    shaker: { count: 0, full: 0 },
-    guitar: { count: 0, full: 0 },
-    beer: { count: 0, full: 0 }
+// Firebase configuration
+const firebaseConfig = {
+
+  apiKey: "AIzaSyDvYO4zfQzUBKq5yhYm4BvBtc3PPUgpm3M",
+
+  authDomain: "personal-pages-d1060.firebaseapp.com",
+
+  projectId: "personal-pages-d1060",
+
+  storageBucket: "personal-pages-d1060.firebasestorage.app",
+
+  messagingSenderId: "483233316053",
+
+  appId: "1:483233316053:web:b0802bb2e666137005b65c",
+
+  measurementId: "G-V0RN8W2KWG"
+
 };
 
-const visitorData = {
-    count: 0,
-    regions: {},
-    quarterly: {
-        shaker: [],
-        guitar: [],
-        beer: []
+
+// Initialize Firebase
+firebase.initializeApp(firebaseConfig);
+const database = firebase.database();
+
+// Initialize data structure
+const defaultData = {
+    hobbyData: {
+        shaker: { count: 0, full: 0 },
+        guitar: { count: 0, full: 0 },
+        beer: { count: 0, full: 0 }
+    },
+    visitorData: {
+        count: 0,
+        regions: {},
+        quarterly: {
+            shaker: [],
+            guitar: [],
+            beer: []
+        },
+        lastQuarterlyUpdate: null
     }
 };
+
+let hobbyData = defaultData.hobbyData;
+let visitorData = defaultData.visitorData;
+
+// Listen for real-time updates
+database.ref('/').on('value', (snapshot) => {
+    const data = snapshot.val() || defaultData;
+    hobbyData = data.hobbyData;
+    visitorData = data.visitorData;
+    initializeUI();
+});
+
+// Save data to Firebase
+function saveData() {
+    return database.ref('/').set({
+        hobbyData: hobbyData,
+        visitorData: visitorData
+    });
+}
+
+// Initialize UI with stored data
+function initializeUI() {
+    // Update progress bars
+    Object.keys(hobbyData).forEach(type => {
+        const progress = (hobbyData[type].count / 100) * 100;
+        const progressElement = document.getElementById(`${type}-progress`);
+        const countElement = document.getElementById(`${type}-count`);
+        const fullElement = document.getElementById(`${type}-full`);
+        
+        progressElement.style.width = `${progress}%`;
+        countElement.textContent = `${hobbyData[type].count}/100`;
+        
+        if (hobbyData[type].full > 0) {
+            fullElement.style.display = 'block';
+            fullElement.title = `Completed ${hobbyData[type].full} times!`;
+        }
+    });
+    
+    // Update visitor count
+    document.getElementById('visitor-count').textContent = visitorData.count;
+    
+    // Update top regions
+    const topRegions = Object.entries(visitorData.regions)
+        .sort(([,a], [,b]) => b - a)
+        .slice(0, 5);
+    
+    document.getElementById('top-regions').innerHTML = topRegions
+        .map(([region, count]) => `${region}: ${count}`)
+        .join('<br>');
+    
+    // Update quarterly stats if they exist
+    if (visitorData.quarterly.shaker.length > 0) {
+        document.getElementById('quarterly-data').innerHTML = `
+            <div>Shaker: ${visitorData.quarterly.shaker.join(' → ')}</div>
+            <div>Guitar: ${visitorData.quarterly.guitar.join(' → ')}</div>
+            <div>Beer: ${visitorData.quarterly.beer.join(' → ')}</div>
+        `;
+    }
+}
 
 // Get visitor's IP and location
 async function getVisitorInfo() {
@@ -914,48 +929,59 @@ async function getVisitorInfo() {
 // Update visitor statistics
 async function updateVisitorStats() {
     const visitorInfo = await getVisitorInfo();
-    visitorData.count++;
     
+    // Use transaction to safely increment visitor count
+    database.ref('visitorData/count').transaction(current => {
+        return (current || 0) + 1;
+    });
+    
+    // Update regions using transaction
     const region = `${visitorInfo.region}, ${visitorInfo.country}`;
-    visitorData.regions[region] = (visitorData.regions[region] || 0) + 1;
+    database.ref(`visitorData/regions/${region}`).transaction(current => {
+        return (current || 0) + 1;
+    });
     
-    // Update display
-    document.getElementById('visitor-count').textContent = visitorData.count;
-    
-    // Update top regions
-    const topRegions = Object.entries(visitorData.regions)
-        .sort(([,a], [,b]) => b - a)
-        .slice(0, 5);
-    
-    document.getElementById('top-regions').innerHTML = topRegions
-        .map(([region, count]) => `${region}: ${count}`)
-        .join('<br>');
+    // Check if we need to update quarterly stats
+    checkAndUpdateQuarterlyStats();
 }
 
-// Update quarterly statistics
-function updateQuarterlyStats() {
+// Check and update quarterly statistics
+function checkAndUpdateQuarterlyStats() {
     const currentDate = new Date();
-    const quarter = Math.floor(currentDate.getMonth() / 3) + 1;
-    const year = currentDate.getFullYear();
-    const quarterKey = `Q${quarter} ${year}`;
+    const currentQuarter = Math.floor(currentDate.getMonth() / 3) + 1;
+    const currentYear = currentDate.getFullYear();
+    const lastUpdate = visitorData.lastQuarterlyUpdate;
     
-    visitorData.quarterly.shaker.push(hobbyData.shaker.full);
-    visitorData.quarterly.guitar.push(hobbyData.guitar.full);
-    visitorData.quarterly.beer.push(hobbyData.beer.full);
-    
-    // Keep only last 4 quarters
-    if (visitorData.quarterly.shaker.length > 4) {
-        visitorData.quarterly.shaker.shift();
-        visitorData.quarterly.guitar.shift();
-        visitorData.quarterly.beer.shift();
+    // If no last update or it's a new quarter, update quarterly stats
+    if (!lastUpdate || 
+        (lastUpdate.year < currentYear) || 
+        (lastUpdate.year === currentYear && lastUpdate.quarter < currentQuarter)) {
+        
+        // Use transaction to safely update quarterly data
+        database.ref('visitorData/quarterly').transaction(current => {
+            if (!current) return defaultData.visitorData.quarterly;
+            
+            // Add current full counts to quarterly arrays
+            current.shaker.push(hobbyData.shaker.full);
+            current.guitar.push(hobbyData.guitar.full);
+            current.beer.push(hobbyData.beer.full);
+            
+            // Keep only last 4 quarters
+            if (current.shaker.length > 4) {
+                current.shaker.shift();
+                current.guitar.shift();
+                current.beer.shift();
+            }
+            
+            return current;
+        });
+        
+        // Update last quarterly update timestamp
+        database.ref('visitorData/lastQuarterlyUpdate').set({
+            year: currentYear,
+            quarter: currentQuarter
+        });
     }
-    
-    // Update display
-    document.getElementById('quarterly-data').innerHTML = `
-        <div>Shaker: ${visitorData.quarterly.shaker.join(' → ')}</div>
-        <div>Guitar: ${visitorData.quarterly.guitar.join(' → ')}</div>
-        <div>Beer: ${visitorData.quarterly.beer.join(' → ')}</div>
-    `;
 }
 
 function toggleQuarterlyStats() {
@@ -978,23 +1004,20 @@ function supportHobby(type) {
         element.classList.add('pour-animation');
     }
     
-    // Update count and progress
-    hobbyData[type].count++;
-    const progress = (hobbyData[type].count / 100) * 100;
-    progressElement.style.width = `${progress}%`;
-    
-    if (hobbyData[type].count >= 100) {
-        hobbyData[type].count = 0;
-        hobbyData[type].full++;
-        fullElement.style.display = 'block';
-        fullElement.title = `Completed ${hobbyData[type].full} times!`;
-        progressElement.style.width = '0%';
+    // Use transaction to safely update hobby data
+    database.ref(`hobbyData/${type}/count`).transaction(current => {
+        const newCount = (current || 0) + 1;
         
-        // Update quarterly stats when reaching 100
-        updateQuarterlyStats();
-    }
-    
-    countElement.textContent = `${hobbyData[type].count}/100`;
+        // If count reaches 100, reset and increment full count
+        if (newCount >= 100) {
+            database.ref(`hobbyData/${type}/full`).transaction(full => {
+                return (full || 0) + 1;
+            });
+            return 0;
+        }
+        
+        return newCount;
+    });
     
     // Remove animation class after animation completes
     setTimeout(() => {
@@ -1002,7 +1025,8 @@ function supportHobby(type) {
     }, 500);
 }
 
-// Initialize visitor stats
+// Initialize UI and visitor stats
+initializeUI();
 updateVisitorStats();
 </script>
 <hr>
