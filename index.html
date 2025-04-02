@@ -850,10 +850,17 @@
     <h3><strong>Click to Support My Hobbies!</strong></h3>
     <hr>
     <!-- IP Statistics -->
-    <div id="ip-stats" style="margin-top: 20px; text-align: right; padding: 10px;">
+    <div id="ip-stats" style="margin: 20px auto; text-align: center; max-width: 800px;">
         <h4>Current Visitors</h4>
-        <div id="visitor-count" style="font-size: 24px; color: #4fa4f4;">0</div>
-        <div id="top-regions"></div>
+        <div id="visitor-count" style="font-size: 24px; color: #4fa4f4; margin-bottom: 20px;">0</div>
+        <div style="display: flex; justify-content: center; gap: 40px; margin: 20px 0;">
+            <div style="width: 400px;">
+                <canvas id="countryPieChart"></canvas>
+            </div>
+            <div style="width: 400px;">
+                <canvas id="regionBarChart"></canvas>
+            </div>
+        </div>
     </div>
 
     <!-- Quarterly Statistics -->
@@ -867,6 +874,9 @@
 <!-- Firebase SDK -->
 <script src="https://www.gstatic.com/firebasejs/9.6.1/firebase-app-compat.js"></script>
 <script src="https://www.gstatic.com/firebasejs/9.6.1/firebase-database-compat.js"></script>
+
+<!-- Add Chart.js -->
+<script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
 
 <script>
 // Firebase configuration
@@ -954,6 +964,9 @@ const defaultData = {
 let hobbyData = defaultData.hobbyData;
 let visitorData = defaultData.visitorData;
 
+let countryPieChart = null;
+let regionBarChart = null;
+
 // Listen for real-time updates
 database.ref('/').on('value', (snapshot) => {
     const data = snapshot.val() || defaultData;
@@ -974,13 +987,13 @@ function saveData() {
 function initializeUI() {
     // Update progress bars
     Object.keys(hobbyData).forEach(type => {
-        const progress = (hobbyData[type].count / 10) * 100; // Changed from 100 to 10
+        const progress = (hobbyData[type].count / 10) * 100;
         const progressElement = document.getElementById(`${type}-progress`);
         const countElement = document.getElementById(`${type}-count`);
         const fullElement = document.getElementById(`${type}-full`);
         
         progressElement.style.width = `${progress}%`;
-        countElement.textContent = `${hobbyData[type].count}/10`; // Changed from 100 to 10
+        countElement.textContent = `${hobbyData[type].count}/10`;
         
         if (hobbyData[type].full > 0) {
             fullElement.style.display = 'block';
@@ -991,23 +1004,105 @@ function initializeUI() {
     // Update visitor count
     document.getElementById('visitor-count').textContent = visitorData.count;
     
-    // Update top regions
-    const topRegions = Object.entries(visitorData.regions)
+    // Update charts
+    updateCharts();
+}
+
+function updateCharts() {
+    // Process visitor data
+    const countryData = {};
+    const regionData = {};
+    
+    Object.entries(visitorData.regions).forEach(([region, count]) => {
+        const [regionName, countryName] = region.split(', ');
+        const country = countryName || 'Anonymous';
+        const regionKey = regionName || 'Anonymous';
+        
+        // Aggregate country data
+        countryData[country] = (countryData[country] || 0) + count;
+        
+        // Store region data
+        regionData[regionKey] = count;
+    });
+    
+    // Sort region data for top 10
+    const sortedRegions = Object.entries(regionData)
         .sort(([,a], [,b]) => b - a)
-        .slice(0, 5);
+        .slice(0, 10);
     
-    document.getElementById('top-regions').innerHTML = topRegions
-        .map(([region, count]) => `${region}: ${count}`)
-        .join('<br>');
-    
-    // Update quarterly stats if they exist
-    if (visitorData.quarterly.shaker.length > 0) {
-        document.getElementById('quarterly-data').innerHTML = `
-            <div>Shaker: ${visitorData.quarterly.shaker.join(' → ')}</div>
-            <div>Guitar: ${visitorData.quarterly.guitar.join(' → ')}</div>
-            <div>Beer: ${visitorData.quarterly.beer.join(' → ')}</div>
-        `;
+    // Update or create pie chart
+    if (countryPieChart) {
+        countryPieChart.destroy();
     }
+    
+    const pieCtx = document.getElementById('countryPieChart').getContext('2d');
+    countryPieChart = new Chart(pieCtx, {
+        type: 'pie',
+        data: {
+            labels: Object.keys(countryData),
+            datasets: [{
+                data: Object.values(countryData),
+                backgroundColor: [
+                    '#FF6384', '#36A2EB', '#FFCE56', '#4BC0C0', '#9966FF',
+                    '#FF9F40', '#FF6384', '#36A2EB', '#FFCE56', '#4BC0C0'
+                ]
+            }]
+        },
+        options: {
+            responsive: true,
+            plugins: {
+                title: {
+                    display: true,
+                    text: 'Visitors by Country'
+                },
+                tooltip: {
+                    callbacks: {
+                        label: function(context) {
+                            const value = context.raw;
+                            const total = context.dataset.data.reduce((a, b) => a + b, 0);
+                            const percentage = ((value / total) * 100).toFixed(1);
+                            return `${context.label}: ${value} (${percentage}%)`;
+                        }
+                    }
+                }
+            }
+        }
+    });
+    
+    // Update or create bar chart
+    if (regionBarChart) {
+        regionBarChart.destroy();
+    }
+    
+    const barCtx = document.getElementById('regionBarChart').getContext('2d');
+    regionBarChart = new Chart(barCtx, {
+        type: 'bar',
+        data: {
+            labels: sortedRegions.map(([region]) => region),
+            datasets: [{
+                label: 'Visitors',
+                data: sortedRegions.map(([,count]) => count),
+                backgroundColor: '#4fa4f4'
+            }]
+        },
+        options: {
+            responsive: true,
+            plugins: {
+                title: {
+                    display: true,
+                    text: 'Top 10 Regions'
+                }
+            },
+            scales: {
+                y: {
+                    beginAtZero: true,
+                    ticks: {
+                        stepSize: 1
+                    }
+                }
+            }
+        }
+    });
 }
 
 // Get visitor's IP and location
@@ -1023,12 +1118,12 @@ async function getVisitorInfo() {
         
         return {
             ip: ip,
-            region: locationData.region || 'Unknown',
-            country: locationData.country_name || 'Unknown'
+            region: locationData.region || 'Anonymous',
+            country: locationData.country_name || 'Anonymous'
         };
     } catch (error) {
         console.error('Error getting visitor info:', error);
-        return { ip: 'Unknown', region: 'Unknown', country: 'Unknown' };
+        return { ip: 'Anonymous', region: 'Anonymous', country: 'Anonymous' };
     }
 }
 
