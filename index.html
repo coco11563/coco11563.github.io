@@ -765,6 +765,131 @@
     </h9>
 <br>
 <hr>
+<div id="hobby-widget" style="text-align: center; margin: 20px 0;">
+    <h3><strong>Support My Hobbies 🎸</strong></h3>
+    <div style="display: flex; justify-content: center; gap: 40px; margin: 20px 0;">
+        <!-- Cocktail Shaker -->
+        <div class="hobby-item" style="text-align: center;">
+            <div class="icon-container" style="position: relative; width: 100px; height: 100px;">
+                <div id="shaker" class="icon" style="font-size: 50px; cursor: pointer;" onclick="supportHobby('shaker')">🍸</div>
+                <div id="shaker-full" class="full-icon" style="position: absolute; top: -20px; right: -20px; font-size: 20px; display: none;">🍹</div>
+            </div>
+            <p id="shaker-count" style="margin-top: 10px;">0/100</p>
+        </div>
+        
+        <!-- Guitar -->
+        <div class="hobby-item" style="text-align: center;">
+            <div class="icon-container" style="position: relative; width: 100px; height: 100px;">
+                <div id="guitar" class="icon" style="font-size: 50px; cursor: pointer;" onclick="supportHobby('guitar')">🎸</div>
+                <div id="guitar-full" class="full-icon" style="position: absolute; top: -20px; right: -20px; font-size: 20px; display: none;">🎸</div>
+            </div>
+            <p id="guitar-count" style="margin-top: 10px;">0/100</p>
+        </div>
+        
+        <!-- Beer Mug -->
+        <div class="hobby-item" style="text-align: center;">
+            <div class="icon-container" style="position: relative; width: 100px; height: 100px;">
+                <div id="beer" class="icon" style="font-size: 50px; cursor: pointer;" onclick="supportHobby('beer')">🍺</div>
+                <div id="beer-full" class="full-icon" style="position: absolute; top: -20px; right: -20px; font-size: 20px; display: none;">🍻</div>
+            </div>
+            <p id="beer-count" style="margin-top: 10px;">0/100</p>
+        </div>
+    </div>
+    <p style="margin-top: 20px; font-style: italic;">
+        He is also good at brewing (🍺), bartending (☕/🍸), and Rock-N-Roll (🎸)
+    </p>
+</div>
+
+<style>
+.hobby-item {
+    transition: transform 0.3s ease;
+}
+
+.hobby-item:hover {
+    transform: scale(1.1);
+}
+
+.icon {
+    transition: transform 0.3s ease;
+}
+
+.icon:hover {
+    transform: scale(1.2);
+}
+
+.full-icon {
+    transition: opacity 0.3s ease;
+}
+
+@keyframes shake {
+    0%, 100% { transform: rotate(0deg); }
+    25% { transform: rotate(-10deg); }
+    75% { transform: rotate(10deg); }
+}
+
+@keyframes strum {
+    0%, 100% { transform: rotate(0deg); }
+    50% { transform: rotate(15deg); }
+}
+
+@keyframes pour {
+    0% { transform: translateY(0); }
+    50% { transform: translateY(-10px); }
+    100% { transform: translateY(0); }
+}
+
+.shake-animation {
+    animation: shake 0.5s ease;
+}
+
+.strum-animation {
+    animation: strum 0.5s ease;
+}
+
+.pour-animation {
+    animation: pour 0.5s ease;
+}
+</style>
+
+<script>
+const hobbyData = {
+    shaker: { count: 0, full: 0 },
+    guitar: { count: 0, full: 0 },
+    beer: { count: 0, full: 0 }
+};
+
+function supportHobby(type) {
+    const element = document.getElementById(type);
+    const countElement = document.getElementById(`${type}-count`);
+    const fullElement = document.getElementById(`${type}-full`);
+    
+    // Add animation
+    if (type === 'shaker') {
+        element.classList.add('shake-animation');
+    } else if (type === 'guitar') {
+        element.classList.add('strum-animation');
+    } else if (type === 'beer') {
+        element.classList.add('pour-animation');
+    }
+    
+    // Update count
+    hobbyData[type].count++;
+    if (hobbyData[type].count >= 100) {
+        hobbyData[type].count = 0;
+        hobbyData[type].full++;
+        fullElement.style.display = 'block';
+        fullElement.title = `Completed ${hobbyData[type].full} times!`;
+    }
+    
+    countElement.textContent = `${hobbyData[type].count}/100`;
+    
+    // Remove animation class after animation completes
+    setTimeout(() => {
+        element.classList.remove('shake-animation', 'strum-animation', 'pour-animation');
+    }, 500);
+}
+</script>
+<hr>
 </body>
 </html>
 
