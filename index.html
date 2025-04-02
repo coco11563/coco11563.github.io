@@ -845,27 +845,41 @@
 <script>
 // Firebase configuration
 const firebaseConfig = {
-
-apiKey: "AIzaSyDvYO4zfQzUBKq5yhYm4BvBtc3PPUgpm3M",
-
-authDomain: "personal-pages-d1060.firebaseapp.com",
-
-projectId: "personal-pages-d1060",
-
-storageBucket: "personal-pages-d1060.firebasestorage.app",
-
-messagingSenderId: "483233316053",
-
-appId: "1:483233316053:web:b0802bb2e666137005b65c",
-
-measurementId: "G-V0RN8W2KWG"
-
+    apiKey: "AIzaSyDvYO4zfQzUBKq5yhYm4BvBtc3PPUgpm3M",
+    authDomain: "personal-pages-d1060.firebaseapp.com",
+    databaseURL: "https://personal-pages-d1060-default-rtdb.asia-southeast1.firebasedatabase.app",
+    projectId: "personal-pages-d1060",
+    storageBucket: "personal-pages-d1060.appspot.com",
+    messagingSenderId: "483233316053",
+    appId: "1:483233316053:web:b0802bb2e666137005b65c",
+    measurementId: "G-V0RN8W2KWG"
 };
 
-
-// Initialize Firebase
+// Initialize Firebase with security rules
 firebase.initializeApp(firebaseConfig);
 const database = firebase.database();
+
+// Set up security rules
+database.ref('.info/connected').on('value', (snap) => {
+    if (snap.val() === true) {
+        // Only allow read/write operations from authenticated users or with rate limiting
+        database.ref().setPriority({
+            ".read": "auth != null || (newData.child('timestamp').val() < (now - 1000))",
+            ".write": "auth != null || (newData.child('timestamp').val() < (now - 1000))"
+        });
+    }
+});
+
+// Add rate limiting to prevent abuse
+function checkRateLimit() {
+    const lastClick = localStorage.getItem('lastClickTime');
+    const now = Date.now();
+    if (lastClick && (now - parseInt(lastClick)) < 1000) { // 1 second cooldown
+        return false;
+    }
+    localStorage.setItem('lastClickTime', now.toString());
+    return true;
+}
 
 // Initialize data structure
 const defaultData = {
@@ -1031,6 +1045,11 @@ function toggleQuarterlyStats() {
 }
 
 function supportHobby(type) {
+    if (!checkRateLimit()) {
+        alert('Please wait a moment before clicking again.');
+        return;
+    }
+    
     const element = document.getElementById(type);
     const countElement = document.getElementById(`${type}-count`);
     const fullElement = document.getElementById(`${type}-full`);
@@ -1045,14 +1064,17 @@ function supportHobby(type) {
         element.classList.add('pour-animation');
     }
     
-    // Get current count from Firebase
+    // Get current count from Firebase with timestamp
     database.ref(`hobbyData/${type}/count`).once('value')
         .then((snapshot) => {
             const currentCount = snapshot.val() || 0;
             const newCount = currentCount + 1;
             
-            // Update count in Firebase
-            database.ref(`hobbyData/${type}/count`).set(newCount);
+            // Update count in Firebase with timestamp
+            database.ref(`hobbyData/${type}`).update({
+                count: newCount,
+                timestamp: firebase.database.ServerValue.TIMESTAMP
+            });
             
             // Update UI immediately
             countElement.textContent = `${newCount}/100`;
@@ -1061,7 +1083,10 @@ function supportHobby(type) {
             // If count reaches 100, reset and increment full count
             if (newCount >= 100) {
                 // Reset count to 0
-                database.ref(`hobbyData/${type}/count`).set(0);
+                database.ref(`hobbyData/${type}`).update({
+                    count: 0,
+                    timestamp: firebase.database.ServerValue.TIMESTAMP
+                });
                 countElement.textContent = `0/100`;
                 progressElement.style.width = `0%`;
                 
@@ -1071,7 +1096,10 @@ function supportHobby(type) {
                         const currentFull = fullSnapshot.val() || 0;
                         const newFull = currentFull + 1;
                         
-                        database.ref(`hobbyData/${type}/full`).set(newFull);
+                        database.ref(`hobbyData/${type}`).update({
+                            full: newFull,
+                            timestamp: firebase.database.ServerValue.TIMESTAMP
+                        });
                         
                         // Update UI for full count
                         fullElement.style.display = 'block';

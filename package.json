@@ -1,0 +1,17 @@
+{
+  "name": "personal-academic-homepage",
+  "version": "1.0.0",
+  "description": "Personal academic homepage with interactive hobby widget",
+  "main": "index.js",
+  "scripts": {
+    "start": "python -m http.server 8000",
+    "deploy": "git push origin main"
+  },
+  "dependencies": {
+    "firebase": "^9.0.0",
+    "dotenv": "^16.0.0"
+  },
+  "devDependencies": {
+    "firebase-tools": "^12.0.0"
+  }
+} 
