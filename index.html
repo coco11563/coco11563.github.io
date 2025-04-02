@@ -19,8 +19,11 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
-    <title>Profile</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="keywords" content="Meng Xiao, 肖濛, 学术主页, 中国科学院计算机网络信息中心, 中国科学院大学, CNIC">
+    <meta name="description" content="Meng Xiao's home page 肖濛的学术主页">
+    <link href="main_style.css" media="all" rel="stylesheet">
+    <title>Meng Xiao (肖濛) - Homepage (学术主页)</title>
     <style>
         /* Base styles */
         body {
@@ -28,6 +31,7 @@
             padding: 0;
             font-family: Arial, sans-serif;
             overflow-x: hidden;
+            max-width: 100%;
         }
 
         /* Responsive table styles */
@@ -35,11 +39,13 @@
             width: 100%;
             max-width: 1200px;
             margin: 0 auto;
+            table-layout: fixed;
         }
 
         #tbInformation td {
             vertical-align: top;
             padding: 10px;
+            word-wrap: break-word;
         }
 
         .profile-image {
@@ -89,10 +95,12 @@
             width: 100%;
             max-width: 1200px;
             margin: 0 auto;
+            table-layout: fixed;
         }
 
         #tbPublications td {
             padding: 10px;
+            word-wrap: break-word;
         }
 
         #tbPublications img {
@@ -101,6 +109,12 @@
         }
 
         /* Media queries for different screen sizes */
+        @media screen and (max-width: 1200px) {
+            #tbInformation, #tbPublications {
+                max-width: 95%;
+            }
+        }
+
         @media screen and (max-width: 768px) {
             .profile-image {
                 max-width: 200px;
@@ -145,6 +159,19 @@
 
             .full-icon {
                 font-size: 12px !important;
+            }
+
+            #tbInformation td {
+                display: block;
+                width: 100% !important;
+            }
+        }
+
+        /* Fix for Firefox */
+        @-moz-document url-prefix() {
+            .profile-image {
+                width: auto;
+                max-width: 270px;
             }
         }
     </style>
