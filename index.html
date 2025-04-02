@@ -854,11 +854,11 @@
         <h4>Current Visitors</h4>
         <div id="visitor-count" style="font-size: 24px; color: #4fa4f4; margin-bottom: 20px;">0</div>
         <div style="display: flex; justify-content: center; gap: 40px; margin: 20px 0;">
-            <div style="width: 400px;">
+            <div style="width: 350px; height: 350px;">
                 <canvas id="countryPieChart"></canvas>
             </div>
-            <div style="width: 400px;">
-                <canvas id="regionBarChart"></canvas>
+            <div style="width: 350px; height: 350px;">
+                <canvas id="countryBarChart"></canvas>
             </div>
         </div>
     </div>
@@ -1011,24 +1011,15 @@ function initializeUI() {
 function updateCharts() {
     // Process visitor data
     const countryData = {};
-    const regionData = {};
     
     Object.entries(visitorData.regions).forEach(([region, count]) => {
-        const [regionName, countryName] = region.split(', ');
-        const country = countryName || 'Anonymous';
-        const regionKey = regionName || 'Anonymous';
-        
-        // Aggregate country data
+        const country = region.split(', ')[1] || 'Anonymous';
         countryData[country] = (countryData[country] || 0) + count;
-        
-        // Store region data
-        regionData[regionKey] = count;
     });
     
-    // Sort region data for top 10
-    const sortedRegions = Object.entries(regionData)
-        .sort(([,a], [,b]) => b - a)
-        .slice(0, 10);
+    // Sort countries by count
+    const sortedCountries = Object.entries(countryData)
+        .sort(([,a], [,b]) => b - a);
     
     // Update or create pie chart
     if (countryPieChart) {
@@ -1050,6 +1041,7 @@ function updateCharts() {
         },
         options: {
             responsive: true,
+            maintainAspectRatio: false,
             plugins: {
                 title: {
                     display: true,
@@ -1074,23 +1066,24 @@ function updateCharts() {
         regionBarChart.destroy();
     }
     
-    const barCtx = document.getElementById('regionBarChart').getContext('2d');
+    const barCtx = document.getElementById('countryBarChart').getContext('2d');
     regionBarChart = new Chart(barCtx, {
         type: 'bar',
         data: {
-            labels: sortedRegions.map(([region]) => region),
+            labels: sortedCountries.map(([country]) => country),
             datasets: [{
                 label: 'Visitors',
-                data: sortedRegions.map(([,count]) => count),
+                data: sortedCountries.map(([,count]) => count),
                 backgroundColor: '#4fa4f4'
             }]
         },
         options: {
             responsive: true,
+            maintainAspectRatio: false,
             plugins: {
                 title: {
                     display: true,
-                    text: 'Top 10 Regions'
+                    text: 'Visitors by Country'
                 }
             },
             scales: {
@@ -1118,12 +1111,11 @@ async function getVisitorInfo() {
         
         return {
             ip: ip,
-            region: locationData.region || 'Anonymous',
             country: locationData.country_name || 'Anonymous'
         };
     } catch (error) {
         console.error('Error getting visitor info:', error);
-        return { ip: 'Anonymous', region: 'Anonymous', country: 'Anonymous' };
+        return { ip: 'Anonymous', country: 'Anonymous' };
     }
 }
 
@@ -1136,9 +1128,8 @@ async function updateVisitorStats() {
         return (current || 0) + 1;
     });
     
-    // Update regions using transaction
-    const region = `${visitorInfo.region}, ${visitorInfo.country}`;
-    database.ref(`visitorData/regions/${region}`).transaction(current => {
+    // Update countries using transaction
+    database.ref(`visitorData/regions/${visitorInfo.country}`).transaction(current => {
         return (current || 0) + 1;
     });
     
