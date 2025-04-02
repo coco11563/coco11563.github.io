@@ -19,31 +19,133 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
     <title>Profile</title>
     <style>
+        /* Base styles */
+        body {
+            margin: 0;
+            padding: 0;
+            font-family: Arial, sans-serif;
+            overflow-x: hidden;
+        }
+
+        /* Responsive table styles */
         #tbInformation {
             width: 100%;
+            max-width: 1200px;
+            margin: 0 auto;
         }
+
         #tbInformation td {
             vertical-align: top;
+            padding: 10px;
         }
+
         .profile-image {
-            width: 270px;
-            height: 270px;
+            width: 100%;
+            max-width: 270px;
+            height: auto;
             border: 2px solid #000;
         }
+
         .profile-info {
             display: flex;
             flex-direction: column;
             justify-content: center;
-            height: 270px; /* Match the height of the image */
+            padding: 10px;
         }
-        .profile-info h5, .profile-info h7 {
-            margin: 0;
+
+        /* Responsive hobby widget styles */
+        #hobby-widget {
+            max-width: 800px;
+            margin: 20px auto;
+            padding: 0 15px;
         }
-        .profile-info a {
-            text-decoration: none;
+
+        .hobby-container {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            gap: 20px;
+            margin: 20px 0;
+        }
+
+        .hobby-item {
+            flex: 0 1 auto;
+            min-width: 100px;
+            max-width: 150px;
+        }
+
+        .icon-container {
+            position: relative;
+            width: 80px;
+            height: 80px;
+            margin: 0 auto;
+        }
+
+        /* Responsive publication table styles */
+        #tbPublications {
+            width: 100%;
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+
+        #tbPublications td {
+            padding: 10px;
+        }
+
+        #tbPublications img {
+            max-width: 100%;
+            height: auto;
+        }
+
+        /* Media queries for different screen sizes */
+        @media screen and (max-width: 768px) {
+            .profile-image {
+                max-width: 200px;
+            }
+
+            .hobby-item {
+                min-width: 80px;
+                max-width: 120px;
+            }
+
+            .icon {
+                font-size: 30px !important;
+            }
+
+            .full-icon {
+                font-size: 14px !important;
+            }
+
+            #tbPublications td {
+                display: block;
+                width: 100% !important;
+            }
+
+            #tbPublications img {
+                max-width: 200px;
+            }
+        }
+
+        @media screen and (max-width: 480px) {
+            .profile-image {
+                max-width: 150px;
+            }
+
+            .hobby-item {
+                min-width: 70px;
+                max-width: 100px;
+            }
+
+            .icon {
+                font-size: 25px !important;
+            }
+
+            .full-icon {
+                font-size: 12px !important;
+            }
         }
     </style>
 </head>
