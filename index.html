@@ -1045,20 +1045,43 @@ function supportHobby(type) {
         element.classList.add('pour-animation');
     }
     
-    // Use transaction to safely update hobby data
-    database.ref(`hobbyData/${type}/count`).transaction(current => {
-        const newCount = (current || 0) + 1;
-        
-        // If count reaches 100, reset and increment full count
-        if (newCount >= 100) {
-            database.ref(`hobbyData/${type}/full`).transaction(full => {
-                return (full || 0) + 1;
-            });
-            return 0;
-        }
-        
-        return newCount;
-    });
+    // Get current count from Firebase
+    database.ref(`hobbyData/${type}/count`).once('value')
+        .then((snapshot) => {
+            const currentCount = snapshot.val() || 0;
+            const newCount = currentCount + 1;
+            
+            // Update count in Firebase
+            database.ref(`hobbyData/${type}/count`).set(newCount);
+            
+            // Update UI immediately
+            countElement.textContent = `${newCount}/100`;
+            progressElement.style.width = `${(newCount / 100) * 100}%`;
+            
+            // If count reaches 100, reset and increment full count
+            if (newCount >= 100) {
+                // Reset count to 0
+                database.ref(`hobbyData/${type}/count`).set(0);
+                countElement.textContent = `0/100`;
+                progressElement.style.width = `0%`;
+                
+                // Increment full count
+                database.ref(`hobbyData/${type}/full`).once('value')
+                    .then((fullSnapshot) => {
+                        const currentFull = fullSnapshot.val() || 0;
+                        const newFull = currentFull + 1;
+                        
+                        database.ref(`hobbyData/${type}/full`).set(newFull);
+                        
+                        // Update UI for full count
+                        fullElement.style.display = 'block';
+                        fullElement.title = `Completed ${newFull} times!`;
+                        
+                        // Check if we need to update quarterly stats
+                        checkAndUpdateQuarterlyStats();
+                    });
+            }
+        });
     
     // Remove animation class after animation completes
     setTimeout(() => {
