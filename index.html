@@ -743,6 +743,47 @@
 </html>
 <hr>
 <div id="hobby-widget" style="text-align: center; margin: 20px 0;">
+    <style>
+        @keyframes shake {
+            0%, 100% { transform: rotate(0deg); }
+            25% { transform: rotate(-15deg); }
+            75% { transform: rotate(15deg); }
+        }
+        
+        @keyframes strum {
+            0%, 100% { transform: scale(1); }
+            50% { transform: scale(1.2); }
+        }
+        
+        @keyframes pour {
+            0%, 100% { transform: translateY(0); }
+            50% { transform: translateY(-10px); }
+        }
+        
+        .shake-animation {
+            animation: shake 0.5s ease-in-out;
+        }
+        
+        .strum-animation {
+            animation: strum 0.5s ease-in-out;
+        }
+        
+        .pour-animation {
+            animation: pour 0.5s ease-in-out;
+        }
+        
+        .icon {
+            transition: transform 0.2s;
+        }
+        
+        .icon:hover {
+            transform: scale(1.1);
+        }
+        
+        .full-icon {
+            transition: opacity 0.3s;
+        }
+    </style>
     <p style="margin-top: 20px; font-style: italic;">
         He is also good at brewing (🍺), bartending (☕/🍸), and Rock-N-Roll (🎸)
     </p>
@@ -781,7 +822,7 @@
         </div>
     </div>
     <h3><strong>Click to Support My Hobbies!</strong></h3>
-
+    <hr>
     <!-- IP Statistics -->
     <div id="ip-stats" style="margin-top: 20px; text-align: right; padding: 10px;">
         <h4>Current Visitors</h4>
@@ -805,19 +846,19 @@
 // Firebase configuration
 const firebaseConfig = {
 
-  apiKey: "AIzaSyDvYO4zfQzUBKq5yhYm4BvBtc3PPUgpm3M",
+apiKey: "AIzaSyDvYO4zfQzUBKq5yhYm4BvBtc3PPUgpm3M",
 
-  authDomain: "personal-pages-d1060.firebaseapp.com",
+authDomain: "personal-pages-d1060.firebaseapp.com",
 
-  projectId: "personal-pages-d1060",
+projectId: "personal-pages-d1060",
 
-  storageBucket: "personal-pages-d1060.firebasestorage.app",
+storageBucket: "personal-pages-d1060.firebasestorage.app",
 
-  messagingSenderId: "483233316053",
+messagingSenderId: "483233316053",
 
-  appId: "1:483233316053:web:b0802bb2e666137005b65c",
+appId: "1:483233316053:web:b0802bb2e666137005b65c",
 
-  measurementId: "G-V0RN8W2KWG"
+measurementId: "G-V0RN8W2KWG"
 
 };
 
