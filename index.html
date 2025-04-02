@@ -974,13 +974,13 @@ function saveData() {
 function initializeUI() {
     // Update progress bars
     Object.keys(hobbyData).forEach(type => {
-        const progress = (hobbyData[type].count / 100) * 100;
+        const progress = (hobbyData[type].count / 10) * 100; // Changed from 100 to 10
         const progressElement = document.getElementById(`${type}-progress`);
         const countElement = document.getElementById(`${type}-count`);
         const fullElement = document.getElementById(`${type}-full`);
         
         progressElement.style.width = `${progress}%`;
-        countElement.textContent = `${hobbyData[type].count}/100`;
+        countElement.textContent = `${hobbyData[type].count}/10`; // Changed from 100 to 10
         
         if (hobbyData[type].full > 0) {
             fullElement.style.display = 'block';
