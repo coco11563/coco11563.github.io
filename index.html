@@ -783,6 +783,23 @@
         .full-icon {
             transition: opacity 0.3s;
         }
+
+        .cooldown-progress {
+            position: absolute;
+            width: 100%;
+            height: 3px;
+            bottom: -5px;
+            background: #f0f0f0;
+            border-radius: 3px;
+            overflow: hidden;
+        }
+
+        .cooldown-progress-bar {
+            height: 100%;
+            background: #4fa4f4;
+            width: 0%;
+            transition: width 0.2s linear;
+        }
     </style>
     <p style="margin-top: 20px; font-style: italic;">
         He is also good at brewing (🍺), bartending (☕/🍸), and Rock-N-Roll (🎸)
@@ -793,10 +810,13 @@
             <div class="icon-container" style="position: relative; width: 100px; height: 100px;">
                 <div class="progress-background" style="position: absolute; width: 100%; height: 10px; bottom: 0; background: #f0f0f0; border-radius: 5px;"></div>
                 <div id="shaker-progress" class="progress-bar" style="position: absolute; width: 0%; height: 10px; bottom: 0; background: #4fa4f4; border-radius: 5px; transition: width 0.3s ease;"></div>
+                <div class="cooldown-progress">
+                    <div id="shaker-cooldown" class="cooldown-progress-bar"></div>
+                </div>
                 <div id="shaker" class="icon" style="font-size: 50px; cursor: pointer; user-select: none;" onclick="supportHobby('shaker')">🍸</div>
                 <div id="shaker-full" class="full-icon" style="position: absolute; top: -20px; right: -20px; font-size: 20px; display: none;">🍹</div>
             </div>
-            <p id="shaker-count" style="margin-top: 10px;">0/100</p>
+            <p id="shaker-count" style="margin-top: 10px;">0/10</p>
         </div>
         
         <!-- Guitar -->
@@ -804,10 +824,13 @@
             <div class="icon-container" style="position: relative; width: 100px; height: 100px;">
                 <div class="progress-background" style="position: absolute; width: 100%; height: 10px; bottom: 0; background: #f0f0f0; border-radius: 5px;"></div>
                 <div id="guitar-progress" class="progress-bar" style="position: absolute; width: 0%; height: 10px; bottom: 0; background: #4fa4f4; border-radius: 5px; transition: width 0.3s ease;"></div>
+                <div class="cooldown-progress">
+                    <div id="guitar-cooldown" class="cooldown-progress-bar"></div>
+                </div>
                 <div id="guitar" class="icon" style="font-size: 50px; cursor: pointer; user-select: none;" onclick="supportHobby('guitar')">🎸</div>
                 <div id="guitar-full" class="full-icon" style="position: absolute; top: -20px; right: -20px; font-size: 20px; display: none;">🎸</div>
             </div>
-            <p id="guitar-count" style="margin-top: 10px;">0/100</p>
+            <p id="guitar-count" style="margin-top: 10px;">0/10</p>
         </div>
         
         <!-- Beer Mug -->
@@ -815,10 +838,13 @@
             <div class="icon-container" style="position: relative; width: 100px; height: 100px;">
                 <div class="progress-background" style="position: absolute; width: 100%; height: 10px; bottom: 0; background: #f0f0f0; border-radius: 5px;"></div>
                 <div id="beer-progress" class="progress-bar" style="position: absolute; width: 0%; height: 10px; bottom: 0; background: #4fa4f4; border-radius: 5px; transition: width 0.3s ease;"></div>
+                <div class="cooldown-progress">
+                    <div id="beer-cooldown" class="cooldown-progress-bar"></div>
+                </div>
                 <div id="beer" class="icon" style="font-size: 50px; cursor: pointer; user-select: none;" onclick="supportHobby('beer')">🍺</div>
                 <div id="beer-full" class="full-icon" style="position: absolute; top: -20px; right: -20px; font-size: 20px; display: none;">🍻</div>
             </div>
-            <p id="beer-count" style="margin-top: 10px;">0/100</p>
+            <p id="beer-count" style="margin-top: 10px;">0/10</p>
         </div>
     </div>
     <h3><strong>Click to Support My Hobbies!</strong></h3>
@@ -870,14 +896,39 @@ database.ref('.info/connected').on('value', (snap) => {
     }
 });
 
-// Add rate limiting to prevent abuse
-function checkRateLimit() {
-    const lastClick = localStorage.getItem('lastClickTime');
+const COOLDOWN_TIME = 200; // 0.2 seconds cooldown
+
+function checkRateLimit(type) {
+    const lastClick = localStorage.getItem(`lastClickTime_${type}`);
     const now = Date.now();
-    if (lastClick && (now - parseInt(lastClick)) < 1000) { // 1 second cooldown
+    const cooldownBar = document.getElementById(`${type}-cooldown`);
+    
+    if (lastClick && (now - parseInt(lastClick)) < COOLDOWN_TIME) {
+        // Show animation but don't increment count
+        const element = document.getElementById(type);
+        if (type === 'shaker') {
+            element.classList.add('shake-animation');
+        } else if (type === 'guitar') {
+            element.classList.add('strum-animation');
+        } else if (type === 'beer') {
+            element.classList.add('pour-animation');
+        }
+        
+        setTimeout(() => {
+            element.classList.remove('shake-animation', 'strum-animation', 'pour-animation');
+        }, 500);
+        
         return false;
     }
-    localStorage.setItem('lastClickTime', now.toString());
+    
+    localStorage.setItem(`lastClickTime_${type}`, now.toString());
+    
+    // Start cooldown progress bar animation
+    cooldownBar.style.width = '100%';
+    setTimeout(() => {
+        cooldownBar.style.width = '0%';
+    }, COOLDOWN_TIME);
+    
     return true;
 }
 
@@ -1045,8 +1096,7 @@ function toggleQuarterlyStats() {
 }
 
 function supportHobby(type) {
-    if (!checkRateLimit()) {
-        alert('Please wait a moment before clicking again.');
+    if (!checkRateLimit(type)) {
         return;
     }
     
@@ -1077,17 +1127,17 @@ function supportHobby(type) {
             });
             
             // Update UI immediately
-            countElement.textContent = `${newCount}/100`;
-            progressElement.style.width = `${(newCount / 100) * 100}%`;
+            countElement.textContent = `${newCount}/10`;
+            progressElement.style.width = `${(newCount / 10) * 100}%`;
             
-            // If count reaches 100, reset and increment full count
-            if (newCount >= 100) {
+            // If count reaches 10, reset and increment full count
+            if (newCount >= 10) {
                 // Reset count to 0
                 database.ref(`hobbyData/${type}`).update({
                     count: 0,
                     timestamp: firebase.database.ServerValue.TIMESTAMP
                 });
-                countElement.textContent = `0/100`;
+                countElement.textContent = `0/10`;
                 progressElement.style.width = `0%`;
                 
                 // Increment full count
