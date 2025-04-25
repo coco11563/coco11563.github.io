@@ -12,6 +12,10 @@ text-align: left;
 padding-left: 0px;
 
 }
+.projects-box.expanded {
+  height: auto;
+  overflow: visible;
+}
 .projects-show {
   padding: 0;
   margin: 0;

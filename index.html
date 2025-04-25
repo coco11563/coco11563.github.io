@@ -153,7 +153,7 @@
         <li><b>[<font color="red">2022.12</font>]</b> Two of my papers have been accepted by <em>SIAM Data Mining 2023</em>!</li>
         <li><b>[<font color="red">2022.12</font>]</b> I have been invited as the PC member of <em>KDD 2023</em>. I will be able to contribute more to the data mining community!</li>
     </ol>
-    <p class="projects-show" id="projects-show"><span class="projects-show-text" id="projects-show-text">MORE</span></p>
+    <p class="projects-show" id="projects-show" onclick="toggleNews()"><span class="projects-show-text" id="projects-show-text">MORE</span></p>
     </ul>
     </p>
     <hr>
@@ -1079,9 +1079,18 @@
     // Initialize UI
     initializeUI();
     </script>
+    <script>
+        function toggleNews() {
+            const projectsBox = document.getElementById('projects-box');
+            projectsBox.classList.toggle('expanded');
+            const projectsShowText = document.getElementById('projects-show-text');
+            if (projectsBox.classList.contains('expanded')) {
+                projectsShowText.textContent = 'LESS';
+            } else {
+                projectsShowText.textContent = 'MORE';
+            }
+        }
+    </script>
     <hr>
     </body>
     </html>
-    
-    
-    
