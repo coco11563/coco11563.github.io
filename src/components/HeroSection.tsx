@@ -295,17 +295,15 @@ export function HeroSection({ profile }: HeroSectionProps) {
               <div className="absolute -inset-2 bg-gradient-to-r from-primary-300 to-secondary-300 rounded-full opacity-30 blur-lg" />
               
               {/* 头像 */}
-              <div className="relative w-64 h-64 md:w-80 md:h-80 lg:w-96 lg:h-96">
-                <div className="w-full h-full rounded-full overflow-hidden shadow-2xl">
+                <div className="relative w-64 h-64 md:w-80 md:h-80 lg:w-96 lg:h-96">
                   <Image
                     src={profile.image}
                     alt={`${profile.name} Profile Photo`}
-                    width={768}
-                    height={768}
-                    className="w-full h-full object-cover scale-150"
+                    fill                    /* 让 Image 绝对定位填满父容器 */
+                    className="rounded-full object-cover shadow-2xl"
                     priority
-                    unoptimized
                     quality={95}
+                    sizes="(max-width: 768px) 100vw, 768px"
                   />
                 </div>
                 
