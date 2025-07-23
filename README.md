@@ -35,11 +35,11 @@
 ## 🙏 致谢
 
 感谢所有合作者和导师的支持：
-- Prof. Yuanchun Zhou (周园春教授)
-- Prof. Yi Du (杜一教授)  
-- Prof. Yanjie Fu (付妍杰教授)
-- Dr. Min Wu (吴敏博士)
-- Prof. Jinmiao Chen (陈金苗教授)
+- Prof. Yuanchun Zhou
+- Prof. Yi Du
+- Prof. Yanjie Fu
+- Dr. Min Wu
+- Prof. Jinmiao Chen
 
 ---
 
