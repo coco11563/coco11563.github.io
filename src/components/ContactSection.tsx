@@ -111,7 +111,12 @@ export function ContactSection({ profile }: ContactSectionProps) {
                       <MapPin size={20} className="text-primary-600 flex-shrink-0 mt-0.5" />
                       <div>
                         <p className="text-gray-700">{aff}</p>
-                        {index === 1 && (
+                        {index === 0 && (
+                          <p className="text-sm text-gray-500">
+                            No. 2 South Dongsheng Road, Haidian District, Beijing
+                          </p>
+                        )}
+                        {index === 2 && (
                           <p className="text-sm text-gray-500">
                             8 College Road, Singapore, 169857
                           </p>

@@ -60,32 +60,29 @@ export function HeroSection({ profile }: HeroSectionProps) {
       {/* 背景动画 */}
       <div className="absolute inset-0 bg-pattern opacity-30" />
       
-      {/* 高性能粒子效果 - 优化GPU加速和动画性能 */}
+      {/* 背景粒子动画 - 确保可见性 */}
       <div className="absolute inset-0 pointer-events-none overflow-hidden">
-        {[...Array(12)].map((_, i) => {
-          // 优化的随机参数
+        {[...Array(15)].map((_, i) => {
+          // 随机参数
           const initialX = Math.random() * 100;
           const initialY = Math.random() * 100;
-          const animationDelay = Math.random() * 8; // 0-8秒随机延迟
-          const animationDuration = 15 + Math.random() * 10; // 15-25秒持续时间
-          const size = 1.5 + Math.random() * 0.8; // 1.5-2.3px大小变体
-          const useComplexAnimation = i % 3 === 0; // 每3个粒子使用一个复杂动画
+          const animationDelay = Math.random() * 5;
+          const animationDuration = 8 + Math.random() * 12;
+          const size = 4 + Math.random() * 4; // 4-8px 更大更明显
           
           return (
             <div
               key={i}
-              className="absolute rounded-full bg-primary-300"
+              className="absolute rounded-full bg-blue-400/40 animate-pulse"
               style={{
                 left: `${initialX}%`,
                 top: `${initialY}%`,
                 width: `${size}px`,
                 height: `${size}px`,
-                opacity: 0.25 + Math.random() * 0.3, // 0.25-0.55透明度
-                animation: `${useComplexAnimation ? 'particleFloat' : 'particleFloatLite'} ${animationDuration}s ${animationDelay}s infinite ease-in-out`,
-                willChange: 'transform, opacity',
-                backfaceVisibility: 'hidden',
-                perspective: '1000px',
-                transform: 'translateZ(0)', // 强制启用硬件加速
+                animationDelay: `${animationDelay}s`,
+                animationDuration: `${animationDuration}s`,
+                boxShadow: '0 0 6px rgba(59, 130, 246, 0.4)',
+                transform: 'translate3d(0, 0, 0)',
               }}
             />
           );
