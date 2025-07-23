@@ -1,0 +1,775 @@
+[
+  {
+    "id": "pub_2025_1",
+    "title": "SciHorizon: Benchmarking AI-for-Science Readiness from Scientific Data to Large Language Models",
+    "authors": [
+      "Chuan Qin",
+      "Xin Chen",
+      "Chengrui Wang",
+      "Pengmin Wu",
+      "Xi Chen",
+      "Yihang Cheng",
+      "Jingyi Zhao",
+      "Meng Xiao",
+      "Xiangchao Dong",
+      "Qingqing Long",
+      "Boya Pan",
+      "Han Wu",
+      "Chengzan Li",
+      "Yuanchun Zhou",
+      "Hui Xiong",
+      "Hengshu Zhu"
+    ],
+    "venue": "ACM SIGKDD",
+    "venueType": "conference",
+    "year": 2025,
+    "citations": 0,
+    "image": "/pubfiles/SIGKDD2025.png",
+    "keywords": [
+      "AI4Science",
+      "benchmarking",
+      "scientific data",
+      "large language models"
+    ],
+    "urls": {
+      "project": "https://www.scihorizon.cn/"
+    },
+    "authorRole": "co-author",
+    "highlighted": true
+  },
+  {
+    "id": "pub_2025_2",
+    "title": "scCompass: An Integrated Multi-Species scRNA-seq Database for AI-Ready",
+    "authors": [
+      "Pengfei Wang",
+      "Wenhao Liu",
+      "Jiajia Wang",
+      "Yana Liu",
+      "Pengjiang Li",
+      "Ping Xu",
+      "Wentao Cui",
+      "Ran Zhang",
+      "Qingqing Long",
+      "Zhilong Hu",
+      "Chen Fang",
+      "Jingxi Dong",
+      "Chunyang Zhang",
+      "Yan Chen",
+      "Chengrui Wang",
+      "Guole Liu",
+      "Hanyu Xie",
+      "Yiyang Zhang",
+      "Meng Xiao",
+      "Shubai Chen",
+      "Haiping Jiang",
+      "The X-Compass Consortium",
+      "Yiqiang Chen",
+      "Ge Yang",
+      "Shihua Zhang",
+      "Zhen Meng",
+      "Xuezhi Wang",
+      "Guihai Feng",
+      "Xin Li",
+      "Yuanchun Zhou"
+    ],
+    "venue": "Advanced Sciences",
+    "venueType": "journal",
+    "year": 2025,
+    "citations": 0,
+    "image": "/pubfiles/ADVSCI2025.png",
+    "keywords": [
+      "single-cell",
+      "scRNA-seq",
+      "database",
+      "multi-species"
+    ],
+    "urls": {
+      "paper": "https://advanced.onlinelibrary.wiley.com/doi/full/10.1002/advs.202500870",
+      "project": "http://www.bdbe.cn/kun#/"
+    },
+    "authorRole": "co-author",
+    "highlighted": true
+  },
+  {
+    "id": "pub_2025_3",
+    "title": "GeneCompass: Deciphering Universal Gene Regulatory Mechanisms with a Knowledge-informed Cross-species Foundation Model",
+    "authors": [
+      "Xiaodong Yang",
+      "Guole Liu",
+      "Guihai Feng",
+      "Dechao Bu",
+      "Pengfei Wang",
+      "Jie Jiang",
+      "Shubai Chen",
+      "Qinmeng Yang",
+      "Hefan Miao",
+      "Yiyang Zhang",
+      "Zhenpeng Man",
+      "Zhongming Liang",
+      "Zichen Wang",
+      "Yaning Li",
+      "Zheng Li",
+      "Yana Liu",
+      "Yao Tian",
+      "Wenhao Liu",
+      "Cong Li",
+      "Ao Li",
+      "Jingxi Dong",
+      "Zhilong Hu",
+      "Chen Fang",
+      "Lina Cui",
+      "Zixu Deng",
+      "Haiping Jiang",
+      "Wentao Cui",
+      "Jiahao Zhang",
+      "Zhaohui Yang",
+      "Handong Li",
+      "Xingjian He",
+      "Liqun Zhong",
+      "Jiaheng Zhou",
+      "Zijian Wang",
+      "Qingqing Long",
+      "Ping Xu",
+      "Hongmei Wang",
+      "Zhen Meng",
+      "Xuezhi Wang",
+      "Yangang Wang",
+      "Yong Wang",
+      "Shihua Zhang",
+      "Jingtao Guo",
+      "Yi Zhao",
+      "Yuanchun Zhou",
+      "Fei Li",
+      "Jing Liu",
+      "Yiqiang Chen",
+      "Ge Yang",
+      "Xin Li"
+    ],
+    "venue": "Cell Research",
+    "venueType": "journal",
+    "year": 2024,
+    "citations": 12,
+    "image": "/pubfiles/CellRes2024.png",
+    "keywords": [
+      "gene regulation",
+      "foundation model",
+      "cross-species"
+    ],
+    "urls": {
+      "paper": "https://www.nature.com/articles/s41422-024-01034-y",
+      "project": "https://github.com/xCompass-AI/GeneCompass"
+    },
+    "authorRole": "co-author",
+    "highlighted": true
+  },
+  {
+    "id": "pub_2025_4",
+    "title": "Gut microbiota and tuberculosis",
+    "authors": [
+      "Yanhua Liu",
+      "Ling Yang",
+      "Maryam Meskini",
+      "Anjana Goel",
+      "Monique Opperman",
+      "Sagar Singh Shyamal",
+      "Ajay Manaithiya",
+      "Meng Xiao",
+      "Ruizi Ni",
+      "Yajing An",
+      "Mingming Zhang",
+      "Yuan Tian",
+      "Shuang Zhou",
+      "Zhaoyang Ye",
+      "Li Zhuang",
+      "Linsheng Li",
+      "Istuti Saraswat",
+      "Ankita Kar",
+      "Syed Luqman Ali",
+      "Shakir Ullah",
+      "Syed Yasir Ali",
+      "Shradha Kaushik",
+      "Tianmu Tian",
+      "Mingyang Jiao",
+      "Shujun Wang",
+      "Giulia Ghisleni",
+      "Alice Armanni",
+      "Sara Fumagalli",
+      "WenYu Wang",
+      "Chao Cao",
+      "Miguel Prieto Lage",
+      "Marla Carpena Rodriguez",
+      "Antonia Bruno",
+      "Chanyuan Jin",
+      "Hanqing Hu",
+      "Yuhang Zhang",
+      "Ilse du Preez",
+      "Ashok Aspatwar",
+      "Lingxia Zhang",
+      "Wenping Gong"
+    ],
+    "venue": "iMeta",
+    "venueType": "journal",
+    "year": 2025,
+    "citations": 0,
+    "image": "/pubfiles/iMeta.png",
+    "keywords": [
+      "tuberculosis",
+      "gut microbiota",
+      "microbiome",
+      "AI"
+    ],
+    "urls": {},
+    "authorRole": "co-first-author",
+    "highlighted": true
+  },
+  {
+    "id": "pub_2025_5",
+    "title": "FastFT: Accelerating Reinforced Feature Transformation via Advanced Exploration Strategies",
+    "authors": [
+      "Tianqi He",
+      "Xiaohan Huang",
+      "Yi Du",
+      "Qingqing Long",
+      "Ziyue Qiao",
+      "Min Wu",
+      "Yanjie Fu",
+      "Yuanchun Zhou",
+      "Meng Xiao"
+    ],
+    "venue": "IEEE ICDE",
+    "venueType": "conference",
+    "year": 2025,
+    "citations": 0,
+    "image": "/pubfiles/ICDE2025.png",
+    "keywords": [
+      "feature transformation",
+      "reinforcement learning",
+      "exploration strategies"
+    ],
+    "urls": {
+      "project": "https://github.com/coco11563/FASTFT-Accelerating-Reinforced-Feature-Transformation-via-Advanced-Exploration-Strategies"
+    },
+    "authorRole": "corresponding-author",
+    "highlighted": true
+  },
+  {
+    "id": "pub_2025_6",
+    "title": "Reinforcement Learning-based Feature Generation Algorithm for Scientific Data",
+    "authors": [
+      "Meng Xiao",
+      "Junfeng Zhou",
+      "Yuanchun Zhou"
+    ],
+    "venue": "Journal of Computer Research and Development",
+    "venueType": "journal",
+    "year": 2025,
+    "citations": 0,
+    "image": "/pubfiles/CRAD2025.png",
+    "keywords": [
+      "feature generation",
+      "reinforcement learning",
+      "scientific data"
+    ],
+    "urls": {},
+    "authorRole": "first-author",
+    "highlighted": true
+  },
+  {
+    "id": "pub_2025_7",
+    "title": "GCAL: Adapting Graph Models to Evolving Domain Shifts",
+    "authors": [
+      "Ziyue Qiao",
+      "Qianyi Cai",
+      "Hao Dong",
+      "Jiawei Gu",
+      "Pengyang Wang",
+      "Meng Xiao",
+      "Xiao Luo",
+      "Hui Xiong"
+    ],
+    "venue": "ICML",
+    "venueType": "conference",
+    "year": 2025,
+    "citations": 0,
+    "image": "/pubfiles/ICML2025.png",
+    "keywords": [
+      "graph models",
+      "domain adaptation",
+      "transfer learning"
+    ],
+    "urls": {},
+    "authorRole": "corresponding-author",
+    "highlighted": true
+  },
+  {
+    "id": "pub_2025_8",
+    "title": "Knowledge Hierarchy Guided Biological-Medical Dataset Distillation for Domain LLM Training",
+    "authors": [
+      "Xunxin Cai",
+      "Chengrui Wang",
+      "Qingqing Long",
+      "Yuanchun Zhou",
+      "Meng Xiao"
+    ],
+    "venue": "DASFAA",
+    "venueType": "conference",
+    "year": 2025,
+    "citations": 0,
+    "image": "/pubfiles/DASFAA2025.png",
+    "keywords": [
+      "dataset distillation",
+      "biomedical",
+      "domain LLM"
+    ],
+    "urls": {
+      "project": "https://www.dropbox.com/scl/fo/0127mpvenexo51n0rpp1m/AETMLlsul52jmDy2JhgEnoM?rlkey=1g6m3j4upiydanya9137fkpqi&st=6um1v8sg&dl=0"
+    },
+    "authorRole": "corresponding-author",
+    "highlighted": true
+  },
+  {
+    "id": "pub_2025_9",
+    "title": "COMAE: COMprehensive Attribute Exploration for Zero-shot Hashing",
+    "authors": [
+      "Yuqi Li",
+      "Qingqing Long",
+      "Yihang Zhou",
+      "Ran Zhang",
+      "Zhiyuan Ning",
+      "Zhihong Zhu",
+      "Yuanchun Zhou",
+      "Xuezhi Wang",
+      "Meng Xiao"
+    ],
+    "venue": "ACM ICMR",
+    "venueType": "conference",
+    "year": 2025,
+    "citations": 0,
+    "image": "/pubfiles/ICMR2025.jpg",
+    "keywords": [
+      "zero-shot hashing",
+      "attribute exploration",
+      "multimedia retrieval"
+    ],
+    "urls": {},
+    "authorRole": "corresponding-author",
+    "highlighted": true
+  },
+  {
+    "id": "pub_2024_1",
+    "title": "Traceable Group-Wise Self-Optimizing Feature Transformation Learning: A Dual Optimization Perspective",
+    "authors": [
+      "Meng Xiao",
+      "Dongjie Wang",
+      "Min Wu",
+      "Kunpeng Liu",
+      "Hui Xiong",
+      "Yuanchun Zhou",
+      "Yanjie Fu"
+    ],
+    "venue": "ACM TKDD",
+    "venueType": "journal",
+    "year": 2024,
+    "citations": 15,
+    "image": "/pubfiles/TKDD24.png",
+    "keywords": [
+      "feature transformation",
+      "group-wise optimization",
+      "dual optimization"
+    ],
+    "urls": {
+      "paper": "https://dl.acm.org/doi/full/10.1145/3638059",
+      "project": "https://github.com/coco11563/Group-wise-Reinforcement-Feature-Generation-for-Optimal-and-Explainable-Representation-Space-Reconst"
+    },
+    "authorRole": "first-author",
+    "highlighted": true
+  },
+  {
+    "id": "pub_2024_2",
+    "title": "Interdisciplinary Fairness in Imbalanced Research Proposal Topic Inference: A Hierarchical Transformer-based Method with Selective Interpolation",
+    "authors": [
+      "Meng Xiao",
+      "Min Wu",
+      "Ziyue Qiao",
+      "Yanjie Fu",
+      "Zhiyuan Ning",
+      "Yi Du",
+      "Yuanchun Zhou"
+    ],
+    "venue": "ACM TKDD",
+    "venueType": "journal",
+    "year": 2024,
+    "citations": 8,
+    "image": "/pubfiles/TKDD-2.png",
+    "keywords": [
+      "research proposal",
+      "topic inference",
+      "fairness",
+      "transformer"
+    ],
+    "urls": {
+      "paper": "https://dl.acm.org/doi/pdf/10.1145/3671149"
+    },
+    "authorRole": "first-author",
+    "highlighted": true
+  },
+  {
+    "id": "pub_2024_3",
+    "title": "SCReader: Prompting Large Language Models to Interpret scRNA-seq Data",
+    "authors": [
+      "Cong Li",
+      "Qingqing Long",
+      "Yuanchun Zhou",
+      "Meng Xiao"
+    ],
+    "venue": "IEEE ICDM",
+    "venueType": "conference",
+    "year": 2024,
+    "citations": 3,
+    "image": "/pubfiles/ICDM24.jpg",
+    "keywords": [
+      "scRNA-seq",
+      "large language models",
+      "bioinformatics"
+    ],
+    "urls": {
+      "project": "https://github.com/coco11563/Prompting-Large-Language-Models-to-Interpret-scRNA-seq-Data"
+    },
+    "authorRole": "corresponding-author",
+    "highlighted": true
+  },
+  {
+    "id": "pub_2024_4",
+    "title": "GUME: Graphs and User Modalities Enhancement for Long-Tail Multimodal Recommendation",
+    "authors": [
+      "Guojiao Lin",
+      "Zhen Meng",
+      "Dongjie Wang",
+      "Qingqing Long",
+      "Yuanchun Zhou",
+      "Meng Xiao"
+    ],
+    "venue": "ACM CIKM",
+    "venueType": "conference",
+    "year": 2024,
+    "citations": 5,
+    "image": "/pubfiles/CIKM24.jpg",
+    "keywords": [
+      "multimodal recommendation",
+      "long-tail",
+      "graph neural networks"
+    ],
+    "urls": {
+      "paper": "https://arxiv.org/pdf/2407.12338",
+      "project": "https://github.com/NanGongNingYi/GUME"
+    },
+    "authorRole": "corresponding-author",
+    "highlighted": true
+  },
+  {
+    "id": "pub_2024_5",
+    "title": "MOAT: Graph Prompting for 3D Molecular Graphs",
+    "authors": [
+      "Qingqing Long",
+      "Yuchen Yan",
+      "Wentao Cui",
+      "Zhihong Zhu",
+      "Wei Ju",
+      "Zhihong Zhu",
+      "Yuanchun Zhou",
+      "Xuezhi Wang",
+      "Meng Xiao"
+    ],
+    "venue": "ACM CIKM",
+    "venueType": "conference",
+    "year": 2024,
+    "citations": 2,
+    "image": "/pubfiles/CIKM-2024-2.png",
+    "keywords": [
+      "molecular graphs",
+      "3D graphs",
+      "graph prompting"
+    ],
+    "urls": {},
+    "authorRole": "corresponding-author",
+    "highlighted": true
+  },
+  {
+    "id": "pub_2024_6",
+    "title": "GENESUM: Large Language Model-based Gene Summary Extraction",
+    "authors": [
+      "Zhijian Chen",
+      "Chuan Hu",
+      "Min Wu",
+      "Qingqing Long",
+      "Xuezhi Wang",
+      "Yuanchun Zhou",
+      "Meng Xiao"
+    ],
+    "venue": "IEEE BIBM",
+    "venueType": "conference",
+    "year": 2024,
+    "citations": 1,
+    "image": "/pubfiles/BIBM24.jpg",
+    "keywords": [
+      "gene summary",
+      "large language models",
+      "bioinformatics"
+    ],
+    "urls": {},
+    "authorRole": "corresponding-author",
+    "highlighted": true
+  },
+  {
+    "id": "pub_2024_7",
+    "title": "DP-CRE: Continual Relation Extraction via Decoupled Contrastive Learning and Memory Structure Preservation",
+    "authors": [
+      "Mengyi Huang",
+      "Meng Xiao",
+      "Ludi Wang",
+      "Yi Du"
+    ],
+    "venue": "LREC-COLING",
+    "venueType": "conference",
+    "year": 2024,
+    "citations": 4,
+    "image": "/pubfiles/COLING24.png",
+    "keywords": [
+      "continual learning",
+      "relation extraction",
+      "contrastive learning"
+    ],
+    "urls": {
+      "paper": "https://arxiv.org/pdf/2403.02718",
+      "project": "https://github.com/mengyi99/DP-CRE"
+    },
+    "authorRole": "co-first-author",
+    "highlighted": true
+  },
+  {
+    "id": "pub_2023_1",
+    "title": "Hierarchical Interdisciplinary Topic Detection Model for Research Proposal Classification",
+    "authors": [
+      "Meng Xiao",
+      "Ziyue Qiao",
+      "Yanjie Fu",
+      "Hao Dong",
+      "Yi Du",
+      "Pengyang Wang",
+      "Hui Xiong",
+      "Yuanchun Zhou"
+    ],
+    "venue": "IEEE TKDE",
+    "venueType": "journal",
+    "year": 2023,
+    "citations": 25,
+    "image": "/pubfiles/TKDE.png",
+    "keywords": [
+      "topic detection",
+      "research proposal",
+      "hierarchical classification"
+    ],
+    "urls": {
+      "paper": "https://arxiv.org/pdf/2209.13519"
+    },
+    "authorRole": "first-author",
+    "highlighted": true
+  },
+  {
+    "id": "pub_2023_2",
+    "title": "Beyond Discrete Selection: Continuous Embedding Space Optimization for Generative Feature Selection",
+    "authors": [
+      "Meng Xiao",
+      "Dongjie Wang",
+      "Min Wu",
+      "Pengfei Wang",
+      "Yuanchun Zhou",
+      "Yanjie Fu"
+    ],
+    "venue": "IEEE ICDM",
+    "venueType": "conference",
+    "year": 2023,
+    "citations": 28,
+    "image": "/pubfiles/ICDM23-1.png",
+    "keywords": [
+      "feature selection",
+      "continuous optimization",
+      "generative models"
+    ],
+    "urls": {
+      "paper": "https://arxiv.org/pdf/2302.13221",
+      "project": "https://www.dropbox.com/sh/vlwz16cquv5ct9d/AACvhlDRwBe3f4nWwGEE4zeCa?dl=0"
+    },
+    "authorRole": "first-author",
+    "highlighted": true
+  },
+  {
+    "id": "pub_2023_3",
+    "title": "Traceable Automatic Feature Transformation via Cascading Actor-Critic Agents",
+    "authors": [
+      "Meng Xiao",
+      "Dongjie Wang",
+      "Min Wu",
+      "Ziyue Qiao",
+      "Pengfei Wang",
+      "Kunpeng Liu",
+      "Yuanchun Zhou",
+      "Yanjie Fu"
+    ],
+    "venue": "SIAM SDM",
+    "venueType": "conference",
+    "year": 2023,
+    "citations": 18,
+    "image": "/pubfiles/SDM23-1.png",
+    "keywords": [
+      "feature transformation",
+      "actor-critic",
+      "traceable learning"
+    ],
+    "urls": {
+      "paper": "https://epubs.siam.org/doi/pdf/10.1137/1.9781611977653.ch87",
+      "project": "https://github.com/coco11563/Traceable_Automatic_Feature_Transformation_via_Cascading_Actor-Critic_Agents"
+    },
+    "authorRole": "first-author",
+    "highlighted": true
+  },
+  {
+    "id": "pub_2023_4",
+    "title": "Resolving the Imbalance Issue in Hierarchical Disciplinary Topic Inference via LLM-based Data Augmentation",
+    "authors": [
+      "Xunxin Cai",
+      "Meng Xiao",
+      "Zhiyuan Ning",
+      "Yuanchun Zhou"
+    ],
+    "venue": "IEEE ICDM",
+    "venueType": "conference",
+    "year": 2023,
+    "citations": 12,
+    "image": "/pubfiles/ICDM23-2.png",
+    "keywords": [
+      "topic inference",
+      "data augmentation",
+      "large language models"
+    ],
+    "urls": {
+      "paper": "https://arxiv.org/pdf/2310.05318"
+    },
+    "authorRole": "corresponding-author",
+    "highlighted": true
+  },
+  {
+    "id": "pub_2023_5",
+    "title": "Reinforcement-Enhanced Autoregressive Feature Transformation: Gradient-steered Search in Continuous Space for Postfix Expressions",
+    "authors": [
+      "Dongjie Wang",
+      "Meng Xiao",
+      "Min Wu",
+      "Pengfei Wang",
+      "Yuanchun Zhou",
+      "Yanjie Fu"
+    ],
+    "venue": "NeurIPS",
+    "venueType": "conference",
+    "year": 2023,
+    "citations": 42,
+    "image": "/pubfiles/NIPS23.png",
+    "keywords": [
+      "autoregressive",
+      "feature transformation",
+      "reinforcement learning"
+    ],
+    "urls": {
+      "paper": "https://proceedings.neurips.cc/paper_files/paper/2023/file/8797d13e5998acfab387d4bf0a5b9b00-Paper-Conference.pdf",
+      "project": "https://github.com/coco11563/MOAT_Differentiable_Feature_Transformation"
+    },
+    "authorRole": "co-first-author",
+    "highlighted": true,
+    "award": "Spotlight Paper"
+  },
+  {
+    "id": "pub_2023_6",
+    "title": "NEEDED: Introducing Hierarchical Transformer to Eye Diseases Diagnosis",
+    "authors": [
+      "Xu Ye",
+      "Meng Xiao",
+      "Zhiyuan Ning",
+      "Weiwei Dai",
+      "Wenjuan Cui",
+      "Yi Du",
+      "Yuanchun Zhou"
+    ],
+    "venue": "SIAM SDM",
+    "venueType": "conference",
+    "year": 2023,
+    "citations": 8,
+    "image": "/pubfiles/SDM-2.png",
+    "keywords": [
+      "medical diagnosis",
+      "eye diseases",
+      "hierarchical transformer"
+    ],
+    "urls": {
+      "paper": "https://epubs.siam.org/doi/pdf/10.1137/1.9781611977653.ch75",
+      "project": "https://github.com/coco11563/NEEDED"
+    },
+    "authorRole": "co-first-author",
+    "highlighted": true
+  },
+  {
+    "id": "pub_2023_7",
+    "title": "Semi-supervised Domain Adaptation in Graph Transfer Learning",
+    "authors": [
+      "Ziyue Qiao",
+      "Luo Xiao",
+      "Meng Xiao",
+      "Hao Dong",
+      "Yuanchun Zhou",
+      "Hui Xiong"
+    ],
+    "venue": "IJCAI",
+    "venueType": "conference",
+    "year": 2023,
+    "citations": 22,
+    "image": "/pubfiles/IJCAI23.png",
+    "keywords": [
+      "domain adaptation",
+      "graph transfer learning",
+      "semi-supervised"
+    ],
+    "urls": {
+      "paper": "https://www.ijcai.org/proceedings/2023/0253.pdf",
+      "project": "https://github.com/joe817/SGDA"
+    },
+    "authorRole": "co-first-author",
+    "highlighted": true
+  },
+  {
+    "id": "pub_2021_1",
+    "title": "Expert Knowledge Guided Length-Variant Hierarchical Label Generation for Proposal Classification",
+    "authors": [
+      "Meng Xiao",
+      "Ziyue Qiao",
+      "Yanjie Fu",
+      "Yi Du",
+      "Pengyang Wang",
+      "Yuanchun Zhou"
+    ],
+    "venue": "IEEE ICDM",
+    "venueType": "conference",
+    "year": 2021,
+    "citations": 35,
+    "image": "/pubfiles/ICDM21.png",
+    "keywords": [
+      "hierarchical classification",
+      "expert knowledge",
+      "proposal classification"
+    ],
+    "urls": {
+      "paper": "https://arxiv.org/pdf/2109.06661",
+      "project": "https://www.dropbox.com/sh/007s3yo1eldh359/AAC-yE_z6umInEI5rKMv0T8ca?dl=0"
+    },
+    "authorRole": "first-author",
+    "highlighted": true
+  }
+]

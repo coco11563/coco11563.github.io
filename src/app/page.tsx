@@ -32,14 +32,14 @@ export default async function HomePage() {
           citationsByYear={citationsByYear} 
         />
         
-        {/* 论文发表 */}
-        <PublicationsSection publications={publications} />
-        
         {/* 项目展示 */}
         <ProjectsSection />
         
         {/* 联系方式 */}
         <ContactSection profile={profile} />
+        
+        {/* 论文发表 - 移到最后 */}
+        <PublicationsSection publications={publications} />
       </main>
       
       {/* 页脚 */}

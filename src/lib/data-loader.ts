@@ -62,11 +62,17 @@ export class StaticDataLoader {
   }
 
   /**
-   * 加载论文列表
+   * 加载论文列表 - 优先使用精选论文
    */
   static async loadPublications(): Promise<Publication[]> {
     try {
-      return await this.readDataFile('publications.json');
+      // 先尝试加载精选论文
+      try {
+        return await this.readDataFile('selected-publications.json');
+      } catch (selectedError) {
+        console.log('Selected publications not found, using full publications list');
+        return await this.readDataFile('publications.json');
+      }
     } catch (error) {
       console.error('Failed to load publications:', error);
       return this.getDefaultPublications();

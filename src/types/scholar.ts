@@ -39,6 +39,11 @@ export interface Publication {
     citations?: string;
     bibtex?: string;
   };
+  // 新增字段用于精选论文
+  image?: string;  // 论文配图
+  authorRole?: 'first-author' | 'co-first-author' | 'corresponding-author' | 'co-author';  // 作者角色
+  highlighted?: boolean;  // 是否为重点论文
+  award?: string;  // 获奖信息
 }
 
 export interface CitationsByYear {
