@@ -64,11 +64,7 @@ export function PublicationsSection({ publications }: PublicationsSectionProps) 
           <h2 className="text-3xl md:text-4xl font-bold gradient-text mb-4">
             Selected Publications
           </h2>
-          <p className="text-lg text-gray-600 max-w-2xl mx-auto">
-            Selected publications as first author, co-first author, and corresponding author in top-tier venues
-          </p>
         </motion.div>
-
         {/* 论文统计信息 */}
         <motion.div
           initial={{ opacity: 0, y: 20 }}
