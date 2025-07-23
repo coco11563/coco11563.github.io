@@ -1,0 +1,247 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* 自定义基础样式 */
+@layer base {
+  html {
+    scroll-behavior: smooth;
+  }
+  
+  body {
+    @apply text-gray-900 selection:bg-primary-200 selection:text-primary-900;
+  }
+  
+  /* 自定义滚动条 */
+  ::-webkit-scrollbar {
+    width: 8px;
+  }
+  
+  ::-webkit-scrollbar-track {
+    @apply bg-gray-100;
+  }
+  
+  ::-webkit-scrollbar-thumb {
+    @apply bg-gray-300 rounded-full hover:bg-gray-400;
+  }
+  
+  /* Firefox 滚动条 */
+  * {
+    scrollbar-width: thin;
+    scrollbar-color: rgb(209 213 219) rgb(243 244 246);
+  }
+}
+
+/* 自定义组件样式 */
+@layer components {
+  /* 按钮样式 */
+  .btn-primary {
+    @apply inline-flex items-center justify-center px-4 py-2 text-sm font-medium text-white bg-primary-600 border border-transparent rounded-md hover:bg-primary-700 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-primary-500 transition-colors duration-200;
+  }
+  
+  .btn-secondary {
+    @apply inline-flex items-center justify-center px-4 py-2 text-sm font-medium text-gray-700 bg-white border border-gray-300 rounded-md hover:bg-gray-50 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-primary-500 transition-colors duration-200;
+  }
+  
+  /* 卡片样式 */
+  .card {
+    @apply bg-white rounded-xl shadow-lg hover:shadow-xl transition-all duration-300 border border-gray-100;
+  }
+  
+  .card-hover {
+    @apply transform hover:-translate-y-1 hover:scale-[1.02] transition-all duration-300;
+  }
+  
+  /* 渐变文字 */
+  .gradient-text {
+    @apply bg-gradient-to-r from-primary-600 to-secondary-600 bg-clip-text text-transparent;
+  }
+  
+  /* 玻璃形态效果 */
+  .glass {
+    @apply backdrop-blur-sm bg-white/80 border border-white/20;
+  }
+  
+  /* 导航栏样式 */
+  .nav-link {
+    @apply text-gray-600 hover:text-primary-600 px-3 py-2 rounded-md text-sm font-medium transition-colors duration-200;
+  }
+  
+  .nav-link-active {
+    @apply text-primary-600 bg-primary-50;
+  }
+  
+  /* 论文卡片样式 */
+  .publication-card {
+    @apply card p-6 space-y-4 hover:border-primary-200;
+  }
+  
+  /* 标签样式 */
+  .tag {
+    @apply inline-flex items-center px-2.5 py-0.5 rounded-full text-xs font-medium;
+  }
+  
+  .tag-journal {
+    @apply bg-blue-100 text-blue-800;
+  }
+  
+  .tag-conference {
+    @apply bg-green-100 text-green-800;
+  }
+  
+  .tag-workshop {
+    @apply bg-yellow-100 text-yellow-800;
+  }
+  
+  .tag-preprint {
+    @apply bg-gray-100 text-gray-800;
+  }
+  
+  /* 指标卡片 */
+  .metric-card {
+    @apply card p-6 text-center space-y-2;
+  }
+  
+  .metric-value {
+    @apply text-3xl font-bold gradient-text;
+  }
+  
+  .metric-label {
+    @apply text-sm text-gray-600;
+  }
+  
+  /* 响应式文字大小 */
+  .text-responsive-sm {
+    @apply text-sm md:text-base;
+  }
+  
+  .text-responsive-lg {
+    @apply text-lg md:text-xl lg:text-2xl;
+  }
+  
+  .text-responsive-xl {
+    @apply text-xl md:text-2xl lg:text-3xl xl:text-4xl;
+  }
+}
+
+/* 自定义工具类 */
+@layer utilities {
+  /* 动画工具类 */
+  .animate-fade-in {
+    animation: fadeIn 0.5s ease-in-out;
+  }
+  
+  .animate-slide-up {
+    animation: slideUp 0.6s ease-out;
+  }
+  
+  .animate-float {
+    animation: float 6s ease-in-out infinite;
+  }
+  
+  /* 背景模式 */
+  .bg-pattern {
+    background-image: radial-gradient(circle at 1px 1px, rgba(59, 130, 246, 0.1) 1px, transparent 0);
+    background-size: 20px 20px;
+  }
+  
+  /* 文字截断 */
+  .text-clamp-2 {
+    display: -webkit-box;
+    -webkit-line-clamp: 2;
+    -webkit-box-orient: vertical;
+    overflow: hidden;
+  }
+  
+  .text-clamp-3 {
+    display: -webkit-box;
+    -webkit-line-clamp: 3;
+    -webkit-box-orient: vertical;
+    overflow: hidden;
+  }
+  
+  /* 容器最大宽度 */
+  .container-custom {
+    @apply mx-auto max-w-7xl px-4 sm:px-6 lg:px-8;
+  }
+  
+  /* 分隔线 */
+  .divider {
+    @apply border-t border-gray-200 my-8;
+  }
+  
+  /* 焦点环 */
+  .focus-ring {
+    @apply focus:outline-none focus:ring-2 focus:ring-primary-500 focus:ring-offset-2;
+  }
+}
+
+/* 关键帧动画 */
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+@keyframes slideUp {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes float {
+  0%, 100% {
+    transform: translateY(0px);
+  }
+  50% {
+    transform: translateY(-20px);
+  }
+}
+
+@keyframes gradient {
+  0%, 100% {
+    background-position: 0% 50%;
+  }
+  50% {
+    background-position: 100% 50%;
+  }
+}
+
+/* 打印样式 */
+@media print {
+  .no-print {
+    display: none !important;
+  }
+  
+  .print-break-before {
+    page-break-before: always;
+  }
+  
+  .print-break-after {
+    page-break-after: always;
+  }
+}
+
+/* 暗色模式支持 (预留) */
+@media (prefers-color-scheme: dark) {
+  /* 可以在这里添加暗色模式的样式 */
+}
+
+/* 减少动画 (尊重用户偏好) */
+@media (prefers-reduced-motion: reduce) {
+  *,
+  *::before,
+  *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+  }
+}

@@ -1,0 +1,171 @@
+name: 📊 Update Scholar Data
+
+on:
+  schedule:
+    # 每天北京时间上午8点执行 (UTC 0点)
+    - cron: '0 0 * * *'
+  workflow_dispatch:
+    # 支持手动触发
+    inputs:
+      force_update:
+        description: '强制更新数据'
+        required: false
+        default: 'false'
+        type: boolean
+  push:
+    paths:
+      # 当数据脚本变更时触发
+      - 'scripts/**'
+      - '.github/workflows/update-data.yml'
+
+jobs:
+  update-scholar-data:
+    runs-on: ubuntu-latest
+    
+    steps:
+    - name: 📥 Checkout repository
+      uses: actions/checkout@v4
+      with:
+        token: ${{ secrets.GITHUB_TOKEN }}
+        fetch-depth: 0
+    
+    - name: 🛠️ Setup Node.js
+      uses: actions/setup-node@v4
+      with:
+        node-version: '18'
+        cache: 'npm'
+    
+    - name: 📦 Install dependencies
+      run: |
+        npm ci
+        # 安装数据采集所需的可选依赖
+        npm install serpapi || echo "SerpAPI installation failed, using fallback"
+    
+    - name: 🔍 Fetch latest scholar data
+      run: |
+        echo "🚀 开始获取学术数据..."
+        node scripts/fetch-scholar-data.js
+      env:
+        SCHOLAR_ID: 'YGwukbUAAAAJ'
+        SERPAPI_KEY: ${{ secrets.SERPAPI_KEY }}
+    
+    - name: 📊 Analyze data changes
+      id: check-changes
+      run: |
+        # 检查是否有文件变更
+        if [ -n "$(git status --porcelain public/data/)" ]; then
+          echo "changes=true" >> $GITHUB_OUTPUT
+          echo "📈 检测到数据变更"
+          
+          # 生成变更摘要
+          git diff --name-only public/data/ > changes.txt
+          echo "Changed files:"
+          cat changes.txt
+          
+          # 检查关键指标变化
+          if [ -f "public/data/metrics.json" ]; then
+            echo "📊 当前指标:"
+            cat public/data/metrics.json | grep -E '"(totalCitations|hIndex)"'
+          fi
+        else
+          echo "changes=false" >> $GITHUB_OUTPUT
+          echo "📋 数据无变化"
+        fi
+    
+    - name: 🏷️ Generate commit message
+      if: steps.check-changes.outputs.changes == 'true'
+      id: commit-msg
+      run: |
+        # 生成动态提交信息
+        current_date=$(date -u +"%Y-%m-%d %H:%M UTC")
+        
+        # 从metrics.json读取当前数据
+        if [ -f "public/data/metrics.json" ]; then
+          citations=$(cat public/data/metrics.json | grep '"totalCitations"' | sed 's/.*: *\([0-9]*\).*/\1/')
+          h_index=$(cat public/data/metrics.json | grep '"hIndex"' | sed 's/.*: *\([0-9]*\).*/\1/')
+          pub_count=$(cat public/data/publications.json | grep -c '"id":')
+          
+          commit_message="📊 自动更新学术数据 ${current_date}
+
+📈 当前统计:
+- 总引用数: ${citations}
+- H指数: ${h_index} 
+- 论文数量: ${pub_count}
+
+🤖 Generated with [Claude Code](https://claude.ai/code)
+
+Co-Authored-By: Claude <noreply@anthropic.com>"
+        else
+          commit_message="📊 自动更新学术数据 ${current_date}
+
+🤖 Generated with [Claude Code](https://claude.ai/code)
+
+Co-Authored-By: Claude <noreply@anthropic.com>"
+        fi
+        
+        echo "COMMIT_MESSAGE<<EOF" >> $GITHUB_OUTPUT
+        echo "$commit_message" >> $GITHUB_OUTPUT
+        echo "EOF" >> $GITHUB_OUTPUT
+    
+    - name: 💾 Commit and push changes
+      if: steps.check-changes.outputs.changes == 'true'
+      run: |
+        # 配置Git用户
+        git config --local user.email "action@github.com"
+        git config --local user.name "GitHub Action Bot"
+        
+        # 添加数据文件
+        git add public/data/
+        
+        # 提交变更
+        git commit -m "${{ steps.commit-msg.outputs.COMMIT_MESSAGE }}"
+        
+        # 推送到远程
+        git push origin main
+        
+        echo "✅ 数据更新已推送到仓库"
+    
+    - name: 🚀 Trigger deployment
+      if: steps.check-changes.outputs.changes == 'true'
+      uses: peter-evans/repository-dispatch@v3
+      with:
+        token: ${{ secrets.GITHUB_TOKEN }}
+        event-type: data-updated
+        client-payload: |
+          {
+            "timestamp": "${{ steps.commit-msg.outputs.timestamp }}",
+            "triggered_by": "scheduled-update"
+          }
+    
+    - name: 📄 Create update summary
+      if: steps.check-changes.outputs.changes == 'true'
+      run: |
+        echo "## 📊 学术数据更新摘要" >> $GITHUB_STEP_SUMMARY
+        echo "" >> $GITHUB_STEP_SUMMARY
+        echo "**更新时间:** $(date -u +"%Y-%m-%d %H:%M:%S UTC")" >> $GITHUB_STEP_SUMMARY
+        echo "" >> $GITHUB_STEP_SUMMARY
+        
+        if [ -f "public/data/metrics.json" ]; then
+          echo "**当前指标:**" >> $GITHUB_STEP_SUMMARY
+          citations=$(cat public/data/metrics.json | grep '"totalCitations"' | sed 's/.*: *\([0-9]*\).*/\1/')
+          h_index=$(cat public/data/metrics.json | grep '"hIndex"' | sed 's/.*: *\([0-9]*\).*/\1/')
+          echo "- 总引用数: ${citations}" >> $GITHUB_STEP_SUMMARY
+          echo "- H指数: ${h_index}" >> $GITHUB_STEP_SUMMARY
+        fi
+        
+        echo "" >> $GITHUB_STEP_SUMMARY
+        echo "**变更文件:**" >> $GITHUB_STEP_SUMMARY
+        git diff --name-only HEAD~1 HEAD public/data/ | sed 's/^/- /' >> $GITHUB_STEP_SUMMARY
+    
+    - name: 📝 No changes summary
+      if: steps.check-changes.outputs.changes == 'false'
+      run: |
+        echo "## 📋 学术数据检查完成" >> $GITHUB_STEP_SUMMARY
+        echo "" >> $GITHUB_STEP_SUMMARY
+        echo "**检查时间:** $(date -u +"%Y-%m-%d %H:%M:%S UTC")" >> $GITHUB_STEP_SUMMARY
+        echo "**结果:** 数据无变化，跳过更新" >> $GITHUB_STEP_SUMMARY
+        
+        if [ -f "public/data/update-log.json" ]; then
+          echo "" >> $GITHUB_STEP_SUMMARY
+          echo "**上次更新:** $(cat public/data/update-log.json | grep timestamp | sed 's/.*": *"\([^"]*\)".*/\1/')" >> $GITHUB_STEP_SUMMARY
+        fi

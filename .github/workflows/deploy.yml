@@ -1,0 +1,190 @@
+name: 🚀 Deploy to GitHub Pages
+
+on:
+  push:
+    branches: [ main ]
+    paths-ignore:
+      - 'README.md'
+      - '.gitignore'
+      - 'LICENSE'
+  repository_dispatch:
+    types: [ data-updated ]
+  workflow_dispatch:
+    inputs:
+      environment:
+        description: '部署环境'
+        required: false
+        default: 'production'
+        type: choice
+        options:
+        - production
+        - staging
+
+# 设置权限
+permissions:
+  contents: read
+  pages: write
+  id-token: write
+
+# 确保同时只有一个部署任务运行
+concurrency:
+  group: "pages"
+  cancel-in-progress: false
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    
+    steps:
+    - name: 📥 Checkout
+      uses: actions/checkout@v4
+    
+    - name: 🛠️ Setup Node.js
+      uses: actions/setup-node@v4
+      with:
+        node-version: '18'
+        cache: 'npm'
+    
+    - name: 📄 Setup Pages
+      uses: actions/configure-pages@v4
+      with:
+        static_site_generator: next
+    
+    - name: 📦 Install dependencies
+      run: |
+        npm ci
+        echo "✅ 依赖安装完成"
+    
+    - name: 🔍 Verify data files
+      run: |
+        echo "📊 检查数据文件..."
+        if [ -d "public/data" ]; then
+          echo "✅ 数据目录存在"
+          ls -la public/data/
+          
+          # 验证关键数据文件
+          required_files=("scholar-profile.json" "metrics.json" "publications.json")
+          for file in "${required_files[@]}"; do
+            if [ -f "public/data/$file" ]; then
+              echo "✅ $file 存在"
+            else
+              echo "⚠️  $file 缺失，生成默认数据"
+              npm run fetch-data
+              break
+            fi
+          done
+        else
+          echo "⚠️  数据目录不存在，生成初始数据"
+          npm run fetch-data
+        fi
+    
+    - name: 🔨 Build with Next.js
+      run: |
+        echo "🏗️  开始构建网站..."
+        npm run build
+        echo "✅ 构建完成"
+      env:
+        NODE_ENV: production
+        NEXT_TELEMETRY_DISABLED: 1
+    
+    - name: 🔧 Post-build optimizations
+      run: |
+        echo "⚡ 执行构建后优化..."
+        
+        # 添加 .nojekyll 文件（禁用 Jekyll）
+        touch out/.nojekyll
+        echo "✅ 已禁用 Jekyll"
+        
+        # 创建 404 页面（如果不存在）
+        if [ ! -f "out/404.html" ] && [ -f "out/index.html" ]; then
+          cp out/index.html out/404.html
+          echo "✅ 已创建 404 页面"
+        fi
+        
+        # 添加安全标头（通过 _headers 文件）
+        cat > out/_headers << 'EOF'
+        /*
+          X-Frame-Options: DENY
+          X-Content-Type-Options: nosniff
+          X-XSS-Protection: 1; mode=block
+          Referrer-Policy: strict-origin-when-cross-origin
+        EOF
+        echo "✅ 已添加安全标头"
+        
+        # 生成网站地图时间戳
+        if [ -f "out/sitemap.xml" ]; then
+          sed -i "s/{{TIMESTAMP}}/$(date -u +%Y-%m-%dT%H:%M:%S+00:00)/g" out/sitemap.xml || true
+          echo "✅ 已更新网站地图时间戳"
+        fi
+        
+        echo "📁 构建输出大小: $(du -sh out | cut -f1)"
+    
+    - name: 📊 Build analysis
+      run: |
+        echo "## 🏗️ 构建分析报告" >> $GITHUB_STEP_SUMMARY
+        echo "" >> $GITHUB_STEP_SUMMARY
+        echo "**构建时间:** $(date -u +"%Y-%m-%d %H:%M:%S UTC")" >> $GITHUB_STEP_SUMMARY
+        echo "**输出大小:** $(du -sh out | cut -f1)" >> $GITHUB_STEP_SUMMARY
+        echo "**文件数量:** $(find out -type f | wc -l)" >> $GITHUB_STEP_SUMMARY
+        echo "" >> $GITHUB_STEP_SUMMARY
+        
+        echo "**主要文件:**" >> $GITHUB_STEP_SUMMARY
+        find out -name "*.html" -o -name "*.js" -o -name "*.css" | head -10 | sed 's/^/- /' >> $GITHUB_STEP_SUMMARY
+        
+        # 检查关键页面
+        if [ -f "out/index.html" ]; then
+          echo "✅ 主页构建成功" >> $GITHUB_STEP_SUMMARY
+        else
+          echo "❌ 主页构建失败" >> $GITHUB_STEP_SUMMARY
+        fi
+    
+    - name: 📤 Upload artifact
+      uses: actions/upload-pages-artifact@v3
+      with:
+        path: ./out
+
+  deploy:
+    environment:
+      name: github-pages
+      url: ${{ steps.deployment.outputs.page_url }}
+    runs-on: ubuntu-latest
+    needs: build
+    
+    steps:
+    - name: 🚀 Deploy to GitHub Pages
+      id: deployment
+      uses: actions/deploy-pages@v4
+    
+    - name: 📝 Deployment summary
+      run: |
+        echo "## 🚀 部署完成" >> $GITHUB_STEP_SUMMARY
+        echo "" >> $GITHUB_STEP_SUMMARY
+        echo "**网站地址:** ${{ steps.deployment.outputs.page_url }}" >> $GITHUB_STEP_SUMMARY
+        echo "**部署时间:** $(date -u +"%Y-%m-%d %H:%M:%S UTC")" >> $GITHUB_STEP_SUMMARY
+        echo "" >> $GITHUB_STEP_SUMMARY
+        echo "🌟 网站已成功部署到 GitHub Pages!" >> $GITHUB_STEP_SUMMARY
+
+  notify:
+    runs-on: ubuntu-latest
+    needs: [build, deploy]
+    if: always()
+    
+    steps:
+    - name: 📊 Create deployment report
+      if: needs.deploy.result == 'success'
+      run: |
+        echo "## 🎉 部署成功报告" >> $GITHUB_STEP_SUMMARY
+        echo "" >> $GITHUB_STEP_SUMMARY
+        echo "✅ 肖濛学术主页已成功更新！" >> $GITHUB_STEP_SUMMARY
+        echo "" >> $GITHUB_STEP_SUMMARY
+        echo "**访问链接:** [点击访问](https://coco11563.github.io)" >> $GITHUB_STEP_SUMMARY
+        echo "**更新时间:** $(date -u +"%Y-%m-%d %H:%M:%S UTC")" >> $GITHUB_STEP_SUMMARY
+    
+    - name: ❌ Create failure report
+      if: needs.deploy.result == 'failure'
+      run: |
+        echo "## ❌ 部署失败报告" >> $GITHUB_STEP_SUMMARY
+        echo "" >> $GITHUB_STEP_SUMMARY
+        echo "构建或部署过程中发生错误，请检查日志。" >> $GITHUB_STEP_SUMMARY
+        echo "" >> $GITHUB_STEP_SUMMARY
+        echo "**失败时间:** $(date -u +"%Y-%m-%d %H:%M:%S UTC")" >> $GITHUB_STEP_SUMMARY
