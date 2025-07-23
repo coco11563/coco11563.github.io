@@ -124,7 +124,7 @@ export function AboutSection({ profile }: AboutSectionProps) {
             </div>
 
             {/* News 部分 */}
-            <div className="mt-12">
+            <div id="news" className="mt-12">
               <NewsSection />
             </div>
           </motion.div>

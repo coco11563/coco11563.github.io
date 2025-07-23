@@ -122,10 +122,10 @@ export function MetricsSection({ metrics, citationsByYear }: MetricsSectionProps
                 className="flex justify-center items-center h-20"
               >
                 {/* 居中的柱状图 */}
-                <div className="flex items-end justify-center space-x-1 h-16">
+                <div className="flex items-end justify-center space-x-1" style={{ height: '64px' }}>
                   {citationsByYear.slice(-6).map((item, index) => {
                     const maxCitations = Math.max(...citationsByYear.slice(-6).map(d => d.citations))
-                    const height = maxCitations > 0 ? Math.max((item.citations / maxCitations) * 100, 5) : 5
+                    const heightPx = maxCitations > 0 ? Math.max((item.citations / maxCitations) * 56, 4) : 4
                     
                     return (
                       <motion.div
@@ -137,8 +137,8 @@ export function MetricsSection({ metrics, citationsByYear }: MetricsSectionProps
                         className="group relative"
                       >
                         <div 
-                          className="w-2 bg-gradient-to-t from-orange-600 to-orange-400 rounded-t"
-                          style={{ height: `${height}%` }}
+                          className="w-2 bg-gradient-to-t from-orange-600 to-orange-400 rounded-t transition-all duration-300"
+                          style={{ height: `${heightPx}px` }}
                         />
                         
                         {/* 悬浮提示 */}

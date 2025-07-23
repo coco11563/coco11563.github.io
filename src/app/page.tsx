@@ -1,7 +1,6 @@
 import { StaticDataLoader } from '@/lib/data-loader'
 import { HeroSection } from '@/components/HeroSection'
 import { AboutSection } from '@/components/AboutSection'
-import { NewsSection } from '@/components/NewsSection'
 import { MetricsSection } from '@/components/MetricsSection'
 import { PublicationsSection } from '@/components/PublicationsSection'
 import { ProjectsSection } from '@/components/ProjectsSection'
@@ -26,13 +25,6 @@ export default async function HomePage() {
         
         {/* 关于我 */}
         <AboutSection profile={profile} />
-        
-        {/* 最新动态 */}
-        <section id="news" className="py-20 bg-gradient-to-br from-gray-50 to-blue-50">
-          <div className="container-custom">
-            <NewsSection />
-          </div>
-        </section>
         
         {/* 学术指标 */}
         <MetricsSection 
