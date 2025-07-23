@@ -108,7 +108,7 @@ export function HeroSection({ profile }: HeroSectionProps) {
           color: '#3b82f6',
           distance: 150,
           enable: true,
-          opacity: 0.2,
+          opacity: isTyping ? 0.4 : 0.1,
           width: 1,
         },
         move: {
@@ -118,7 +118,7 @@ export function HeroSection({ profile }: HeroSectionProps) {
             default: 'bounce',
           },
           random: true,
-          speed: isTyping ? 2 : 0.5,
+          speed: isTyping ? 1.5 : 0.5,
           straight: false,
         },
         number: {
@@ -150,12 +150,15 @@ export function HeroSection({ profile }: HeroSectionProps) {
       {/* 背景动画 */}
       <div className="absolute inset-0 bg-pattern opacity-30" />
       
-      <Particles
-        id="tsparticles"
-        particlesLoaded={particlesLoaded}
-        options={particleOptions}
-        className="absolute inset-0 -z-0"
-      />
+      {init && (
+        <Particles
+          id="tsparticles"
+          particlesLoaded={particlesLoaded}
+          options={particleOptions}
+          style={{ position: 'absolute' }}
+          className="absolute inset-0 -z-0"
+        />
+      )}
       
 
       <div className="container-custom relative z-10">
@@ -299,7 +302,7 @@ export function HeroSection({ profile }: HeroSectionProps) {
                     alt={`${profile.name} Profile Photo`}
                     width={768}
                     height={768}
-                    className="w-full h-full object-cover"
+                    className="w-full h-full object-cover scale-110"
                     priority
                     unoptimized
                     quality={95}

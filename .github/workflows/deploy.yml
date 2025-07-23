@@ -67,9 +67,6 @@ jobs:
           npm ci
         fi
         echo "✅ 依赖安装完成"
-
-    - name: 🧹 Clean cache
-      run: rm -rf .next/cache
     
     - name: 🔍 Verify data files
       run: |
