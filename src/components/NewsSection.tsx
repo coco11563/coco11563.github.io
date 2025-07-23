@@ -1,6 +1,5 @@
 'use client'
 
-import { motion } from 'framer-motion'
 import { Calendar, ExternalLink, Star, Award, BookOpen, Zap } from 'lucide-react'
 import { useState, useEffect } from 'react'
 
@@ -130,12 +129,7 @@ export function NewsSection({ className = "" }: NewsSectionProps) {
   }
 
   return (
-    <motion.div
-      initial={{ opacity: 0, y: 20 }}
-      whileInView={{ opacity: 1, y: 0 }}
-      viewport={{ once: true }}
-      className={`space-y-6 ${className}`}
-    >
+    <div className={`space-y-6 ${className}`}>
       {/* 标题 */}
       <div className="flex items-center space-x-3 mb-8">
         <Calendar className="text-primary-600" size={28} />
@@ -160,12 +154,8 @@ export function NewsSection({ className = "" }: NewsSectionProps) {
             const colorClasses = getNewsColor(item.type)
             
             return (
-              <motion.div
+              <div
                 key={index}
-                initial={{ opacity: 0, x: -20 }}
-                whileInView={{ opacity: 1, x: 0 }}
-                viewport={{ once: true }}
-                transition={{ delay: index * 0.1 }}
                 className="relative flex items-start space-x-4"
               >
                 {/* Timeline Icon */}
@@ -218,25 +208,20 @@ export function NewsSection({ className = "" }: NewsSectionProps) {
                     </div>
                   )}
                 </div>
-              </motion.div>
+              </div>
             )
           })}
         </div>
       </div>
 
       {/* View More Button */}
-      <motion.div
-        initial={{ opacity: 0 }}
-        whileInView={{ opacity: 1 }}
-        viewport={{ once: true }}
-        className="text-center pt-6"
-      >
+      <div className="text-center pt-6">
         <button className="inline-flex items-center px-4 py-2 text-sm font-medium text-primary-600 bg-primary-50 hover:bg-primary-100 rounded-lg transition-colors">
           <Calendar size={16} className="mr-2" />
           View All News
         </button>
-      </motion.div>
+      </div>
       )}
-    </motion.div>
+    </div>
   )
 }
