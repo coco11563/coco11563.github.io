@@ -163,12 +163,12 @@ export class StaticDataLoader {
 
   private static getDefaultMetrics(): Metrics {
     return {
-      totalCitations: 645,
-      totalCitationsRecent: 580,
-      hIndex: 12,
-      hIndexRecent: 11,
-      i10Index: 15,
-      i10IndexRecent: 14,
+      totalCitations: 853,
+      totalCitationsRecent: 790,
+      hIndex: 16,
+      hIndexRecent: 15,
+      i10Index: 20,
+      i10IndexRecent: 19,
       lastUpdated: new Date().toISOString()
     };
   }
