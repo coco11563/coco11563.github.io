@@ -156,16 +156,14 @@ export class StaticDataLoader {
       name: 'Meng Xiao (肖濛)',
       nameZh: '肖濛',
       affiliation: [
-        'Computer Network Information Center',
-        'CAS',
-        'Duke-NUS Medical School',
-        'NUS'
+        'Computer Network Information Center, CAS',
+        'Duke-NUS Medical School, NUS'
       ],
       email: ['shaow.at.cnic.cn', 'meng.xiao.at.nus.edu.sg'],
       homepage: 'https://coco11563.github.io',
       interests: ['AI4S', 'AI4Data', 'Data Mining'],
       image: '/indexfiles/me.png',
-      verified: false
+      verified: true
     };
   }
 
