@@ -1,4 +1,6 @@
 import { ScholarProfile, Publication, Metrics, CitationsByYear } from '@/types/scholar';
+import { promises as fs } from 'fs';
+import path from 'path';
 
 /**
  * 静态数据加载器
@@ -6,15 +8,41 @@ import { ScholarProfile, Publication, Metrics, CitationsByYear } from '@/types/s
  */
 export class StaticDataLoader {
   /**
+   * 判断是否在构建时环境
+   */
+  private static isBuildTime(): boolean {
+    return typeof window === 'undefined' && process.env.NODE_ENV !== 'development';
+  }
+
+  /**
+   * 读取文件数据（构建时使用文件系统，运行时使用fetch）
+   */
+  private static async readDataFile(filename: string): Promise<any> {
+    try {
+      if (this.isBuildTime()) {
+        // 构建时直接读取文件系统
+        const filePath = path.join(process.cwd(), 'public', 'data', filename);
+        const fileContent = await fs.readFile(filePath, 'utf-8');
+        return JSON.parse(fileContent);
+      } else {
+        // 运行时使用fetch
+        const response = await fetch(`/data/${filename}`);
+        if (!response.ok) {
+          throw new Error(`HTTP error! status: ${response.status}`);
+        }
+        return await response.json();
+      }
+    } catch (error) {
+      throw error;
+    }
+  }
+
+  /**
    * 加载学者档案
    */
   static async loadProfile(): Promise<ScholarProfile> {
     try {
-      const response = await fetch(`/data/scholar-profile.json`);
-      if (!response.ok) {
-        throw new Error(`HTTP error! status: ${response.status}`);
-      }
-      return await response.json();
+      return await this.readDataFile('scholar-profile.json');
     } catch (error) {
       console.error('Failed to load profile:', error);
       return this.getDefaultProfile();
@@ -26,11 +54,7 @@ export class StaticDataLoader {
    */
   static async loadMetrics(): Promise<Metrics> {
     try {
-      const response = await fetch(`/data/metrics.json`);
-      if (!response.ok) {
-        throw new Error(`HTTP error! status: ${response.status}`);
-      }
-      return await response.json();
+      return await this.readDataFile('metrics.json');
     } catch (error) {
       console.error('Failed to load metrics:', error);
       return this.getDefaultMetrics();
@@ -42,11 +66,7 @@ export class StaticDataLoader {
    */
   static async loadPublications(): Promise<Publication[]> {
     try {
-      const response = await fetch(`/data/publications.json`);
-      if (!response.ok) {
-        throw new Error(`HTTP error! status: ${response.status}`);
-      }
-      return await response.json();
+      return await this.readDataFile('publications.json');
     } catch (error) {
       console.error('Failed to load publications:', error);
       return this.getDefaultPublications();
@@ -58,11 +78,7 @@ export class StaticDataLoader {
    */
   static async loadCitationsByYear(): Promise<CitationsByYear[]> {
     try {
-      const response = await fetch(`/data/citations-by-year.json`);
-      if (!response.ok) {
-        throw new Error(`HTTP error! status: ${response.status}`);
-      }
-      return await response.json();
+      return await this.readDataFile('citations-by-year.json');
     } catch (error) {
       console.error('Failed to load citations by year:', error);
       return this.getDefaultCitationsByYear();
