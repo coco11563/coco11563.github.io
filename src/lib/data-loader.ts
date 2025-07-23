@@ -5,14 +5,12 @@ import { ScholarProfile, Publication, Metrics, CitationsByYear } from '@/types/s
  * 从 public/data 目录加载预生成的 JSON 数据
  */
 export class StaticDataLoader {
-  private static basePath = process.env.NODE_ENV === 'production' ? '' : '';
-
   /**
    * 加载学者档案
    */
   static async loadProfile(): Promise<ScholarProfile> {
     try {
-      const response = await fetch(`${this.basePath}/data/scholar-profile.json`);
+      const response = await fetch(`/data/scholar-profile.json`);
       if (!response.ok) {
         throw new Error(`HTTP error! status: ${response.status}`);
       }
@@ -28,7 +26,7 @@ export class StaticDataLoader {
    */
   static async loadMetrics(): Promise<Metrics> {
     try {
-      const response = await fetch(`${this.basePath}/data/metrics.json`);
+      const response = await fetch(`/data/metrics.json`);
       if (!response.ok) {
         throw new Error(`HTTP error! status: ${response.status}`);
       }
@@ -44,7 +42,7 @@ export class StaticDataLoader {
    */
   static async loadPublications(): Promise<Publication[]> {
     try {
-      const response = await fetch(`${this.basePath}/data/publications.json`);
+      const response = await fetch(`/data/publications.json`);
       if (!response.ok) {
         throw new Error(`HTTP error! status: ${response.status}`);
       }
@@ -60,7 +58,7 @@ export class StaticDataLoader {
    */
   static async loadCitationsByYear(): Promise<CitationsByYear[]> {
     try {
-      const response = await fetch(`${this.basePath}/data/citations-by-year.json`);
+      const response = await fetch(`/data/citations-by-year.json`);
       if (!response.ok) {
         throw new Error(`HTTP error! status: ${response.status}`);
       }
