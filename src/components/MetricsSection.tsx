@@ -2,7 +2,7 @@
 
 import { motion } from 'framer-motion'
 import { Metrics, CitationsByYear } from '@/types/scholar'
-import { TrendingUp, BookOpen, Award, Calendar } from 'lucide-react'
+import { TrendingUp, BookOpen, Award, Calendar, Zap } from 'lucide-react'
 
 interface MetricsSectionProps {
   metrics: Metrics
@@ -12,7 +12,7 @@ interface MetricsSectionProps {
 export function MetricsSection({ metrics, citationsByYear }: MetricsSectionProps) {
   const metricCards = [
     {
-      icon: TrendingUp,
+      icon: Zap,
       label: "Total Citations",
       value: metrics.totalCitations,
       recent: metrics.totalCitationsRecent,
@@ -112,16 +112,20 @@ export function MetricsSection({ metrics, citationsByYear }: MetricsSectionProps
               <TrendingUp size={24} className="text-orange-600" />
             </div>
 
-            {/* 迷你柱状图 */}
+            {/* 数值 */}
             <div className="space-y-2">
-              <div className="text-lg font-bold text-gray-900 mb-3">Citation Trends</div>
-              
-              <div className="relative h-24">
-                {/* 迷你柱状图 */}
-                <div className="flex items-end justify-between h-full px-1">
+              <motion.div
+                initial={{ scale: 0 }}
+                whileInView={{ scale: 1 }}
+                viewport={{ once: true }}
+                transition={{ delay: metricCards.length * 0.1 + 0.2, type: "spring" }}
+                className="flex justify-center items-center h-20"
+              >
+                {/* 居中的柱状图 */}
+                <div className="flex items-end justify-center space-x-1 h-16">
                   {citationsByYear.slice(-6).map((item, index) => {
                     const maxCitations = Math.max(...citationsByYear.slice(-6).map(d => d.citations))
-                    const height = (item.citations / maxCitations) * 100
+                    const height = maxCitations > 0 ? Math.max((item.citations / maxCitations) * 100, 5) : 5
                     
                     return (
                       <motion.div
@@ -145,15 +149,10 @@ export function MetricsSection({ metrics, citationsByYear }: MetricsSectionProps
                     )
                   })}
                 </div>
-                
-                {/* 年份标签 */}
-                <div className="flex justify-between text-xs text-gray-500 mt-1 px-1">
-                  {citationsByYear.slice(-6).map((item) => (
-                    <span key={item.year} className="text-center">
-                      {item.year.toString().slice(-2)}
-                    </span>
-                  ))}
-                </div>
+              </motion.div>
+              
+              <div className="metric-label">
+                Citation Trends
               </div>
             </div>
           </motion.div>

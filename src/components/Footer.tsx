@@ -92,16 +92,7 @@ export function Footer() {
           {/* 技术栈信息 */}
           <div className="mt-4 text-center">
             <p className="text-xs text-gray-500">
-              🚀 Deployed on GitHub Pages • 📊 Data auto-updated daily • 
-              🤖 Generated with{' '}
-              <a 
-                href="https://claude.ai/code" 
-                target="_blank" 
-                rel="noopener noreferrer"
-                className="text-primary-400 hover:text-primary-300 transition-colors"
-              >
-                Claude Code
-              </a>
+              🚀 Deployed on GitHub Pages • 📊 Data auto-updated daily
             </p>
           </div>
         </div>
