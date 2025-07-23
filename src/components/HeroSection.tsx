@@ -108,7 +108,7 @@ export function HeroSection({ profile }: HeroSectionProps) {
           color: '#3b82f6',
           distance: 150,
           enable: true,
-          opacity: isTyping ? 0.4 : 0.1,
+          opacity: 0.1,
           width: 1,
         },
         move: {
@@ -118,7 +118,7 @@ export function HeroSection({ profile }: HeroSectionProps) {
             default: 'bounce',
           },
           random: true,
-          speed: isTyping ? 1.5 : 0.5,
+          speed: 0.5,
           straight: false,
         },
         number: {
@@ -139,7 +139,7 @@ export function HeroSection({ profile }: HeroSectionProps) {
       },
       detectRetina: true,
     };
-  }, [isTyping]);
+  }, []);
 
   if (!init) {
     return null;
@@ -302,7 +302,7 @@ export function HeroSection({ profile }: HeroSectionProps) {
                     alt={`${profile.name} Profile Photo`}
                     width={768}
                     height={768}
-                    className="w-full h-full object-cover scale-110"
+                    className="w-full h-full object-cover scale-125"
                     priority
                     unoptimized
                     quality={95}
