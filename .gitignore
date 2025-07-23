@@ -104,3 +104,5 @@ private/
 # Next.js build output
 .next/
 out/
+
+.claude/

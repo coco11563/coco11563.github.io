@@ -5,6 +5,7 @@ import './globals.css'
 const inter = Inter({ subsets: ['latin'] })
 
 export const metadata: Metadata = {
+  metadataBase: new URL('https://coco11563.github.io'),
   title: 'Meng Xiao (肖濛) - Academic Homepage',
   description: 'Personal academic homepage of Meng Xiao, PhD researcher in Data-centric AI, AI4LifeScience, and Scientific Data Mining.',
   keywords: [
