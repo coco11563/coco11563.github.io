@@ -107,7 +107,7 @@ export function NewsSection({ className = "" }: NewsSectionProps) {
   const [isExpanding, setIsExpanding] = useState(false);
   
   // 默认显示的新闻数量（与timeline长度相同）
-  const defaultNewsCount = 3;
+  const defaultNewsCount = 2;
   const displayedNews = showAll ? newsData : newsData.slice(0, defaultNewsCount);
   
   const toggleShowAll = async () => {
