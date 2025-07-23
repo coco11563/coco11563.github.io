@@ -1,23 +1,22 @@
-'use client'
+'use client';
 
-import { Calendar, ExternalLink, Star, Award, BookOpen, Zap } from 'lucide-react'
-import { useState, useEffect } from 'react'
+import React from 'react';
+import { Calendar, ExternalLink, Star, Award, BookOpen, Zap } from 'lucide-react';
 
 interface NewsItem {
-  date: string
-  title: string
-  description?: string
-  link?: string
-  type: 'publication' | 'award' | 'grant' | 'talk' | 'general'
-  highlighted?: boolean
+  date: string;
+  title: string;
+  description?: string;
+  link?: string;
+  type: 'publication' | 'award' | 'grant' | 'talk' | 'general';
+  highlighted?: boolean;
 }
 
 interface NewsSectionProps {
-  className?: string
+  className?: string;
 }
 
-// 默认新闻数据（作为备用）
-const defaultNewsItems: NewsItem[] = [
+const newsData: NewsItem[] = [
   {
     date: "2025.07",
     title: "Two papers accepted by CRAD DCAI Issue and BMC Bioinformatics!",
@@ -80,54 +79,29 @@ const defaultNewsItems: NewsItem[] = [
     title: "One paper accepted by BIBM 2024!",
     type: "publication"
   }
-]
+];
+
+function getNewsIcon(type: string) {
+  switch (type) {
+    case 'publication': return BookOpen;
+    case 'award': return Award;
+    case 'grant': return Star;
+    case 'talk': return Zap;
+    default: return Zap;
+  }
+}
+
+function getNewsColor(type: string) {
+  switch (type) {
+    case 'publication': return 'text-blue-600 bg-blue-50';
+    case 'award': return 'text-yellow-600 bg-yellow-50';
+    case 'grant': return 'text-green-600 bg-green-50';
+    case 'talk': return 'text-purple-600 bg-purple-50';
+    default: return 'text-gray-600 bg-gray-50';
+  }
+}
 
 export function NewsSection({ className = "" }: NewsSectionProps) {
-  const [newsItems, setNewsItems] = useState<NewsItem[]>([])
-  const [loading, setLoading] = useState(true)
-
-  // 加载新闻数据
-  useEffect(() => {
-    const loadNewsData = async () => {
-      try {
-        const response = await fetch('/data/news.json')
-        if (response.ok) {
-          const data = await response.json()
-          setNewsItems(data)
-        } else {
-          setNewsItems(defaultNewsItems)
-        }
-      } catch (error) {
-        console.error('Failed to load news data:', error)
-        setNewsItems(defaultNewsItems)
-      } finally {
-        setLoading(false)
-      }
-    }
-
-    loadNewsData()
-  }, [])
-
-  const getNewsIcon = (type: string) => {
-    switch (type) {
-      case 'publication': return BookOpen
-      case 'award': return Award
-      case 'grant': return Star
-      case 'talk': return Zap
-      default: return Zap
-    }
-  }
-
-  const getNewsColor = (type: string) => {
-    switch (type) {
-      case 'publication': return 'text-blue-600 bg-blue-50'
-      case 'award': return 'text-yellow-600 bg-yellow-50'
-      case 'grant': return 'text-green-600 bg-green-50'
-      case 'talk': return 'text-purple-600 bg-purple-50'
-      default: return 'text-gray-600 bg-gray-50'
-    }
-  }
-
   return (
     <div className={`space-y-6 ${className}`}>
       {/* 标题 */}
@@ -136,22 +110,15 @@ export function NewsSection({ className = "" }: NewsSectionProps) {
         <h3 className="text-2xl font-bold text-gray-900">Latest News</h3>
       </div>
 
-      {loading && (
-        <div className="flex items-center justify-center py-8">
-          <div className="animate-spin rounded-full h-8 w-8 border-b-2 border-primary-600"></div>
-        </div>
-      )}
-
       {/* News Timeline */}
-      {!loading && (
       <div className="relative">
         {/* Timeline Line */}
         <div className="absolute left-6 top-0 bottom-0 w-0.5 bg-gradient-to-b from-primary-400 to-primary-200"></div>
         
         <div className="space-y-8">
-          {newsItems.map((item, index) => {
-            const IconComponent = getNewsIcon(item.type)
-            const colorClasses = getNewsColor(item.type)
+          {newsData.map((item, index) => {
+            const IconComponent = getNewsIcon(item.type);
+            const colorClasses = getNewsColor(item.type);
             
             return (
               <div
@@ -209,7 +176,7 @@ export function NewsSection({ className = "" }: NewsSectionProps) {
                   )}
                 </div>
               </div>
-            )
+            );
           })}
         </div>
       </div>
@@ -221,7 +188,6 @@ export function NewsSection({ className = "" }: NewsSectionProps) {
           View All News
         </button>
       </div>
-      )}
     </div>
-  )
+  );
 }
