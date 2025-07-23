@@ -159,7 +159,7 @@ export function HeroSection({ profile }: HeroSectionProps) {
           className="absolute inset-0 -z-0"
         />
       )}
-      
+
 
       <div className="container-custom relative z-10">
         <div className="grid lg:grid-cols-2 gap-12 items-center">
@@ -293,9 +293,9 @@ export function HeroSection({ profile }: HeroSectionProps) {
               {/* 背景装饰 */}
               <div className="absolute -inset-4 bg-gradient-to-r from-primary-400 to-secondary-400 rounded-full opacity-20 blur-xl" />
               <div className="absolute -inset-2 bg-gradient-to-r from-primary-300 to-secondary-300 rounded-full opacity-30 blur-lg" />
-              
+              <div className="relative w-64 h-64 md:w-80 md:h-80 lg:w-96 lg:h-96">
               {/* 头像 */}
-                <div className="relative w-64 h-64 md:w-80 md:h-80 lg:w-96 lg:h-96">
+                  <div className="w-full h-full rounded-full overflow-hidden border-4 border-white shadow-2xl">
                   <Image
                     src={profile.image}
                     alt={`${profile.name} Profile Photo`}
