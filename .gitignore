@@ -101,3 +101,6 @@ credentials.json
 *.pdf.backup
 draft/
 private/
+
+.next/*
+.next

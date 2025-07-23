@@ -175,19 +175,19 @@ export function ContactSection({ profile }: ContactSectionProps) {
                 <ul className="space-y-2 ml-4">
                   <li className="flex items-start">
                     <span className="w-2 h-2 bg-primary-600 rounded-full mt-2 mr-3 flex-shrink-0"></span>
-                    <span>Data-centric AI and machine learning systems</span>
+                    <span>Foundation models for biomedical scientific discovery</span>
                   </li>
                   <li className="flex items-start">
                     <span className="w-2 h-2 bg-primary-600 rounded-full mt-2 mr-3 flex-shrink-0"></span>
-                    <span>AI applications in life sciences and healthcare</span>
+                    <span>Agentic AI applications in life sciences and healthcare</span>
                   </li>
                   <li className="flex items-start">
                     <span className="w-2 h-2 bg-primary-600 rounded-full mt-2 mr-3 flex-shrink-0"></span>
-                    <span>Scientific data mining and knowledge discovery</span>
+                    <span>Scientific literature data mining and knowledge discovery</span>
                   </li>
                   <li className="flex items-start">
                     <span className="w-2 h-2 bg-primary-600 rounded-full mt-2 mr-3 flex-shrink-0"></span>
-                    <span>Foundation models for scientific applications</span>
+                    <span>Data-centric AI and efficient machine learning systems</span>
                   </li>
                 </ul>
               </div>
