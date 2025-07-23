@@ -3,6 +3,7 @@
 import { motion } from 'framer-motion'
 import { ScholarProfile } from '@/types/scholar'
 import { GraduationCap, Award, Star, Users } from 'lucide-react'
+import { NewsSection } from './NewsSection'
 
 interface AboutSectionProps {
   profile: ScholarProfile
@@ -120,6 +121,11 @@ export function AboutSection({ profile }: AboutSectionProps) {
                   </motion.span>
                 ))}
               </div>
+            </div>
+
+            {/* News 部分 */}
+            <div className="mt-12">
+              <NewsSection />
             </div>
           </motion.div>
 
