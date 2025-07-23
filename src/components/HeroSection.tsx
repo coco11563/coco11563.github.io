@@ -20,7 +20,11 @@ export function HeroSection({ profile }: HeroSectionProps) {
       "Data-centric AI Researcher",
       "AI4LifeScience Expert", 
       "Scientific Data Mining Specialist",
-      "Machine Learning Engineer"
+      "Machine Learning Engineer",
+      "Code 4 Fun!",
+      "Good Beer Brewer",
+      "Rock Star",
+      "Cocktail Expert"
     ]
     const currentText = texts[currentIndex]
     const shouldDelete = isDeleting
@@ -56,47 +60,38 @@ export function HeroSection({ profile }: HeroSectionProps) {
       {/* 背景动画 */}
       <div className="absolute inset-0 bg-pattern opacity-30" />
       
-      {/* 浮动粒子效果 - 独立动画，不与打字特效同步 */}
-      <div className="absolute inset-0">
-        {[...Array(20)].map((_, i) => {
-          // 为每个粒子生成独立的随机参数
+      {/* 高性能粒子效果 - 优化GPU加速和动画性能 */}
+      <div className="absolute inset-0 pointer-events-none overflow-hidden">
+        {[...Array(12)].map((_, i) => {
+          // 优化的随机参数
           const initialX = Math.random() * 100;
           const initialY = Math.random() * 100;
-          const moveRangeX = 50 + Math.random() * 100;
-          const moveRangeY = 50 + Math.random() * 100;
-          const baseDuration = 8 + Math.random() * 8; // 8-16秒随机持续时间
-          const delay = Math.random() * 4; // 0-4秒随机延迟
+          const animationDelay = Math.random() * 8; // 0-8秒随机延迟
+          const animationDuration = 15 + Math.random() * 10; // 15-25秒持续时间
+          const size = 1.5 + Math.random() * 0.8; // 1.5-2.3px大小变体
+          const useComplexAnimation = i % 3 === 0; // 每3个粒子使用一个复杂动画
           
           return (
-            <motion.div
+            <div
               key={i}
-              className="absolute w-2 h-2 bg-primary-300 rounded-full opacity-40"
-              initial={{
-                x: initialX,
-                y: initialY,
-                scale: 0.8 + Math.random() * 0.4,
-              }}
-              animate={{
-                x: [initialX, initialX + moveRangeX, initialX - moveRangeX, initialX],
-                y: [initialY, initialY - moveRangeY, initialY + moveRangeY, initialY],
-                scale: [0.8, 1.4, 0.6, 0.8],
-                opacity: [0.4, 0.8, 0.2, 0.4],
-              }}
-              transition={{
-                duration: baseDuration,
-                repeat: Infinity,
-                ease: "easeInOut",
-                delay: delay,
-                times: [0, 0.33, 0.66, 1], // 控制动画节点时间
-              }}
+              className="absolute rounded-full bg-primary-300"
               style={{
                 left: `${initialX}%`,
                 top: `${initialY}%`,
+                width: `${size}px`,
+                height: `${size}px`,
+                opacity: 0.25 + Math.random() * 0.3, // 0.25-0.55透明度
+                animation: `${useComplexAnimation ? 'particleFloat' : 'particleFloatLite'} ${animationDuration}s ${animationDelay}s infinite ease-in-out`,
+                willChange: 'transform, opacity',
+                backfaceVisibility: 'hidden',
+                perspective: '1000px',
+                transform: 'translateZ(0)', // 强制启用硬件加速
               }}
             />
           );
         })}
       </div>
+      
 
       <div className="container-custom relative z-10">
         <div className="grid lg:grid-cols-2 gap-12 items-center">
