@@ -49,20 +49,41 @@ async function fetchScholarDataWithSerpAPI(scholarId) {
   }
 
   try {
-    const { getJson } = require("serpapi");
-    
     console.log('🔍 正在从 Google Scholar 获取数据...');
     
-    // 获取学者基本信息和论文列表
-    const authorData = await fetchWithRetry(() => 
-      getJson({
-        engine: "google_scholar_author",
-        author_id: scholarId,
-        api_key: CONFIG.apiKey,
-        num: 100,
-        sort: "cited"
-      })
-    );
+    // 使用原生HTTPS请求（避免依赖问题）
+    const https = require('https');
+    const url = `https://serpapi.com/search.json?engine=google_scholar_author&author_id=${scholarId}&api_key=${CONFIG.apiKey}&num=100&sort=cited`;
+    const apiUrl = new URL(url);
+    
+    const authorData = await new Promise((resolve, reject) => {
+      const req = https.get({
+        hostname: apiUrl.hostname,
+        path: apiUrl.pathname + apiUrl.search,
+        headers: { 'User-Agent': 'Node.js' }
+      }, (res) => {
+        let data = '';
+        res.on('data', (chunk) => { data += chunk; });
+        res.on('end', () => {
+          try {
+            const result = JSON.parse(data);
+            if (result.error) {
+              reject(new Error(result.error));
+            } else {
+              resolve(result);
+            }
+          } catch (parseError) {
+            reject(parseError);
+          }
+        });
+      });
+      
+      req.on('error', reject);
+      req.setTimeout(10000, () => {
+        req.destroy();
+        reject(new Error('Request timeout'));
+      });
+    });
 
     console.log(`✅ 成功获取学者数据: ${authorData.author?.name}`);
     
