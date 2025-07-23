@@ -110,8 +110,8 @@ async function fetchScholarDataFallback() {
     name: 'Meng Xiao',
     nameZh: '肖濛',
     affiliation: [
-      'Computer Network Information Center, Chinese Academy of Sciences',
-      'DUKE-NUS Medical School, National University of Singapore'
+      'Computer Network Information Center, CAS',
+      'Duke-NUS Medical School, NUS'
     ],
     email: ['shaow.at.cnic.cn', 'meng.xiao.at.nus.edu.sg'],
     homepage: 'https://coco11563.github.io',
@@ -255,7 +255,7 @@ function processScholarData(authorData) {
   const affiliationStr = authorData.author?.affiliation || authorData.author?.affiliations || '';
   const affiliationArray = typeof affiliationStr === 'string' && affiliationStr
     ? affiliationStr.split(/[;,]\s*/).filter(item => item.trim())
-    : ['Computer Network Information Center, Chinese Academy of Sciences', 'DUKE-NUS Medical School, National University of Singapore'];
+    : ['Computer Network Information Center, CAS', 'Duke-NUS Medical School, NUS'];
 
   // 处理邮箱信息
   const emailStr = authorData.author?.email || '';
@@ -272,8 +272,8 @@ function processScholarData(authorData) {
     interests: Array.isArray(authorData.author?.interests)
       ? authorData.author.interests.map(i => typeof i === 'object' ? i.title : i)
       : authorData.author?.interests || ['Data-centric AI', 'AI4LifeScience', 'Scientific Data Mining'],
-    image: authorData.author?.thumbnail || '/indexfiles/me.png',
-    verified: authorData.author?.email_verified || false
+    image: '/indexfiles/me.png', // 固定使用本地图片
+    verified: true // 手动设置为已验证
   };
 
   // 改进的指标提取逻辑

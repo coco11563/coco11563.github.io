@@ -2,10 +2,8 @@
   "name": "Meng Xiao (肖濛)",
   "nameZh": "肖濛",
   "affiliation": [
-    "Computer Network Information Center",
-    "CAS",
-    "Duke-NUS Medical School",
-    "NUS"
+    "Computer Network Information Center, CAS",
+    "Duke-NUS Medical School, NUS"
   ],
   "email": [
     "shaow.at.cnic.cn",
@@ -17,6 +15,6 @@
     "AI4Data",
     "Data Mining"
   ],
-  "image": "https://scholar.googleusercontent.com/citations?view_op=view_photo&user=YGwukbUAAAAJ&citpid=16",
-  "verified": false
+  "image": "/indexfiles/me.png",
+  "verified": true
 }
