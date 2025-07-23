@@ -89,11 +89,23 @@ export function HeroSection({ profile }: HeroSectionProps) {
       interactivity: {
         events: {
           onHover: {
-            enable: false, // 禁用鼠标悬停交互
-            mode: 'repulse',
+            enable: true, // 启用鼠标悬停交互
+            mode: 'attract',
+          },
+          onClick: {
+            enable: true,
+            mode: 'push',
           },
         },
         modes: {
+          attract: {
+            distance: 200,
+            duration: 0.4,
+            factor: 1,
+          },
+          push: {
+            particles_nb: 4,
+          },
           repulse: {
             distance: 100,
             duration: 0.4,
@@ -106,9 +118,9 @@ export function HeroSection({ profile }: HeroSectionProps) {
         },
         links: {
           color: '#3b82f6',
-          distance: 150,
+          distance: 120,
           enable: true,
-          opacity: 0.1,
+          opacity: 0.2,
           width: 1,
         },
         move: {
@@ -117,24 +129,34 @@ export function HeroSection({ profile }: HeroSectionProps) {
           outModes: {
             default: 'bounce',
           },
-          random: true,
-          speed: 0.2, // 降低粒子速度
+          random: false,
+          speed: 0.5,
           straight: false,
         },
         number: {
           density: {
             enable: true,
           },
-          value: 15, // 减少粒子数量
+          value: 20,
         },
         opacity: {
-          value: 0.3,
+          value: 0.4,
+          animation: {
+            enable: true,
+            speed: 1,
+            sync: false,
+          },
         },
         shape: {
           type: 'circle',
         },
         size: {
-          value: { min: 1, max: 4 },
+          value: { min: 1, max: 3 },
+          animation: {
+            enable: true,
+            speed: 2,
+            sync: false,
+          },
         },
       },
       detectRetina: true,
