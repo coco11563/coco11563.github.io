@@ -17,75 +17,75 @@ interface NewsSectionProps {
   className?: string
 }
 
+// 默认新闻数据（作为备用）
+const defaultNewsItems: NewsItem[] = [
+  {
+    date: "2025.07",
+    title: "Two papers accepted by CRAD DCAI Issue and BMC Bioinformatics!",
+    type: "publication",
+    highlighted: true
+  },
+  {
+    date: "2025.05", 
+    title: "New survey about Gut microbiota and tuberculosis published!",
+    link: "https://onlinelibrary.wiley.com/doi/10.1002/imt2.70054",
+    type: "publication"
+  },
+  {
+    date: "2025.05",
+    title: "Three papers accepted by ICML 2025, SIGKDD 2025, and iMeta!",
+    type: "publication", 
+    highlighted: true
+  },
+  {
+    date: "2025.04",
+    title: "Five papers accepted by ICLR 2025, DASFAA 2025, IEEE ICDE 2025, Advanced Science, and ICMR 2025!",
+    type: "publication",
+    highlighted: true
+  },
+  {
+    date: "2025.03",
+    title: "New survey about Agentic AI published!",
+    link: "https://arxiv.org/abs/2503.21460",
+    type: "publication"
+  },
+  {
+    date: "2025.01",
+    title: "New survey about DCAI published!",
+    link: "http://arxiv.org/abs/2501.10555", 
+    type: "publication"
+  },
+  {
+    date: "2025.01",
+    title: "Nominated as Excellent Reviewer (Top-20%) for ACM SIGKDD!",
+    type: "award"
+  },
+  {
+    date: "2024.12",
+    title: "Research proposal about Genomic Data Engineering granted by Natural Science Foundation of Beijing, China!",
+    type: "grant"
+  },
+  {
+    date: "2024.11",
+    title: "Research proposal about Scientific Impact Evaluation granted by Natural Science Foundation of China!",
+    type: "grant"
+  },
+  {
+    date: "2024.11",
+    title: "Invited talk as distinguished student for UCAS Graduate Academic Forum!",
+    link: "https://scce.ucas.ac.cn/index.php/zh-CN/xwbd/3554-2024-5",
+    type: "talk"
+  },
+  {
+    date: "2024.10",
+    title: "One paper accepted by BIBM 2024!",
+    type: "publication"
+  }
+]
+
 export function NewsSection({ className = "" }: NewsSectionProps) {
   const [newsItems, setNewsItems] = useState<NewsItem[]>([])
   const [loading, setLoading] = useState(true)
-
-  // 默认新闻数据（作为备用）
-  const defaultNewsItems: NewsItem[] = [
-    {
-      date: "2025.07",
-      title: "Two papers accepted by CRAD DCAI Issue and BMC Bioinformatics!",
-      type: "publication",
-      highlighted: true
-    },
-    {
-      date: "2025.05", 
-      title: "New survey about Gut microbiota and tuberculosis published!",
-      link: "https://onlinelibrary.wiley.com/doi/10.1002/imt2.70054",
-      type: "publication"
-    },
-    {
-      date: "2025.05",
-      title: "Three papers accepted by ICML 2025, SIGKDD 2025, and iMeta!",
-      type: "publication", 
-      highlighted: true
-    },
-    {
-      date: "2025.04",
-      title: "Five papers accepted by ICLR 2025, DASFAA 2025, IEEE ICDE 2025, Advanced Science, and ICMR 2025!",
-      type: "publication",
-      highlighted: true
-    },
-    {
-      date: "2025.03",
-      title: "New survey about Agentic AI published!",
-      link: "https://arxiv.org/abs/2503.21460",
-      type: "publication"
-    },
-    {
-      date: "2025.01",
-      title: "New survey about DCAI published!",
-      link: "http://arxiv.org/abs/2501.10555", 
-      type: "publication"
-    },
-    {
-      date: "2025.01",
-      title: "Nominated as Excellent Reviewer (Top-20%) for ACM SIGKDD!",
-      type: "award"
-    },
-    {
-      date: "2024.12",
-      title: "Research proposal about Genomic Data Engineering granted by Natural Science Foundation of Beijing, China!",
-      type: "grant"
-    },
-    {
-      date: "2024.11",
-      title: "Research proposal about Scientific Impact Evaluation granted by Natural Science Foundation of China!",
-      type: "grant"
-    },
-    {
-      date: "2024.11",
-      title: "Invited talk as distinguished student for UCAS Graduate Academic Forum!",
-      link: "https://scce.ucas.ac.cn/index.php/zh-CN/xwbd/3554-2024-5", 
-      type: "talk"
-    },
-    {
-      date: "2024.10",
-      title: "One paper accepted by BIBM 2024!",
-      type: "publication"
-    }
-  ]
 
   // 加载新闻数据
   useEffect(() => {
