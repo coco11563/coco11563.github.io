@@ -1,20 +1,36 @@
-'use client'
+"""'use client'
 
-import { useState, useEffect } from 'react'
+import { useState, useEffect, useMemo, useCallback } from 'react'
 import Image from 'next/image'
 import { motion } from 'framer-motion'
 import { ChevronDown, MapPin, Mail, ExternalLink } from 'lucide-react'
 import { ScholarProfile } from '@/types/scholar'
+import Particles, { initParticlesEngine } from "@tsparticles/react";
+import { type Container, type ISourceOptions } from "@tsparticles/engine";
+import { loadSlim } from "@tsparticles/slim";
 
 interface HeroSectionProps {
   profile: ScholarProfile
 }
 
 export function HeroSection({ profile }: HeroSectionProps) {
+  const [init, setInit] = useState(false);
   const [typedText, setTypedText] = useState('')
   const [currentIndex, setCurrentIndex] = useState(0)
   const [isDeleting, setIsDeleting] = useState(false)
   const [isTyping, setIsTyping] = useState(true)
+
+  useEffect(() => {
+    initParticlesEngine(async (engine) => {
+      await loadSlim(engine);
+    }).then(() => {
+      setInit(true);
+    });
+  }, []);
+
+  const particlesLoaded = async (container?: Container): Promise<void> => {
+    console.log(container);
+  };
 
   useEffect(() => {
     const texts = [
@@ -62,49 +78,84 @@ export function HeroSection({ profile }: HeroSectionProps) {
     }
   }
 
+  const particleOptions = useMemo((): ISourceOptions => {
+    return {
+      background: {
+        color: {
+          value: 'transparent',
+        },
+      },
+      fpsLimit: 60,
+      interactivity: {
+        events: {
+          onHover: {
+            enable: true,
+            mode: 'repulse',
+          },
+        },
+        modes: {
+          repulse: {
+            distance: 100,
+            duration: 0.4,
+          },
+        },
+      },
+      particles: {
+        color: {
+          value: '#3b82f6',
+        },
+        links: {
+          color: '#3b82f6',
+          distance: 150,
+          enable: true,
+          opacity: 0.2,
+          width: 1,
+        },
+        move: {
+          direction: 'none',
+          enable: true,
+          outModes: {
+            default: 'bounce',
+          },
+          random: true,
+          speed: isTyping ? 2 : 0.5,
+          straight: false,
+        },
+        number: {
+          density: {
+            enable: true,
+          },
+          value: 30,
+        },
+        opacity: {
+          value: 0.3,
+        },
+        shape: {
+          type: 'circle',
+        },
+        size: {
+          value: { min: 1, max: 4 },
+        },
+      },
+      detectRetina: true,
+    };
+  }, [isTyping]);
+
+  if (!init) {
+    return null;
+  }
+
   return (
     <section className="relative min-h-screen flex items-center justify-center overflow-hidden bg-gradient-to-br from-slate-50 via-blue-50 to-indigo-100">
       {/* 背景动画 */}
       <div className="absolute inset-0 bg-pattern opacity-30" />
       
-      {/* 独立的背景粒子动画 - 完全解耦于打字效果 */}
-      <div className="absolute inset-0 pointer-events-none overflow-hidden">
-        {[...Array(20)].map((_, i) => {
-          // 固定的随机参数，在组件生命周期内保持一致
-          const initialX = (i * 47.3) % 100; // 伪随机分布
-          const initialY = (i * 31.7) % 100;
-          const animationDelay = (i * 0.7) % 8; // 0-8秒延迟
-          const baseAnimationDuration = 12 + (i % 8); // 12-20秒基础持续时间
-          const typingSpeedBoost = isTyping ? 0.7 : 1; // 打字时加速30%
-          const animationDuration = baseAnimationDuration * typingSpeedBoost;
-          const size = 3 + (i % 5); // 3-7px
-          const opacity = 0.2 + (i % 4) * 0.1; // 0.2-0.5
-          
-          return (
-            <div
-              key={i}
-              className={`absolute rounded-full transition-all duration-500 ${
-                isTyping 
-                  ? 'bg-blue-500/60 animate-pulse' 
-                  : 'bg-blue-400/30 animate-pulse'
-              }`}
-              style={{
-                left: `${initialX}%`,
-                top: `${initialY}%`,
-                width: `${size}px`,
-                height: `${size}px`,
-                opacity: opacity,
-                animationDelay: `${animationDelay}s`,
-                animationDuration: `${animationDuration}s`,
-                boxShadow: isTyping 
-                  ? '0 0 8px rgba(59, 130, 246, 0.6)' 
-                  : '0 0 4px rgba(59, 130, 246, 0.3)',
-                transform: 'translate3d(0, 0, 0)',
-              }}
-            />
-          );
-        })}
-      </div>
+      <Particles
+        id="tsparticles"
+        particlesLoaded={particlesLoaded}
+        options={particleOptions}
+        className="absolute inset-0 -z-0"
+      />
       
 
       <div className="container-custom relative z-10">
@@ -161,7 +212,7 @@ export function HeroSection({ profile }: HeroSectionProps) {
               {profile.affiliation.map((aff, index) => (
                 <div key={index} className="flex items-center space-x-2 text-gray-600">
                   <MapPin size={16} className="text-primary-500 flex-shrink-0" />
-                  <span className="text-sm md:text-base">{aff}</span>
+                  <span className="text-sm md:text-base">{"'"}</span>
                 </div>
               ))}
             </motion.div>
@@ -242,7 +293,7 @@ export function HeroSection({ profile }: HeroSectionProps) {
               
               {/* 头像 */}
               <div className="relative w-64 h-64 md:w-80 md:h-80 lg:w-96 lg:h-96">
-                <div className="w-full h-full rounded-full overflow-hidden border-4 border-white shadow-2xl">
+                <div className="w-full h-full rounded-full overflow-hidden shadow-2xl">
                   <Image
                     src={profile.image}
                     alt={`${profile.name} Profile Photo`}
@@ -287,3 +338,4 @@ export function HeroSection({ profile }: HeroSectionProps) {
     </section>
   )
 }
+""
