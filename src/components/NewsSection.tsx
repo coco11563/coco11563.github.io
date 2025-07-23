@@ -1,7 +1,8 @@
 'use client';
 
-import React from 'react';
-import { Calendar, ExternalLink, Star, Award, BookOpen, Zap } from 'lucide-react';
+import React, { useState } from 'react';
+import { motion, AnimatePresence } from 'framer-motion';
+import { Calendar, ExternalLink, Star, Award, BookOpen, Zap, ChevronDown, ChevronUp } from 'lucide-react';
 
 interface NewsItem {
   date: string;
@@ -102,8 +103,32 @@ function getNewsColor(type: string) {
 }
 
 export function NewsSection({ className = "" }: NewsSectionProps) {
+  const [showAll, setShowAll] = useState(false);
+  const [isExpanding, setIsExpanding] = useState(false);
+  
+  // 默认显示的新闻数量（与timeline长度相同）
+  const defaultNewsCount = 3;
+  const displayedNews = showAll ? newsData : newsData.slice(0, defaultNewsCount);
+  
+  const toggleShowAll = async () => {
+    if (!showAll) {
+      setIsExpanding(true);
+      setShowAll(true);
+      // 等待动画完成后重置expanding状态
+      setTimeout(() => setIsExpanding(false), 600);
+    } else {
+      setShowAll(false);
+    }
+  };
+
   return (
-    <div className={`space-y-6 ${className}`}>
+    <motion.div 
+      initial={{ opacity: 0, y: 20 }}
+      whileInView={{ opacity: 1, y: 0 }}
+      viewport={{ once: true }}
+      transition={{ duration: 0.6 }}
+      className={`space-y-6 ${className}`}
+    >
       {/* 标题 */}
       <div className="flex items-center space-x-3 mb-8">
         <Calendar className="text-primary-600" size={28} />
@@ -116,15 +141,23 @@ export function NewsSection({ className = "" }: NewsSectionProps) {
         <div className="absolute left-6 top-0 bottom-0 w-0.5 bg-gradient-to-b from-primary-400 to-primary-200"></div>
         
         <div className="space-y-8">
-          {newsData.map((item, index) => {
-            const IconComponent = getNewsIcon(item.type);
-            const colorClasses = getNewsColor(item.type);
-            
-            return (
-              <div
-                key={index}
-                className="relative flex items-start space-x-4"
-              >
+          <AnimatePresence>
+            {displayedNews.map((item, index) => {
+              const IconComponent = getNewsIcon(item.type);
+              const colorClasses = getNewsColor(item.type);
+              
+              return (
+                <motion.div
+                  key={index}
+                  initial={{ opacity: 0, x: -20 }}
+                  animate={{ opacity: 1, x: 0 }}
+                  exit={{ opacity: 0, x: -20 }}
+                  transition={{ 
+                    duration: 0.5, 
+                    delay: isExpanding && index >= defaultNewsCount ? (index - defaultNewsCount) * 0.1 : index * 0.1 
+                  }}
+                  className="relative flex items-start space-x-4"
+                >
                 {/* Timeline Icon */}
                 <div className={`flex-shrink-0 w-12 h-12 rounded-full ${colorClasses} flex items-center justify-center relative z-10 shadow-sm`}>
                   <IconComponent size={20} />
@@ -175,19 +208,52 @@ export function NewsSection({ className = "" }: NewsSectionProps) {
                     </div>
                   )}
                 </div>
-              </div>
+              </motion.div>
             );
           })}
+          </AnimatePresence>
         </div>
       </div>
 
-      {/* View More Button */}
-      <div className="text-center pt-6">
-        <button className="inline-flex items-center px-4 py-2 text-sm font-medium text-primary-600 bg-primary-50 hover:bg-primary-100 rounded-lg transition-colors">
-          <Calendar size={16} className="mr-2" />
-          View All News
-        </button>
-      </div>
-    </div>
+      {/* View More/Less Button */}
+      {newsData.length > defaultNewsCount && (
+        <motion.div 
+          className="text-center pt-6"
+          initial={{ opacity: 0 }}
+          animate={{ opacity: 1 }}
+          transition={{ delay: 0.3 }}
+        >
+          <button 
+            onClick={toggleShowAll}
+            className="inline-flex items-center px-4 py-2 text-sm font-medium text-primary-600 bg-primary-50 hover:bg-primary-100 rounded-lg transition-all duration-300 hover:scale-105"
+          >
+            <Calendar size={16} className="mr-2" />
+            {showAll ? (
+              <>
+                Show Less
+                <ChevronUp size={16} className="ml-2" />
+              </>
+            ) : (
+              <>
+                View All News ({newsData.length})
+                <ChevronDown size={16} className="ml-2" />
+              </>
+            )}
+          </button>
+          
+          {/* 展开时显示统计信息 */}
+          {showAll && (
+            <motion.p 
+              initial={{ opacity: 0, y: 10 }}
+              animate={{ opacity: 1, y: 0 }}
+              transition={{ delay: 0.2 }}
+              className="text-xs text-gray-500 mt-2"
+            >
+              Showing all {newsData.length} news items
+            </motion.p>
+          )}
+        </motion.div>
+      )}
+    </motion.div>
   );
 }
