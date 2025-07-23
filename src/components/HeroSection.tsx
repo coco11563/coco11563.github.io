@@ -1,6 +1,6 @@
-"""'use client'
+'use client'
 
-import { useState, useEffect, useMemo, useCallback } from 'react'
+import { useState, useEffect, useMemo } from 'react'
 import Image from 'next/image'
 import { motion } from 'framer-motion'
 import { ChevronDown, MapPin, Mail, ExternalLink } from 'lucide-react'
@@ -212,7 +212,7 @@ export function HeroSection({ profile }: HeroSectionProps) {
               {profile.affiliation.map((aff, index) => (
                 <div key={index} className="flex items-center space-x-2 text-gray-600">
                   <MapPin size={16} className="text-primary-500 flex-shrink-0" />
-                  <span className="text-sm md:text-base">{"'"}</span>
+                  <span className="text-sm md:text-base">{aff}</span>
                 </div>
               ))}
             </motion.div>
@@ -338,4 +338,3 @@ export function HeroSection({ profile }: HeroSectionProps) {
     </section>
   )
 }
-""
