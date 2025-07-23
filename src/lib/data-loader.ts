@@ -147,17 +147,19 @@ export class StaticDataLoader {
   // 默认数据（回退选项）
   private static getDefaultProfile(): ScholarProfile {
     return {
-      name: 'Meng Xiao',
+      name: 'Meng Xiao (肖濛)',
       nameZh: '肖濛',
       affiliation: [
-        'Computer Network Information Center, Chinese Academy of Sciences',
-        'DUKE-NUS Medical School, National University of Singapore'
+        'Computer Network Information Center',
+        'CAS',
+        'Duke-NUS Medical School',
+        'NUS'
       ],
       email: ['shaow.at.cnic.cn', 'meng.xiao.at.nus.edu.sg'],
       homepage: 'https://coco11563.github.io',
-      interests: ['Data-centric AI', 'AI4LifeScience', 'Scientific Data Mining'],
+      interests: ['AI4S', 'AI4Data', 'Data Mining'],
       image: '/indexfiles/me.png',
-      verified: true
+      verified: false
     };
   }
 

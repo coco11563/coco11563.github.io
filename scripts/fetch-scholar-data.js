@@ -251,13 +251,27 @@ function generateMockCitationsByYear(startYear, endYear) {
  * 处理和标准化Scholar数据
  */
 function processScholarData(authorData) {
+  // 处理机构信息 - SerpAPI返回字符串，需要转换为数组
+  const affiliationStr = authorData.author?.affiliation || authorData.author?.affiliations || '';
+  const affiliationArray = typeof affiliationStr === 'string' && affiliationStr
+    ? affiliationStr.split(/[;,]\s*/).filter(item => item.trim())
+    : ['Computer Network Information Center, Chinese Academy of Sciences', 'DUKE-NUS Medical School, National University of Singapore'];
+
+  // 处理邮箱信息
+  const emailStr = authorData.author?.email || '';
+  const emailArray = emailStr.includes('Verified email at') 
+    ? ['shaow.at.cnic.cn', 'meng.xiao.at.nus.edu.sg']
+    : [emailStr].filter(Boolean);
+
   const profile = {
     name: authorData.author?.name || 'Meng Xiao',
     nameZh: '肖濛',
-    affiliation: authorData.author?.affiliations || [],
-    email: authorData.author?.email || '',
-    homepage: authorData.author?.homepage || '',
-    interests: authorData.author?.interests?.map(i => i.title) || [],
+    affiliation: affiliationArray,
+    email: emailArray.length > 0 ? emailArray : ['shaow.at.cnic.cn', 'meng.xiao.at.nus.edu.sg'],
+    homepage: authorData.author?.homepage || 'https://coco11563.github.io',
+    interests: Array.isArray(authorData.author?.interests)
+      ? authorData.author.interests.map(i => typeof i === 'object' ? i.title : i)
+      : authorData.author?.interests || ['Data-centric AI', 'AI4LifeScience', 'Scientific Data Mining'],
     image: authorData.author?.thumbnail || '/indexfiles/me.png',
     verified: authorData.author?.email_verified || false
   };
