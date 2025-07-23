@@ -3,7 +3,7 @@
 # GitHub Secrets 配置脚本
 # 需要先安装 GitHub CLI: https://cli.github.com/
 
-API_KEY="426465cd7cc1af7ad50cdcb73736b2fe4c069184e52957d80602bf302c363b66"
+API_KEY="YOUR_SERPAPI_KEY_HERE"
 
 echo "🔧 配置 GitHub Secrets..."
 
