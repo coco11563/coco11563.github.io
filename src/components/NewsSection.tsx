@@ -2,6 +2,7 @@
 
 import { motion } from 'framer-motion'
 import { Calendar, ExternalLink, Star, Award, BookOpen, Zap } from 'lucide-react'
+import { useState, useEffect } from 'react'
 
 interface NewsItem {
   date: string
@@ -17,7 +18,11 @@ interface NewsSectionProps {
 }
 
 export function NewsSection({ className = "" }: NewsSectionProps) {
-  const newsItems: NewsItem[] = [
+  const [newsItems, setNewsItems] = useState<NewsItem[]>([])
+  const [loading, setLoading] = useState(true)
+
+  // 默认新闻数据（作为备用）
+  const defaultNewsItems: NewsItem[] = [
     {
       date: "2025.07",
       title: "Two papers accepted by CRAD DCAI Issue and BMC Bioinformatics!",
@@ -82,6 +87,28 @@ export function NewsSection({ className = "" }: NewsSectionProps) {
     }
   ]
 
+  // 加载新闻数据
+  useEffect(() => {
+    const loadNewsData = async () => {
+      try {
+        const response = await fetch('/data/news.json')
+        if (response.ok) {
+          const data = await response.json()
+          setNewsItems(data)
+        } else {
+          setNewsItems(defaultNewsItems)
+        }
+      } catch (error) {
+        console.error('Failed to load news data:', error)
+        setNewsItems(defaultNewsItems)
+      } finally {
+        setLoading(false)
+      }
+    }
+
+    loadNewsData()
+  }, [])
+
   const getNewsIcon = (type: string) => {
     switch (type) {
       case 'publication': return BookOpen
@@ -115,7 +142,14 @@ export function NewsSection({ className = "" }: NewsSectionProps) {
         <h3 className="text-2xl font-bold text-gray-900">Latest News</h3>
       </div>
 
+      {loading && (
+        <div className="flex items-center justify-center py-8">
+          <div className="animate-spin rounded-full h-8 w-8 border-b-2 border-primary-600"></div>
+        </div>
+      )}
+
       {/* News Timeline */}
+      {!loading && (
       <div className="relative">
         {/* Timeline Line */}
         <div className="absolute left-6 top-0 bottom-0 w-0.5 bg-gradient-to-b from-primary-400 to-primary-200"></div>
@@ -202,6 +236,7 @@ export function NewsSection({ className = "" }: NewsSectionProps) {
           View All News
         </button>
       </motion.div>
+      )}
     </motion.div>
   )
 }

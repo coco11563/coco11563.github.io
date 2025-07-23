@@ -263,15 +263,17 @@ function processScholarData(authorData) {
     ? ['shaow.at.cnic.cn', 'meng.xiao.at.nus.edu.sg']
     : [emailStr].filter(Boolean);
 
+  // 固定的profile数据，不允许自动更新覆盖
   const profile = {
-    name: authorData.author?.name || 'Meng Xiao',
+    name: 'Meng Xiao (肖濛)',
     nameZh: '肖濛',
-    affiliation: affiliationArray,
-    email: emailArray.length > 0 ? emailArray : ['shaow.at.cnic.cn', 'meng.xiao.at.nus.edu.sg'],
-    homepage: authorData.author?.homepage || 'https://coco11563.github.io',
-    interests: Array.isArray(authorData.author?.interests)
-      ? authorData.author.interests.map(i => typeof i === 'object' ? i.title : i)
-      : authorData.author?.interests || ['Data-centric AI', 'AI4LifeScience', 'Scientific Data Mining'],
+    affiliation: [
+      'Computer Network Information Center, CAS',
+      'Duke-NUS Medical School, NUS'
+    ], // 固定格式，防止被覆盖
+    email: ['shaow.at.cnic.cn', 'meng.xiao.at.nus.edu.sg'],
+    homepage: 'https://coco11563.github.io',
+    interests: ['AI4S', 'AI4Data', 'Data Mining'], // 固定兴趣标签
     image: '/indexfiles/me.png', // 固定使用本地图片
     verified: true // 手动设置为已验证
   };
