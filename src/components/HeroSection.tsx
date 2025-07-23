@@ -205,8 +205,8 @@ export function HeroSection({ profile }: HeroSectionProps) {
                   <Image
                     src={profile.image}
                     alt={`${profile.name} Profile Photo`}
-                    fill                    /* 让 Image 绝对定位填满父容器 */
-                    className="rounded-full object-cover shadow-2xl"
+                    fill
+                    className="object-cover scale-110"
                     priority
                     quality={95}
                     sizes="(max-width: 768px) 100vw, 768px"

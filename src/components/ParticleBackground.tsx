@@ -7,6 +7,7 @@ import { loadSlim } from "@tsparticles/slim";
 
 const ParticleBackground = memo(() => {
   const [init, setInit] = useState(false);
+  const [isVisible, setIsVisible] = useState(true);
 
   useEffect(() => {
     initParticlesEngine(async (engine) => {
@@ -14,6 +15,18 @@ const ParticleBackground = memo(() => {
     }).then(() => {
       setInit(true);
     });
+  }, []);
+
+  useEffect(() => {
+    const handleScroll = () => {
+      const scrollY = window.scrollY;
+      const windowHeight = window.innerHeight;
+      // 当滚动超过视窗高度的80%时隐藏粒子
+      setIsVisible(scrollY < windowHeight * 0.8);
+    };
+
+    window.addEventListener('scroll', handleScroll);
+    return () => window.removeEventListener('scroll', handleScroll);
   }, []);
 
   const particlesLoaded = async (container?: Container): Promise<void> => {
@@ -46,7 +59,7 @@ const ParticleBackground = memo(() => {
             factor: 1,
           },
           push: {
-            particles_nb: 4,
+            particles_nb: 1,
           },
           repulse: {
             distance: 100,
@@ -60,10 +73,10 @@ const ParticleBackground = memo(() => {
         },
         links: {
           color: '#3b82f6',
-          distance: 120,
+          distance: 130,
           enable: true,
-          opacity: 0.2,
-          width: 1,
+          opacity: 0.3,
+          width: 1.5,
         },
         move: {
           direction: 'none',
@@ -72,20 +85,20 @@ const ParticleBackground = memo(() => {
             default: 'bounce',
           },
           random: false,
-          speed: 0.5,
+          speed: 1.2,
           straight: false,
         },
         number: {
           density: {
             enable: true,
           },
-          value: 20,
+          value: 18,
         },
         opacity: {
-          value: 0.4,
+          value: 0.6,
           animation: {
             enable: true,
-            speed: 1,
+            speed: 1.5,
             sync: false,
           },
         },
@@ -93,10 +106,10 @@ const ParticleBackground = memo(() => {
           type: 'circle',
         },
         size: {
-          value: { min: 1, max: 3 },
+          value: { min: 2, max: 5 },
           animation: {
             enable: true,
-            speed: 2,
+            speed: 3,
             sync: false,
           },
         },
@@ -105,7 +118,7 @@ const ParticleBackground = memo(() => {
     };
   }, []);
 
-  if (!init) {
+  if (!init || !isVisible) {
     return null;
   }
 
