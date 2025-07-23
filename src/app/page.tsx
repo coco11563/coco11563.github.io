@@ -26,6 +26,9 @@ export default async function HomePage() {
         {/* 关于我 */}
         <AboutSection profile={profile} />
         
+        {/* 联系方式 */}
+        <ContactSection profile={profile} />
+        
         {/* 学术指标 */}
         <MetricsSection 
           metrics={metrics} 
@@ -34,9 +37,6 @@ export default async function HomePage() {
         
         {/* 项目展示 */}
         <ProjectsSection />
-        
-        {/* 联系方式 */}
-        <ContactSection profile={profile} />
         
         {/* 论文发表 - 移到最后 */}
         <PublicationsSection publications={publications} />

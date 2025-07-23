@@ -102,5 +102,6 @@ credentials.json
 draft/
 private/
 
-.next/*
-.next
+# Next.js build output
+.next/
+out/
