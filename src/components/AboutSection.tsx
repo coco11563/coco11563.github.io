@@ -13,27 +13,27 @@ export function AboutSection({ profile }: AboutSectionProps) {
   const achievements = [
     {
       icon: Award,
-      title: "中国科学院院长奖学金特别奖",
-      description: "博士培养单位首位获得者",
+      title: "CAS President Award - Special Prize (中国科学院院长奖学金特别奖)",
+      description: "The highest award for graduate students of the CAS",
       year: "2023"
     },
     {
       icon: Star,
-      title: "北京市科协青年人才托举工程",
-      description: "2024-2026年资助计划",
+      title: "Young Talent Support Project by BAST (北京市科协青年人才托举工程)",
+      description: "Batch of 2024-2026",
       year: "2024"
     },
     {
       icon: GraduationCap,
-      title: "博士学位",
-      description: "中国科学院大学",
+      title: "Doctoral Degree (博士学位)",
+      description: "University of Chinese Academy of Sciences (中国科学院大学)",
       year: "2023"
     },
     {
       icon: Users,
-      title: "30+ 篇学术论文",
-      description: "包括顶级期刊和会议",
-      year: "至今"
+      title: "Published 30+ Research Articles",
+      description: "Includes top journals and conferences",
+      year: "To Date"
     }
   ]
 
