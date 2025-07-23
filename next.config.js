@@ -10,10 +10,6 @@ const nextConfig = {
   assetPrefix: process.env.NODE_ENV === 'production' ? '' : '',
   basePath: process.env.NODE_ENV === 'production' ? '' : '',
   
-  // 图片优化（适配静态导出）
-  images: {
-    unoptimized: true,
-  },
   
   // 实验性功能
   experimental: {
