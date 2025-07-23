@@ -106,3 +106,4 @@ private/
 out/
 
 .claude/
+next-env.d.ts

@@ -89,7 +89,7 @@ export function HeroSection({ profile }: HeroSectionProps) {
       interactivity: {
         events: {
           onHover: {
-            enable: true,
+            enable: false, // 禁用鼠标悬停交互
             mode: 'repulse',
           },
         },
@@ -118,14 +118,14 @@ export function HeroSection({ profile }: HeroSectionProps) {
             default: 'bounce',
           },
           random: true,
-          speed: 0.5,
+          speed: 0.2, // 降低粒子速度
           straight: false,
         },
         number: {
           density: {
             enable: true,
           },
-          value: 30,
+          value: 15, // 减少粒子数量
         },
         opacity: {
           value: 0.3,
@@ -302,7 +302,7 @@ export function HeroSection({ profile }: HeroSectionProps) {
                     alt={`${profile.name} Profile Photo`}
                     width={768}
                     height={768}
-                    className="w-full h-full object-cover scale-125"
+                    className="w-full h-full object-cover scale-150"
                     priority
                     unoptimized
                     quality={95}
