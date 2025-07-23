@@ -1,0 +1,180 @@
+[
+  {
+    "id": "pub_0",
+    "title": "GCAL: Adapting Graph Models to Evolving Domain Shifts",
+    "authors": [
+      "Ziyue Qiao",
+      "Qianyi Cai",
+      "Hao Dong",
+      "Jiawei Gu",
+      "Pengyang Wang",
+      "Meng Xiao*",
+      "Xiao Luo",
+      "Hui Xiong"
+    ],
+    "venue": "ICML",
+    "year": 2025,
+    "citations": 0,
+    "abstract": "",
+    "urls": {
+      "paper": "",
+      "code": "",
+      "project": ""
+    },
+    "venueType": "conference",
+    "keywords": [
+      "gcal",
+      "adapting",
+      "graph",
+      "models",
+      "evolving"
+    ]
+  },
+  {
+    "id": "pub_1",
+    "title": "FastFT: Accelerating Reinforced Feature Transformation via Advanced Exploration Strategies",
+    "authors": [
+      "Tianqi He",
+      "Xiaohan Huang",
+      "Yi Du",
+      "Qingqing Long",
+      "Ziyue Qiao",
+      "Min Wu",
+      "Yanjie Fu",
+      "Yuanchun Zhou",
+      "Meng Xiao*"
+    ],
+    "venue": "IEEE ICDE",
+    "year": 2025,
+    "citations": 0,
+    "abstract": "",
+    "urls": {
+      "paper": "",
+      "code": "",
+      "project": ""
+    },
+    "venueType": "conference",
+    "keywords": [
+      "fastft",
+      "accelerating",
+      "reinforced",
+      "feature",
+      "transformation"
+    ]
+  },
+  {
+    "id": "pub_2",
+    "title": "Traceable Group-Wise Self-Optimizing Feature Transformation Learning: A Dual Optimization Perspective",
+    "authors": [
+      "Meng Xiao",
+      "Dongjie Wang",
+      "Min Wu",
+      "Kunpeng Liu",
+      "Hui Xiong",
+      "Yuanchun Zhou",
+      "Yanjie Fu"
+    ],
+    "venue": "ACM TKDD",
+    "year": 2024,
+    "citations": 15,
+    "abstract": "",
+    "urls": {
+      "paper": "",
+      "code": "",
+      "project": ""
+    },
+    "venueType": "journal",
+    "keywords": [
+      "traceable",
+      "group",
+      "wise",
+      "self",
+      "optimizing"
+    ]
+  },
+  {
+    "id": "pub_3",
+    "title": "SCReader: Prompting Large Language Models to Interpret scRNA-seq Data",
+    "authors": [
+      "Cong Li",
+      "Qingqing Long",
+      "Yuanchun Zhou",
+      "Meng Xiao*"
+    ],
+    "venue": "IEEE ICDM",
+    "year": 2024,
+    "citations": 3,
+    "abstract": "",
+    "urls": {
+      "paper": "",
+      "code": "",
+      "project": ""
+    },
+    "venueType": "conference",
+    "keywords": [
+      "screader",
+      "prompting",
+      "large",
+      "language",
+      "models"
+    ]
+  },
+  {
+    "id": "pub_4",
+    "title": "Beyond Discrete Selection: Continuous Embedding Space Optimization for Generative Feature Selection",
+    "authors": [
+      "Meng Xiao",
+      "Dongjie Wang",
+      "Min Wu",
+      "Pengfei Wang",
+      "Yuanchun Zhou",
+      "Yanjie Fu"
+    ],
+    "venue": "IEEE ICDM",
+    "year": 2023,
+    "citations": 28,
+    "abstract": "",
+    "urls": {
+      "paper": "",
+      "code": "",
+      "project": ""
+    },
+    "venueType": "conference",
+    "keywords": [
+      "beyond",
+      "discrete",
+      "selection",
+      "continuous",
+      "embedding"
+    ]
+  },
+  {
+    "id": "pub_5",
+    "title": "Reinforcement-Enhanced Autoregressive Feature Transformation: Gradient-steered Search in Continuous Space for Postfix Expressions",
+    "authors": [
+      "Dongjie Wang",
+      "Meng Xiao",
+      "Min Wu",
+      "Pengfei Wang",
+      "Yuanchun Zhou",
+      "Yanjie Fu"
+    ],
+    "venue": "NeurIPS",
+    "year": 2023,
+    "citations": 42,
+    "abstract": "",
+    "urls": {
+      "paper": "",
+      "code": "",
+      "project": ""
+    },
+    "venueType": "conference",
+    "keywords": [
+      "reinforcement",
+      "enhanced",
+      "autoregressive",
+      "feature",
+      "transformation"
+    ]
+  }
+]

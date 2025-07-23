@@ -1,0 +1,20 @@
+{
+  "name": "Meng Xiao",
+  "nameZh": "肖濛",
+  "affiliation": [
+    "Computer Network Information Center, Chinese Academy of Sciences",
+    "DUKE-NUS Medical School, National University of Singapore"
+  ],
+  "email": [
+    "shaow.at.cnic.cn",
+    "meng.xiao.at.nus.edu.sg"
+  ],
+  "homepage": "https://coco11563.github.io",
+  "interests": [
+    "Data-centric AI",
+    "AI4LifeScience",
+    "Scientific Data Mining"
+  ],
+  "image": "/indexfiles/me.png",
+  "verified": true
+}
