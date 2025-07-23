@@ -43,7 +43,6 @@ jobs:
       uses: actions/setup-node@v4
       with:
         node-version: '18'
-        cache: 'npm'
     
     - name: 📄 Setup Pages
       uses: actions/configure-pages@v4
@@ -52,7 +51,13 @@ jobs:
     
     - name: 📦 Install dependencies
       run: |
-        npm ci
+        # 如果没有 package-lock.json，使用 npm install
+        if [ ! -f "package-lock.json" ]; then
+          echo "⚠️  package-lock.json not found, using npm install"
+          npm install
+        else
+          npm ci
+        fi
         echo "✅ 依赖安装完成"
     
     - name: 🔍 Verify data files

@@ -33,11 +33,16 @@ jobs:
       uses: actions/setup-node@v4
       with:
         node-version: '18'
-        cache: 'npm'
     
     - name: 📦 Install dependencies
       run: |
-        npm ci
+        # 如果没有 package-lock.json，使用 npm install
+        if [ ! -f "package-lock.json" ]; then
+          echo "⚠️  package-lock.json not found, using npm install"
+          npm install
+        else
+          npm ci
+        fi
         # 安装数据采集所需的可选依赖
         npm install serpapi || echo "SerpAPI installation failed, using fallback"
     
