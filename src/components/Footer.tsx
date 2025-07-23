@@ -19,11 +19,11 @@ export function Footer() {
             </div>
             
             <p className="text-gray-400 text-sm">
-              Assistant Researcher passionate about Data-centric AI and Scientific Data Mining
+              Research Fellow about Single-cell Data Based Digital Virtual Cell Twin.
             </p>
             
             <p className="text-gray-400 text-sm">
-              Computer Network Information Center, Chinese Academy of Sciences
+              DUKE-NUS Medical School, National University of Singapore
             </p>
           </div>
 
