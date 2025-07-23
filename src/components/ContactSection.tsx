@@ -116,7 +116,7 @@ export function ContactSection({ profile }: ContactSectionProps) {
                             No. 2 South Dongsheng Road, Haidian District, Beijing
                           </p>
                         )}
-                        {index === 2 && (
+                        {index === 1 && (
                           <p className="text-sm text-gray-500">
                             8 College Road, Singapore, 169857
                           </p>

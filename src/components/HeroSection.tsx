@@ -14,6 +14,7 @@ export function HeroSection({ profile }: HeroSectionProps) {
   const [typedText, setTypedText] = useState('')
   const [currentIndex, setCurrentIndex] = useState(0)
   const [isDeleting, setIsDeleting] = useState(false)
+  const [isTyping, setIsTyping] = useState(true)
 
   useEffect(() => {
     const texts = [
@@ -32,11 +33,17 @@ export function HeroSection({ profile }: HeroSectionProps) {
 
     const timer = setTimeout(() => {
       if (!shouldDelete && typedText === currentText) {
-        setTimeout(() => setIsDeleting(true), 2000)
+        setIsTyping(false)
+        setTimeout(() => {
+          setIsDeleting(true)
+          setIsTyping(true)
+        }, 2000)
       } else if (shouldDelete && typedText === '') {
         setIsDeleting(false)
         setCurrentIndex((prev) => (prev + 1) % texts.length)
+        setIsTyping(true)
       } else {
+        setIsTyping(true)
         setTypedText(prev => 
           shouldDelete 
             ? prev.slice(0, -1)
@@ -60,28 +67,38 @@ export function HeroSection({ profile }: HeroSectionProps) {
       {/* 背景动画 */}
       <div className="absolute inset-0 bg-pattern opacity-30" />
       
-      {/* 背景粒子动画 - 确保可见性 */}
+      {/* 独立的背景粒子动画 - 完全解耦于打字效果 */}
       <div className="absolute inset-0 pointer-events-none overflow-hidden">
-        {[...Array(15)].map((_, i) => {
-          // 随机参数
-          const initialX = Math.random() * 100;
-          const initialY = Math.random() * 100;
-          const animationDelay = Math.random() * 5;
-          const animationDuration = 8 + Math.random() * 12;
-          const size = 4 + Math.random() * 4; // 4-8px 更大更明显
+        {[...Array(20)].map((_, i) => {
+          // 固定的随机参数，在组件生命周期内保持一致
+          const initialX = (i * 47.3) % 100; // 伪随机分布
+          const initialY = (i * 31.7) % 100;
+          const animationDelay = (i * 0.7) % 8; // 0-8秒延迟
+          const baseAnimationDuration = 12 + (i % 8); // 12-20秒基础持续时间
+          const typingSpeedBoost = isTyping ? 0.7 : 1; // 打字时加速30%
+          const animationDuration = baseAnimationDuration * typingSpeedBoost;
+          const size = 3 + (i % 5); // 3-7px
+          const opacity = 0.2 + (i % 4) * 0.1; // 0.2-0.5
           
           return (
             <div
               key={i}
-              className="absolute rounded-full bg-blue-400/40 animate-pulse"
+              className={`absolute rounded-full transition-all duration-500 ${
+                isTyping 
+                  ? 'bg-blue-500/60 animate-pulse' 
+                  : 'bg-blue-400/30 animate-pulse'
+              }`}
               style={{
                 left: `${initialX}%`,
                 top: `${initialY}%`,
                 width: `${size}px`,
                 height: `${size}px`,
+                opacity: opacity,
                 animationDelay: `${animationDelay}s`,
                 animationDuration: `${animationDuration}s`,
-                boxShadow: '0 0 6px rgba(59, 130, 246, 0.4)',
+                boxShadow: isTyping 
+                  ? '0 0 8px rgba(59, 130, 246, 0.6)' 
+                  : '0 0 4px rgba(59, 130, 246, 0.3)',
                 transform: 'translate3d(0, 0, 0)',
               }}
             />
