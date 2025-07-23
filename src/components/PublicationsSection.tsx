@@ -11,29 +11,8 @@ interface PublicationsSectionProps {
 }
 
 export function PublicationsSection({ publications }: PublicationsSectionProps) {
-  const [selectedType, setSelectedType] = useState<string>('all')
-  const [searchQuery, setSearchQuery] = useState('')
-
-  // 按类型过滤
-  const venueTypes = ['all', 'conference', 'journal', 'workshop', 'other']
-  const typeLabels = {
-    all: 'All',
-    conference: 'Conferences',
-    journal: 'Journals', 
-    workshop: 'Workshops',
-    other: 'Others'
-  }
-
-  // 过滤论文
-  const filteredPublications = publications.filter(pub => {
-    const typeMatch = selectedType === 'all' || pub.venueType === selectedType
-    const searchMatch = searchQuery === '' || 
-      pub.title.toLowerCase().includes(searchQuery.toLowerCase()) ||
-      pub.authors.some(author => author.toLowerCase().includes(searchQuery.toLowerCase())) ||
-      pub.venue.toLowerCase().includes(searchQuery.toLowerCase())
-    
-    return typeMatch && searchMatch
-  })
+  // 直接使用所有论文，不进行过滤
+  const filteredPublications = publications
 
   // 按年份分组
   const publicationsByYear = filteredPublications.reduce((acc, pub) => {
@@ -90,44 +69,16 @@ export function PublicationsSection({ publications }: PublicationsSectionProps) 
           </p>
         </motion.div>
 
-        {/* 过滤器 */}
+        {/* 论文统计信息 */}
         <motion.div
           initial={{ opacity: 0, y: 20 }}
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true }}
-          className="mb-12"
+          className="text-center mb-12"
         >
-          {/* 搜索框 */}
-          <div className="mb-6">
-            <input
-              type="text"
-              placeholder="Search publications by title, author, or venue..."
-              value={searchQuery}
-              onChange={(e) => setSearchQuery(e.target.value)}
-              className="w-full max-w-md mx-auto block px-4 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-primary-500 focus:border-transparent"
-            />
-          </div>
-
-          {/* 类型过滤 */}
-          <div className="flex flex-wrap justify-center gap-2">
-            {venueTypes.map((type) => (
-              <button
-                key={type}
-                onClick={() => setSelectedType(type)}
-                className={`px-4 py-2 rounded-full text-sm font-medium transition-colors ${
-                  selectedType === type
-                    ? 'bg-primary-600 text-white'
-                    : 'bg-gray-100 text-gray-700 hover:bg-gray-200'
-                }`}
-              >
-                {typeLabels[type as keyof typeof typeLabels]} ({
-                  type === 'all' 
-                    ? publications.length 
-                    : publications.filter(p => p.venueType === type).length
-                })
-              </button>
-            ))}
-          </div>
+          <p className="text-gray-600">
+            {publications.length} selected publications • First author, co-first author, and corresponding author works
+          </p>
         </motion.div>
 
         {/* 论文列表 */}

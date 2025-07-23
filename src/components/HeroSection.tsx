@@ -56,28 +56,46 @@ export function HeroSection({ profile }: HeroSectionProps) {
       {/* 背景动画 */}
       <div className="absolute inset-0 bg-pattern opacity-30" />
       
-      {/* 浮动粒子效果 */}
+      {/* 浮动粒子效果 - 独立动画，不与打字特效同步 */}
       <div className="absolute inset-0">
-        {[...Array(20)].map((_, i) => (
-          <motion.div
-            key={i}
-            className="absolute w-2 h-2 bg-primary-300 rounded-full opacity-60"
-            animate={{
-              x: [0, 100, 0],
-              y: [0, -100, 0],
-              scale: [1, 1.5, 1],
-            }}
-            transition={{
-              duration: 10 + i * 2,
-              repeat: Infinity,
-              ease: "easeInOut",
-            }}
-            style={{
-              left: `${Math.random() * 100}%`,
-              top: `${Math.random() * 100}%`,
-            }}
-          />
-        ))}
+        {[...Array(20)].map((_, i) => {
+          // 为每个粒子生成独立的随机参数
+          const initialX = Math.random() * 100;
+          const initialY = Math.random() * 100;
+          const moveRangeX = 50 + Math.random() * 100;
+          const moveRangeY = 50 + Math.random() * 100;
+          const baseDuration = 8 + Math.random() * 8; // 8-16秒随机持续时间
+          const delay = Math.random() * 4; // 0-4秒随机延迟
+          
+          return (
+            <motion.div
+              key={i}
+              className="absolute w-2 h-2 bg-primary-300 rounded-full opacity-40"
+              initial={{
+                x: initialX,
+                y: initialY,
+                scale: 0.8 + Math.random() * 0.4,
+              }}
+              animate={{
+                x: [initialX, initialX + moveRangeX, initialX - moveRangeX, initialX],
+                y: [initialY, initialY - moveRangeY, initialY + moveRangeY, initialY],
+                scale: [0.8, 1.4, 0.6, 0.8],
+                opacity: [0.4, 0.8, 0.2, 0.4],
+              }}
+              transition={{
+                duration: baseDuration,
+                repeat: Infinity,
+                ease: "easeInOut",
+                delay: delay,
+                times: [0, 0.33, 0.66, 1], // 控制动画节点时间
+              }}
+              style={{
+                left: `${initialX}%`,
+                top: `${initialY}%`,
+              }}
+            />
+          );
+        })}
       </div>
 
       <div className="container-custom relative z-10">
@@ -219,11 +237,12 @@ export function HeroSection({ profile }: HeroSectionProps) {
                   <Image
                     src={profile.image}
                     alt={`${profile.name} Profile Photo`}
-                    width={384}
-                    height={384}
+                    width={768}
+                    height={768}
                     className="w-full h-full object-cover"
                     priority
                     unoptimized
+                    quality={95}
                   />
                 </div>
                 

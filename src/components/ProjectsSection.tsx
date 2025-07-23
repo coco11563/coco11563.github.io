@@ -1,6 +1,7 @@
 'use client'
 
 import { motion } from 'framer-motion'
+import Image from 'next/image'
 import { ExternalLink, Github, Award, Users } from 'lucide-react'
 
 export function ProjectsSection() {
@@ -9,6 +10,7 @@ export function ProjectsSection() {
       title: "SciHorizon: AI-for-Science Benchmark",
       description: "A comprehensive benchmarking platform for evaluating AI systems in scientific applications, from data processing to large language model integration.",
       status: "SIGKDD 2025",
+      image: "/pubfiles/SIGKDD2025.png",
       links: {
         project: "https://www.scihorizon.cn/",
         github: ""
@@ -20,6 +22,7 @@ export function ProjectsSection() {
       title: "scCompass: Multi-Species scRNA-seq Database",
       description: "An integrated database and analysis platform for single-cell RNA sequencing data across multiple species, designed for AI-ready applications.",
       status: "Advanced Sciences 2025",
+      image: "/pubfiles/ADVSCI2025.png",
       links: {
         project: "http://www.bdbe.cn/kun#/",
         github: ""
@@ -31,6 +34,7 @@ export function ProjectsSection() {
       title: "GeneCompass: Gene Regulatory Foundation Model",
       description: "A knowledge-informed cross-species foundation model for understanding universal gene regulatory mechanisms.",
       status: "Cell Research 2024",
+      image: "/pubfiles/CellRes2024.png",
       links: {
         project: "",
         github: "https://github.com/xCompass-AI/GeneCompass"
@@ -42,6 +46,7 @@ export function ProjectsSection() {
       title: "Data-Centric AI Workshop Series",
       description: "Organizing workshops at top-tier conferences (ICDM, CIKM) to advance data-centric approaches in AI research.",
       status: "ICDM 2023/2024, CIKM 2024",
+      image: "/pubfiles/CIKM-2024-2.png",
       links: {
         project: "https://data-centric-ai-dev.github.io/",
         github: ""
@@ -78,13 +83,13 @@ export function ProjectsSection() {
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true }}
               transition={{ delay: index * 0.1 }}
-              className={`card p-6 card-hover relative ${
+              className={`card card-hover relative overflow-hidden ${
                 project.featured ? 'border-primary-200 bg-gradient-to-br from-white to-primary-50' : ''
               }`}
             >
               {/* 特色标签 */}
               {project.featured && (
-                <div className="absolute top-4 right-4">
+                <div className="absolute top-4 right-4 z-10">
                   <div className="flex items-center gap-1 px-2 py-1 bg-primary-600 text-white text-xs rounded-full">
                     <Award size={12} />
                     Featured
@@ -92,60 +97,77 @@ export function ProjectsSection() {
                 </div>
               )}
 
-              {/* 状态标签 */}
-              <div className="mb-4">
-                <span className="inline-flex items-center px-3 py-1 bg-green-100 text-green-800 text-sm font-medium rounded-full">
-                  {project.status}
-                </span>
-              </div>
+              {/* 项目图片 */}
+              {project.image && (
+                <div className="relative h-48 bg-gray-100">
+                  <Image
+                    src={project.image}
+                    alt={`${project.title} thumbnail`}
+                    fill
+                    className="object-cover"
+                    unoptimized
+                  />
+                  {/* 渐变遮罩 */}
+                  <div className="absolute inset-0 bg-gradient-to-t from-black/20 to-transparent" />
+                </div>
+              )}
 
-              {/* 项目标题 */}
-              <h3 className="text-xl font-semibold text-gray-900 mb-3">
-                {project.title}
-              </h3>
-
-              {/* 项目描述 */}
-              <p className="text-gray-600 mb-4 leading-relaxed">
-                {project.description}
-              </p>
-
-              {/* 标签 */}
-              <div className="flex flex-wrap gap-2 mb-6">
-                {project.tags.map((tag) => (
-                  <span
-                    key={tag}
-                    className="px-2 py-1 bg-gray-100 text-gray-600 text-xs rounded"
-                  >
-                    {tag}
+              <div className="p-6">
+                {/* 状态标签 */}
+                <div className="mb-4">
+                  <span className="inline-flex items-center px-3 py-1 bg-green-100 text-green-800 text-sm font-medium rounded-full">
+                    {project.status}
                   </span>
-                ))}
-              </div>
+                </div>
 
-              {/* 链接 */}
-              <div className="flex gap-3">
-                {project.links.project && (
-                  <a
-                    href={project.links.project}
-                    target="_blank"
-                    rel="noopener noreferrer"
-                    className="inline-flex items-center gap-2 px-4 py-2 bg-primary-600 text-white rounded-lg hover:bg-primary-700 transition-colors text-sm font-medium"
-                  >
-                    <ExternalLink size={16} />
-                    Visit Project
-                  </a>
-                )}
-                
-                {project.links.github && (
-                  <a
-                    href={project.links.github}
-                    target="_blank"
-                    rel="noopener noreferrer"
-                    className="inline-flex items-center gap-2 px-4 py-2 bg-gray-800 text-white rounded-lg hover:bg-gray-900 transition-colors text-sm font-medium"
-                  >
-                    <Github size={16} />
-                    GitHub
-                  </a>
-                )}
+                {/* 项目标题 */}
+                <h3 className="text-xl font-semibold text-gray-900 mb-3">
+                  {project.title}
+                </h3>
+
+                {/* 项目描述 */}
+                <p className="text-gray-600 mb-4 leading-relaxed">
+                  {project.description}
+                </p>
+
+                {/* 标签 */}
+                <div className="flex flex-wrap gap-2 mb-6">
+                  {project.tags.map((tag) => (
+                    <span
+                      key={tag}
+                      className="px-2 py-1 bg-gray-100 text-gray-600 text-xs rounded"
+                    >
+                      {tag}
+                    </span>
+                  ))}
+                </div>
+
+                {/* 链接 */}
+                <div className="flex gap-3">
+                  {project.links.project && (
+                    <a
+                      href={project.links.project}
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      className="inline-flex items-center gap-2 px-4 py-2 bg-primary-600 text-white rounded-lg hover:bg-primary-700 transition-colors text-sm font-medium"
+                    >
+                      <ExternalLink size={16} />
+                      Visit Project
+                    </a>
+                  )}
+                  
+                  {project.links.github && (
+                    <a
+                      href={project.links.github}
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      className="inline-flex items-center gap-2 px-4 py-2 bg-gray-800 text-white rounded-lg hover:bg-gray-900 transition-colors text-sm font-medium"
+                    >
+                      <Github size={16} />
+                      GitHub
+                    </a>
+                  )}
+                </div>
               </div>
             </motion.div>
           ))}

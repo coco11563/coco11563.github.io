@@ -13,7 +13,7 @@ export function AboutSection({ profile }: AboutSectionProps) {
     {
       icon: Award,
       title: "中国科学院院长奖学金特别奖",
-      description: "2023年首位CNIC获得者",
+      description: "博士培养单位首位获得者",
       year: "2023"
     },
     {
@@ -41,19 +41,19 @@ export function AboutSection({ profile }: AboutSectionProps) {
       year: "2025-Present",
       title: "Research Fellow",
       organization: "DUKE-NUS Medical School, NUS",
-      description: "专注于医学数据挖掘和AI4LifeScience研究"
+      description: "single-cell data mining, AI for lifescience"
     },
     {
       year: "2023-Present", 
       title: "Assistant Researcher",
       organization: "Computer Network Information Center, CAS",
-      description: "从事数据中心AI和科学数据挖掘研究"
+      description: "scientific data mining, Data-centric AI"
     },
     {
       year: "2019-2023",
       title: "PhD Student",
       organization: "University of Chinese Academy of Sciences",
-      description: "获得博士学位，研究方向为机器学习和数据挖掘"
+      description: "科技文献知识理解与挖掘，交叉学科知识建模"
     }
   ]
 
