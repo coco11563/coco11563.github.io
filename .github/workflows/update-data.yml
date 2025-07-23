@@ -87,25 +87,31 @@ jobs:
         # 从metrics.json读取当前数据
         if [ -f "public/data/metrics.json" ]; then
           citations=$(cat public/data/metrics.json | grep '"totalCitations"' | sed 's/.*: *\([0-9]*\).*/\1/')
-          h_index=$(cat public/data/metrics.json | grep '"hIndex"' | sed 's/.*: *\([0-9]*\).*/\1/')
+          h_index=$(cat public/data/metrics.json | grep '"hIndex"' | sed 's/.*: *\([0-9]*\).*/\1/')  
           pub_count=$(cat public/data/publications.json | grep -c '"id":')
           
-          commit_message="📊 自动更新学术数据 ${current_date}
+          commit_message=$(cat <<EOF
+        📊 自动更新学术数据 ${current_date}
 
-📈 当前统计:
-- 总引用数: ${citations}
-- H指数: ${h_index} 
-- 论文数量: ${pub_count}
+        📈 当前统计:
+        - 总引用数: ${citations}
+        - H指数: ${h_index} 
+        - 论文数量: ${pub_count}
 
-🤖 Generated with [Claude Code](https://claude.ai/code)
+        🤖 Generated with [Claude Code](https://claude.ai/code)
 
-Co-Authored-By: Claude <noreply@anthropic.com>"
+        Co-Authored-By: Claude <noreply@anthropic.com>
+        EOF
+        )
         else
-          commit_message="📊 自动更新学术数据 ${current_date}
+          commit_message=$(cat <<EOF
+        📊 自动更新学术数据 ${current_date}
 
-🤖 Generated with [Claude Code](https://claude.ai/code)
+        🤖 Generated with [Claude Code](https://claude.ai/code)
 
-Co-Authored-By: Claude <noreply@anthropic.com>"
+        Co-Authored-By: Claude <noreply@anthropic.com>
+        EOF
+        )
         fi
         
         echo "COMMIT_MESSAGE<<EOF" >> $GITHUB_OUTPUT
