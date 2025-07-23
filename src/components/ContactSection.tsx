@@ -164,7 +164,7 @@ export function ContactSection({ profile }: ContactSectionProps) {
               
               <div className="space-y-4 text-gray-600">
                 <p>
-                  I'm always interested in collaborating with researchers and practitioners in:
+                  I&apos;m always interested in collaborating with researchers and practitioners in:
                 </p>
                 
                 <ul className="space-y-2 ml-4">
@@ -224,7 +224,7 @@ export function ContactSection({ profile }: ContactSectionProps) {
             <div className="bg-primary-50 border border-primary-200 rounded-lg p-4">
               <p className="text-sm text-primary-800">
                 <strong>Response Time:</strong> I typically respond to emails within 2-3 business days. 
-                For urgent matters, please mention "URGENT" in the subject line.
+                For urgent matters, please mention &quot;URGENT&quot; in the subject line.
               </p>
             </div>
           </motion.div>

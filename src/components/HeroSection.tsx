@@ -15,14 +15,13 @@ export function HeroSection({ profile }: HeroSectionProps) {
   const [currentIndex, setCurrentIndex] = useState(0)
   const [isDeleting, setIsDeleting] = useState(false)
 
-  const texts = [
-    "Data-centric AI Researcher",
-    "AI4LifeScience Expert", 
-    "Scientific Data Mining Specialist",
-    "Machine Learning Engineer"
-  ]
-
   useEffect(() => {
+    const texts = [
+      "Data-centric AI Researcher",
+      "AI4LifeScience Expert", 
+      "Scientific Data Mining Specialist",
+      "Machine Learning Engineer"
+    ]
     const currentText = texts[currentIndex]
     const shouldDelete = isDeleting
     const timeout = shouldDelete ? 50 : 150
@@ -43,7 +42,7 @@ export function HeroSection({ profile }: HeroSectionProps) {
     }, timeout)
 
     return () => clearTimeout(timer)
-  }, [typedText, currentIndex, isDeleting, texts])
+  }, [typedText, currentIndex, isDeleting])
 
   const scrollToNext = () => {
     const nextSection = document.getElementById('about')
