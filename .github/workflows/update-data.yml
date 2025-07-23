@@ -18,6 +18,11 @@ on:
       - 'scripts/**'
       - '.github/workflows/update-data.yml'
 
+# 设置权限
+permissions:
+  contents: write
+  actions: read
+
 jobs:
   update-scholar-data:
     runs-on: ubuntu-latest
@@ -124,6 +129,9 @@ jobs:
         # 配置Git用户
         git config --local user.email "action@github.com"
         git config --local user.name "GitHub Action Bot"
+        
+        # 配置Git使用token进行认证
+        git remote set-url origin https://x-access-token:${{ secrets.GITHUB_TOKEN }}@github.com/${{ github.repository }}.git
         
         # 添加数据文件
         git add public/data/
