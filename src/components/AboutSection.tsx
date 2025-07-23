@@ -41,19 +41,19 @@ export function AboutSection({ profile }: AboutSectionProps) {
       year: "2025-Present",
       title: "Research Fellow",
       organization: "DUKE-NUS Medical School, NUS",
-      description: "single-cell data mining, AI for lifescience"
+      description: "Single-cell Data Mining, AI for lifescience"
     },
     {
       year: "2023-Present", 
       title: "Assistant Researcher",
       organization: "Computer Network Information Center, CAS",
-      description: "scientific data mining, Data-centric AI"
+      description: "Scientific Data Mining, Data-centric AI"
     },
     {
       year: "2019-2023",
       title: "PhD Student",
       organization: "University of Chinese Academy of Sciences",
-      description: "科技文献知识理解与挖掘，交叉学科知识建模"
+      description: "Scientific Literature Mining, Interdisciplinary Knowledge Graph"
     }
   ]
 
