@@ -1,36 +1,20 @@
 'use client'
 
-import { useState, useEffect, useMemo } from 'react'
+import { useState, useEffect } from 'react'
 import Image from 'next/image'
 import { motion } from 'framer-motion'
 import { ChevronDown, MapPin, Mail, ExternalLink } from 'lucide-react'
 import { ScholarProfile } from '@/types/scholar'
-import Particles, { initParticlesEngine } from "@tsparticles/react";
-import { type Container, type ISourceOptions } from "@tsparticles/engine";
-import { loadSlim } from "@tsparticles/slim";
+import { ParticleBackground } from './ParticleBackground'
 
 interface HeroSectionProps {
   profile: ScholarProfile
 }
 
 export function HeroSection({ profile }: HeroSectionProps) {
-  const [init, setInit] = useState(false);
   const [typedText, setTypedText] = useState('')
   const [currentIndex, setCurrentIndex] = useState(0)
   const [isDeleting, setIsDeleting] = useState(false)
-  const [isTyping, setIsTyping] = useState(true)
-
-  useEffect(() => {
-    initParticlesEngine(async (engine) => {
-      await loadSlim(engine);
-    }).then(() => {
-      setInit(true);
-    });
-  }, []);
-
-  const particlesLoaded = async (container?: Container): Promise<void> => {
-    console.log(container);
-  };
 
   useEffect(() => {
     const texts = [
@@ -49,17 +33,13 @@ export function HeroSection({ profile }: HeroSectionProps) {
 
     const timer = setTimeout(() => {
       if (!shouldDelete && typedText === currentText) {
-        setIsTyping(false)
         setTimeout(() => {
           setIsDeleting(true)
-          setIsTyping(true)
         }, 2000)
       } else if (shouldDelete && typedText === '') {
         setIsDeleting(false)
         setCurrentIndex((prev) => (prev + 1) % texts.length)
-        setIsTyping(true)
       } else {
-        setIsTyping(true)
         setTypedText(prev => 
           shouldDelete 
             ? prev.slice(0, -1)
@@ -78,109 +58,13 @@ export function HeroSection({ profile }: HeroSectionProps) {
     }
   }
 
-  const particleOptions = useMemo((): ISourceOptions => {
-    return {
-      background: {
-        color: {
-          value: 'transparent',
-        },
-      },
-      fpsLimit: 60,
-      interactivity: {
-        events: {
-          onHover: {
-            enable: true, // 启用鼠标悬停交互
-            mode: 'attract',
-          },
-          onClick: {
-            enable: true,
-            mode: 'push',
-          },
-        },
-        modes: {
-          attract: {
-            distance: 200,
-            duration: 0.4,
-            factor: 1,
-          },
-          push: {
-            particles_nb: 4,
-          },
-          repulse: {
-            distance: 100,
-            duration: 0.4,
-          },
-        },
-      },
-      particles: {
-        color: {
-          value: '#3b82f6',
-        },
-        links: {
-          color: '#3b82f6',
-          distance: 120,
-          enable: true,
-          opacity: 0.2,
-          width: 1,
-        },
-        move: {
-          direction: 'none',
-          enable: true,
-          outModes: {
-            default: 'bounce',
-          },
-          random: false,
-          speed: 0.5,
-          straight: false,
-        },
-        number: {
-          density: {
-            enable: true,
-          },
-          value: 20,
-        },
-        opacity: {
-          value: 0.4,
-          animation: {
-            enable: true,
-            speed: 1,
-            sync: false,
-          },
-        },
-        shape: {
-          type: 'circle',
-        },
-        size: {
-          value: { min: 1, max: 3 },
-          animation: {
-            enable: true,
-            speed: 2,
-            sync: false,
-          },
-        },
-      },
-      detectRetina: true,
-    };
-  }, []);
-
-  if (!init) {
-    return null;
-  }
 
   return (
     <section className="relative min-h-screen flex items-center justify-center overflow-hidden bg-gradient-to-br from-slate-50 via-blue-50 to-indigo-100">
       {/* 背景动画 */}
       <div className="absolute inset-0 bg-pattern opacity-30" />
       
-      {init && (
-        <Particles
-          id="tsparticles"
-          particlesLoaded={particlesLoaded}
-          options={particleOptions}
-          style={{ position: 'absolute' }}
-          className="absolute inset-0 -z-0"
-        />
-      )}
+      <ParticleBackground />
 
 
       <div className="container-custom relative z-10">
