@@ -119,13 +119,13 @@ export function MetricsSection({ metrics, citationsByYear }: MetricsSectionProps
                 whileInView={{ scale: 1 }}
                 viewport={{ once: true }}
                 transition={{ delay: metricCards.length * 0.1 + 0.2, type: "spring" }}
-                className="flex justify-center items-center h-20"
+                className="metric-value flex justify-center items-center"
               >
-                {/* 居中的柱状图 */}
-                <div className="flex items-end justify-center space-x-1" style={{ height: '64px' }}>
+                {/* 柱状图作为主要数值显示 */}
+                <div className="flex items-end justify-center space-x-1" style={{ height: '48px' }}>
                   {citationsByYear.slice(-6).map((item, index) => {
                     const maxCitations = Math.max(...citationsByYear.slice(-6).map(d => d.citations))
-                    const heightPx = maxCitations > 0 ? Math.max((item.citations / maxCitations) * 56, 4) : 4
+                    const heightPx = maxCitations > 0 ? Math.max((item.citations / maxCitations) * 40, 3) : 3
                     
                     return (
                       <motion.div
@@ -150,6 +150,10 @@ export function MetricsSection({ metrics, citationsByYear }: MetricsSectionProps
                   })}
                 </div>
               </motion.div>
+              
+              <div className="text-xs text-gray-500">
+                Past 6 Years
+              </div>
               
               <div className="metric-label">
                 Citation Trends
