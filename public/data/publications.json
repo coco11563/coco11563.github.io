@@ -213,6 +213,37 @@
   },
   {
     "id": "pub_7",
+    "title": "BioRAG: A RAG-LLM Framework for Biological Question Reasoning",
+    "authors": [
+      "C Wang",
+      "Q Long",
+      "M Xiao",
+      "X Cai",
+      "C Wu",
+      "Z Meng",
+      "X Wang",
+      "Y Zhou"
+    ],
+    "venue": "arXiv preprint arXiv:2408.01107, 2024",
+    "year": "2024",
+    "citations": 29,
+    "citationsId": "6760124863574288334",
+    "abstract": "",
+    "urls": {
+      "paper": "https://scholar.google.com/citations?view_op=view_citation&hl=en&user=YGwukbUAAAAJ&pagesize=100&citation_for_view=YGwukbUAAAAJ:nVrZBo8bIpAC",
+      "citations": "https://scholar.google.com/scholar?oi=bibs&hl=en&cites=6760124863574288334"
+    },
+    "venueType": "other",
+    "keywords": [
+      "biorag",
+      "rag",
+      "llm",
+      "framework",
+      "biological"
+    ]
+  },
+  {
+    "id": "pub_8",
     "title": "Beyond Discrete Selection: Continuous Embedding Space Optimization for Generative Feature Selection",
     "authors": [
       "M Xiao",
@@ -241,7 +272,7 @@
     ]
   },
   {
-    "id": "pub_8",
+    "id": "pub_9",
     "title": "A survey on the construction methods and applications of sci-tech big data knowledge graph",
     "authors": [
       "Y Zhou",
@@ -266,37 +297,6 @@
       "methods",
       "applications",
       "sci"
-    ]
-  },
-  {
-    "id": "pub_9",
-    "title": "BioRAG: A RAG-LLM Framework for Biological Question Reasoning",
-    "authors": [
-      "C Wang",
-      "Q Long",
-      "M Xiao",
-      "X Cai",
-      "C Wu",
-      "Z Meng",
-      "X Wang",
-      "Y Zhou"
-    ],
-    "venue": "arXiv preprint arXiv:2408.01107, 2024",
-    "year": "2024",
-    "citations": 28,
-    "citationsId": "6760124863574288334",
-    "abstract": "",
-    "urls": {
-      "paper": "https://scholar.google.com/citations?view_op=view_citation&hl=en&user=YGwukbUAAAAJ&pagesize=100&citation_for_view=YGwukbUAAAAJ:nVrZBo8bIpAC",
-      "citations": "https://scholar.google.com/scholar?oi=bibs&hl=en&cites=6760124863574288334"
-    },
-    "venueType": "other",
-    "keywords": [
-      "biorag",
-      "rag",
-      "llm",
-      "framework",
-      "biological"
     ]
   },
   {
