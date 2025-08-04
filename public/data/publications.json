@@ -16,7 +16,7 @@
     ],
     "venue": "Cell Research 34 (12), 830-845, 2024",
     "year": "2024",
-    "citations": 68,
+    "citations": 69,
     "citationsId": "15912681120747030699",
     "abstract": "",
     "urls": {
@@ -34,6 +34,39 @@
   },
   {
     "id": "pub_1",
+    "title": "Large Language Model Agent: A Survey on Methodology, Applications and Challenges",
+    "authors": [
+      "J Luo",
+      "W Zhang",
+      "Y Yuan",
+      "Y Zhao",
+      "J Yang",
+      "Y Gu",
+      "B Wu",
+      "B Chen",
+      "Z Qiao",
+      "..."
+    ],
+    "venue": "arXiv preprint arxiv:2503.21460, 2025",
+    "year": "2025",
+    "citations": 44,
+    "citationsId": "2553384233263415865,4543464159028255200,3511825580536173473,6686040006820538842",
+    "abstract": "",
+    "urls": {
+      "paper": "https://scholar.google.com/citations?view_op=view_citation&hl=en&user=YGwukbUAAAAJ&pagesize=100&citation_for_view=YGwukbUAAAAJ:7BrZ7Jt4UNcC",
+      "citations": "https://scholar.google.com/scholar?oi=bibs&hl=en&cites=2553384233263415865,4543464159028255200,3511825580536173473,6686040006820538842"
+    },
+    "venueType": "other",
+    "keywords": [
+      "large",
+      "language",
+      "model",
+      "agent",
+      "survey"
+    ]
+  },
+  {
+    "id": "pub_2",
     "title": "Exploring human mobility patterns using geo-tagged social media data at the group level",
     "authors": [
       "C Yang",
@@ -64,39 +97,6 @@
     ]
   },
   {
-    "id": "pub_2",
-    "title": "Large Language Model Agent: A Survey on Methodology, Applications and Challenges",
-    "authors": [
-      "J Luo",
-      "W Zhang",
-      "Y Yuan",
-      "Y Zhao",
-      "J Yang",
-      "Y Gu",
-      "B Wu",
-      "B Chen",
-      "Z Qiao",
-      "..."
-    ],
-    "venue": "arXiv preprint arxiv:2503.21460, 2025",
-    "year": "2025",
-    "citations": 41,
-    "citationsId": "2553384233263415865,4543464159028255200,6686040006820538842,3511825580536173473",
-    "abstract": "",
-    "urls": {
-      "paper": "https://scholar.google.com/citations?view_op=view_citation&hl=en&user=YGwukbUAAAAJ&pagesize=100&citation_for_view=YGwukbUAAAAJ:7BrZ7Jt4UNcC",
-      "citations": "https://scholar.google.com/scholar?oi=bibs&hl=en&cites=2553384233263415865,4543464159028255200,6686040006820538842,3511825580536173473"
-    },
-    "venueType": "other",
-    "keywords": [
-      "large",
-      "language",
-      "model",
-      "agent",
-      "survey"
-    ]
-  },
-  {
     "id": "pub_3",
     "title": "Semi-supervised Domain Adaptation in Graph Transfer Learning",
     "authors": [
@@ -109,7 +109,7 @@
     ],
     "venue": "2023 International Joint Conference on Artificial Intelligence (IJCAI), 2023",
     "year": "2023",
-    "citations": 37,
+    "citations": 38,
     "citationsId": "8095856175023135105",
     "abstract": "",
     "urls": {
@@ -127,35 +127,6 @@
   },
   {
     "id": "pub_4",
-    "title": "Temporal Inductive Path Neural Network for Temporal Knowledge Graph Reasoning",
-    "authors": [
-      "H Dong",
-      "P Wang",
-      "M Xiao",
-      "Z Ning",
-      "P Wang",
-      "Y Zhou"
-    ],
-    "venue": "Artificial Intelligence Journal, 2024",
-    "year": "2024",
-    "citations": 36,
-    "citationsId": "10863920213481238703",
-    "abstract": "",
-    "urls": {
-      "paper": "https://scholar.google.com/citations?view_op=view_citation&hl=en&user=YGwukbUAAAAJ&pagesize=100&citation_for_view=YGwukbUAAAAJ:mNrWkgRL2YcC",
-      "citations": "https://scholar.google.com/scholar?oi=bibs&hl=en&cites=10863920213481238703"
-    },
-    "venueType": "other",
-    "keywords": [
-      "temporal",
-      "inductive",
-      "path",
-      "neural",
-      "network"
-    ]
-  },
-  {
-    "id": "pub_5",
     "title": "Resolving the Imbalance Issue in Hierarchical Disciplinary Topic Inference via LLM-based Data Augmentation",
     "authors": [
       "C Xunxin",
@@ -165,7 +136,7 @@
     ],
     "venue": "The IEEE International Conference on Data Mining (ICDM) 2023, 956-961, 2023",
     "year": "2023",
-    "citations": 36,
+    "citations": 38,
     "citationsId": "9669930467170038570",
     "abstract": "",
     "urls": {
@@ -182,7 +153,67 @@
     ]
   },
   {
+    "id": "pub_5",
+    "title": "Temporal Inductive Path Neural Network for Temporal Knowledge Graph Reasoning",
+    "authors": [
+      "H Dong",
+      "P Wang",
+      "M Xiao",
+      "Z Ning",
+      "P Wang",
+      "Y Zhou"
+    ],
+    "venue": "Artificial Intelligence Journal, 2024",
+    "year": "2024",
+    "citations": 37,
+    "citationsId": "10863920213481238703",
+    "abstract": "",
+    "urls": {
+      "paper": "https://scholar.google.com/citations?view_op=view_citation&hl=en&user=YGwukbUAAAAJ&pagesize=100&citation_for_view=YGwukbUAAAAJ:mNrWkgRL2YcC",
+      "citations": "https://scholar.google.com/scholar?oi=bibs&hl=en&cites=10863920213481238703"
+    },
+    "venueType": "other",
+    "keywords": [
+      "temporal",
+      "inductive",
+      "path",
+      "neural",
+      "network"
+    ]
+  },
+  {
     "id": "pub_6",
+    "title": "BioRAG: A RAG-LLM Framework for Biological Question Reasoning",
+    "authors": [
+      "C Wang",
+      "Q Long",
+      "M Xiao",
+      "X Cai",
+      "C Wu",
+      "Z Meng",
+      "X Wang",
+      "Y Zhou"
+    ],
+    "venue": "arXiv preprint arXiv:2408.01107, 2024",
+    "year": "2024",
+    "citations": 30,
+    "citationsId": "6760124863574288334",
+    "abstract": "",
+    "urls": {
+      "paper": "https://scholar.google.com/citations?view_op=view_citation&hl=en&user=YGwukbUAAAAJ&pagesize=100&citation_for_view=YGwukbUAAAAJ:nVrZBo8bIpAC",
+      "citations": "https://scholar.google.com/scholar?oi=bibs&hl=en&cites=6760124863574288334"
+    },
+    "venueType": "other",
+    "keywords": [
+      "biorag",
+      "rag",
+      "llm",
+      "framework",
+      "biological"
+    ]
+  },
+  {
+    "id": "pub_7",
     "title": "Traceable group-wise self-optimizing feature transformation learning: A dual optimization perspective",
     "authors": [
       "M Xiao",
@@ -212,37 +243,6 @@
     ]
   },
   {
-    "id": "pub_7",
-    "title": "BioRAG: A RAG-LLM Framework for Biological Question Reasoning",
-    "authors": [
-      "C Wang",
-      "Q Long",
-      "M Xiao",
-      "X Cai",
-      "C Wu",
-      "Z Meng",
-      "X Wang",
-      "Y Zhou"
-    ],
-    "venue": "arXiv preprint arXiv:2408.01107, 2024",
-    "year": "2024",
-    "citations": 29,
-    "citationsId": "6760124863574288334",
-    "abstract": "",
-    "urls": {
-      "paper": "https://scholar.google.com/citations?view_op=view_citation&hl=en&user=YGwukbUAAAAJ&pagesize=100&citation_for_view=YGwukbUAAAAJ:nVrZBo8bIpAC",
-      "citations": "https://scholar.google.com/scholar?oi=bibs&hl=en&cites=6760124863574288334"
-    },
-    "venueType": "other",
-    "keywords": [
-      "biorag",
-      "rag",
-      "llm",
-      "framework",
-      "biological"
-    ]
-  },
-  {
     "id": "pub_8",
     "title": "Beyond Discrete Selection: Continuous Embedding Space Optimization for Generative Feature Selection",
     "authors": [
@@ -255,7 +255,7 @@
     ],
     "venue": "The IEEE International Conference on Data Mining (ICDM) 1 (1), 1-10, 2023",
     "year": "2023",
-    "citations": 29,
+    "citations": 30,
     "citationsId": "4039133266398073629",
     "abstract": "",
     "urls": {
@@ -553,7 +553,7 @@
     ],
     "venue": "Accepted by IJCAI-24, 2024",
     "year": "2024",
-    "citations": 13,
+    "citations": 14,
     "citationsId": "6654659459105812857",
     "abstract": "",
     "urls": {
@@ -755,6 +755,33 @@
   },
   {
     "id": "pub_25",
+    "title": "DP-CRE: Continual Relation Extraction via Decoupled Contrastive Learning and Memory Structure Preservation",
+    "authors": [
+      "M Huang",
+      "M Xiao",
+      "L Wang",
+      "Y Du"
+    ],
+    "venue": "COLING-2024, 2024",
+    "year": "2024",
+    "citations": 6,
+    "citationsId": "14659409203115987087",
+    "abstract": "",
+    "urls": {
+      "paper": "https://scholar.google.com/citations?view_op=view_citation&hl=en&user=YGwukbUAAAAJ&pagesize=100&citation_for_view=YGwukbUAAAAJ:LhH-TYMQEocC",
+      "citations": "https://scholar.google.com/scholar?oi=bibs&hl=en&cites=14659409203115987087"
+    },
+    "venueType": "other",
+    "keywords": [
+      "cre",
+      "continual",
+      "relation",
+      "extraction",
+      "decoupled"
+    ]
+  },
+  {
+    "id": "pub_26",
     "title": "FastFT: Accelerating Reinforced Feature Transformation via Advanced Exploration Strategies",
     "authors": [
       "T He",
@@ -786,7 +813,7 @@
     ]
   },
   {
-    "id": "pub_26",
+    "id": "pub_27",
     "title": "Enhanced Gene Selection in Single-Cell Genomics: Pre-Filtering Synergy and Reinforced Optimization",
     "authors": [
       "W Zhang",
@@ -813,33 +840,6 @@
       "selection",
       "single",
       "cell"
-    ]
-  },
-  {
-    "id": "pub_27",
-    "title": "DP-CRE: Continual Relation Extraction via Decoupled Contrastive Learning and Memory Structure Preservation",
-    "authors": [
-      "M Huang",
-      "M Xiao",
-      "L Wang",
-      "Y Du"
-    ],
-    "venue": "COLING-2024, 2024",
-    "year": "2024",
-    "citations": 5,
-    "citationsId": "14659409203115987087",
-    "abstract": "",
-    "urls": {
-      "paper": "https://scholar.google.com/citations?view_op=view_citation&hl=en&user=YGwukbUAAAAJ&pagesize=100&citation_for_view=YGwukbUAAAAJ:LhH-TYMQEocC",
-      "citations": "https://scholar.google.com/scholar?oi=bibs&hl=en&cites=14659409203115987087"
-    },
-    "venueType": "other",
-    "keywords": [
-      "cre",
-      "continual",
-      "relation",
-      "extraction",
-      "decoupled"
     ]
   },
   {
@@ -1557,36 +1557,6 @@
   },
   {
     "id": "pub_52",
-    "title": "Distribution-Aware Data Expansion with Diffusion Models",
-    "authors": [
-      "L Yang",
-      "JH Yong",
-      "H Yin",
-      "J Jiang",
-      "M Xiao",
-      "W Zhang",
-      "B Wang"
-    ],
-    "venue": "The Thirty-eighth Annual Conference on Neural Information Processing Systems, 2024",
-    "year": "2024",
-    "citations": 0,
-    "citationsId": "",
-    "abstract": "",
-    "urls": {
-      "paper": "https://scholar.google.com/citations?view_op=view_citation&hl=en&user=YGwukbUAAAAJ&pagesize=100&citation_for_view=YGwukbUAAAAJ:WHdLCjDvYFkC",
-      "citations": ""
-    },
-    "venueType": "other",
-    "keywords": [
-      "distribution",
-      "aware",
-      "data",
-      "expansion",
-      "diffusion"
-    ]
-  },
-  {
-    "id": "pub_53",
     "title": "Build Roadmap for Automated Feature Transformation: A Graph-based Reinforcement Learning Approach",
     "authors": [
       "X Huang",
@@ -1617,7 +1587,7 @@
     ]
   },
   {
-    "id": "pub_54",
+    "id": "pub_53",
     "title": "Doctoral Thesis: Hierarchical Topic Mining and Application of Heterogeneous Texts",
     "authors": [
       "M Xiao"
