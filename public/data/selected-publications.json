@@ -32,7 +32,9 @@
       "large language models"
     ],
     "urls": {
-      "project": "https://www.scihorizon.cn/"
+      "paper": "https://dl.acm.org/doi/pdf/10.1145/3711896.3737403",
+      "project": "https://www.scihorizon.cn/",
+      "report": "https://www.nature.com/articles/d41586-025-02462-5"
     },
     "authorRole": "co-author",
     "highlighted": true
@@ -570,7 +572,8 @@
       "hierarchical classification"
     ],
     "urls": {
-      "paper": "https://arxiv.org/pdf/2209.13519"
+      "paper": "https://arxiv.org/pdf/2209.13519",
+      "report": "https://www.cas.cn/cm/202109/t20210930_4807705.shtml"
     },
     "authorRole": "first-author",
     "highlighted": true
