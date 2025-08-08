@@ -109,7 +109,7 @@
     ],
     "venue": "2023 International Joint Conference on Artificial Intelligence (IJCAI), 2023",
     "year": "2023",
-    "citations": 38,
+    "citations": 39,
     "citationsId": "8095856175023135105",
     "abstract": "",
     "urls": {
@@ -183,6 +183,35 @@
   },
   {
     "id": "pub_6",
+    "title": "Beyond Discrete Selection: Continuous Embedding Space Optimization for Generative Feature Selection",
+    "authors": [
+      "M Xiao",
+      "D Wang",
+      "M Wu",
+      "P Wang",
+      "Y Zhou",
+      "Y Fu"
+    ],
+    "venue": "The IEEE International Conference on Data Mining (ICDM) 1 (1), 1-10, 2023",
+    "year": "2023",
+    "citations": 31,
+    "citationsId": "4039133266398073629",
+    "abstract": "",
+    "urls": {
+      "paper": "https://scholar.google.com/citations?view_op=view_citation&hl=en&user=YGwukbUAAAAJ&pagesize=100&citation_for_view=YGwukbUAAAAJ:cWzG1nlazyYC",
+      "citations": "https://scholar.google.com/scholar?oi=bibs&hl=en&cites=4039133266398073629"
+    },
+    "venueType": "conference",
+    "keywords": [
+      "beyond",
+      "discrete",
+      "selection",
+      "continuous",
+      "embedding"
+    ]
+  },
+  {
+    "id": "pub_7",
     "title": "BioRAG: A RAG-LLM Framework for Biological Question Reasoning",
     "authors": [
       "C Wang",
@@ -213,7 +242,7 @@
     ]
   },
   {
-    "id": "pub_7",
+    "id": "pub_8",
     "title": "Traceable group-wise self-optimizing feature transformation learning: A dual optimization perspective",
     "authors": [
       "M Xiao",
@@ -240,35 +269,6 @@
       "wise",
       "self",
       "optimizing"
-    ]
-  },
-  {
-    "id": "pub_8",
-    "title": "Beyond Discrete Selection: Continuous Embedding Space Optimization for Generative Feature Selection",
-    "authors": [
-      "M Xiao",
-      "D Wang",
-      "M Wu",
-      "P Wang",
-      "Y Zhou",
-      "Y Fu"
-    ],
-    "venue": "The IEEE International Conference on Data Mining (ICDM) 1 (1), 1-10, 2023",
-    "year": "2023",
-    "citations": 30,
-    "citationsId": "4039133266398073629",
-    "abstract": "",
-    "urls": {
-      "paper": "https://scholar.google.com/citations?view_op=view_citation&hl=en&user=YGwukbUAAAAJ&pagesize=100&citation_for_view=YGwukbUAAAAJ:cWzG1nlazyYC",
-      "citations": "https://scholar.google.com/scholar?oi=bibs&hl=en&cites=4039133266398073629"
-    },
-    "venueType": "conference",
-    "keywords": [
-      "beyond",
-      "discrete",
-      "selection",
-      "continuous",
-      "embedding"
     ]
   },
   {
@@ -342,7 +342,7 @@
     ],
     "venue": "NeurIPS 2023 Spotlight, 2023",
     "year": "2023",
-    "citations": 27,
+    "citations": 28,
     "citationsId": "5820154520915659664",
     "abstract": "",
     "urls": {
@@ -1149,6 +1149,37 @@
   },
   {
     "id": "pub_38",
+    "title": "GCAL: Adapting Graph Models to Evolving Domain Shifts",
+    "authors": [
+      "Z Qiao",
+      "Q Cai",
+      "H Dong",
+      "J Gu",
+      "P Wang",
+      "M Xiao",
+      "X Luo",
+      "H Xiong"
+    ],
+    "venue": "Forty-Second International Conference on Machine Learning (ICML 2025), 2025",
+    "year": "2025",
+    "citations": 2,
+    "citationsId": "10846738215468634009",
+    "abstract": "",
+    "urls": {
+      "paper": "https://scholar.google.com/citations?view_op=view_citation&hl=en&user=YGwukbUAAAAJ&pagesize=100&citation_for_view=YGwukbUAAAAJ:L1USKYWJimsC",
+      "citations": "https://scholar.google.com/scholar?oi=bibs&hl=en&cites=10846738215468634009"
+    },
+    "venueType": "conference",
+    "keywords": [
+      "gcal",
+      "adapting",
+      "graph",
+      "models",
+      "evolving"
+    ]
+  },
+  {
+    "id": "pub_39",
     "title": "GeneSUM: Large Language Model-based Gene Summary Extraction",
     "authors": [
       "Z Chen",
@@ -1178,7 +1209,7 @@
     ]
   },
   {
-    "id": "pub_39",
+    "id": "pub_40",
     "title": "Towards Graph Prompt Learning: A Survey and Beyond",
     "authors": [
       "Q Long",
@@ -1211,7 +1242,7 @@
     ]
   },
   {
-    "id": "pub_40",
+    "id": "pub_41",
     "title": "GUME: Graphs and User Modalities Enhancement for Long-Tail Multimodal Recommendation",
     "authors": [
       "G Lin",
@@ -1237,37 +1268,6 @@
       "user",
       "modalities",
       "enhancement"
-    ]
-  },
-  {
-    "id": "pub_41",
-    "title": "GCAL: Adapting Graph Models to Evolving Domain Shifts",
-    "authors": [
-      "Z Qiao",
-      "Q Cai",
-      "H Dong",
-      "J Gu",
-      "P Wang",
-      "M Xiao",
-      "X Luo",
-      "H Xiong"
-    ],
-    "venue": "Forty-Second International Conference on Machine Learning (ICML 2025), 2025",
-    "year": "2025",
-    "citations": 1,
-    "citationsId": "10846738215468634009",
-    "abstract": "",
-    "urls": {
-      "paper": "https://scholar.google.com/citations?view_op=view_citation&hl=en&user=YGwukbUAAAAJ&pagesize=100&citation_for_view=YGwukbUAAAAJ:L1USKYWJimsC",
-      "citations": "https://scholar.google.com/scholar?oi=bibs&hl=en&cites=10846738215468634009"
-    },
-    "venueType": "conference",
-    "keywords": [
-      "gcal",
-      "adapting",
-      "graph",
-      "models",
-      "evolving"
     ]
   },
   {
