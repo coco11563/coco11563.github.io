@@ -34,6 +34,37 @@
   },
   {
     "id": "pub_1",
+    "title": "BioRAG: A RAG-LLM Framework for Biological Question Reasoning",
+    "authors": [
+      "C Wang",
+      "Q Long",
+      "M Xiao",
+      "X Cai",
+      "C Wu",
+      "Z Meng",
+      "X Wang",
+      "Y Zhou"
+    ],
+    "venue": "arXiv preprint arXiv:2408.01107, 2024",
+    "year": "2024",
+    "citations": 46,
+    "citationsId": "6760124863574288334,2726936835234220227,17375686450664542083,9885407197037122924,15882021473251243073",
+    "abstract": "",
+    "urls": {
+      "paper": "https://scholar.google.com/citations?view_op=view_citation&hl=en&user=YGwukbUAAAAJ&pagesize=100&citation_for_view=YGwukbUAAAAJ:nVrZBo8bIpAC",
+      "citations": "https://scholar.google.com/scholar?oi=bibs&hl=en&cites=6760124863574288334,2726936835234220227,17375686450664542083,9885407197037122924,15882021473251243073"
+    },
+    "venueType": "other",
+    "keywords": [
+      "biorag",
+      "rag",
+      "llm",
+      "framework",
+      "biological"
+    ]
+  },
+  {
+    "id": "pub_2",
     "title": "Large Language Model Agent: A Survey on Methodology, Applications and Challenges",
     "authors": [
       "J Luo",
@@ -66,7 +97,7 @@
     ]
   },
   {
-    "id": "pub_2",
+    "id": "pub_3",
     "title": "Exploring human mobility patterns using geo-tagged social media data at the group level",
     "authors": [
       "C Yang",
@@ -97,7 +128,7 @@
     ]
   },
   {
-    "id": "pub_3",
+    "id": "pub_4",
     "title": "Semi-supervised Domain Adaptation in Graph Transfer Learning",
     "authors": [
       "Z Qiao*",
@@ -126,7 +157,7 @@
     ]
   },
   {
-    "id": "pub_4",
+    "id": "pub_5",
     "title": "Resolving the Imbalance Issue in Hierarchical Disciplinary Topic Inference via LLM-based Data Augmentation",
     "authors": [
       "C Xunxin",
@@ -153,7 +184,7 @@
     ]
   },
   {
-    "id": "pub_5",
+    "id": "pub_6",
     "title": "Temporal Inductive Path Neural Network for Temporal Knowledge Graph Reasoning",
     "authors": [
       "H Dong",
@@ -182,7 +213,7 @@
     ]
   },
   {
-    "id": "pub_6",
+    "id": "pub_7",
     "title": "Beyond Discrete Selection: Continuous Embedding Space Optimization for Generative Feature Selection",
     "authors": [
       "M Xiao",
@@ -208,37 +239,6 @@
       "selection",
       "continuous",
       "embedding"
-    ]
-  },
-  {
-    "id": "pub_7",
-    "title": "BioRAG: A RAG-LLM Framework for Biological Question Reasoning",
-    "authors": [
-      "C Wang",
-      "Q Long",
-      "M Xiao",
-      "X Cai",
-      "C Wu",
-      "Z Meng",
-      "X Wang",
-      "Y Zhou"
-    ],
-    "venue": "arXiv preprint arXiv:2408.01107, 2024",
-    "year": "2024",
-    "citations": 30,
-    "citationsId": "6760124863574288334",
-    "abstract": "",
-    "urls": {
-      "paper": "https://scholar.google.com/citations?view_op=view_citation&hl=en&user=YGwukbUAAAAJ&pagesize=100&citation_for_view=YGwukbUAAAAJ:nVrZBo8bIpAC",
-      "citations": "https://scholar.google.com/scholar?oi=bibs&hl=en&cites=6760124863574288334"
-    },
-    "venueType": "other",
-    "keywords": [
-      "biorag",
-      "rag",
-      "llm",
-      "framework",
-      "biological"
     ]
   },
   {
@@ -373,12 +373,12 @@
     ],
     "venue": "IEEE Transactions on Knowledge and Data Engineering 35 (9), 9685-9699, 2023",
     "year": "2023",
-    "citations": 19,
-    "citationsId": "3043400476458974115",
+    "citations": 20,
+    "citationsId": "3043400476458974115,17235107202730669356",
     "abstract": "",
     "urls": {
       "paper": "https://scholar.google.com/citations?view_op=view_citation&hl=en&user=YGwukbUAAAAJ&pagesize=100&citation_for_view=YGwukbUAAAAJ:CB2v5VPnA5kC",
-      "citations": "https://scholar.google.com/scholar?oi=bibs&hl=en&cites=3043400476458974115"
+      "citations": "https://scholar.google.com/scholar?oi=bibs&hl=en&cites=3043400476458974115,17235107202730669356"
     },
     "venueType": "other",
     "keywords": [
@@ -420,6 +420,38 @@
   },
   {
     "id": "pub_14",
+    "title": "Comae: Comprehensive attribute exploration for zero-shot hashing",
+    "authors": [
+      "Y Li",
+      "Q Long",
+      "Y Zhou",
+      "R Zhang",
+      "Z Ning",
+      "Z Zhu",
+      "Y Zhou",
+      "X Wang",
+      "M Xiao"
+    ],
+    "venue": "Proceedings of the 2025 International Conference on Multimedia Retrieval …, 2025",
+    "year": "2025",
+    "citations": 16,
+    "citationsId": "12840450703004098056,5818235308232295910",
+    "abstract": "",
+    "urls": {
+      "paper": "https://scholar.google.com/citations?view_op=view_citation&hl=en&user=YGwukbUAAAAJ&pagesize=100&citation_for_view=YGwukbUAAAAJ:artPoR2Yc-kC",
+      "citations": "https://scholar.google.com/scholar?oi=bibs&hl=en&cites=12840450703004098056,5818235308232295910"
+    },
+    "venueType": "other",
+    "keywords": [
+      "comae",
+      "comprehensive",
+      "attribute",
+      "exploration",
+      "zero"
+    ]
+  },
+  {
+    "id": "pub_15",
     "title": "NEEDED: Introducing Hierarchical Transformer to Eye Diseases Diagnosis",
     "authors": [
       "X Ye*",
@@ -449,7 +481,7 @@
     ]
   },
   {
-    "id": "pub_15",
+    "id": "pub_16",
     "title": "Experimental study on direct tensile mechanical properties of hydraulic asphalt concrete",
     "authors": [
       "Z Ning",
@@ -474,38 +506,6 @@
       "direct",
       "tensile",
       "mechanical"
-    ]
-  },
-  {
-    "id": "pub_16",
-    "title": "Comae: Comprehensive attribute exploration for zero-shot hashing",
-    "authors": [
-      "Y Li",
-      "Q Long",
-      "Y Zhou",
-      "R Zhang",
-      "Z Ning",
-      "Z Zhu",
-      "Y Zhou",
-      "X Wang",
-      "M Xiao"
-    ],
-    "venue": "Proceedings of the 2025 International Conference on Multimedia Retrieval …, 2025",
-    "year": "2025",
-    "citations": 15,
-    "citationsId": "12840450703004098056",
-    "abstract": "",
-    "urls": {
-      "paper": "https://scholar.google.com/citations?view_op=view_citation&hl=en&user=YGwukbUAAAAJ&pagesize=100&citation_for_view=YGwukbUAAAAJ:artPoR2Yc-kC",
-      "citations": "https://scholar.google.com/scholar?oi=bibs&hl=en&cites=12840450703004098056"
-    },
-    "venueType": "other",
-    "keywords": [
-      "comae",
-      "comprehensive",
-      "attribute",
-      "exploration",
-      "zero"
     ]
   },
   {
@@ -665,6 +665,65 @@
   },
   {
     "id": "pub_22",
+    "title": "Knowledge-Guided Biomarker Identification for Label-Free Single-Cell RNA-Seq Data: A Reinforcement Learning Perspective",
+    "authors": [
+      "M Xiao",
+      "W Zhang",
+      "X Huang",
+      "H Zhu",
+      "M Wu",
+      "X Li",
+      "Y Zhou"
+    ],
+    "venue": "arXiv preprint arXiv:2501.04718, 2025",
+    "year": "2025",
+    "citations": 8,
+    "citationsId": "5099728859865515737,7733828662904658466",
+    "abstract": "",
+    "urls": {
+      "paper": "https://scholar.google.com/citations?view_op=view_citation&hl=en&user=YGwukbUAAAAJ&pagesize=100&citation_for_view=YGwukbUAAAAJ:QD3KBmkZPeQC",
+      "citations": "https://scholar.google.com/scholar?oi=bibs&hl=en&cites=5099728859865515737,7733828662904658466"
+    },
+    "venueType": "other",
+    "keywords": [
+      "knowledge",
+      "guided",
+      "biomarker",
+      "identification",
+      "label"
+    ]
+  },
+  {
+    "id": "pub_23",
+    "title": "GUME: Graphs and User Modalities Enhancement for Long-Tail Multimodal Recommendation",
+    "authors": [
+      "G Lin",
+      "Z Meng",
+      "D Wang",
+      "Q Long",
+      "Y Zhou",
+      "M Xiao"
+    ],
+    "venue": "CIKM '24: Proceedings of the 33rd ACM International Conference on …, 2024",
+    "year": "2024",
+    "citations": 8,
+    "citationsId": "13858498669539712293,11175020044088109149",
+    "abstract": "",
+    "urls": {
+      "paper": "https://scholar.google.com/citations?view_op=view_citation&hl=en&user=YGwukbUAAAAJ&pagesize=100&citation_for_view=YGwukbUAAAAJ:u-coK7KVo8oC",
+      "citations": "https://scholar.google.com/scholar?oi=bibs&hl=en&cites=13858498669539712293,11175020044088109149"
+    },
+    "venueType": "conference",
+    "keywords": [
+      "gume",
+      "graphs",
+      "user",
+      "modalities",
+      "enhancement"
+    ]
+  },
+  {
+    "id": "pub_24",
     "title": "scCDCG: Efficient Deep Structural Clustering for single-cell RNA-seq via Deep Cut-informed Graph Embedding",
     "authors": [
       "P Xu",
@@ -694,7 +753,40 @@
     ]
   },
   {
-    "id": "pub_23",
+    "id": "pub_25",
+    "title": "Collaborative Multi-Agent Reinforcement Learning for Automated Feature Transformation with Graph-Driven Path Optimization",
+    "authors": [
+      "X Huang",
+      "D Wang",
+      "Z Ning",
+      "Z Qiao",
+      "Q Long",
+      "H Zhu",
+      "Y Du",
+      "M Wu",
+      "Y Zhou",
+      "..."
+    ],
+    "venue": "arXiv preprint arXiv:2504.17355, 2025",
+    "year": "2025",
+    "citations": 7,
+    "citationsId": "9900583851438116807,11188694279581744184,4393542771694372293,993993026473509146",
+    "abstract": "",
+    "urls": {
+      "paper": "https://scholar.google.com/citations?view_op=view_citation&hl=en&user=YGwukbUAAAAJ&pagesize=100&citation_for_view=YGwukbUAAAAJ:MhiOAD_qIWkC",
+      "citations": "https://scholar.google.com/scholar?oi=bibs&hl=en&cites=9900583851438116807,11188694279581744184,4393542771694372293,993993026473509146"
+    },
+    "venueType": "other",
+    "keywords": [
+      "collaborative",
+      "multi",
+      "agent",
+      "reinforcement",
+      "learning"
+    ]
+  },
+  {
+    "id": "pub_26",
     "title": "Information filtering and interpolating for semi-supervised graph domain adaptation",
     "authors": [
       "Z Qiao",
@@ -722,39 +814,7 @@
     ]
   },
   {
-    "id": "pub_24",
-    "title": "Enhancing Tabular Data Optimization with a Flexible Graph-based Reinforced Exploration Strategy",
-    "authors": [
-      "X Huang",
-      "D Wang",
-      "Z Ning",
-      "Z Qiao",
-      "Q Long",
-      "H Zhu",
-      "M Wu",
-      "Y Zhou",
-      "M Xiao"
-    ],
-    "venue": "Submitted to ICLR 25, 2024",
-    "year": "2024",
-    "citations": 6,
-    "citationsId": "9900583851438116807,11188694279581744184",
-    "abstract": "",
-    "urls": {
-      "paper": "https://scholar.google.com/citations?view_op=view_citation&hl=en&user=YGwukbUAAAAJ&pagesize=100&citation_for_view=YGwukbUAAAAJ:ZzlSgRqYykMC",
-      "citations": "https://scholar.google.com/scholar?oi=bibs&hl=en&cites=9900583851438116807,11188694279581744184"
-    },
-    "venueType": "conference",
-    "keywords": [
-      "enhancing",
-      "tabular",
-      "data",
-      "optimization",
-      "flexible"
-    ]
-  },
-  {
-    "id": "pub_25",
+    "id": "pub_27",
     "title": "DP-CRE: Continual Relation Extraction via Decoupled Contrastive Learning and Memory Structure Preservation",
     "authors": [
       "M Huang",
@@ -781,7 +841,7 @@
     ]
   },
   {
-    "id": "pub_26",
+    "id": "pub_28",
     "title": "FastFT: Accelerating Reinforced Feature Transformation via Advanced Exploration Strategies",
     "authors": [
       "T He",
@@ -813,37 +873,36 @@
     ]
   },
   {
-    "id": "pub_27",
-    "title": "Enhanced Gene Selection in Single-Cell Genomics: Pre-Filtering Synergy and Reinforced Optimization",
+    "id": "pub_29",
+    "title": "Towards Continuous Reuse of Graph Models via Holistic Memory Diversification",
     "authors": [
-      "W Zhang",
-      "Z Meng",
-      "D Wang",
-      "M Wu",
-      "K Liu",
-      "Y Zhou",
-      "M Xiao"
+      "Z Qiao",
+      "J Xiao",
+      "Q Sun",
+      "M Xiao",
+      "X Luo",
+      "H Xiong"
     ],
-    "venue": "arXiv preprint arXiv:2406.07418, 2024",
-    "year": "2024",
+    "venue": "The Thirteenth International Conference on Learning Representations, 2025",
+    "year": "2025",
     "citations": 5,
-    "citationsId": "5099728859865515737",
+    "citationsId": "1963250201067067285,665646360071089846",
     "abstract": "",
     "urls": {
-      "paper": "https://scholar.google.com/citations?view_op=view_citation&hl=en&user=YGwukbUAAAAJ&pagesize=100&citation_for_view=YGwukbUAAAAJ:jL-93Qbq4QoC",
-      "citations": "https://scholar.google.com/scholar?oi=bibs&hl=en&cites=5099728859865515737"
+      "paper": "https://scholar.google.com/citations?view_op=view_citation&hl=en&user=YGwukbUAAAAJ&pagesize=100&citation_for_view=YGwukbUAAAAJ:v1_lew4L6wgC",
+      "citations": "https://scholar.google.com/scholar?oi=bibs&hl=en&cites=1963250201067067285,665646360071089846"
     },
     "venueType": "other",
     "keywords": [
-      "enhanced",
-      "gene",
-      "selection",
-      "single",
-      "cell"
+      "towards",
+      "continuous",
+      "reuse",
+      "graph",
+      "models"
     ]
   },
   {
-    "id": "pub_28",
+    "id": "pub_30",
     "title": "scCompass: An Integrated Multi‐Species scRNA‐seq Database for AI‐Ready",
     "authors": [
       "P Wang",
@@ -877,7 +936,7 @@
     ]
   },
   {
-    "id": "pub_29",
+    "id": "pub_31",
     "title": "SciHorizon: Benchmarking AI-for-Science Readiness from Scientific Data to Large Language Models",
     "authors": [
       "C Qin",
@@ -910,7 +969,7 @@
     ]
   },
   {
-    "id": "pub_30",
+    "id": "pub_32",
     "title": "Knowledge Hierarchy Guided Biological-Medical Dataset Distillation for Domain LLM Training",
     "authors": [
       "X Cai",
@@ -938,66 +997,34 @@
     ]
   },
   {
-    "id": "pub_31",
-    "title": "Towards Continuous Reuse of Graph Models via Holistic Memory Diversification",
+    "id": "pub_33",
+    "title": "scReader: Prompting Large Language Models to Interpret scRNA-seq Data",
     "authors": [
-      "Z Qiao",
-      "J Xiao",
-      "Q Sun",
-      "M Xiao",
-      "X Luo",
-      "H Xiong"
+      "C Li",
+      "Q Long",
+      "Y Zhou",
+      "M Xiao"
     ],
-    "venue": "The Thirteenth International Conference on Learning Representations, 2025",
-    "year": "2025",
+    "venue": "Accepted By ICDM 2024, 2024",
+    "year": "2024",
     "citations": 4,
-    "citationsId": "1963250201067067285",
+    "citationsId": "8550002402258129107,8654951797349558270",
     "abstract": "",
     "urls": {
-      "paper": "https://scholar.google.com/citations?view_op=view_citation&hl=en&user=YGwukbUAAAAJ&pagesize=100&citation_for_view=YGwukbUAAAAJ:v1_lew4L6wgC",
-      "citations": "https://scholar.google.com/scholar?oi=bibs&hl=en&cites=1963250201067067285"
+      "paper": "https://scholar.google.com/citations?view_op=view_citation&hl=en&user=YGwukbUAAAAJ&pagesize=100&citation_for_view=YGwukbUAAAAJ:0CzhzZyukY4C",
+      "citations": "https://scholar.google.com/scholar?oi=bibs&hl=en&cites=8550002402258129107,8654951797349558270"
     },
-    "venueType": "other",
+    "venueType": "conference",
     "keywords": [
-      "towards",
-      "continuous",
-      "reuse",
-      "graph",
+      "screader",
+      "prompting",
+      "large",
+      "language",
       "models"
     ]
   },
   {
-    "id": "pub_32",
-    "title": "Knowledge-Guided Biomarker Identification for Label-Free Single-Cell RNA-Seq Data: A Reinforcement Learning Perspective",
-    "authors": [
-      "M Xiao",
-      "W Zhang",
-      "X Huang",
-      "H Zhu",
-      "M Wu",
-      "X Li",
-      "Y Zhou"
-    ],
-    "venue": "arXiv preprint arXiv:2501.04718, 2025",
-    "year": "2025",
-    "citations": 3,
-    "citationsId": "7733828662904658466",
-    "abstract": "",
-    "urls": {
-      "paper": "https://scholar.google.com/citations?view_op=view_citation&hl=en&user=YGwukbUAAAAJ&pagesize=100&citation_for_view=YGwukbUAAAAJ:QD3KBmkZPeQC",
-      "citations": "https://scholar.google.com/scholar?oi=bibs&hl=en&cites=7733828662904658466"
-    },
-    "venueType": "other",
-    "keywords": [
-      "knowledge",
-      "guided",
-      "biomarker",
-      "identification",
-      "label"
-    ]
-  },
-  {
-    "id": "pub_33",
+    "id": "pub_34",
     "title": "MOAT: Graph prompting for 3D molecular graphs",
     "authors": [
       "Q Long",
@@ -1028,7 +1055,7 @@
     ]
   },
   {
-    "id": "pub_34",
+    "id": "pub_35",
     "title": "Automated Taxonomy Alignment via Large Language Models: Bridging the Gap between Knowledge Domains",
     "authors": [
       "W Cui",
@@ -1057,7 +1084,7 @@
     ]
   },
   {
-    "id": "pub_35",
+    "id": "pub_36",
     "title": "Refining Computational Inference of Gene Regulatory Networks: Integrating Knockout Data within a Multi-Task Framework",
     "authors": [
       "W Cui",
@@ -1088,67 +1115,7 @@
     ]
   },
   {
-    "id": "pub_36",
-    "title": "scInterpreter: Training Large Language Models to Interpret scRNA-seq Data for Cell Type Annotation",
-    "authors": [
-      "C Li",
-      "M Xiao",
-      "P Wang",
-      "G Feng",
-      "X Li",
-      "Y Zhou"
-    ],
-    "venue": "arXiv preprint arXiv:2402.12405, 2024",
-    "year": "2024",
-    "citations": 3,
-    "citationsId": "8550002402258129107",
-    "abstract": "",
-    "urls": {
-      "paper": "https://scholar.google.com/citations?view_op=view_citation&hl=en&user=YGwukbUAAAAJ&pagesize=100&citation_for_view=YGwukbUAAAAJ:wMgC3FpKEyYC",
-      "citations": "https://scholar.google.com/scholar?oi=bibs&hl=en&cites=8550002402258129107"
-    },
-    "venueType": "other",
-    "keywords": [
-      "scinterpreter",
-      "training",
-      "large",
-      "language",
-      "models"
-    ]
-  },
-  {
     "id": "pub_37",
-    "title": "Who should review your proposal? interdisciplinary topic path detection for research proposals",
-    "authors": [
-      "M Xiao",
-      "Z Qiao",
-      "Y Fu",
-      "H Dong",
-      "Y Du",
-      "P Wang",
-      "D Li",
-      "Y Zhou"
-    ],
-    "venue": "arXiv preprint arXiv:2203.10922, 2022",
-    "year": "2022",
-    "citations": 3,
-    "citationsId": "17235107202730669356",
-    "abstract": "",
-    "urls": {
-      "paper": "https://scholar.google.com/citations?view_op=view_citation&hl=en&user=YGwukbUAAAAJ&pagesize=100&citation_for_view=YGwukbUAAAAJ:jU7OWUQzBzMC",
-      "citations": "https://scholar.google.com/scholar?oi=bibs&hl=en&cites=17235107202730669356"
-    },
-    "venueType": "other",
-    "keywords": [
-      "who",
-      "should",
-      "review",
-      "your",
-      "proposal?"
-    ]
-  },
-  {
-    "id": "pub_38",
     "title": "GCAL: Adapting Graph Models to Evolving Domain Shifts",
     "authors": [
       "Z Qiao",
@@ -1179,7 +1146,7 @@
     ]
   },
   {
-    "id": "pub_39",
+    "id": "pub_38",
     "title": "GeneSUM: Large Language Model-based Gene Summary Extraction",
     "authors": [
       "Z Chen",
@@ -1209,7 +1176,7 @@
     ]
   },
   {
-    "id": "pub_40",
+    "id": "pub_39",
     "title": "Towards Graph Prompt Learning: A Survey and Beyond",
     "authors": [
       "Q Long",
@@ -1242,124 +1209,7 @@
     ]
   },
   {
-    "id": "pub_41",
-    "title": "GUME: Graphs and User Modalities Enhancement for Long-Tail Multimodal Recommendation",
-    "authors": [
-      "G Lin",
-      "Z Meng",
-      "D Wang",
-      "Q Long",
-      "Y Zhou",
-      "M Xiao"
-    ],
-    "venue": "CIKM '24: Proceedings of the 33rd ACM International Conference on …, 2024",
-    "year": "2024",
-    "citations": 2,
-    "citationsId": "11175020044088109149",
-    "abstract": "",
-    "urls": {
-      "paper": "https://scholar.google.com/citations?view_op=view_citation&hl=en&user=YGwukbUAAAAJ&pagesize=100&citation_for_view=YGwukbUAAAAJ:u-coK7KVo8oC",
-      "citations": "https://scholar.google.com/scholar?oi=bibs&hl=en&cites=11175020044088109149"
-    },
-    "venueType": "conference",
-    "keywords": [
-      "gume",
-      "graphs",
-      "user",
-      "modalities",
-      "enhancement"
-    ]
-  },
-  {
-    "id": "pub_42",
-    "title": "Collaborative Multi-Agent Reinforcement Learning for Automated Feature Transformation with Graph-Driven Path Optimization",
-    "authors": [
-      "X Huang",
-      "D Wang",
-      "Z Ning",
-      "Z Qiao",
-      "Q Long",
-      "H Zhu",
-      "Y Du",
-      "M Wu",
-      "Y Zhou",
-      "..."
-    ],
-    "venue": "arXiv preprint arXiv:2504.17355, 2025",
-    "year": "2025",
-    "citations": 1,
-    "citationsId": "4393542771694372293",
-    "abstract": "",
-    "urls": {
-      "paper": "https://scholar.google.com/citations?view_op=view_citation&hl=en&user=YGwukbUAAAAJ&pagesize=100&citation_for_view=YGwukbUAAAAJ:MhiOAD_qIWkC",
-      "citations": "https://scholar.google.com/scholar?oi=bibs&hl=en&cites=4393542771694372293"
-    },
-    "venueType": "other",
-    "keywords": [
-      "collaborative",
-      "multi",
-      "agent",
-      "reinforcement",
-      "learning"
-    ]
-  },
-  {
-    "id": "pub_43",
-    "title": "Holistic Memory Diversification for Incremental Learning in Growing Graphs",
-    "authors": [
-      "Z Qiao",
-      "J Xiao",
-      "Q Sun",
-      "M Xiao",
-      "H Xiong"
-    ],
-    "venue": "ICLR 2025, 2025",
-    "year": "2025",
-    "citations": 1,
-    "citationsId": "665646360071089846",
-    "abstract": "",
-    "urls": {
-      "paper": "https://scholar.google.com/citations?view_op=view_citation&hl=en&user=YGwukbUAAAAJ&pagesize=100&citation_for_view=YGwukbUAAAAJ:8xutWZnSdmoC",
-      "citations": "https://scholar.google.com/scholar?oi=bibs&hl=en&cites=665646360071089846"
-    },
-    "venueType": "conference",
-    "keywords": [
-      "holistic",
-      "memory",
-      "diversification",
-      "incremental",
-      "learning"
-    ]
-  },
-  {
-    "id": "pub_44",
-    "title": "scReader: Prompting Large Language Models to Interpret scRNA-seq Data",
-    "authors": [
-      "C Li",
-      "Q Long",
-      "Y Zhou",
-      "M Xiao"
-    ],
-    "venue": "Accepted By ICDM 2024, 2024",
-    "year": "2024",
-    "citations": 1,
-    "citationsId": "8654951797349558270",
-    "abstract": "",
-    "urls": {
-      "paper": "https://scholar.google.com/citations?view_op=view_citation&hl=en&user=YGwukbUAAAAJ&pagesize=100&citation_for_view=YGwukbUAAAAJ:0CzhzZyukY4C",
-      "citations": "https://scholar.google.com/scholar?oi=bibs&hl=en&cites=8654951797349558270"
-    },
-    "venueType": "conference",
-    "keywords": [
-      "screader",
-      "prompting",
-      "large",
-      "language",
-      "models"
-    ]
-  },
-  {
-    "id": "pub_45",
+    "id": "pub_40",
     "title": "Soft Graph Clustering for single-cell RNA Sequencing Data",
     "authors": [
       "P Xu",
@@ -1388,7 +1238,7 @@
     ]
   },
   {
-    "id": "pub_46",
+    "id": "pub_41",
     "title": "Reinforcement Learning-based Feature Generation Algorithm for Scientific Data",
     "authors": [
       "M Xiao",
@@ -1414,7 +1264,7 @@
     ]
   },
   {
-    "id": "pub_47",
+    "id": "pub_42",
     "title": "Gut microbiota and tuberculosis",
     "authors": [
       "Y Liu",
@@ -1442,7 +1292,7 @@
     ]
   },
   {
-    "id": "pub_48",
+    "id": "pub_43",
     "title": "m-KAILIN: A Knowledge-Driven Agentic Scientific Corpus Distillation Framework for Biomedical Large Language Models Training",
     "authors": [
       "M Xiao",
@@ -1471,7 +1321,7 @@
     ]
   },
   {
-    "id": "pub_49",
+    "id": "pub_44",
     "title": "Comprehend, Divide, and Conquer: Feature Subspace Exploration via Multi-Agent Hierarchical Reinforcement Learning",
     "authors": [
       "W Zhang",
@@ -1502,7 +1352,7 @@
     ]
   },
   {
-    "id": "pub_50",
+    "id": "pub_45",
     "title": "Key Technologies and Pratical Applications of Artificial Intelligence",
     "authors": [
       "CAS Computer Network Information Center"
@@ -1526,7 +1376,7 @@
     ]
   },
   {
-    "id": "pub_51",
+    "id": "pub_46",
     "title": "DynMoLE: Boosting Mixture of LoRA Experts Fine-Tuning with a Hybrid Routing Mechanism",
     "authors": [
       "D Li",
@@ -1556,38 +1406,7 @@
     ]
   },
   {
-    "id": "pub_52",
-    "title": "Build Roadmap for Automated Feature Transformation: A Graph-based Reinforcement Learning Approach",
-    "authors": [
-      "X Huang",
-      "D Wang",
-      "Z Ning",
-      "Z Qiao",
-      "H Zhu",
-      "M Wu",
-      "Y Zhou",
-      "M Xiao"
-    ],
-    "venue": "Openreview, 2024",
-    "year": "2024",
-    "citations": 0,
-    "citationsId": "",
-    "abstract": "",
-    "urls": {
-      "paper": "https://scholar.google.com/citations?view_op=view_citation&hl=en&user=YGwukbUAAAAJ&pagesize=100&citation_for_view=YGwukbUAAAAJ:cK4Rrx0J3m0C",
-      "citations": ""
-    },
-    "venueType": "other",
-    "keywords": [
-      "build",
-      "roadmap",
-      "automated",
-      "feature",
-      "transformation"
-    ]
-  },
-  {
-    "id": "pub_53",
+    "id": "pub_47",
     "title": "Doctoral Thesis: Hierarchical Topic Mining and Application of Heterogeneous Texts",
     "authors": [
       "M Xiao"
