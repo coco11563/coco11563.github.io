@@ -140,7 +140,7 @@
     ],
     "venue": "2023 International Joint Conference on Artificial Intelligence (IJCAI), 2023",
     "year": "2023",
-    "citations": 39,
+    "citations": 41,
     "citationsId": "8095856175023135105",
     "abstract": "",
     "urls": {
@@ -665,6 +665,35 @@
   },
   {
     "id": "pub_22",
+    "title": "GUME: Graphs and User Modalities Enhancement for Long-Tail Multimodal Recommendation",
+    "authors": [
+      "G Lin",
+      "Z Meng",
+      "D Wang",
+      "Q Long",
+      "Y Zhou",
+      "M Xiao"
+    ],
+    "venue": "CIKM '24: Proceedings of the 33rd ACM International Conference on …, 2024",
+    "year": "2024",
+    "citations": 9,
+    "citationsId": "13858498669539712293,11175020044088109149",
+    "abstract": "",
+    "urls": {
+      "paper": "https://scholar.google.com/citations?view_op=view_citation&hl=en&user=YGwukbUAAAAJ&pagesize=100&citation_for_view=YGwukbUAAAAJ:u-coK7KVo8oC",
+      "citations": "https://scholar.google.com/scholar?oi=bibs&hl=en&cites=13858498669539712293,11175020044088109149"
+    },
+    "venueType": "conference",
+    "keywords": [
+      "gume",
+      "graphs",
+      "user",
+      "modalities",
+      "enhancement"
+    ]
+  },
+  {
+    "id": "pub_23",
     "title": "Knowledge-Guided Biomarker Identification for Label-Free Single-Cell RNA-Seq Data: A Reinforcement Learning Perspective",
     "authors": [
       "M Xiao",
@@ -691,35 +720,6 @@
       "biomarker",
       "identification",
       "label"
-    ]
-  },
-  {
-    "id": "pub_23",
-    "title": "GUME: Graphs and User Modalities Enhancement for Long-Tail Multimodal Recommendation",
-    "authors": [
-      "G Lin",
-      "Z Meng",
-      "D Wang",
-      "Q Long",
-      "Y Zhou",
-      "M Xiao"
-    ],
-    "venue": "CIKM '24: Proceedings of the 33rd ACM International Conference on …, 2024",
-    "year": "2024",
-    "citations": 8,
-    "citationsId": "13858498669539712293,11175020044088109149",
-    "abstract": "",
-    "urls": {
-      "paper": "https://scholar.google.com/citations?view_op=view_citation&hl=en&user=YGwukbUAAAAJ&pagesize=100&citation_for_view=YGwukbUAAAAJ:u-coK7KVo8oC",
-      "citations": "https://scholar.google.com/scholar?oi=bibs&hl=en&cites=13858498669539712293,11175020044088109149"
-    },
-    "venueType": "conference",
-    "keywords": [
-      "gume",
-      "graphs",
-      "user",
-      "modalities",
-      "enhancement"
     ]
   },
   {
