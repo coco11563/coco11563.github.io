@@ -47,7 +47,7 @@
     ],
     "venue": "arXiv preprint arXiv:2408.01107, 2024",
     "year": "2024",
-    "citations": 46,
+    "citations": 47,
     "citationsId": "6760124863574288334,2726936835234220227,17375686450664542083,9885407197037122924,15882021473251243073",
     "abstract": "",
     "urls": {
@@ -158,33 +158,6 @@
   },
   {
     "id": "pub_5",
-    "title": "Resolving the Imbalance Issue in Hierarchical Disciplinary Topic Inference via LLM-based Data Augmentation",
-    "authors": [
-      "C Xunxin",
-      "M Xiao*",
-      "Z Ning",
-      "Y Zhou"
-    ],
-    "venue": "The IEEE International Conference on Data Mining (ICDM) 2023, 956-961, 2023",
-    "year": "2023",
-    "citations": 38,
-    "citationsId": "9669930467170038570",
-    "abstract": "",
-    "urls": {
-      "paper": "https://scholar.google.com/citations?view_op=view_citation&hl=en&user=YGwukbUAAAAJ&pagesize=100&citation_for_view=YGwukbUAAAAJ:bKqednn6t2AC",
-      "citations": "https://scholar.google.com/scholar?oi=bibs&hl=en&cites=9669930467170038570"
-    },
-    "venueType": "conference",
-    "keywords": [
-      "resolving",
-      "imbalance",
-      "issue",
-      "hierarchical",
-      "disciplinary"
-    ]
-  },
-  {
-    "id": "pub_6",
     "title": "Temporal Inductive Path Neural Network for Temporal Knowledge Graph Reasoning",
     "authors": [
       "H Dong",
@@ -196,7 +169,7 @@
     ],
     "venue": "Artificial Intelligence Journal, 2024",
     "year": "2024",
-    "citations": 37,
+    "citations": 39,
     "citationsId": "10863920213481238703",
     "abstract": "",
     "urls": {
@@ -210,6 +183,33 @@
       "path",
       "neural",
       "network"
+    ]
+  },
+  {
+    "id": "pub_6",
+    "title": "Resolving the Imbalance Issue in Hierarchical Disciplinary Topic Inference via LLM-based Data Augmentation",
+    "authors": [
+      "C Xunxin",
+      "M Xiao*",
+      "Z Ning",
+      "Y Zhou"
+    ],
+    "venue": "The IEEE International Conference on Data Mining (ICDM) 2023, 956-961, 2023",
+    "year": "2023",
+    "citations": 39,
+    "citationsId": "9669930467170038570",
+    "abstract": "",
+    "urls": {
+      "paper": "https://scholar.google.com/citations?view_op=view_citation&hl=en&user=YGwukbUAAAAJ&pagesize=100&citation_for_view=YGwukbUAAAAJ:bKqednn6t2AC",
+      "citations": "https://scholar.google.com/scholar?oi=bibs&hl=en&cites=9669930467170038570"
+    },
+    "venueType": "conference",
+    "keywords": [
+      "resolving",
+      "imbalance",
+      "issue",
+      "hierarchical",
+      "disciplinary"
     ]
   },
   {
@@ -601,6 +601,35 @@
   },
   {
     "id": "pub_20",
+    "title": "GUME: Graphs and User Modalities Enhancement for Long-Tail Multimodal Recommendation",
+    "authors": [
+      "G Lin",
+      "Z Meng",
+      "D Wang",
+      "Q Long",
+      "Y Zhou",
+      "M Xiao"
+    ],
+    "venue": "CIKM '24: Proceedings of the 33rd ACM International Conference on …, 2024",
+    "year": "2024",
+    "citations": 10,
+    "citationsId": "13858498669539712293,11175020044088109149",
+    "abstract": "",
+    "urls": {
+      "paper": "https://scholar.google.com/citations?view_op=view_citation&hl=en&user=YGwukbUAAAAJ&pagesize=100&citation_for_view=YGwukbUAAAAJ:u-coK7KVo8oC",
+      "citations": "https://scholar.google.com/scholar?oi=bibs&hl=en&cites=13858498669539712293,11175020044088109149"
+    },
+    "venueType": "conference",
+    "keywords": [
+      "gume",
+      "graphs",
+      "user",
+      "modalities",
+      "enhancement"
+    ]
+  },
+  {
+    "id": "pub_21",
     "title": "Towards Data-Centric AI: A Comprehensive Survey of Traditional, Reinforcement, and Generative Approaches for Tabular Data Transformation",
     "authors": [
       "D Wang",
@@ -633,7 +662,7 @@
     ]
   },
   {
-    "id": "pub_21",
+    "id": "pub_22",
     "title": "Distribution-Aware Data Expansion with Diffusion Models",
     "authors": [
       "H Zhu",
@@ -661,35 +690,6 @@
       "data",
       "expansion",
       "diffusion"
-    ]
-  },
-  {
-    "id": "pub_22",
-    "title": "GUME: Graphs and User Modalities Enhancement for Long-Tail Multimodal Recommendation",
-    "authors": [
-      "G Lin",
-      "Z Meng",
-      "D Wang",
-      "Q Long",
-      "Y Zhou",
-      "M Xiao"
-    ],
-    "venue": "CIKM '24: Proceedings of the 33rd ACM International Conference on …, 2024",
-    "year": "2024",
-    "citations": 9,
-    "citationsId": "13858498669539712293,11175020044088109149",
-    "abstract": "",
-    "urls": {
-      "paper": "https://scholar.google.com/citations?view_op=view_citation&hl=en&user=YGwukbUAAAAJ&pagesize=100&citation_for_view=YGwukbUAAAAJ:u-coK7KVo8oC",
-      "citations": "https://scholar.google.com/scholar?oi=bibs&hl=en&cites=13858498669539712293,11175020044088109149"
-    },
-    "venueType": "conference",
-    "keywords": [
-      "gume",
-      "graphs",
-      "user",
-      "modalities",
-      "enhancement"
     ]
   },
   {
