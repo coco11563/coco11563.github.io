@@ -34,6 +34,39 @@
   },
   {
     "id": "pub_1",
+    "title": "Large Language Model Agent: A Survey on Methodology, Applications and Challenges",
+    "authors": [
+      "J Luo",
+      "W Zhang",
+      "Y Yuan",
+      "Y Zhao",
+      "J Yang",
+      "Y Gu",
+      "B Wu",
+      "B Chen",
+      "Z Qiao",
+      "..."
+    ],
+    "venue": "arXiv preprint arxiv:2503.21460, 2025",
+    "year": "2025",
+    "citations": 47,
+    "citationsId": "2553384233263415865,4543464159028255200,6686040006820538842,3511825580536173473",
+    "abstract": "",
+    "urls": {
+      "paper": "https://scholar.google.com/citations?view_op=view_citation&hl=en&user=YGwukbUAAAAJ&pagesize=100&citation_for_view=YGwukbUAAAAJ:7BrZ7Jt4UNcC",
+      "citations": "https://scholar.google.com/scholar?oi=bibs&hl=en&cites=2553384233263415865,4543464159028255200,6686040006820538842,3511825580536173473"
+    },
+    "venueType": "other",
+    "keywords": [
+      "large",
+      "language",
+      "model",
+      "agent",
+      "survey"
+    ]
+  },
+  {
+    "id": "pub_2",
     "title": "BioRAG: A RAG-LLM Framework for Biological Question Reasoning",
     "authors": [
       "C Wang",
@@ -61,39 +94,6 @@
       "llm",
       "framework",
       "biological"
-    ]
-  },
-  {
-    "id": "pub_2",
-    "title": "Large Language Model Agent: A Survey on Methodology, Applications and Challenges",
-    "authors": [
-      "J Luo",
-      "W Zhang",
-      "Y Yuan",
-      "Y Zhao",
-      "J Yang",
-      "Y Gu",
-      "B Wu",
-      "B Chen",
-      "Z Qiao",
-      "..."
-    ],
-    "venue": "arXiv preprint arxiv:2503.21460, 2025",
-    "year": "2025",
-    "citations": 45,
-    "citationsId": "2553384233263415865,4543464159028255200,3511825580536173473,6686040006820538842",
-    "abstract": "",
-    "urls": {
-      "paper": "https://scholar.google.com/citations?view_op=view_citation&hl=en&user=YGwukbUAAAAJ&pagesize=100&citation_for_view=YGwukbUAAAAJ:7BrZ7Jt4UNcC",
-      "citations": "https://scholar.google.com/scholar?oi=bibs&hl=en&cites=2553384233263415865,4543464159028255200,3511825580536173473,6686040006820538842"
-    },
-    "venueType": "other",
-    "keywords": [
-      "large",
-      "language",
-      "model",
-      "agent",
-      "survey"
     ]
   },
   {
@@ -601,6 +601,37 @@
   },
   {
     "id": "pub_20",
+    "title": "Distribution-Aware Data Expansion with Diffusion Models",
+    "authors": [
+      "H Zhu",
+      "L Yang",
+      "JH Yong",
+      "H Yin",
+      "J Jiang",
+      "M Xiao",
+      "W Zhang",
+      "B Wang"
+    ],
+    "venue": "accepted by NeurIPS, 2025",
+    "year": "2025",
+    "citations": 10,
+    "citationsId": "5532038992782397291",
+    "abstract": "",
+    "urls": {
+      "paper": "https://scholar.google.com/citations?view_op=view_citation&hl=en&user=YGwukbUAAAAJ&pagesize=100&citation_for_view=YGwukbUAAAAJ:Ehil0879vHcC",
+      "citations": "https://scholar.google.com/scholar?oi=bibs&hl=en&cites=5532038992782397291"
+    },
+    "venueType": "other",
+    "keywords": [
+      "distribution",
+      "aware",
+      "data",
+      "expansion",
+      "diffusion"
+    ]
+  },
+  {
+    "id": "pub_21",
     "title": "GUME: Graphs and User Modalities Enhancement for Long-Tail Multimodal Recommendation",
     "authors": [
       "G Lin",
@@ -629,7 +660,7 @@
     ]
   },
   {
-    "id": "pub_21",
+    "id": "pub_22",
     "title": "Towards Data-Centric AI: A Comprehensive Survey of Traditional, Reinforcement, and Generative Approaches for Tabular Data Transformation",
     "authors": [
       "D Wang",
@@ -659,37 +690,6 @@
       "centric",
       "comprehensive",
       "survey"
-    ]
-  },
-  {
-    "id": "pub_22",
-    "title": "Distribution-Aware Data Expansion with Diffusion Models",
-    "authors": [
-      "H Zhu",
-      "L Yang",
-      "JH Yong",
-      "H Yin",
-      "J Jiang",
-      "M Xiao",
-      "W Zhang",
-      "B Wang"
-    ],
-    "venue": "accepted by NeurIPS, 2025",
-    "year": "2025",
-    "citations": 9,
-    "citationsId": "5532038992782397291",
-    "abstract": "",
-    "urls": {
-      "paper": "https://scholar.google.com/citations?view_op=view_citation&hl=en&user=YGwukbUAAAAJ&pagesize=100&citation_for_view=YGwukbUAAAAJ:Ehil0879vHcC",
-      "citations": "https://scholar.google.com/scholar?oi=bibs&hl=en&cites=5532038992782397291"
-    },
-    "venueType": "other",
-    "keywords": [
-      "distribution",
-      "aware",
-      "data",
-      "expansion",
-      "diffusion"
     ]
   },
   {
@@ -1210,6 +1210,38 @@
   },
   {
     "id": "pub_40",
+    "title": "SciRerankBench: Benchmarking Rerankers Towards Scientific Retrieval-Augmented Generated LLMs",
+    "authors": [
+      "H Chen",
+      "Q Long",
+      "M Xiao",
+      "X Luo",
+      "W Ju",
+      "C Wang",
+      "X Wang",
+      "Y Zhou",
+      "H Zhu"
+    ],
+    "venue": "arXiv preprint arXiv:2508.08742, 2025",
+    "year": "2025",
+    "citations": 0,
+    "citationsId": "",
+    "abstract": "",
+    "urls": {
+      "paper": "https://scholar.google.com/citations?view_op=view_citation&hl=en&user=YGwukbUAAAAJ&pagesize=100&citation_for_view=YGwukbUAAAAJ:rHJHxKgnXwkC",
+      "citations": ""
+    },
+    "venueType": "other",
+    "keywords": [
+      "scirerankbench",
+      "benchmarking",
+      "rerankers",
+      "towards",
+      "scientific"
+    ]
+  },
+  {
+    "id": "pub_41",
     "title": "Soft Graph Clustering for single-cell RNA Sequencing Data",
     "authors": [
       "P Xu",
@@ -1238,7 +1270,7 @@
     ]
   },
   {
-    "id": "pub_41",
+    "id": "pub_42",
     "title": "Reinforcement Learning-based Feature Generation Algorithm for Scientific Data",
     "authors": [
       "M Xiao",
@@ -1264,7 +1296,7 @@
     ]
   },
   {
-    "id": "pub_42",
+    "id": "pub_43",
     "title": "Gut microbiota and tuberculosis",
     "authors": [
       "Y Liu",
@@ -1292,7 +1324,7 @@
     ]
   },
   {
-    "id": "pub_43",
+    "id": "pub_44",
     "title": "m-KAILIN: A Knowledge-Driven Agentic Scientific Corpus Distillation Framework for Biomedical Large Language Models Training",
     "authors": [
       "M Xiao",
@@ -1321,7 +1353,7 @@
     ]
   },
   {
-    "id": "pub_44",
+    "id": "pub_45",
     "title": "Comprehend, Divide, and Conquer: Feature Subspace Exploration via Multi-Agent Hierarchical Reinforcement Learning",
     "authors": [
       "W Zhang",
@@ -1352,7 +1384,7 @@
     ]
   },
   {
-    "id": "pub_45",
+    "id": "pub_46",
     "title": "Key Technologies and Pratical Applications of Artificial Intelligence",
     "authors": [
       "CAS Computer Network Information Center"
@@ -1376,7 +1408,7 @@
     ]
   },
   {
-    "id": "pub_46",
+    "id": "pub_47",
     "title": "DynMoLE: Boosting Mixture of LoRA Experts Fine-Tuning with a Hybrid Routing Mechanism",
     "authors": [
       "D Li",
@@ -1406,7 +1438,7 @@
     ]
   },
   {
-    "id": "pub_47",
+    "id": "pub_48",
     "title": "Doctoral Thesis: Hierarchical Topic Mining and Application of Heterogeneous Texts",
     "authors": [
       "M Xiao"
