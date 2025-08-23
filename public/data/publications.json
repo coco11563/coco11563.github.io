@@ -140,7 +140,7 @@
     ],
     "venue": "2023 International Joint Conference on Artificial Intelligence (IJCAI), 2023",
     "year": "2023",
-    "citations": 41,
+    "citations": 42,
     "citationsId": "8095856175023135105",
     "abstract": "",
     "urls": {
@@ -420,6 +420,34 @@
   },
   {
     "id": "pub_14",
+    "title": "Experimental study on direct tensile mechanical properties of hydraulic asphalt concrete",
+    "authors": [
+      "Z Ning",
+      "Y Liu",
+      "X Meng",
+      "J Dong",
+      "Z Song"
+    ],
+    "venue": "Shuili Fadian Xeubao 41 (1), 74-83, 2022",
+    "year": "2022",
+    "citations": 17,
+    "citationsId": "9320876076568182663",
+    "abstract": "",
+    "urls": {
+      "paper": "https://scholar.google.com/citations?view_op=view_citation&hl=en&user=YGwukbUAAAAJ&pagesize=100&citation_for_view=YGwukbUAAAAJ:ubry08Y2EpUC",
+      "citations": "https://scholar.google.com/scholar?oi=bibs&hl=en&cites=9320876076568182663"
+    },
+    "venueType": "other",
+    "keywords": [
+      "experimental",
+      "study",
+      "direct",
+      "tensile",
+      "mechanical"
+    ]
+  },
+  {
+    "id": "pub_15",
     "title": "Comae: Comprehensive attribute exploration for zero-shot hashing",
     "authors": [
       "Y Li",
@@ -451,7 +479,7 @@
     ]
   },
   {
-    "id": "pub_15",
+    "id": "pub_16",
     "title": "NEEDED: Introducing Hierarchical Transformer to Eye Diseases Diagnosis",
     "authors": [
       "X Ye*",
@@ -478,34 +506,6 @@
       "hierarchical",
       "transformer",
       "eye"
-    ]
-  },
-  {
-    "id": "pub_16",
-    "title": "Experimental study on direct tensile mechanical properties of hydraulic asphalt concrete",
-    "authors": [
-      "Z Ning",
-      "Y Liu",
-      "X Meng",
-      "J Dong",
-      "Z Song"
-    ],
-    "venue": "Shuili Fadian Xeubao 41 (1), 74-83, 2022",
-    "year": "2022",
-    "citations": 16,
-    "citationsId": "9320876076568182663",
-    "abstract": "",
-    "urls": {
-      "paper": "https://scholar.google.com/citations?view_op=view_citation&hl=en&user=YGwukbUAAAAJ&pagesize=100&citation_for_view=YGwukbUAAAAJ:ubry08Y2EpUC",
-      "citations": "https://scholar.google.com/scholar?oi=bibs&hl=en&cites=9320876076568182663"
-    },
-    "venueType": "other",
-    "keywords": [
-      "experimental",
-      "study",
-      "direct",
-      "tensile",
-      "mechanical"
     ]
   },
   {
@@ -824,7 +824,7 @@
     ],
     "venue": "COLING-2024, 2024",
     "year": "2024",
-    "citations": 6,
+    "citations": 7,
     "citationsId": "14659409203115987087",
     "abstract": "",
     "urls": {
