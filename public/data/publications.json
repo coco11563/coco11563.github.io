@@ -16,7 +16,7 @@
     ],
     "venue": "Cell Research 34 (12), 830-845, 2024",
     "year": "2024",
-    "citations": 69,
+    "citations": 70,
     "citationsId": "15912681120747030699",
     "abstract": "",
     "urls": {
@@ -47,7 +47,7 @@
     ],
     "venue": "arXiv preprint arXiv:2408.01107, 2024",
     "year": "2024",
-    "citations": 48,
+    "citations": 51,
     "citationsId": "6760124863574288334,2726936835234220227,17375686450664542083,9885407197037122924,15882021473251243073",
     "abstract": "",
     "urls": {
@@ -80,7 +80,7 @@
     ],
     "venue": "arXiv preprint arxiv:2503.21460, 2025",
     "year": "2025",
-    "citations": 47,
+    "citations": 50,
     "citationsId": "2553384233263415865,4543464159028255200,6686040006820538842,3511825580536173473",
     "abstract": "",
     "urls": {
@@ -169,7 +169,7 @@
     ],
     "venue": "Artificial Intelligence Journal, 2024",
     "year": "2024",
-    "citations": 39,
+    "citations": 40,
     "citationsId": "10863920213481238703",
     "abstract": "",
     "urls": {
@@ -273,6 +273,35 @@
   },
   {
     "id": "pub_9",
+    "title": "Reinforcement-Enhanced Autoregressive Feature Transformation: Gradient-steered Search in Continuous Space for Postfix Expressions",
+    "authors": [
+      "D Wang*",
+      "M Xiao*",
+      "M Wu",
+      "P Wang",
+      "Y Zhou",
+      "Y Fu"
+    ],
+    "venue": "NeurIPS 2023 Spotlight, 2023",
+    "year": "2023",
+    "citations": 29,
+    "citationsId": "5820154520915659664",
+    "abstract": "",
+    "urls": {
+      "paper": "https://scholar.google.com/citations?view_op=view_citation&hl=en&user=YGwukbUAAAAJ&pagesize=100&citation_for_view=YGwukbUAAAAJ:HtS1dXgVpQUC",
+      "citations": "https://scholar.google.com/scholar?oi=bibs&hl=en&cites=5820154520915659664"
+    },
+    "venueType": "other",
+    "keywords": [
+      "reinforcement",
+      "enhanced",
+      "autoregressive",
+      "feature",
+      "transformation"
+    ]
+  },
+  {
+    "id": "pub_10",
     "title": "A survey on the construction methods and applications of sci-tech big data knowledge graph",
     "authors": [
       "Y Zhou",
@@ -300,7 +329,7 @@
     ]
   },
   {
-    "id": "pub_10",
+    "id": "pub_11",
     "title": "Traceable Automatic Feature Transformation via Cascading Actor-Critic Agents",
     "authors": [
       "M Xiao",
@@ -327,35 +356,6 @@
       "feature",
       "transformation",
       "cascading"
-    ]
-  },
-  {
-    "id": "pub_11",
-    "title": "Reinforcement-Enhanced Autoregressive Feature Transformation: Gradient-steered Search in Continuous Space for Postfix Expressions",
-    "authors": [
-      "D Wang*",
-      "M Xiao*",
-      "M Wu",
-      "P Wang",
-      "Y Zhou",
-      "Y Fu"
-    ],
-    "venue": "NeurIPS 2023 Spotlight, 2023",
-    "year": "2023",
-    "citations": 28,
-    "citationsId": "5820154520915659664",
-    "abstract": "",
-    "urls": {
-      "paper": "https://scholar.google.com/citations?view_op=view_citation&hl=en&user=YGwukbUAAAAJ&pagesize=100&citation_for_view=YGwukbUAAAAJ:HtS1dXgVpQUC",
-      "citations": "https://scholar.google.com/scholar?oi=bibs&hl=en&cites=5820154520915659664"
-    },
-    "venueType": "other",
-    "keywords": [
-      "reinforcement",
-      "enhanced",
-      "autoregressive",
-      "feature",
-      "transformation"
     ]
   },
   {
