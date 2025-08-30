@@ -16,7 +16,7 @@
     ],
     "venue": "Cell Research 34 (12), 830-845, 2024",
     "year": "2024",
-    "citations": 70,
+    "citations": 71,
     "citationsId": "15912681120747030699",
     "abstract": "",
     "urls": {
@@ -34,6 +34,39 @@
   },
   {
     "id": "pub_1",
+    "title": "Large Language Model Agent: A Survey on Methodology, Applications and Challenges",
+    "authors": [
+      "J Luo",
+      "W Zhang",
+      "Y Yuan",
+      "Y Zhao",
+      "J Yang",
+      "Y Gu",
+      "B Wu",
+      "B Chen",
+      "Z Qiao",
+      "..."
+    ],
+    "venue": "arXiv preprint arxiv:2503.21460, 2025",
+    "year": "2025",
+    "citations": 55,
+    "citationsId": "2553384233263415865,4543464159028255200,6686040006820538842,3511825580536173473",
+    "abstract": "",
+    "urls": {
+      "paper": "https://scholar.google.com/citations?view_op=view_citation&hl=en&user=YGwukbUAAAAJ&pagesize=100&citation_for_view=YGwukbUAAAAJ:7BrZ7Jt4UNcC",
+      "citations": "https://scholar.google.com/scholar?oi=bibs&hl=en&cites=2553384233263415865,4543464159028255200,6686040006820538842,3511825580536173473"
+    },
+    "venueType": "other",
+    "keywords": [
+      "large",
+      "language",
+      "model",
+      "agent",
+      "survey"
+    ]
+  },
+  {
+    "id": "pub_2",
     "title": "BioRAG: A RAG-LLM Framework for Biological Question Reasoning",
     "authors": [
       "C Wang",
@@ -61,39 +94,6 @@
       "llm",
       "framework",
       "biological"
-    ]
-  },
-  {
-    "id": "pub_2",
-    "title": "Large Language Model Agent: A Survey on Methodology, Applications and Challenges",
-    "authors": [
-      "J Luo",
-      "W Zhang",
-      "Y Yuan",
-      "Y Zhao",
-      "J Yang",
-      "Y Gu",
-      "B Wu",
-      "B Chen",
-      "Z Qiao",
-      "..."
-    ],
-    "venue": "arXiv preprint arxiv:2503.21460, 2025",
-    "year": "2025",
-    "citations": 51,
-    "citationsId": "2553384233263415865,4543464159028255200,6686040006820538842,3511825580536173473",
-    "abstract": "",
-    "urls": {
-      "paper": "https://scholar.google.com/citations?view_op=view_citation&hl=en&user=YGwukbUAAAAJ&pagesize=100&citation_for_view=YGwukbUAAAAJ:7BrZ7Jt4UNcC",
-      "citations": "https://scholar.google.com/scholar?oi=bibs&hl=en&cites=2553384233263415865,4543464159028255200,6686040006820538842,3511825580536173473"
-    },
-    "venueType": "other",
-    "keywords": [
-      "large",
-      "language",
-      "model",
-      "agent",
-      "survey"
     ]
   },
   {
@@ -140,7 +140,7 @@
     ],
     "venue": "2023 International Joint Conference on Artificial Intelligence (IJCAI), 2023",
     "year": "2023",
-    "citations": 42,
+    "citations": 43,
     "citationsId": "8095856175023135105",
     "abstract": "",
     "urls": {
@@ -420,6 +420,38 @@
   },
   {
     "id": "pub_14",
+    "title": "Comae: Comprehensive attribute exploration for zero-shot hashing",
+    "authors": [
+      "Y Li",
+      "Q Long",
+      "Y Zhou",
+      "R Zhang",
+      "Z Ning",
+      "Z Zhu",
+      "Y Zhou",
+      "X Wang",
+      "M Xiao"
+    ],
+    "venue": "Proceedings of the 2025 International Conference on Multimedia Retrieval …, 2025",
+    "year": "2025",
+    "citations": 17,
+    "citationsId": "12840450703004098056,5818235308232295910",
+    "abstract": "",
+    "urls": {
+      "paper": "https://scholar.google.com/citations?view_op=view_citation&hl=en&user=YGwukbUAAAAJ&pagesize=100&citation_for_view=YGwukbUAAAAJ:artPoR2Yc-kC",
+      "citations": "https://scholar.google.com/scholar?oi=bibs&hl=en&cites=12840450703004098056,5818235308232295910"
+    },
+    "venueType": "other",
+    "keywords": [
+      "comae",
+      "comprehensive",
+      "attribute",
+      "exploration",
+      "zero"
+    ]
+  },
+  {
+    "id": "pub_15",
     "title": "Experimental study on direct tensile mechanical properties of hydraulic asphalt concrete",
     "authors": [
       "Z Ning",
@@ -444,38 +476,6 @@
       "direct",
       "tensile",
       "mechanical"
-    ]
-  },
-  {
-    "id": "pub_15",
-    "title": "Comae: Comprehensive attribute exploration for zero-shot hashing",
-    "authors": [
-      "Y Li",
-      "Q Long",
-      "Y Zhou",
-      "R Zhang",
-      "Z Ning",
-      "Z Zhu",
-      "Y Zhou",
-      "X Wang",
-      "M Xiao"
-    ],
-    "venue": "Proceedings of the 2025 International Conference on Multimedia Retrieval …, 2025",
-    "year": "2025",
-    "citations": 16,
-    "citationsId": "12840450703004098056,5818235308232295910",
-    "abstract": "",
-    "urls": {
-      "paper": "https://scholar.google.com/citations?view_op=view_citation&hl=en&user=YGwukbUAAAAJ&pagesize=100&citation_for_view=YGwukbUAAAAJ:artPoR2Yc-kC",
-      "citations": "https://scholar.google.com/scholar?oi=bibs&hl=en&cites=12840450703004098056,5818235308232295910"
-    },
-    "venueType": "other",
-    "keywords": [
-      "comae",
-      "comprehensive",
-      "attribute",
-      "exploration",
-      "zero"
     ]
   },
   {
@@ -571,6 +571,35 @@
   },
   {
     "id": "pub_19",
+    "title": "GUME: Graphs and User Modalities Enhancement for Long-Tail Multimodal Recommendation",
+    "authors": [
+      "G Lin",
+      "Z Meng",
+      "D Wang",
+      "Q Long",
+      "Y Zhou",
+      "M Xiao"
+    ],
+    "venue": "CIKM '24: Proceedings of the 33rd ACM International Conference on …, 2024",
+    "year": "2024",
+    "citations": 12,
+    "citationsId": "13858498669539712293,11175020044088109149",
+    "abstract": "",
+    "urls": {
+      "paper": "https://scholar.google.com/citations?view_op=view_citation&hl=en&user=YGwukbUAAAAJ&pagesize=100&citation_for_view=YGwukbUAAAAJ:u-coK7KVo8oC",
+      "citations": "https://scholar.google.com/scholar?oi=bibs&hl=en&cites=13858498669539712293,11175020044088109149"
+    },
+    "venueType": "conference",
+    "keywords": [
+      "gume",
+      "graphs",
+      "user",
+      "modalities",
+      "enhancement"
+    ]
+  },
+  {
+    "id": "pub_20",
     "title": "Interdisciplinary Fairness in Imbalanced Research Proposal Topic Inference: A Hierarchical Transformer-based Method with Selective Interpolation",
     "authors": [
       "M Xiao",
@@ -597,35 +626,6 @@
       "imbalanced",
       "research",
       "proposal"
-    ]
-  },
-  {
-    "id": "pub_20",
-    "title": "GUME: Graphs and User Modalities Enhancement for Long-Tail Multimodal Recommendation",
-    "authors": [
-      "G Lin",
-      "Z Meng",
-      "D Wang",
-      "Q Long",
-      "Y Zhou",
-      "M Xiao"
-    ],
-    "venue": "CIKM '24: Proceedings of the 33rd ACM International Conference on …, 2024",
-    "year": "2024",
-    "citations": 11,
-    "citationsId": "13858498669539712293,11175020044088109149",
-    "abstract": "",
-    "urls": {
-      "paper": "https://scholar.google.com/citations?view_op=view_citation&hl=en&user=YGwukbUAAAAJ&pagesize=100&citation_for_view=YGwukbUAAAAJ:u-coK7KVo8oC",
-      "citations": "https://scholar.google.com/scholar?oi=bibs&hl=en&cites=13858498669539712293,11175020044088109149"
-    },
-    "venueType": "conference",
-    "keywords": [
-      "gume",
-      "graphs",
-      "user",
-      "modalities",
-      "enhancement"
     ]
   },
   {
