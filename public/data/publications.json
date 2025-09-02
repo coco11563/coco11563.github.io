@@ -214,6 +214,65 @@
   },
   {
     "id": "pub_7",
+    "title": "Traceable group-wise self-optimizing feature transformation learning: A dual optimization perspective",
+    "authors": [
+      "M Xiao",
+      "D Wang",
+      "M Wu",
+      "K Liu",
+      "H Xiong",
+      "Y Zhou",
+      "Y Fu"
+    ],
+    "venue": "ACM Transactions on Knowledge Discovery from Data, 2024",
+    "year": "2024",
+    "citations": 31,
+    "citationsId": "6615326047713733595,1241716313002083917",
+    "abstract": "",
+    "urls": {
+      "paper": "https://scholar.google.com/citations?view_op=view_citation&hl=en&user=YGwukbUAAAAJ&pagesize=100&citation_for_view=YGwukbUAAAAJ:9c2xU6iGI7YC",
+      "citations": "https://scholar.google.com/scholar?oi=bibs&hl=en&cites=6615326047713733595,1241716313002083917"
+    },
+    "venueType": "other",
+    "keywords": [
+      "traceable",
+      "group",
+      "wise",
+      "self",
+      "optimizing"
+    ]
+  },
+  {
+    "id": "pub_8",
+    "title": "Reinforcement-Enhanced Autoregressive Feature Transformation: Gradient-steered Search in Continuous Space for Postfix Expressions",
+    "authors": [
+      "D Wang*",
+      "M Xiao*",
+      "M Wu",
+      "P Wang",
+      "Y Zhou",
+      "Y Fu"
+    ],
+    "venue": "NeurIPS 2023 Spotlight, 2023",
+    "year": "2023",
+    "citations": 31,
+    "citationsId": "5820154520915659664",
+    "abstract": "",
+    "urls": {
+      "paper": "https://scholar.google.com/citations?view_op=view_citation&hl=en&user=YGwukbUAAAAJ&pagesize=100&citation_for_view=YGwukbUAAAAJ:HtS1dXgVpQUC",
+      "citations": "https://scholar.google.com/scholar?oi=bibs&hl=en&cites=5820154520915659664"
+    },
+    "venueType": "other",
+    "keywords": [
+      "reinforcement",
+      "enhanced",
+      "autoregressive",
+      "feature",
+      "transformation"
+    ]
+  },
+  {
+    "id": "pub_9",
     "title": "Beyond Discrete Selection: Continuous Embedding Space Optimization for Generative Feature Selection",
     "authors": [
       "M Xiao",
@@ -242,66 +301,37 @@
     ]
   },
   {
-    "id": "pub_8",
-    "title": "Traceable group-wise self-optimizing feature transformation learning: A dual optimization perspective",
+    "id": "pub_10",
+    "title": "Traceable Automatic Feature Transformation via Cascading Actor-Critic Agents",
     "authors": [
       "M Xiao",
       "D Wang",
       "M Wu",
-      "K Liu",
-      "H Xiong",
-      "Y Zhou",
-      "Y Fu"
-    ],
-    "venue": "ACM Transactions on Knowledge Discovery from Data, 2024",
-    "year": "2024",
-    "citations": 30,
-    "citationsId": "6615326047713733595,1241716313002083917",
-    "abstract": "",
-    "urls": {
-      "paper": "https://scholar.google.com/citations?view_op=view_citation&hl=en&user=YGwukbUAAAAJ&pagesize=100&citation_for_view=YGwukbUAAAAJ:9c2xU6iGI7YC",
-      "citations": "https://scholar.google.com/scholar?oi=bibs&hl=en&cites=6615326047713733595,1241716313002083917"
-    },
-    "venueType": "other",
-    "keywords": [
-      "traceable",
-      "group",
-      "wise",
-      "self",
-      "optimizing"
-    ]
-  },
-  {
-    "id": "pub_9",
-    "title": "Reinforcement-Enhanced Autoregressive Feature Transformation: Gradient-steered Search in Continuous Space for Postfix Expressions",
-    "authors": [
-      "D Wang*",
-      "M Xiao*",
-      "M Wu",
+      "Z Qiao",
       "P Wang",
       "Y Zhou",
       "Y Fu"
     ],
-    "venue": "NeurIPS 2023 Spotlight, 2023",
+    "venue": "Proceedings of the 2023 SIAM International Conference on Data Mining (SDM …, 2023",
     "year": "2023",
-    "citations": 30,
-    "citationsId": "5820154520915659664",
+    "citations": 29,
+    "citationsId": "6728572511182266488",
     "abstract": "",
     "urls": {
-      "paper": "https://scholar.google.com/citations?view_op=view_citation&hl=en&user=YGwukbUAAAAJ&pagesize=100&citation_for_view=YGwukbUAAAAJ:HtS1dXgVpQUC",
-      "citations": "https://scholar.google.com/scholar?oi=bibs&hl=en&cites=5820154520915659664"
+      "paper": "https://scholar.google.com/citations?view_op=view_citation&hl=en&user=YGwukbUAAAAJ&pagesize=100&citation_for_view=YGwukbUAAAAJ:8d8msizDQcsC",
+      "citations": "https://scholar.google.com/scholar?oi=bibs&hl=en&cites=6728572511182266488"
     },
-    "venueType": "other",
+    "venueType": "conference",
     "keywords": [
-      "reinforcement",
-      "enhanced",
-      "autoregressive",
+      "traceable",
+      "automatic",
       "feature",
-      "transformation"
+      "transformation",
+      "cascading"
     ]
   },
   {
-    "id": "pub_10",
+    "id": "pub_11",
     "title": "A survey on the construction methods and applications of sci-tech big data knowledge graph",
     "authors": [
       "Y Zhou",
@@ -326,36 +356,6 @@
       "methods",
       "applications",
       "sci"
-    ]
-  },
-  {
-    "id": "pub_11",
-    "title": "Traceable Automatic Feature Transformation via Cascading Actor-Critic Agents",
-    "authors": [
-      "M Xiao",
-      "D Wang",
-      "M Wu",
-      "Z Qiao",
-      "P Wang",
-      "Y Zhou",
-      "Y Fu"
-    ],
-    "venue": "Proceedings of the 2023 SIAM International Conference on Data Mining (SDM …, 2023",
-    "year": "2023",
-    "citations": 28,
-    "citationsId": "6728572511182266488",
-    "abstract": "",
-    "urls": {
-      "paper": "https://scholar.google.com/citations?view_op=view_citation&hl=en&user=YGwukbUAAAAJ&pagesize=100&citation_for_view=YGwukbUAAAAJ:8d8msizDQcsC",
-      "citations": "https://scholar.google.com/scholar?oi=bibs&hl=en&cites=6728572511182266488"
-    },
-    "venueType": "conference",
-    "keywords": [
-      "traceable",
-      "automatic",
-      "feature",
-      "transformation",
-      "cascading"
     ]
   },
   {
