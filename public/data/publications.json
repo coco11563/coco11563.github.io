@@ -49,7 +49,7 @@
     ],
     "venue": "arXiv preprint arxiv:2503.21460, 2025",
     "year": "2025",
-    "citations": 56,
+    "citations": 57,
     "citationsId": "2553384233263415865,4543464159028255200,6686040006820538842,3511825580536173473",
     "abstract": "",
     "urls": {
@@ -571,6 +571,36 @@
   },
   {
     "id": "pub_19",
+    "title": "Interdisciplinary Fairness in Imbalanced Research Proposal Topic Inference: A Hierarchical Transformer-based Method with Selective Interpolation",
+    "authors": [
+      "M Xiao",
+      "M Wu",
+      "Z Qiao",
+      "Y Fu",
+      "Z Ning",
+      "Y Du",
+      "Y Zhou"
+    ],
+    "venue": "Accepted by Transactions on Knowledge Discovery from Data, 2024",
+    "year": "2024",
+    "citations": 13,
+    "citationsId": "11362247288105421797,1702467773286029028",
+    "abstract": "",
+    "urls": {
+      "paper": "https://scholar.google.com/citations?view_op=view_citation&hl=en&user=YGwukbUAAAAJ&pagesize=100&citation_for_view=YGwukbUAAAAJ:4vMrXwiscB8C",
+      "citations": "https://scholar.google.com/scholar?oi=bibs&hl=en&cites=11362247288105421797,1702467773286029028"
+    },
+    "venueType": "other",
+    "keywords": [
+      "interdisciplinary",
+      "fairness",
+      "imbalanced",
+      "research",
+      "proposal"
+    ]
+  },
+  {
+    "id": "pub_20",
     "title": "GUME: Graphs and User Modalities Enhancement for Long-Tail Multimodal Recommendation",
     "authors": [
       "G Lin",
@@ -596,36 +626,6 @@
       "user",
       "modalities",
       "enhancement"
-    ]
-  },
-  {
-    "id": "pub_20",
-    "title": "Interdisciplinary Fairness in Imbalanced Research Proposal Topic Inference: A Hierarchical Transformer-based Method with Selective Interpolation",
-    "authors": [
-      "M Xiao",
-      "M Wu",
-      "Z Qiao",
-      "Y Fu",
-      "Z Ning",
-      "Y Du",
-      "Y Zhou"
-    ],
-    "venue": "Accepted by Transactions on Knowledge Discovery from Data, 2024",
-    "year": "2024",
-    "citations": 12,
-    "citationsId": "11362247288105421797,1702467773286029028",
-    "abstract": "",
-    "urls": {
-      "paper": "https://scholar.google.com/citations?view_op=view_citation&hl=en&user=YGwukbUAAAAJ&pagesize=100&citation_for_view=YGwukbUAAAAJ:4vMrXwiscB8C",
-      "citations": "https://scholar.google.com/scholar?oi=bibs&hl=en&cites=11362247288105421797,1702467773286029028"
-    },
-    "venueType": "other",
-    "keywords": [
-      "interdisciplinary",
-      "fairness",
-      "imbalanced",
-      "research",
-      "proposal"
     ]
   },
   {
