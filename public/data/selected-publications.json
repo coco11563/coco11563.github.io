@@ -1,5 +1,35 @@
 [
   {
+    "id": "pub_2025_0",
+    "title": "Knowledge-Guided Gene Panel Selection for Label-Free Single-Cell RNA-Seq Data: A Reinforcement Learning Perspective",
+    "authors": [
+      "Meng Xiao",
+      "Weiliang Zhang",
+      "Xiaohan Huang",
+      "Hengshu Zhu",
+      "Min Wu",
+      "Xiaoli Li",
+      "Yuanchun Zhou"
+    ],
+    "venue": "IEEE Transactions on Computational Biology and Bioinformatics",
+    "venueType": "journal",
+    "year": 2025,
+    "citations": 0,
+    "image": "/pubfiles/TCBB25.pdf",
+    "keywords": [
+      "knowledge-guided",
+      "gene panel selection", 
+      "single-cell RNA-seq",
+      "reinforcement learning",
+      "label-free"
+    ],
+    "urls": {
+      "paper": "https://arxiv.org/pdf/2501.04718"
+    },
+    "authorRole": "first-author",
+    "highlighted": true
+  },
+  {
     "id": "pub_2025_1",
     "title": "SciHorizon: Benchmarking AI-for-Science Readiness from Scientific Data to Large Language Models",
     "authors": [
