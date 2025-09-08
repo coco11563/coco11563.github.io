@@ -18,7 +18,7 @@
     "image": "/pubfiles/TCBB25.pdf",
     "keywords": [
       "knowledge-guided",
-      "gene panel selection", 
+      "gene panel selection",
       "single-cell RNA-seq",
       "reinforcement learning",
       "label-free"
@@ -53,7 +53,7 @@
     "venue": "ACM SIGKDD",
     "venueType": "conference",
     "year": 2025,
-    "citations": 0,
+    "citations": 5,
     "image": "/pubfiles/SIGKDD2025.png",
     "keywords": [
       "AI4Science",
@@ -64,10 +64,12 @@
     "urls": {
       "paper": "https://dl.acm.org/doi/pdf/10.1145/3711896.3737403",
       "project": "https://www.scihorizon.cn/",
-      "report": "https://www.nature.com/articles/d41586-025-02462-5"
+      "report": "https://www.nature.com/articles/d41586-025-02462-5",
+      "citations": "https://scholar.google.com/scholar?oi=bibs&hl=en&cites=4593117441343030867"
     },
     "authorRole": "co-author",
-    "highlighted": true
+    "highlighted": true,
+    "citationsId": "4593117441343030867"
   },
   {
     "id": "pub_2025_2",
@@ -180,7 +182,7 @@
     "venue": "Cell Research",
     "venueType": "journal",
     "year": 2024,
-    "citations": 12,
+    "citations": 73,
     "image": "/pubfiles/CellRes2024.png",
     "keywords": [
       "gene regulation",
@@ -189,10 +191,12 @@
     ],
     "urls": {
       "paper": "https://www.nature.com/articles/s41422-024-01034-y",
-      "project": "https://github.com/xCompass-AI/GeneCompass"
+      "project": "https://github.com/xCompass-AI/GeneCompass",
+      "citations": "https://scholar.google.com/scholar?oi=bibs&hl=en&cites=15912681120747030699"
     },
     "authorRole": "co-author",
-    "highlighted": true
+    "highlighted": true,
+    "citationsId": "15912681120747030699"
   },
   {
     "id": "pub_2025_4",
@@ -271,7 +275,7 @@
     "venue": "IEEE ICDE",
     "venueType": "conference",
     "year": 2025,
-    "citations": 0,
+    "citations": 5,
     "image": "/pubfiles/ICDE2025.png",
     "keywords": [
       "feature transformation",
@@ -279,10 +283,12 @@
       "exploration strategies"
     ],
     "urls": {
-      "project": "https://github.com/coco11563/FASTFT-Accelerating-Reinforced-Feature-Transformation-via-Advanced-Exploration-Strategies"
+      "project": "https://github.com/coco11563/FASTFT-Accelerating-Reinforced-Feature-Transformation-via-Advanced-Exploration-Strategies",
+      "citations": "https://scholar.google.com/scholar?oi=bibs&hl=en&cites=6261182078408259100"
     },
     "authorRole": "corresponding-author",
-    "highlighted": true
+    "highlighted": true,
+    "citationsId": "6261182078408259100"
   },
   {
     "id": "pub_2025_6",
@@ -322,16 +328,19 @@
     "venue": "ICML",
     "venueType": "conference",
     "year": 2025,
-    "citations": 0,
+    "citations": 2,
     "image": "/pubfiles/ICML2025.png",
     "keywords": [
       "graph models",
       "domain adaptation",
       "transfer learning"
     ],
-    "urls": {},
+    "urls": {
+      "citations": "https://scholar.google.com/scholar?oi=bibs&hl=en&cites=10846738215468634009"
+    },
     "authorRole": "corresponding-author",
-    "highlighted": true
+    "highlighted": true,
+    "citationsId": "10846738215468634009"
   },
   {
     "id": "pub_2025_8",
@@ -346,7 +355,7 @@
     "venue": "DASFAA",
     "venueType": "conference",
     "year": 2025,
-    "citations": 0,
+    "citations": 4,
     "image": "/pubfiles/DASFAA2025.png",
     "keywords": [
       "dataset distillation",
@@ -354,10 +363,12 @@
       "domain LLM"
     ],
     "urls": {
-      "project": "https://www.dropbox.com/scl/fo/0127mpvenexo51n0rpp1m/AETMLlsul52jmDy2JhgEnoM?rlkey=1g6m3j4upiydanya9137fkpqi&st=6um1v8sg&dl=0"
+      "project": "https://www.dropbox.com/scl/fo/0127mpvenexo51n0rpp1m/AETMLlsul52jmDy2JhgEnoM?rlkey=1g6m3j4upiydanya9137fkpqi&st=6um1v8sg&dl=0",
+      "citations": "https://scholar.google.com/scholar?oi=bibs&hl=en&cites=17234279651497737399"
     },
     "authorRole": "corresponding-author",
-    "highlighted": true
+    "highlighted": true,
+    "citationsId": "17234279651497737399"
   },
   {
     "id": "pub_2025_9",
@@ -376,16 +387,19 @@
     "venue": "ACM ICMR",
     "venueType": "conference",
     "year": 2025,
-    "citations": 0,
+    "citations": 17,
     "image": "/pubfiles/ICMR2025.jpg",
     "keywords": [
       "zero-shot hashing",
       "attribute exploration",
       "multimedia retrieval"
     ],
-    "urls": {},
+    "urls": {
+      "citations": "https://scholar.google.com/scholar?oi=bibs&hl=en&cites=12840450703004098056,5818235308232295910"
+    },
     "authorRole": "corresponding-author",
-    "highlighted": true
+    "highlighted": true,
+    "citationsId": "12840450703004098056,5818235308232295910"
   },
   {
     "id": "pub_2024_1",
@@ -402,7 +416,7 @@
     "venue": "ACM TKDD",
     "venueType": "journal",
     "year": 2024,
-    "citations": 15,
+    "citations": 31,
     "image": "/pubfiles/TKDD24.png",
     "keywords": [
       "feature transformation",
@@ -411,10 +425,12 @@
     ],
     "urls": {
       "paper": "https://dl.acm.org/doi/full/10.1145/3638059",
-      "project": "https://github.com/coco11563/Group-wise-Reinforcement-Feature-Generation-for-Optimal-and-Explainable-Representation-Space-Reconst"
+      "project": "https://github.com/coco11563/Group-wise-Reinforcement-Feature-Generation-for-Optimal-and-Explainable-Representation-Space-Reconst",
+      "citations": "https://scholar.google.com/scholar?oi=bibs&hl=en&cites=6615326047713733595,1241716313002083917"
     },
     "authorRole": "first-author",
-    "highlighted": true
+    "highlighted": true,
+    "citationsId": "6615326047713733595,1241716313002083917"
   },
   {
     "id": "pub_2024_2",
@@ -431,7 +447,7 @@
     "venue": "ACM TKDD",
     "venueType": "journal",
     "year": 2024,
-    "citations": 8,
+    "citations": 13,
     "image": "/pubfiles/TKDD-2.png",
     "keywords": [
       "research proposal",
@@ -440,10 +456,12 @@
       "transformer"
     ],
     "urls": {
-      "paper": "https://dl.acm.org/doi/pdf/10.1145/3671149"
+      "paper": "https://dl.acm.org/doi/pdf/10.1145/3671149",
+      "citations": "https://scholar.google.com/scholar?oi=bibs&hl=en&cites=11362247288105421797,1702467773286029028"
     },
     "authorRole": "first-author",
-    "highlighted": true
+    "highlighted": true,
+    "citationsId": "11362247288105421797,1702467773286029028"
   },
   {
     "id": "pub_2024_3",
@@ -457,7 +475,7 @@
     "venue": "IEEE ICDM",
     "venueType": "conference",
     "year": 2024,
-    "citations": 3,
+    "citations": 4,
     "image": "/pubfiles/ICDM24.jpg",
     "keywords": [
       "scRNA-seq",
@@ -465,10 +483,12 @@
       "bioinformatics"
     ],
     "urls": {
-      "project": "https://github.com/coco11563/Prompting-Large-Language-Models-to-Interpret-scRNA-seq-Data"
+      "project": "https://github.com/coco11563/Prompting-Large-Language-Models-to-Interpret-scRNA-seq-Data",
+      "citations": "https://scholar.google.com/scholar?oi=bibs&hl=en&cites=8550002402258129107,8654951797349558270"
     },
     "authorRole": "corresponding-author",
-    "highlighted": true
+    "highlighted": true,
+    "citationsId": "8550002402258129107,8654951797349558270"
   },
   {
     "id": "pub_2024_4",
@@ -484,7 +504,7 @@
     "venue": "ACM CIKM",
     "venueType": "conference",
     "year": 2024,
-    "citations": 5,
+    "citations": 12,
     "image": "/pubfiles/CIKM24.jpg",
     "keywords": [
       "multimodal recommendation",
@@ -493,10 +513,12 @@
     ],
     "urls": {
       "paper": "https://arxiv.org/pdf/2407.12338",
-      "project": "https://github.com/NanGongNingYi/GUME"
+      "project": "https://github.com/NanGongNingYi/GUME",
+      "citations": "https://scholar.google.com/scholar?oi=bibs&hl=en&cites=13858498669539712293,11175020044088109149"
     },
     "authorRole": "corresponding-author",
-    "highlighted": true
+    "highlighted": true,
+    "citationsId": "13858498669539712293,11175020044088109149"
   },
   {
     "id": "pub_2024_5",
@@ -515,16 +537,19 @@
     "venue": "ACM CIKM",
     "venueType": "conference",
     "year": 2024,
-    "citations": 2,
+    "citations": 4,
     "image": "/pubfiles/CIKM-2024-2.png",
     "keywords": [
       "molecular graphs",
       "3D graphs",
       "graph prompting"
     ],
-    "urls": {},
+    "urls": {
+      "citations": "https://scholar.google.com/scholar?oi=bibs&hl=en&cites=5198760644724581966"
+    },
     "authorRole": "corresponding-author",
-    "highlighted": true
+    "highlighted": true,
+    "citationsId": "5198760644724581966"
   },
   {
     "id": "pub_2024_6",
@@ -541,16 +566,19 @@
     "venue": "IEEE BIBM",
     "venueType": "conference",
     "year": 2024,
-    "citations": 1,
+    "citations": 2,
     "image": "/pubfiles/BIBM24.jpg",
     "keywords": [
       "gene summary",
       "large language models",
       "bioinformatics"
     ],
-    "urls": {},
+    "urls": {
+      "citations": "https://scholar.google.com/scholar?oi=bibs&hl=en&cites=11663470701856889780"
+    },
     "authorRole": "corresponding-author",
-    "highlighted": true
+    "highlighted": true,
+    "citationsId": "11663470701856889780"
   },
   {
     "id": "pub_2024_7",
@@ -564,7 +592,7 @@
     "venue": "LREC-COLING",
     "venueType": "conference",
     "year": 2024,
-    "citations": 4,
+    "citations": 7,
     "image": "/pubfiles/COLING24.png",
     "keywords": [
       "continual learning",
@@ -573,10 +601,12 @@
     ],
     "urls": {
       "paper": "https://arxiv.org/pdf/2403.02718",
-      "project": "https://github.com/mengyi99/DP-CRE"
+      "project": "https://github.com/mengyi99/DP-CRE",
+      "citations": "https://scholar.google.com/scholar?oi=bibs&hl=en&cites=14659409203115987087"
     },
     "authorRole": "co-first-author",
-    "highlighted": true
+    "highlighted": true,
+    "citationsId": "14659409203115987087"
   },
   {
     "id": "pub_2023_1",
@@ -594,7 +624,7 @@
     "venue": "IEEE TKDE",
     "venueType": "journal",
     "year": 2023,
-    "citations": 25,
+    "citations": 20,
     "image": "/pubfiles/TKDE.png",
     "keywords": [
       "topic detection",
@@ -603,10 +633,12 @@
     ],
     "urls": {
       "paper": "https://arxiv.org/pdf/2209.13519",
-      "report": "https://www.cas.cn/cm/202109/t20210930_4807705.shtml"
+      "report": "https://www.cas.cn/cm/202109/t20210930_4807705.shtml",
+      "citations": "https://scholar.google.com/scholar?oi=bibs&hl=en&cites=3043400476458974115,17235107202730669356"
     },
     "authorRole": "first-author",
-    "highlighted": true
+    "highlighted": true,
+    "citationsId": "3043400476458974115,17235107202730669356"
   },
   {
     "id": "pub_2023_2",
@@ -622,7 +654,7 @@
     "venue": "IEEE ICDM",
     "venueType": "conference",
     "year": 2023,
-    "citations": 28,
+    "citations": 31,
     "image": "/pubfiles/ICDM23-1.png",
     "keywords": [
       "feature selection",
@@ -631,10 +663,12 @@
     ],
     "urls": {
       "paper": "https://arxiv.org/pdf/2302.13221",
-      "project": "https://www.dropbox.com/sh/vlwz16cquv5ct9d/AACvhlDRwBe3f4nWwGEE4zeCa?dl=0"
+      "project": "https://www.dropbox.com/sh/vlwz16cquv5ct9d/AACvhlDRwBe3f4nWwGEE4zeCa?dl=0",
+      "citations": "https://scholar.google.com/scholar?oi=bibs&hl=en&cites=4039133266398073629"
     },
     "authorRole": "first-author",
-    "highlighted": true
+    "highlighted": true,
+    "citationsId": "4039133266398073629"
   },
   {
     "id": "pub_2023_3",
@@ -652,7 +686,7 @@
     "venue": "SIAM SDM",
     "venueType": "conference",
     "year": 2023,
-    "citations": 18,
+    "citations": 29,
     "image": "/pubfiles/SDM23-1.png",
     "keywords": [
       "feature transformation",
@@ -661,10 +695,12 @@
     ],
     "urls": {
       "paper": "https://epubs.siam.org/doi/pdf/10.1137/1.9781611977653.ch87",
-      "project": "https://github.com/coco11563/Traceable_Automatic_Feature_Transformation_via_Cascading_Actor-Critic_Agents"
+      "project": "https://github.com/coco11563/Traceable_Automatic_Feature_Transformation_via_Cascading_Actor-Critic_Agents",
+      "citations": "https://scholar.google.com/scholar?oi=bibs&hl=en&cites=6728572511182266488"
     },
     "authorRole": "first-author",
-    "highlighted": true
+    "highlighted": true,
+    "citationsId": "6728572511182266488"
   },
   {
     "id": "pub_2023_4",
@@ -678,7 +714,7 @@
     "venue": "IEEE ICDM",
     "venueType": "conference",
     "year": 2023,
-    "citations": 12,
+    "citations": 40,
     "image": "/pubfiles/ICDM23-2.png",
     "keywords": [
       "topic inference",
@@ -686,10 +722,12 @@
       "large language models"
     ],
     "urls": {
-      "paper": "https://arxiv.org/pdf/2310.05318"
+      "paper": "https://arxiv.org/pdf/2310.05318",
+      "citations": "https://scholar.google.com/scholar?oi=bibs&hl=en&cites=9669930467170038570"
     },
     "authorRole": "corresponding-author",
-    "highlighted": true
+    "highlighted": true,
+    "citationsId": "9669930467170038570"
   },
   {
     "id": "pub_2023_5",
@@ -705,7 +743,7 @@
     "venue": "NeurIPS",
     "venueType": "conference",
     "year": 2023,
-    "citations": 42,
+    "citations": 32,
     "image": "/pubfiles/NIPS23.png",
     "keywords": [
       "autoregressive",
@@ -714,11 +752,13 @@
     ],
     "urls": {
       "paper": "https://proceedings.neurips.cc/paper_files/paper/2023/file/8797d13e5998acfab387d4bf0a5b9b00-Paper-Conference.pdf",
-      "project": "https://github.com/coco11563/MOAT_Differentiable_Feature_Transformation"
+      "project": "https://github.com/coco11563/MOAT_Differentiable_Feature_Transformation",
+      "citations": "https://scholar.google.com/scholar?oi=bibs&hl=en&cites=5820154520915659664"
     },
     "authorRole": "co-first-author",
     "highlighted": true,
-    "award": "Spotlight Paper"
+    "award": "Spotlight Paper",
+    "citationsId": "5820154520915659664"
   },
   {
     "id": "pub_2023_6",
@@ -735,7 +775,7 @@
     "venue": "SIAM SDM",
     "venueType": "conference",
     "year": 2023,
-    "citations": 8,
+    "citations": 16,
     "image": "/pubfiles/SDM-2.png",
     "keywords": [
       "medical diagnosis",
@@ -744,10 +784,12 @@
     ],
     "urls": {
       "paper": "https://epubs.siam.org/doi/pdf/10.1137/1.9781611977653.ch75",
-      "project": "https://github.com/coco11563/NEEDED"
+      "project": "https://github.com/coco11563/NEEDED",
+      "citations": "https://scholar.google.com/scholar?oi=bibs&hl=en&cites=5139450937202533538"
     },
     "authorRole": "co-first-author",
-    "highlighted": true
+    "highlighted": true,
+    "citationsId": "5139450937202533538"
   },
   {
     "id": "pub_2023_7",
@@ -763,7 +805,7 @@
     "venue": "IJCAI",
     "venueType": "conference",
     "year": 2023,
-    "citations": 22,
+    "citations": 43,
     "image": "/pubfiles/IJCAI23.png",
     "keywords": [
       "domain adaptation",
@@ -772,10 +814,12 @@
     ],
     "urls": {
       "paper": "https://www.ijcai.org/proceedings/2023/0253.pdf",
-      "project": "https://github.com/joe817/SGDA"
+      "project": "https://github.com/joe817/SGDA",
+      "citations": "https://scholar.google.com/scholar?oi=bibs&hl=en&cites=8095856175023135105"
     },
     "authorRole": "co-first-author",
-    "highlighted": true
+    "highlighted": true,
+    "citationsId": "8095856175023135105"
   },
   {
     "id": "pub_2021_1",
