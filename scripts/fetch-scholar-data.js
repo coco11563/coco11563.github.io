@@ -340,6 +340,47 @@ function determineVenueType(venue) {
 }
 
 /**
+ * 更新现有论文的引用数据
+ */
+function updateCitationCounts(existingPublications, newPublications) {
+  console.log('🔄 更新现有论文的引用数据...');
+  
+  // 创建新论文的标题映射，用于匹配
+  const newPubsMap = new Map();
+  newPublications.forEach(pub => {
+    const titleKey = pub.title.toLowerCase().trim();
+    newPubsMap.set(titleKey, pub);
+  });
+
+  let updatedCount = 0;
+  
+  // 更新现有论文的引用数据
+  const updatedPublications = existingPublications.map(existingPub => {
+    const titleKey = existingPub.title.toLowerCase().trim();
+    const matchedPub = newPubsMap.get(titleKey);
+    
+    if (matchedPub && matchedPub.citations !== existingPub.citations) {
+      console.log(`📈 更新论文引用: "${existingPub.title}" (${existingPub.citations} -> ${matchedPub.citations})`);
+      updatedCount++;
+      return {
+        ...existingPub,
+        citations: matchedPub.citations,
+        citationsId: matchedPub.citationsId || existingPub.citationsId,
+        urls: {
+          ...existingPub.urls,
+          citations: matchedPub.urls.citations || existingPub.urls.citations
+        }
+      };
+    }
+    
+    return existingPub;
+  });
+
+  console.log(`✅ 共更新了 ${updatedCount} 篇论文的引用数据`);
+  return updatedPublications;
+}
+
+/**
  * 保存数据到静态JSON文件
  */
 async function saveDataToFiles(data) {
@@ -348,10 +389,41 @@ async function saveDataToFiles(data) {
     fs.mkdirSync(CONFIG.dataDir, { recursive: true });
   }
 
+  // 检查是否存在现有的publications.json文件
+  const pubsFilePath = path.join(CONFIG.dataDir, 'publications.json');
+  let finalPublications = data.publications;
+  
+  if (fs.existsSync(pubsFilePath)) {
+    try {
+      const existingPublications = JSON.parse(fs.readFileSync(pubsFilePath, 'utf-8'));
+      console.log(`📋 发现现有论文数据，共 ${existingPublications.length} 篇`);
+      
+      // 只更新引用数据，保留现有结构
+      finalPublications = updateCitationCounts(existingPublications, data.publications);
+    } catch (error) {
+      console.warn('⚠️  读取现有论文数据失败，将使用新数据:', error.message);
+    }
+  }
+
+  // 同样处理selected-publications.json
+  const selectedPubsFilePath = path.join(CONFIG.dataDir, 'selected-publications.json');
+  if (fs.existsSync(selectedPubsFilePath)) {
+    try {
+      const existingSelectedPubs = JSON.parse(fs.readFileSync(selectedPubsFilePath, 'utf-8'));
+      console.log(`📋 发现现有精选论文数据，共 ${existingSelectedPubs.length} 篇`);
+      
+      const updatedSelectedPubs = updateCitationCounts(existingSelectedPubs, data.publications);
+      fs.writeFileSync(selectedPubsFilePath, JSON.stringify(updatedSelectedPubs, null, 2));
+      console.log(`✅ 已更新: selected-publications.json`);
+    } catch (error) {
+      console.warn('⚠️  读取现有精选论文数据失败:', error.message);
+    }
+  }
+
   const files = [
     { name: 'scholar-profile.json', data: data.profile },
     { name: 'metrics.json', data: data.metrics },
-    { name: 'publications.json', data: data.publications },
+    { name: 'publications.json', data: finalPublications },
     { name: 'citations-by-year.json', data: data.citationsByYear }
   ];
 
@@ -362,7 +434,7 @@ async function saveDataToFiles(data) {
   }
 
   console.log(`📊 数据统计:`);
-  console.log(`   论文数量: ${data.publications.length}`);
+  console.log(`   论文数量: ${finalPublications.length}`);
   console.log(`   总引用数: ${data.metrics.totalCitations}`);
   console.log(`   H指数: ${data.metrics.hIndex}`);
 }

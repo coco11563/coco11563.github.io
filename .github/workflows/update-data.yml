@@ -10,7 +10,7 @@ on:
       force_update:
         description: '强制更新数据'
         required: false
-        default: 'false'
+        default: false
         type: boolean
   push:
     paths:
@@ -54,7 +54,21 @@ jobs:
     - name: 🔍 Fetch latest scholar data
       run: |
         echo "🚀 开始获取学术数据..."
+        echo "📋 当前配置:"
+        echo "  - Scholar ID: ${SCHOLAR_ID}"
+        echo "  - SerpAPI配置: $([ -n "$SERPAPI_KEY" ] && echo "已配置" || echo "未配置，将使用备用数据源")"
+        
+        # 备份现有数据以防出错
+        if [ -f "public/data/publications.json" ]; then
+          echo "💾 备份现有数据..."
+          cp public/data/publications.json public/data/publications.json.backup || true
+          cp public/data/selected-publications.json public/data/selected-publications.json.backup || true
+        fi
+        
+        # 执行数据获取
         node scripts/fetch-scholar-data.js
+        
+        echo "✅ 学术数据获取完成"
       env:
         SCHOLAR_ID: 'YGwukbUAAAAJ'
         SERPAPI_KEY: ${{ secrets.SERPAPI_KEY }}
@@ -71,6 +85,22 @@ jobs:
           git diff --name-only public/data/ > changes.txt
           echo "Changed files:"
           cat changes.txt
+          
+          # 分析引用数变化
+          if [ -f "public/data/publications.json.backup" ] && [ -f "public/data/publications.json" ]; then
+            echo "📈 分析引用数变化..."
+            
+            # 使用更简单的方式比较引用数变化
+            old_total=$(cat public/data/publications.json.backup | grep -o '"citations": *[0-9]*' | awk -F': *' '{sum += $2} END {print sum+0}')
+            new_total=$(cat public/data/publications.json | grep -o '"citations": *[0-9]*' | awk -F': *' '{sum += $2} END {print sum+0}')
+            
+            if [ "$old_total" != "$new_total" ]; then
+              diff=$((new_total - old_total))
+              echo "📊 总引用数变化: $old_total → $new_total (+$diff)"
+            else
+              echo "📋 总引用数无变化: $new_total"
+            fi
+          fi
           
           # 检查关键指标变化
           if [ -f "public/data/metrics.json" ]; then
@@ -95,11 +125,22 @@ jobs:
           h_index=$(cat public/data/metrics.json | grep '"hIndex"' | sed 's/.*: *\([0-9]*\).*/\1/')  
           pub_count=$(cat public/data/publications.json | grep -c '"id":')
           
+          # 计算引用数变化
+          citation_change=""
+          if [ -f "public/data/publications.json.backup" ]; then
+            old_total=$(cat public/data/publications.json.backup | grep -o '"citations": *[0-9]*' | awk -F': *' '{sum += $2} END {print sum+0}')
+            new_total=$(cat public/data/publications.json | grep -o '"citations": *[0-9]*' | awk -F': *' '{sum += $2} END {print sum+0}')
+            if [ "$old_total" != "$new_total" ]; then
+              diff=$((new_total - old_total))
+              citation_change=" (+${diff} 新增引用)"
+            fi
+          fi
+          
           commit_message=$(cat <<EOF
         📊 自动更新学术数据 ${current_date}
 
         📈 当前统计:
-        - 总引用数: ${citations}
+        - 总引用数: ${citations}${citation_change}
         - H指数: ${h_index} 
         - 论文数量: ${pub_count}
 
@@ -143,6 +184,10 @@ jobs:
         git push origin main
         
         echo "✅ 数据更新已推送到仓库"
+        
+        # 清理备份文件
+        rm -f public/data/*.backup
+        echo "🧹 清理备份文件完成"
     
     - name: 🚀 Trigger deployment
       if: steps.check-changes.outputs.changes == 'true'
