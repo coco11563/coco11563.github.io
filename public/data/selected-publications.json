@@ -182,7 +182,7 @@
     "venue": "Cell Research",
     "venueType": "journal",
     "year": 2024,
-    "citations": 73,
+    "citations": 74,
     "image": "/pubfiles/CellRes2024.png",
     "keywords": [
       "gene regulation",
@@ -246,7 +246,7 @@
     "venue": "iMeta",
     "venueType": "journal",
     "year": 2025,
-    "citations": 0,
+    "citations": 1,
     "image": "/pubfiles/iMeta.png",
     "keywords": [
       "tuberculosis",
@@ -254,9 +254,12 @@
       "microbiome",
       "AI"
     ],
-    "urls": {},
+    "urls": {
+      "citations": "https://scholar.google.com/scholar?oi=bibs&hl=en&cites=5077486449361070010"
+    },
     "authorRole": "co-first-author",
-    "highlighted": true
+    "highlighted": true,
+    "citationsId": "5077486449361070010"
   },
   {
     "id": "pub_2025_5",
@@ -387,7 +390,7 @@
     "venue": "ACM ICMR",
     "venueType": "conference",
     "year": 2025,
-    "citations": 17,
+    "citations": 18,
     "image": "/pubfiles/ICMR2025.jpg",
     "keywords": [
       "zero-shot hashing",
@@ -654,7 +657,7 @@
     "venue": "IEEE ICDM",
     "venueType": "conference",
     "year": 2023,
-    "citations": 31,
+    "citations": 32,
     "image": "/pubfiles/ICDM23-1.png",
     "keywords": [
       "feature selection",
