@@ -10,14 +10,13 @@
     "date": "2025.08",
     "title": "Thanks NSFC to support my research!",
     "link": "https://mp.weixin.qq.com/s/c_Jwv90-u2jN-9Qu1iMn7Q",
-    "type": "publication",
+    "type": "grant",
     "highlighted": true
   },
   {
     "date": "2025.07",
     "title": "Two papers accepted by CRAD DCAI Issue and BMC Bioinformatics!",
-    "type": "publication",
-    "highlighted": true
+    "type": "publication"
   },
   {
     "date": "2025.05", 
@@ -28,14 +27,12 @@
   {
     "date": "2025.05",
     "title": "Three papers accepted by ICML 2025, SIGKDD 2025, and iMeta!",
-    "type": "publication", 
-    "highlighted": true
+    "type": "publication"
   },
   {
     "date": "2025.04",
     "title": "Five papers accepted by ICLR 2025, DASFAA 2025, IEEE ICDE 2025, Advanced Science, and ICMR 2025!",
-    "type": "publication",
-    "highlighted": true
+    "type": "publication"
   },
   {
     "date": "2025.03",
