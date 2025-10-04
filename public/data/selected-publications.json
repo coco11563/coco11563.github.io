@@ -184,7 +184,7 @@
     "venue": "Cell Research",
     "venueType": "journal",
     "year": 2024,
-    "citations": 79,
+    "citations": 81,
     "image": "/pubfiles/CellRes2024.png",
     "keywords": [
       "gene regulation",
@@ -360,7 +360,7 @@
     "venue": "DASFAA",
     "venueType": "conference",
     "year": 2025,
-    "citations": 4,
+    "citations": 5,
     "image": "/pubfiles/DASFAA2025.png",
     "keywords": [
       "dataset distillation",
@@ -392,7 +392,7 @@
     "venue": "ACM ICMR",
     "venueType": "conference",
     "year": 2025,
-    "citations": 18,
+    "citations": 19,
     "image": "/pubfiles/ICMR2025.jpg",
     "keywords": [
       "zero-shot hashing",
