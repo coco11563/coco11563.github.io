@@ -421,7 +421,7 @@
     "venue": "ACM TKDD",
     "venueType": "journal",
     "year": 2024,
-    "citations": 32,
+    "citations": 33,
     "image": "/pubfiles/TKDD24.png",
     "keywords": [
       "feature transformation",
@@ -659,7 +659,7 @@
     "venue": "IEEE ICDM",
     "venueType": "conference",
     "year": 2023,
-    "citations": 33,
+    "citations": 34,
     "image": "/pubfiles/ICDM23-1.png",
     "keywords": [
       "feature selection",
@@ -691,7 +691,7 @@
     "venue": "SIAM SDM",
     "venueType": "conference",
     "year": 2023,
-    "citations": 30,
+    "citations": 31,
     "image": "/pubfiles/SDM23-1.png",
     "keywords": [
       "feature transformation",
