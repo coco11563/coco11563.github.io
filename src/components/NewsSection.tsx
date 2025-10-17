@@ -19,13 +19,32 @@ interface NewsSectionProps {
 
 const newsData: NewsItem[] = [
   {
-    date: "2025.07",
-    title: "Two papers accepted by CRAD DCAI Issue and BMC Bioinformatics!",
+    date: "2025.10",
+    title: "One Paper accepted by IEEE TNNLS!",
     type: "publication",
     highlighted: true
   },
   {
-    date: "2025.05", 
+    date: "2025.09",
+    title: "One Paper accepted by IEEE TCBB!",
+    link: "https://ieeexplore.ieee.org/abstract/document/11164312",
+    type: "publication",
+    highlighted: true
+  },
+  {
+    date: "2025.08",
+    title: "Thanks NSFC to support my research!",
+    link: "https://mp.weixin.qq.com/s/c_Jwv90-u2jN-9Qu1iMn7Q",
+    type: "grant",
+    highlighted: true
+  },
+  {
+    date: "2025.07",
+    title: "Two papers accepted by CRAD DCAI Issue and BMC Bioinformatics!",
+    type: "publication"
+  },
+  {
+    date: "2025.05",
     title: "New survey about Gut microbiota and tuberculosis published!",
     link: "https://onlinelibrary.wiley.com/doi/10.1002/imt2.70054",
     type: "publication"
@@ -33,14 +52,12 @@ const newsData: NewsItem[] = [
   {
     date: "2025.05",
     title: "Three papers accepted by ICML 2025, SIGKDD 2025, and iMeta!",
-    type: "publication", 
-    highlighted: true
+    type: "publication"
   },
   {
     date: "2025.04",
     title: "Five papers accepted by ICLR 2025, DASFAA 2025, IEEE ICDE 2025, Advanced Science, and ICMR 2025!",
-    type: "publication",
-    highlighted: true
+    type: "publication"
   },
   {
     date: "2025.03",
@@ -51,7 +68,7 @@ const newsData: NewsItem[] = [
   {
     date: "2025.01",
     title: "New survey about DCAI published!",
-    link: "http://arxiv.org/abs/2501.10555", 
+    link: "http://arxiv.org/abs/2501.10555",
     type: "publication"
   },
   {
