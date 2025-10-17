@@ -184,7 +184,7 @@
     "venue": "Cell Research",
     "venueType": "journal",
     "year": 2024,
-    "citations": 84,
+    "citations": 83,
     "image": "/pubfiles/CellRes2024.png",
     "keywords": [
       "gene regulation",
@@ -392,7 +392,7 @@
     "venue": "ACM ICMR",
     "venueType": "conference",
     "year": 2025,
-    "citations": 19,
+    "citations": 18,
     "image": "/pubfiles/ICMR2025.jpg",
     "keywords": [
       "zero-shot hashing",
@@ -421,7 +421,7 @@
     "venue": "ACM TKDD",
     "venueType": "journal",
     "year": 2024,
-    "citations": 33,
+    "citations": 34,
     "image": "/pubfiles/TKDD24.png",
     "keywords": [
       "feature transformation",
@@ -719,7 +719,7 @@
     "venue": "IEEE ICDM",
     "venueType": "conference",
     "year": 2023,
-    "citations": 43,
+    "citations": 44,
     "image": "/pubfiles/ICDM23-2.png",
     "keywords": [
       "topic inference",
