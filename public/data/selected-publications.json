@@ -1,5 +1,32 @@
 [
   {
+    "id": "pub_2025_tnnls",
+    "title": "Adapting Graph Models via Target Integrity Assessment and Source Distribution Hypothesis",
+    "authors": [
+      "Ziyue Qiao",
+      "Xiaomin Yu",
+      "Weiyu Guo",
+      "Xiao Luo",
+      "Meng Xiao",
+      "Hui Xiong"
+    ],
+    "venue": "IEEE Transactions on Neural Networks and Learning Systems",
+    "venueType": "journal",
+    "year": 2025,
+    "citations": 0,
+    "image": "/pubfiles/TNNLS25.png",
+    "keywords": [
+      "graph neural networks",
+      "domain adaptation",
+      "transfer learning",
+      "distribution shift",
+      "source-free adaptation"
+    ],
+    "urls": {},
+    "authorRole": "corresponding-author",
+    "highlighted": true
+  },
+  {
     "id": "pub_2025_0",
     "title": "Knowledge-Guided Gene Panel Selection for Label-Free Single-Cell RNA-Seq Data: A Reinforcement Learning Perspective",
     "authors": [
