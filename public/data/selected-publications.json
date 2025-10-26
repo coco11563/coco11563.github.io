@@ -360,7 +360,7 @@
     "venue": "ICML",
     "venueType": "conference",
     "year": 2025,
-    "citations": 2,
+    "citations": 3,
     "image": "/pubfiles/ICML2025.png",
     "keywords": [
       "graph models",
@@ -686,7 +686,7 @@
     "venue": "IEEE ICDM",
     "venueType": "conference",
     "year": 2023,
-    "citations": 34,
+    "citations": 35,
     "image": "/pubfiles/ICDM23-1.png",
     "keywords": [
       "feature selection",
