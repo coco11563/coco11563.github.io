@@ -1,1 +1,30 @@
-[]
+[
+  {
+    "year": 2019,
+    "citations": 7
+  },
+  {
+    "year": 2020,
+    "citations": 14
+  },
+  {
+    "year": 2021,
+    "citations": 8
+  },
+  {
+    "year": 2022,
+    "citations": 20
+  },
+  {
+    "year": 2023,
+    "citations": 60
+  },
+  {
+    "year": 2024,
+    "citations": 219
+  },
+  {
+    "year": 2025,
+    "citations": 558
+  }
+]
