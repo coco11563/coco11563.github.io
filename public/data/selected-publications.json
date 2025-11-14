@@ -82,7 +82,7 @@
     "venue": "ACM SIGKDD",
     "venueType": "conference",
     "year": 2025,
-    "citations": 7,
+    "citations": 8,
     "image": "/pubfiles/SIGKDD2025.png",
     "keywords": [
       "AI4Science",
@@ -211,7 +211,7 @@
     "venue": "Cell Research",
     "venueType": "journal",
     "year": 2024,
-    "citations": 87,
+    "citations": 89,
     "image": "/pubfiles/CellRes2024.png",
     "keywords": [
       "gene regulation",
@@ -656,7 +656,7 @@
     "venue": "IEEE TKDE",
     "venueType": "journal",
     "year": 2023,
-    "citations": 21,
+    "citations": 22,
     "image": "/pubfiles/TKDE.png",
     "keywords": [
       "topic detection",
@@ -746,7 +746,7 @@
     "venue": "IEEE ICDM",
     "venueType": "conference",
     "year": 2023,
-    "citations": 45,
+    "citations": 46,
     "image": "/pubfiles/ICDM23-2.png",
     "keywords": [
       "topic inference",
@@ -775,7 +775,7 @@
     "venue": "NeurIPS",
     "venueType": "conference",
     "year": 2023,
-    "citations": 33,
+    "citations": 34,
     "image": "/pubfiles/NIPS23.png",
     "keywords": [
       "autoregressive",
@@ -837,7 +837,7 @@
     "venue": "IJCAI",
     "venueType": "conference",
     "year": 2023,
-    "citations": 44,
+    "citations": 45,
     "image": "/pubfiles/IJCAI23.png",
     "keywords": [
       "domain adaptation",
