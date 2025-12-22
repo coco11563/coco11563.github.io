@@ -211,7 +211,7 @@
     "venue": "Cell Research",
     "venueType": "journal",
     "year": 2024,
-    "citations": 91,
+    "citations": 101,
     "image": "/pubfiles/CellRes2024.png",
     "keywords": [
       "gene regulation",
@@ -275,7 +275,7 @@
     "venue": "iMeta",
     "venueType": "journal",
     "year": 2025,
-    "citations": 1,
+    "citations": 3,
     "image": "/pubfiles/iMeta.png",
     "keywords": [
       "tuberculosis",
@@ -419,7 +419,7 @@
     "venue": "ACM ICMR",
     "venueType": "conference",
     "year": 2025,
-    "citations": 20,
+    "citations": 24,
     "image": "/pubfiles/ICMR2025.jpg",
     "keywords": [
       "zero-shot hashing",
@@ -448,7 +448,7 @@
     "venue": "ACM TKDD",
     "venueType": "journal",
     "year": 2024,
-    "citations": 37,
+    "citations": 39,
     "image": "/pubfiles/TKDD24.png",
     "keywords": [
       "feature transformation",
@@ -507,7 +507,7 @@
     "venue": "IEEE ICDM",
     "venueType": "conference",
     "year": 2024,
-    "citations": 6,
+    "citations": 7,
     "image": "/pubfiles/ICDM24.jpg",
     "keywords": [
       "scRNA-seq",
@@ -536,7 +536,7 @@
     "venue": "ACM CIKM",
     "venueType": "conference",
     "year": 2024,
-    "citations": 16,
+    "citations": 18,
     "image": "/pubfiles/CIKM24.jpg",
     "keywords": [
       "multimodal recommendation",
@@ -569,7 +569,7 @@
     "venue": "ACM CIKM",
     "venueType": "conference",
     "year": 2024,
-    "citations": 4,
+    "citations": 6,
     "image": "/pubfiles/CIKM-2024-2.png",
     "keywords": [
       "molecular graphs",
@@ -624,7 +624,7 @@
     "venue": "LREC-COLING",
     "venueType": "conference",
     "year": 2024,
-    "citations": 7,
+    "citations": 8,
     "image": "/pubfiles/COLING24.png",
     "keywords": [
       "continual learning",
@@ -686,7 +686,7 @@
     "venue": "IEEE ICDM",
     "venueType": "conference",
     "year": 2023,
-    "citations": 36,
+    "citations": 38,
     "image": "/pubfiles/ICDM23-1.png",
     "keywords": [
       "feature selection",
@@ -718,7 +718,7 @@
     "venue": "SIAM SDM",
     "venueType": "conference",
     "year": 2023,
-    "citations": 31,
+    "citations": 33,
     "image": "/pubfiles/SDM23-1.png",
     "keywords": [
       "feature transformation",
@@ -746,7 +746,7 @@
     "venue": "IEEE ICDM",
     "venueType": "conference",
     "year": 2023,
-    "citations": 46,
+    "citations": 48,
     "image": "/pubfiles/ICDM23-2.png",
     "keywords": [
       "topic inference",
@@ -775,7 +775,7 @@
     "venue": "NeurIPS",
     "venueType": "conference",
     "year": 2023,
-    "citations": 34,
+    "citations": 36,
     "image": "/pubfiles/NIPS23.png",
     "keywords": [
       "autoregressive",
@@ -837,7 +837,7 @@
     "venue": "IJCAI",
     "venueType": "conference",
     "year": 2023,
-    "citations": 45,
+    "citations": 47,
     "image": "/pubfiles/IJCAI23.png",
     "keywords": [
       "domain adaptation",
