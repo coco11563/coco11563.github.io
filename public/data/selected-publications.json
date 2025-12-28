@@ -536,7 +536,7 @@
     "venue": "ACM CIKM",
     "venueType": "conference",
     "year": 2024,
-    "citations": 18,
+    "citations": 19,
     "image": "/pubfiles/CIKM24.jpg",
     "keywords": [
       "multimodal recommendation",
@@ -546,11 +546,11 @@
     "urls": {
       "paper": "https://arxiv.org/pdf/2407.12338",
       "project": "https://github.com/NanGongNingYi/GUME",
-      "citations": "https://scholar.google.com/scholar?oi=bibs&hl=en&cites=13858498669539712293,11175020044088109149"
+      "citations": "https://scholar.google.com/scholar?oi=bibs&hl=en&cites=11175020044088109149,13858498669539712293"
     },
     "authorRole": "corresponding-author",
     "highlighted": true,
-    "citationsId": "13858498669539712293,11175020044088109149"
+    "citationsId": "11175020044088109149,13858498669539712293"
   },
   {
     "id": "pub_2024_5",
