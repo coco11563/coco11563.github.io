@@ -211,7 +211,7 @@
     "venue": "Cell Research",
     "venueType": "journal",
     "year": 2024,
-    "citations": 103,
+    "citations": 104,
     "image": "/pubfiles/CellRes2024.png",
     "keywords": [
       "gene regulation",
@@ -746,7 +746,7 @@
     "venue": "IEEE ICDM",
     "venueType": "conference",
     "year": 2023,
-    "citations": 48,
+    "citations": 49,
     "image": "/pubfiles/ICDM23-2.png",
     "keywords": [
       "topic inference",
