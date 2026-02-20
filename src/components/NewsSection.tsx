@@ -19,6 +19,19 @@ interface NewsSectionProps {
 
 const newsData: NewsItem[] = [
   {
+    date: "2026.02",
+    title: "One paper \"A Cross-Modal Hierarchical Contrastive Learning Framework for Protein-Protein Interaction Prediction\" accepted by DASFAA 2026!",
+    type: "publication",
+    highlighted: true
+  },
+  {
+    date: "2026.01",
+    title: "One paper accepted by the Innovation Life!",
+    link: "https://www.the-innovation.org/article/doi/10.59717/j.xinn-life.2026.100196",
+    type: "publication",
+    highlighted: true
+  },
+  {
     date: "2025.10",
     title: "One Paper accepted by IEEE TNNLS!",
     type: "publication",

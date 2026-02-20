@@ -87,7 +87,7 @@ export default function RootLayout({
               "alternateName": "肖濛",
               "url": "https://coco11563.github.io",
               "image": "https://coco11563.github.io/indexfiles/me.png",
-              "jobTitle": "Assistant Researcher",
+              "jobTitle": "Associate Professor",
               "worksFor": [
                 {
                   "@type": "Organization",

@@ -31,7 +31,7 @@ export function AboutSection({ profile }: AboutSectionProps) {
     },
     {
       icon: Users,
-      title: "Published 30+ Research Articles",
+      title: "Published 40+ Research Articles",
       description: "Includes top journals and conferences",
       year: "To Date"
     }
@@ -39,13 +39,19 @@ export function AboutSection({ profile }: AboutSectionProps) {
 
   const timeline = [
     {
+      year: "2026-Present",
+      title: "Associate Professor",
+      organization: "Computer Network Information Center, CAS",
+      description: "Scientific Data Mining, Data-centric AI"
+    },
+    {
       year: "2025-Present",
       title: "Research Fellow",
       organization: "DUKE-NUS Medical School, NUS",
       description: "Single-cell Data Mining, AI for lifescience"
     },
     {
-      year: "2023-Present", 
+      year: "2023-2025",
       title: "Assistant Researcher",
       organization: "Computer Network Information Center, CAS",
       description: "Scientific Data Mining, Data-centric AI"
@@ -92,14 +98,13 @@ export function AboutSection({ profile }: AboutSectionProps) {
               </p>
               
               <p className="text-gray-700 leading-relaxed">
-                Currently, he is a research fellow at <strong>DUKE-NUS Medical School, National University of Singapore</strong>. 
-                He is also an assistant researcher (postdoctoral fellow) at the Computer Network Information Center, 
-                Chinese Academy of Sciences from 2023.
+                Currently, he is an associate professor at the <strong>Computer Network Information Center, Chinese Academy of Sciences</strong>.
+                He is also a research fellow at <strong>DUKE-NUS Medical School, National University of Singapore</strong>.
               </p>
               
               <p className="text-gray-700 leading-relaxed">
-                Meng Xiao has published over 30 papers, including <strong>iMeta, NeurIPS, ICLR, ICML, IEEE TKDE, 
-                IEEE ICDE, ACM SIGKDD, AIJ, and ACM TKDD</strong>. He actively contributes to the academic community 
+                Meng Xiao has published over 40 papers, including <strong>iMeta, the Innovation Life, NeurIPS, ICLR, ICML, IEEE TKDE,
+                IEEE ICDE, ACM SIGKDD, AIJ, and ACM TKDD</strong>. He actively contributes to the academic community
                 as a (s)PC member or reviewer on many premier international conferences and journals.
               </p>
             </div>
