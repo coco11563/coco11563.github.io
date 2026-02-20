@@ -189,11 +189,11 @@ export class StaticDataLoader {
   private static getDefaultMetrics(): Metrics {
     return {
       totalCitations: 1025,
-      totalCitationsRecent: 960,
+      totalCitationsRecent: 1025,
       hIndex: 17,
-      hIndexRecent: 16,
+      hIndexRecent: 17,
       i10Index: 27,
-      i10IndexRecent: 25,
+      i10IndexRecent: 27,
       lastUpdated: new Date().toISOString()
     };
   }

@@ -451,15 +451,15 @@ function processScholarData(authorData) {
     totalCitations: citedByTable[0]?.citations?.all ??
                    authorData.cited_by?.citations?.all ?? 1025,
     totalCitationsRecent: citedByTable[0]?.citations?.since_2019 ??
-                         authorData.cited_by?.citations?.since_2019 ?? 960,
+                         authorData.cited_by?.citations?.since_2019 ?? 1025,
     hIndex: citedByTable[1]?.h_index?.all ??
            authorData.cited_by?.h_index?.all ?? 17,
     hIndexRecent: citedByTable[1]?.h_index?.since_2019 ??
-                 authorData.cited_by?.h_index?.since_2019 ?? 16,
+                 authorData.cited_by?.h_index?.since_2019 ?? 17,
     i10Index: citedByTable[2]?.i10_index?.all ??
              authorData.cited_by?.i10_index?.all ?? 27,
     i10IndexRecent: citedByTable[2]?.i10_index?.since_2019 ??
-                   authorData.cited_by?.i10_index?.since_2019 ?? 25,
+                   authorData.cited_by?.i10_index?.since_2019 ?? 27,
     lastUpdated: new Date().toISOString()
   };
 
