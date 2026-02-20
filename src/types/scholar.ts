@@ -46,6 +46,15 @@ export interface Publication {
   award?: string;  // 获奖信息
 }
 
+export interface NewsItem {
+  date: string;
+  title: string;
+  description?: string;
+  link?: string;
+  type: 'publication' | 'award' | 'grant' | 'talk' | 'general';
+  highlighted?: boolean;
+}
+
 export interface CitationsByYear {
   year: number;
   citations: number;
