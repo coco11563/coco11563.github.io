@@ -15,7 +15,6 @@ export function MetricsSection({ metrics, citationsByYear }: MetricsSectionProps
       icon: Zap,
       label: "Total Citations",
       value: metrics.totalCitations,
-      recent: metrics.totalCitationsRecent,
       color: "from-blue-500 to-blue-600",
       bgColor: "bg-blue-50",
       textColor: "text-blue-600"
@@ -24,7 +23,6 @@ export function MetricsSection({ metrics, citationsByYear }: MetricsSectionProps
       icon: Award,
       label: "h-index",
       value: metrics.hIndex,
-      recent: metrics.hIndexRecent,
       color: "from-green-500 to-green-600",
       bgColor: "bg-green-50",
       textColor: "text-green-600"
@@ -33,7 +31,6 @@ export function MetricsSection({ metrics, citationsByYear }: MetricsSectionProps
       icon: BookOpen,
       label: "i10-index",
       value: metrics.i10Index,
-      recent: metrics.i10IndexRecent,
       color: "from-purple-500 to-purple-600",
       bgColor: "bg-purple-50",
       textColor: "text-purple-600"
@@ -85,13 +82,7 @@ export function MetricsSection({ metrics, citationsByYear }: MetricsSectionProps
                 >
                   {metric.value.toLocaleString()}
                 </motion.div>
-                
-                {metric.recent !== null && (
-                  <div className="text-xs text-gray-500">
-                    Since 2019: {metric.recent.toLocaleString()}
-                  </div>
-                )}
-                
+
                 <div className="metric-label">
                   {metric.label}
                 </div>
