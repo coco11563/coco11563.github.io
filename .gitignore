@@ -105,5 +105,8 @@ private/
 .next/
 out/
 
+# TypeScript build info
+*.tsbuildinfo
+
 .claude/
 next-env.d.ts
