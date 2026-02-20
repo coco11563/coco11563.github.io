@@ -1,46 +1,56 @@
-# 肖濛 (Meng Xiao) - 个人学术主页
+# Meng Xiao (肖濛) - Academic Homepage
 
-这是肖濛的个人学术主页网站，展示其学术成果、研究项目和个人信息。
+Personal academic homepage built with Next.js, featuring automated Google Scholar data synchronization.
 
-## 👨‍🎓 个人信息
+**Live site**: [coco11563.github.io](https://coco11563.github.io)
 
-- **姓名**: Meng Xiao (肖濛)
-- **职位**: PhD, Assistant Researcher (助理研究员)
-- **机构**: 
-  - Computer Network Information Center (计算机网络信息中心), Chinese Academy of Sciences (中国科学院)
-  - DUKE-NUS Medical School, National University of Singapore (新加坡国立大学)
-- **研究领域**: Data-centric AI, AI4LifeScience, Scientific Data Mining
-- **联系方式**: 
-  - 📧 shaow.at.cnic.cn (工作邮箱)
-  - 📧 meng.xiao.at.nus.edu.sg (学术邮箱)
-- **地址**: 8 College Road, Singapore, 169857
+## Tech Stack
 
-## 🏆 主要成就
+- **Framework**: Next.js 14 (Static Export)
+- **Language**: TypeScript
+- **Styling**: Tailwind CSS
+- **Animation**: Framer Motion, tsParticles
+- **Data Source**: Google Scholar via SerpAPI
+- **Deployment**: GitHub Pages + GitHub Actions
 
-- 中国科学院院长奖学金特别奖 (2023年首位CNIC获得者)
-- 北京市科协青年人才托举工程 (2024-2026)
-- 发表学术论文30余篇，包括iMeta、NeurIPS、ICLR、ICML、IEEE TKDE等顶级期刊和会议
+## Project Structure
 
-## 📞 联系方式
+```
+src/
+├── app/              # Next.js App Router pages
+├── components/       # UI components
+│   ├── HeroSection        # Landing hero with particle background
+│   ├── AboutSection       # Bio and research interests
+│   ├── MetricsSection     # Citation stats & trend chart
+│   ├── PublicationsSection # Paper list from Scholar
+│   ├── ProjectsSection    # Research projects
+│   ├── NewsSection        # Recent updates
+│   ├── ContactSection     # Contact info
+│   ├── Navigation         # Top nav bar
+│   └── Footer
+├── lib/              # Data loading utilities
+└── types/            # TypeScript type definitions
+scripts/
+└── fetch-scholar-data.js  # Scholar data fetcher (SerpAPI)
+public/data/               # Static JSON data (auto-updated)
+.github/workflows/
+├── deploy.yml             # Build & deploy to GitHub Pages
+└── update-data.yml        # Scheduled Scholar data sync
+```
 
-- **学术合作**: meng.xiao.at.nus.edu.sg
-- **技术支持**: shaow.at.cnic.cn
-- **GitHub**: [coco11563](https://github.com/coco11563)
-- **Google Scholar**: [Meng Xiao](https://scholar.google.com/citations?user=YGwukbUAAAAJ&hl=en)
+## Development
 
-## 📄 许可证
+```bash
+npm install
+npm run dev          # Start dev server at localhost:3000
+npm run build        # Production build (static export)
+npm run fetch-data   # Manually refresh Scholar data (requires SERPAPI_KEY)
+```
 
-本项目采用 MIT 许可证 - 查看 [LICENSE](LICENSE) 文件了解详情。
+## Scholar Data Automation
 
-## 🙏 致谢
+A GitHub Actions workflow (`update-data.yml`) periodically fetches the latest metrics and publications from Google Scholar and commits updated JSON to `public/data/`. See `SERPAPI_SETUP.md` for API key configuration.
 
-感谢所有合作者和导师的支持：
-- Prof. Yuanchun Zhou
-- Prof. Yi Du
-- Prof. Yanjie Fu
-- Dr. Min Wu
-- Prof. Jinmiao Chen
+## License
 
----
-
-*最后更新: 2025年7月*
+MIT - see [LICENSE](LICENSE).
