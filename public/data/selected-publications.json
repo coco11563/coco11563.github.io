@@ -1,5 +1,77 @@
 [
   {
+    "id": "pub_2026_dasfaa",
+    "title": "A Cross-Modal Hierarchical Contrastive Learning Framework for Protein-Protein Interaction Prediction",
+    "authors": [
+      "Ran Zhang",
+      "Yihong Wang",
+      "Xuezhi Wang",
+      "QingQing Long",
+      "Jianghua Zhao",
+      "Meng Xiao"
+    ],
+    "venue": "DASFAA",
+    "venueType": "conference",
+    "year": 2026,
+    "citations": 0,
+    "image": "/pubfiles/DASFAA2026.png",
+    "keywords": [
+      "protein-protein interaction",
+      "cross-modal",
+      "contrastive learning",
+      "hierarchical"
+    ],
+    "urls": {},
+    "authorRole": "corresponding-author",
+    "highlighted": true
+  },
+  {
+    "id": "pub_2026_xinnlife",
+    "title": "A Comprehensive Survey on Artificial Intelligence for Biomolecule Design",
+    "authors": [
+      "Guang Yang",
+      "Jianing Li",
+      "Qiong Wang",
+      "Lianlian Wu",
+      "Zhengshan Chen",
+      "Peng-Cheng Zhao",
+      "Haoyang Wang",
+      "Qinglong Wang",
+      "Bing Wen",
+      "Chao Song",
+      "Wenxin Xu",
+      "Xiongfei He",
+      "Xiao Zhang",
+      "Sophia Tsoka",
+      "Siu-Ming Yiu",
+      "Fang-Xiang Wu",
+      "Meng Xiao",
+      "Shirui Pan",
+      "Hui Yu",
+      "Song He",
+      "Xiaoli Li",
+      "Xiaochen Bo",
+      "Min Wu",
+      "Jian-Yu Shi"
+    ],
+    "venue": "The Innovation Life",
+    "venueType": "journal",
+    "year": 2026,
+    "citations": 0,
+    "image": "/pubfiles/XINNLIFE2026.png",
+    "keywords": [
+      "artificial intelligence",
+      "biomolecule design",
+      "generative AI",
+      "drug discovery"
+    ],
+    "urls": {
+      "paper": "https://www.the-innovation.org/article/doi/10.59717/j.xinn-life.2026.100196"
+    },
+    "authorRole": "corresponding-author",
+    "highlighted": true
+  },
+  {
     "id": "pub_2025_tnnls",
     "title": "Adapting Graph Models via Target Integrity Assessment and Source Distribution Hypothesis",
     "authors": [

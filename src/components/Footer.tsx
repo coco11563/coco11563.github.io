@@ -19,7 +19,7 @@ export function Footer() {
             </div>
             
             <p className="text-gray-400 text-sm">
-              Assistant Researcher passionate about Data-centric AI and Scientific Data Mining.
+              Associate Professor passionate about Data-centric AI and Scientific Data Mining.
             </p>
             
             <p className="text-gray-400 text-sm">
