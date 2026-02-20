@@ -1,15 +1,16 @@
 'use client'
 
 import { motion } from 'framer-motion'
-import { ScholarProfile } from '@/types/scholar'
+import { ScholarProfile, NewsItem } from '@/types/scholar'
 import { GraduationCap, Award, Star, Users } from 'lucide-react'
 import { NewsSection } from './NewsSection'
 
 interface AboutSectionProps {
   profile: ScholarProfile
+  news: NewsItem[]
 }
 
-export function AboutSection({ profile }: AboutSectionProps) {
+export function AboutSection({ profile, news }: AboutSectionProps) {
   const achievements = [
     {
       icon: Award,
@@ -130,7 +131,7 @@ export function AboutSection({ profile }: AboutSectionProps) {
 
             {/* News 部分 */}
             <div id="news" className="mt-12">
-              <NewsSection />
+              <NewsSection news={news} />
             </div>
           </motion.div>
 

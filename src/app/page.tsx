@@ -10,40 +10,40 @@ import { Footer } from '@/components/Footer'
 
 export default async function HomePage() {
   // 在构建时获取所有数据 (Static Site Generation)
-  const { profile, metrics, publications, citationsByYear } = 
+  const { profile, metrics, publications, citationsByYear, news } =
     await StaticDataLoader.loadAllData()
 
   return (
     <>
       {/* 导航栏 */}
       <Navigation />
-      
+
       {/* 主要内容 */}
       <main className="relative">
         {/* 英雄区域 */}
         <HeroSection profile={profile} />
-        
+
         {/* 关于我 */}
-        <AboutSection profile={profile} />
-        
+        <AboutSection profile={profile} news={news} />
+
         {/* 联系方式 */}
         <ContactSection profile={profile} />
-        
+
         {/* 学术指标 */}
-        <MetricsSection 
-          metrics={metrics} 
-          citationsByYear={citationsByYear} 
+        <MetricsSection
+          metrics={metrics}
+          citationsByYear={citationsByYear}
         />
-        
+
         {/* 项目展示 */}
         <ProjectsSection />
-        
+
         {/* 论文发表 - 移到最后 */}
         <PublicationsSection publications={publications} />
       </main>
-      
+
       {/* 页脚 */}
-      <Footer />
+      <Footer news={news} />
     </>
   )
 }

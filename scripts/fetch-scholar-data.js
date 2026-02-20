@@ -96,17 +96,25 @@ async function fetchScholarDataWithSerpAPI(scholarId) {
 }
 
 /**
- * 备用数据源（从现有HTML解析）
+ * 备用数据源（从现有JSON数据文件读取）
  */
 async function fetchScholarDataFallback() {
-  console.log('📋 使用现有数据作为备用数据源');
-  
-  // 从现有 index.html 提取结构化数据
-  const indexPath = path.join(__dirname, '../index.html');
-  const htmlContent = fs.readFileSync(indexPath, 'utf8');
-  
-  // 解析现有数据
-  const profile = {
+  console.log('📋 使用现有JSON数据作为备用数据源');
+
+  // 尝试从现有 public/data/*.json 读取
+  const readJsonSafe = (filename, fallback) => {
+    const filePath = path.join(CONFIG.dataDir, filename);
+    try {
+      if (fs.existsSync(filePath)) {
+        return JSON.parse(fs.readFileSync(filePath, 'utf-8'));
+      }
+    } catch (error) {
+      console.warn(`⚠️  读取 ${filename} 失败: ${error.message}`);
+    }
+    return fallback;
+  };
+
+  const profile = readJsonSafe('scholar-profile.json', {
     name: 'Meng Xiao',
     nameZh: '肖濛',
     affiliation: [
@@ -118,27 +126,28 @@ async function fetchScholarDataFallback() {
     interests: ['Data-centric AI', 'AI4LifeScience', 'Scientific Data Mining'],
     image: '/indexfiles/me.png',
     verified: true
-  };
+  });
 
-  const metrics = {
-    totalCitations: 853, // 从你的Google Scholar页面更新的数据
-    totalCitationsRecent: 790,
-    hIndex: 16, // 正确的H指数
-    hIndexRecent: 15,
-    i10Index: 20, // 正确的i10指数
-    i10IndexRecent: 19,
+  const metrics = readJsonSafe('metrics.json', {
+    totalCitations: 0,
+    totalCitationsRecent: 0,
+    hIndex: 0,
+    hIndexRecent: 0,
+    i10Index: 0,
+    i10IndexRecent: 0,
     lastUpdated: new Date().toISOString()
-  };
+  });
 
-  // 从HTML中提取论文信息
-  const publications = extractPublicationsFromHTML(htmlContent);
-  
-  return {
-    profile,
-    metrics,
-    publications,
-    citationsByYear: generateMockCitationsByYear(2019, new Date().getFullYear())
-  };
+  const publications = readJsonSafe('publications.json', []);
+  const citationsByYear = readJsonSafe('citations-by-year.json', []);
+
+  if (publications.length === 0) {
+    console.log('⚠️  未找到现有论文数据，数据将为空');
+  } else {
+    console.log(`✅ 从现有数据读取到 ${publications.length} 篇论文`);
+  }
+
+  return { profile, metrics, publications, citationsByYear };
 }
 
 /**

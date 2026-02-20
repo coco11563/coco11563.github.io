@@ -1,4 +1,4 @@
-import { ScholarProfile, Publication, Metrics, CitationsByYear } from '@/types/scholar';
+import { ScholarProfile, Publication, Metrics, CitationsByYear, NewsItem } from '@/types/scholar';
 import { promises as fs } from 'fs';
 import path from 'path';
 
@@ -92,21 +92,35 @@ export class StaticDataLoader {
   }
 
   /**
+   * 加载新闻数据
+   */
+  static async loadNews(): Promise<NewsItem[]> {
+    try {
+      return await this.readDataFile('news.json');
+    } catch (error) {
+      console.error('Failed to load news:', error);
+      return [];
+    }
+  }
+
+  /**
    * 加载所有数据
    */
   static async loadAllData() {
-    const [profile, metrics, publications, citationsByYear] = await Promise.all([
+    const [profile, metrics, publications, citationsByYear, news] = await Promise.all([
       this.loadProfile(),
       this.loadMetrics(),
       this.loadPublications(),
-      this.loadCitationsByYear()
+      this.loadCitationsByYear(),
+      this.loadNews()
     ]);
 
     return {
       profile,
       metrics,
       publications,
-      citationsByYear
+      citationsByYear,
+      news
     };
   }
 

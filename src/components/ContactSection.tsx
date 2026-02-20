@@ -194,7 +194,7 @@ export function ContactSection({ profile }: ContactSectionProps) {
             </div>
 
             {/* 学术服务 */}
-            <div className="card p-6">
+            <div id="services" className="card p-6">
               <div className="flex items-center mb-4">
                 <Award size={24} className="text-primary-600 mr-3" />
                 <h3 className="text-xl font-semibold text-gray-900">

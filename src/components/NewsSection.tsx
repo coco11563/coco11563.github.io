@@ -3,114 +3,12 @@
 import React, { useState } from 'react';
 import { motion, AnimatePresence } from 'framer-motion';
 import { Calendar, ExternalLink, Star, Award, BookOpen, Zap, ChevronDown, ChevronUp } from 'lucide-react';
-
-interface NewsItem {
-  date: string;
-  title: string;
-  description?: string;
-  link?: string;
-  type: 'publication' | 'award' | 'grant' | 'talk' | 'general';
-  highlighted?: boolean;
-}
+import { NewsItem } from '@/types/scholar';
 
 interface NewsSectionProps {
+  news: NewsItem[];
   className?: string;
 }
-
-const newsData: NewsItem[] = [
-  {
-    date: "2026.02",
-    title: "One paper \"A Cross-Modal Hierarchical Contrastive Learning Framework for Protein-Protein Interaction Prediction\" accepted by DASFAA 2026!",
-    type: "publication",
-    highlighted: true
-  },
-  {
-    date: "2026.01",
-    title: "One paper accepted by the Innovation Life!",
-    link: "https://www.the-innovation.org/article/doi/10.59717/j.xinn-life.2026.100196",
-    type: "publication",
-    highlighted: true
-  },
-  {
-    date: "2025.10",
-    title: "One Paper accepted by IEEE TNNLS!",
-    type: "publication",
-    highlighted: true
-  },
-  {
-    date: "2025.09",
-    title: "One Paper accepted by IEEE TCBB!",
-    link: "https://ieeexplore.ieee.org/abstract/document/11164312",
-    type: "publication",
-    highlighted: true
-  },
-  {
-    date: "2025.08",
-    title: "Thanks NSFC to support my research!",
-    link: "https://mp.weixin.qq.com/s/c_Jwv90-u2jN-9Qu1iMn7Q",
-    type: "grant",
-    highlighted: true
-  },
-  {
-    date: "2025.07",
-    title: "Two papers accepted by CRAD DCAI Issue and BMC Bioinformatics!",
-    type: "publication"
-  },
-  {
-    date: "2025.05",
-    title: "New survey about Gut microbiota and tuberculosis published!",
-    link: "https://onlinelibrary.wiley.com/doi/10.1002/imt2.70054",
-    type: "publication"
-  },
-  {
-    date: "2025.05",
-    title: "Three papers accepted by ICML 2025, SIGKDD 2025, and iMeta!",
-    type: "publication"
-  },
-  {
-    date: "2025.04",
-    title: "Five papers accepted by ICLR 2025, DASFAA 2025, IEEE ICDE 2025, Advanced Science, and ICMR 2025!",
-    type: "publication"
-  },
-  {
-    date: "2025.03",
-    title: "New survey about Agentic AI published!",
-    link: "https://arxiv.org/abs/2503.21460",
-    type: "publication"
-  },
-  {
-    date: "2025.01",
-    title: "New survey about DCAI published!",
-    link: "http://arxiv.org/abs/2501.10555",
-    type: "publication"
-  },
-  {
-    date: "2025.01",
-    title: "Nominated as Excellent Reviewer (Top-20%) for ACM SIGKDD!",
-    type: "award"
-  },
-  {
-    date: "2024.12",
-    title: "Research proposal about Genomic Data Engineering granted by Natural Science Foundation of Beijing, China!",
-    type: "grant"
-  },
-  {
-    date: "2024.11",
-    title: "Research proposal about Scientific Impact Evaluation granted by Natural Science Foundation of China!",
-    type: "grant"
-  },
-  {
-    date: "2024.11",
-    title: "Invited talk as distinguished student for UCAS Graduate Academic Forum!",
-    link: "https://scce.ucas.ac.cn/index.php/zh-CN/xwbd/3554-2024-5",
-    type: "talk"
-  },
-  {
-    date: "2024.10",
-    title: "One paper accepted by BIBM 2024!",
-    type: "publication"
-  }
-];
 
 function getNewsIcon(type: string) {
   switch (type) {
@@ -132,19 +30,17 @@ function getNewsColor(type: string) {
   }
 }
 
-export function NewsSection({ className = "" }: NewsSectionProps) {
+export function NewsSection({ news, className = "" }: NewsSectionProps) {
   const [showAll, setShowAll] = useState(false);
   const [isExpanding, setIsExpanding] = useState(false);
-  
-  // 默认显示的新闻数量（与timeline长度相同）
+
   const defaultNewsCount = 2;
-  const displayedNews = showAll ? newsData : newsData.slice(0, defaultNewsCount);
-  
+  const displayedNews = showAll ? news : news.slice(0, defaultNewsCount);
+
   const toggleShowAll = async () => {
     if (!showAll) {
       setIsExpanding(true);
       setShowAll(true);
-      // 等待动画完成后重置expanding状态
       setTimeout(() => setIsExpanding(false), 600);
     } else {
       setShowAll(false);
@@ -152,7 +48,8 @@ export function NewsSection({ className = "" }: NewsSectionProps) {
   };
 
   return (
-    <motion.div 
+    <motion.div
+      id="news"
       initial={{ opacity: 0, y: 20 }}
       whileInView={{ opacity: 1, y: 0 }}
       viewport={{ once: true }}
@@ -169,22 +66,22 @@ export function NewsSection({ className = "" }: NewsSectionProps) {
       <div className="relative">
         {/* Timeline Line */}
         <div className="absolute left-6 top-0 bottom-0 w-0.5 bg-gradient-to-b from-primary-400 to-primary-200"></div>
-        
+
         <div className="space-y-8">
           <AnimatePresence>
             {displayedNews.map((item, index) => {
               const IconComponent = getNewsIcon(item.type);
               const colorClasses = getNewsColor(item.type);
-              
+
               return (
                 <motion.div
                   key={index}
                   initial={{ opacity: 0, x: -20 }}
                   animate={{ opacity: 1, x: 0 }}
                   exit={{ opacity: 0, x: -20 }}
-                  transition={{ 
-                    duration: 0.5, 
-                    delay: isExpanding && index >= defaultNewsCount ? (index - defaultNewsCount) * 0.1 : index * 0.1 
+                  transition={{
+                    duration: 0.5,
+                    delay: isExpanding && index >= defaultNewsCount ? (index - defaultNewsCount) * 0.1 : index * 0.1
                   }}
                   className="relative flex items-start space-x-4"
                 >
@@ -246,14 +143,14 @@ export function NewsSection({ className = "" }: NewsSectionProps) {
       </div>
 
       {/* View More/Less Button */}
-      {newsData.length > defaultNewsCount && (
-        <motion.div 
+      {news.length > defaultNewsCount && (
+        <motion.div
           className="text-center pt-6"
           initial={{ opacity: 0 }}
           animate={{ opacity: 1 }}
           transition={{ delay: 0.3 }}
         >
-          <button 
+          <button
             onClick={toggleShowAll}
             className="inline-flex items-center px-4 py-2 text-sm font-medium text-primary-600 bg-primary-50 hover:bg-primary-100 rounded-lg transition-all duration-300 hover:scale-105"
           >
@@ -265,21 +162,20 @@ export function NewsSection({ className = "" }: NewsSectionProps) {
               </>
             ) : (
               <>
-                View All News ({newsData.length})
+                View All News ({news.length})
                 <ChevronDown size={16} className="ml-2" />
               </>
             )}
           </button>
-          
-          {/* 展开时显示统计信息 */}
+
           {showAll && (
-            <motion.p 
+            <motion.p
               initial={{ opacity: 0, y: 10 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ delay: 0.2 }}
               className="text-xs text-gray-500 mt-2"
             >
-              Showing all {newsData.length} news items
+              Showing all {news.length} news items
             </motion.p>
           )}
         </motion.div>
