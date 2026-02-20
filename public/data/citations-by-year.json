@@ -1,10 +1,26 @@
 [
-  {"year": 2018, "citations": 12},
-  {"year": 2019, "citations": 35},
-  {"year": 2020, "citations": 58},
-  {"year": 2021, "citations": 82},
-  {"year": 2022, "citations": 118},
-  {"year": 2023, "citations": 175},
-  {"year": 2024, "citations": 218},
-  {"year": 2025, "citations": 155}
+  {
+    "year": 2009,
+    "citations": 5
+  },
+  {
+    "year": 2014,
+    "citations": 26
+  },
+  {
+    "year": 2018,
+    "citations": 7
+  },
+  {
+    "year": 2019,
+    "citations": 18
+  },
+  {
+    "year": 2021,
+    "citations": 18
+  },
+  {
+    "year": 2022,
+    "citations": 44
+  }
 ]
