@@ -84,7 +84,12 @@ export class StaticDataLoader {
    */
   static async loadCitationsByYear(): Promise<CitationsByYear[]> {
     try {
-      return await this.readDataFile('citations-by-year.json');
+      const data = await this.readDataFile('citations-by-year.json');
+      // 如果文件存在但为空数组，使用默认数据
+      if (!Array.isArray(data) || data.length === 0) {
+        return this.getDefaultCitationsByYear();
+      }
+      return data;
     } catch (error) {
       console.error('Failed to load citations by year:', error);
       return this.getDefaultCitationsByYear();
@@ -183,12 +188,12 @@ export class StaticDataLoader {
 
   private static getDefaultMetrics(): Metrics {
     return {
-      totalCitations: 853,
-      totalCitationsRecent: 790,
-      hIndex: 16,
-      hIndexRecent: 15,
-      i10Index: 20,
-      i10IndexRecent: 19,
+      totalCitations: 1025,
+      totalCitationsRecent: 960,
+      hIndex: 17,
+      hIndexRecent: 16,
+      i10Index: 27,
+      i10IndexRecent: 25,
       lastUpdated: new Date().toISOString()
     };
   }
@@ -221,16 +226,15 @@ export class StaticDataLoader {
   }
 
   private static getDefaultCitationsByYear(): CitationsByYear[] {
-    const currentYear = new Date().getFullYear();
-    const years = [];
-    
-    for (let year = 2019; year <= currentYear; year++) {
-      years.push({
-        year,
-        citations: Math.floor(Math.random() * 100) + 50
-      });
-    }
-    
-    return years;
+    return [
+      { year: 2018, citations: 12 },
+      { year: 2019, citations: 35 },
+      { year: 2020, citations: 58 },
+      { year: 2021, citations: 82 },
+      { year: 2022, citations: 118 },
+      { year: 2023, citations: 175 },
+      { year: 2024, citations: 218 },
+      { year: 2025, citations: 155 }
+    ];
   }
 }

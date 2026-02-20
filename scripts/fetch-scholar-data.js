@@ -96,26 +96,181 @@ async function fetchScholarDataWithSerpAPI(scholarId) {
 }
 
 /**
- * 备用数据源（从现有JSON数据文件读取）
+ * 从现有JSON文件安全读取
+ */
+function readJsonSafe(filename, fallback) {
+  const filePath = path.join(CONFIG.dataDir, filename);
+  try {
+    if (fs.existsSync(filePath)) {
+      return JSON.parse(fs.readFileSync(filePath, 'utf-8'));
+    }
+  } catch (error) {
+    console.warn(`⚠️  读取 ${filename} 失败: ${error.message}`);
+  }
+  return fallback;
+}
+
+/**
+ * 从论文列表计算指标（当无法从API获取时）
+ */
+function computeMetricsFromPublications(publications, existingMetrics) {
+  if (!publications || publications.length === 0) return existingMetrics;
+
+  const sorted = [...publications]
+    .map(p => p.citations || 0)
+    .sort((a, b) => b - a);
+
+  const totalCitations = sorted.reduce((sum, c) => sum + c, 0);
+
+  // 计算 h-index
+  let hIndex = 0;
+  for (let i = 0; i < sorted.length; i++) {
+    if (sorted[i] >= i + 1) hIndex = i + 1;
+    else break;
+  }
+
+  // 计算 i10-index
+  const i10Index = sorted.filter(c => c >= 10).length;
+
+  return {
+    totalCitations,
+    totalCitationsRecent: existingMetrics?.totalCitationsRecent ?? totalCitations,
+    hIndex,
+    hIndexRecent: existingMetrics?.hIndexRecent ?? hIndex,
+    i10Index,
+    i10IndexRecent: existingMetrics?.i10IndexRecent ?? i10Index,
+    lastUpdated: new Date().toISOString()
+  };
+}
+
+/**
+ * 使用 Semantic Scholar API 获取数据（免费，无需API Key）
+ */
+async function fetchScholarDataSemanticScholar(scholarName) {
+  console.log('🔬 尝试使用 Semantic Scholar API（免费）...');
+  const https = require('https');
+
+  try {
+    // Step 1: 搜索作者
+    const searchUrl = `https://api.semanticscholar.org/graph/v1/author/search?query=${encodeURIComponent(scholarName)}&fields=name,affiliations,citationCount,hIndex,paperCount&limit=5`;
+
+    const searchResults = await new Promise((resolve, reject) => {
+      const req = https.get(searchUrl, { headers: { 'User-Agent': 'Academic-Homepage/1.0' } }, (res) => {
+        let data = '';
+        res.on('data', (chunk) => { data += chunk; });
+        res.on('end', () => {
+          try { resolve(JSON.parse(data)); }
+          catch (e) { reject(e); }
+        });
+      });
+      req.on('error', reject);
+      req.setTimeout(15000, () => { req.destroy(); reject(new Error('Timeout')); });
+    });
+
+    if (!searchResults.data || searchResults.data.length === 0) {
+      throw new Error('未找到作者');
+    }
+
+    // 找到匹配的作者（优先匹配 CAS/CNIC 相关的）
+    const author = searchResults.data.find(a =>
+      a.affiliations?.some(aff => aff.toLowerCase().includes('chinese academy') || aff.toLowerCase().includes('cnic'))
+    ) || searchResults.data[0];
+
+    console.log(`✅ 找到作者: ${author.name} (ID: ${author.authorId})`);
+
+    // Step 2: 获取作者详细信息和论文
+    const detailUrl = `https://api.semanticscholar.org/graph/v1/author/${author.authorId}?fields=name,citationCount,hIndex,paperCount,papers.year,papers.citationCount,papers.title`;
+
+    const authorDetail = await new Promise((resolve, reject) => {
+      const req = https.get(detailUrl, { headers: { 'User-Agent': 'Academic-Homepage/1.0' } }, (res) => {
+        let data = '';
+        res.on('data', (chunk) => { data += chunk; });
+        res.on('end', () => {
+          try { resolve(JSON.parse(data)); }
+          catch (e) { reject(e); }
+        });
+      });
+      req.on('error', reject);
+      req.setTimeout(15000, () => { req.destroy(); reject(new Error('Timeout')); });
+    });
+
+    // 从论文的引用数据计算 citations-by-year（按论文发表年份汇总）
+    const citationsByYear = {};
+    (authorDetail.papers || []).forEach(paper => {
+      if (paper.year && paper.citationCount > 0) {
+        citationsByYear[paper.year] = (citationsByYear[paper.year] || 0) + paper.citationCount;
+      }
+    });
+
+    const citationsByYearArray = Object.entries(citationsByYear)
+      .map(([year, citations]) => ({ year: parseInt(year), citations }))
+      .sort((a, b) => a.year - b.year);
+
+    // 读取现有数据
+    const existingMetrics = readJsonSafe('metrics.json', null);
+
+    const metrics = {
+      totalCitations: authorDetail.citationCount ?? existingMetrics?.totalCitations ?? 853,
+      totalCitationsRecent: existingMetrics?.totalCitationsRecent ?? authorDetail.citationCount ?? 790,
+      hIndex: authorDetail.hIndex ?? existingMetrics?.hIndex ?? 16,
+      hIndexRecent: existingMetrics?.hIndexRecent ?? authorDetail.hIndex ?? 15,
+      i10Index: existingMetrics?.i10Index ?? 20,
+      i10IndexRecent: existingMetrics?.i10IndexRecent ?? 19,
+      lastUpdated: new Date().toISOString()
+    };
+
+    console.log(`📊 Semantic Scholar 数据: 引用=${metrics.totalCitations}, h-index=${metrics.hIndex}`);
+
+    // 读取现有的profile（不覆盖）
+    const profile = readJsonSafe('scholar-profile.json', {
+      name: 'Meng Xiao (肖濛)',
+      nameZh: '肖濛',
+      affiliation: ['Computer Network Information Center, CAS', 'Duke-NUS Medical School, NUS'],
+      email: ['shaow.at.cnic.cn', 'meng.xiao.at.nus.edu.sg'],
+      homepage: 'https://coco11563.github.io',
+      interests: ['AI4S', 'AI4Data', 'Data Mining'],
+      image: '/indexfiles/me.png',
+      verified: true
+    });
+
+    // 将 Semantic Scholar 论文转为标准格式（仅用于更新引用数）
+    const publications = (authorDetail.papers || [])
+      .filter(p => p.title)
+      .map((p, i) => ({
+        id: `ss_pub_${i}`,
+        title: p.title,
+        authors: [],
+        venue: '',
+        year: p.year || new Date().getFullYear(),
+        citations: p.citationCount || 0,
+        abstract: '',
+        urls: {},
+        venueType: 'other',
+        keywords: extractKeywords(p.title)
+      }));
+
+    return { profile, metrics, publications, citationsByYear: citationsByYearArray };
+
+  } catch (error) {
+    console.warn(`⚠️  Semantic Scholar API 失败: ${error.message}`);
+    return null;
+  }
+}
+
+/**
+ * 备用数据源（先尝试 Semantic Scholar，再回退到本地JSON文件）
  */
 async function fetchScholarDataFallback() {
+  // 先尝试 Semantic Scholar（免费API）
+  const ssData = await fetchScholarDataSemanticScholar('Meng Xiao');
+  if (ssData) {
+    return ssData;
+  }
+
   console.log('📋 使用现有JSON数据作为备用数据源');
 
-  // 尝试从现有 public/data/*.json 读取
-  const readJsonSafe = (filename, fallback) => {
-    const filePath = path.join(CONFIG.dataDir, filename);
-    try {
-      if (fs.existsSync(filePath)) {
-        return JSON.parse(fs.readFileSync(filePath, 'utf-8'));
-      }
-    } catch (error) {
-      console.warn(`⚠️  读取 ${filename} 失败: ${error.message}`);
-    }
-    return fallback;
-  };
-
   const profile = readJsonSafe('scholar-profile.json', {
-    name: 'Meng Xiao',
+    name: 'Meng Xiao (肖濛)',
     nameZh: '肖濛',
     affiliation: [
       'Computer Network Information Center, CAS',
@@ -123,28 +278,30 @@ async function fetchScholarDataFallback() {
     ],
     email: ['shaow.at.cnic.cn', 'meng.xiao.at.nus.edu.sg'],
     homepage: 'https://coco11563.github.io',
-    interests: ['Data-centric AI', 'AI4LifeScience', 'Scientific Data Mining'],
+    interests: ['AI4S', 'AI4Data', 'Data Mining'],
     image: '/indexfiles/me.png',
     verified: true
   });
 
-  const metrics = readJsonSafe('metrics.json', {
-    totalCitations: 0,
-    totalCitationsRecent: 0,
-    hIndex: 0,
-    hIndexRecent: 0,
-    i10Index: 0,
-    i10IndexRecent: 0,
-    lastUpdated: new Date().toISOString()
-  });
-
+  const existingMetrics = readJsonSafe('metrics.json', null);
   const publications = readJsonSafe('publications.json', []);
   const citationsByYear = readJsonSafe('citations-by-year.json', []);
+
+  // 从论文数据重新计算指标（而不是直接使用可能过时的 metrics.json）
+  const metrics = publications.length > 0
+    ? computeMetricsFromPublications(publications, existingMetrics)
+    : existingMetrics ?? {
+        totalCitations: 0, totalCitationsRecent: 0,
+        hIndex: 0, hIndexRecent: 0,
+        i10Index: 0, i10IndexRecent: 0,
+        lastUpdated: new Date().toISOString()
+      };
 
   if (publications.length === 0) {
     console.log('⚠️  未找到现有论文数据，数据将为空');
   } else {
     console.log(`✅ 从现有数据读取到 ${publications.length} 篇论文`);
+    console.log(`📊 计算指标: 引用=${metrics.totalCitations}, h-index=${metrics.hIndex}, i10=${metrics.i10Index}`);
   }
 
   return { profile, metrics, publications, citationsByYear };
@@ -291,18 +448,18 @@ function processScholarData(authorData) {
   const citedByTable = authorData.cited_by?.table || [];
   
   const metrics = {
-    totalCitations: citedByTable[0]?.citations?.all || 
-                   authorData.cited_by?.citations?.all || 853,
-    totalCitationsRecent: citedByTable[0]?.citations?.since_2019 || 
-                         authorData.cited_by?.citations?.since_2019 || 790,
-    hIndex: citedByTable[1]?.h_index?.all || 
-           authorData.cited_by?.h_index?.all || 16,
-    hIndexRecent: citedByTable[1]?.h_index?.since_2019 || 
-                 authorData.cited_by?.h_index?.since_2019 || 15,
-    i10Index: citedByTable[2]?.i10_index?.all || 
-             authorData.cited_by?.i10_index?.all || 20,
-    i10IndexRecent: citedByTable[2]?.i10_index?.since_2019 || 
-                   authorData.cited_by?.i10_index?.since_2019 || 19,
+    totalCitations: citedByTable[0]?.citations?.all ??
+                   authorData.cited_by?.citations?.all ?? 1025,
+    totalCitationsRecent: citedByTable[0]?.citations?.since_2019 ??
+                         authorData.cited_by?.citations?.since_2019 ?? 960,
+    hIndex: citedByTable[1]?.h_index?.all ??
+           authorData.cited_by?.h_index?.all ?? 17,
+    hIndexRecent: citedByTable[1]?.h_index?.since_2019 ??
+                 authorData.cited_by?.h_index?.since_2019 ?? 16,
+    i10Index: citedByTable[2]?.i10_index?.all ??
+             authorData.cited_by?.i10_index?.all ?? 27,
+    i10IndexRecent: citedByTable[2]?.i10_index?.since_2019 ??
+                   authorData.cited_by?.i10_index?.since_2019 ?? 25,
     lastUpdated: new Date().toISOString()
   };
 
