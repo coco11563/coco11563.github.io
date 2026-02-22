@@ -449,17 +449,17 @@ function processScholarData(authorData) {
   
   const metrics = {
     totalCitations: citedByTable[0]?.citations?.all ??
-                   authorData.cited_by?.citations?.all ?? 1025,
+                   authorData.cited_by?.citations?.all ?? 1163,
     totalCitationsRecent: citedByTable[0]?.citations?.since_2019 ??
-                         authorData.cited_by?.citations?.since_2019 ?? 960,
+                         authorData.cited_by?.citations?.since_2019 ?? 1163,
     hIndex: citedByTable[1]?.h_index?.all ??
-           authorData.cited_by?.h_index?.all ?? 17,
+           authorData.cited_by?.h_index?.all ?? 18,
     hIndexRecent: citedByTable[1]?.h_index?.since_2019 ??
-                 authorData.cited_by?.h_index?.since_2019 ?? 16,
+                 authorData.cited_by?.h_index?.since_2019 ?? 18,
     i10Index: citedByTable[2]?.i10_index?.all ??
-             authorData.cited_by?.i10_index?.all ?? 27,
+             authorData.cited_by?.i10_index?.all ?? 30,
     i10IndexRecent: citedByTable[2]?.i10_index?.since_2019 ??
-                   authorData.cited_by?.i10_index?.since_2019 ?? 25,
+                   authorData.cited_by?.i10_index?.since_2019 ?? 30,
     lastUpdated: new Date().toISOString()
   };
 
@@ -586,9 +586,20 @@ async function saveDataToFiles(data) {
     }
   }
 
+  // Sanity check: reject metrics that look like a wrong-author match
+  const existingMetrics = readJsonSafe('metrics.json', null);
+  let finalMetrics = data.metrics;
+  if (existingMetrics && existingMetrics.totalCitations > 0) {
+    const ratio = data.metrics.totalCitations / existingMetrics.totalCitations;
+    if (ratio < 0.7) {
+      console.warn(`⚠️  新指标 (citations=${data.metrics.totalCitations}) 远低于现有数据 (${existingMetrics.totalCitations})，疑似匹配到错误作者，保留现有 metrics`);
+      finalMetrics = { ...existingMetrics, lastUpdated: new Date().toISOString() };
+    }
+  }
+
   const files = [
     { name: 'scholar-profile.json', data: data.profile },
-    { name: 'metrics.json', data: data.metrics },
+    { name: 'metrics.json', data: finalMetrics },
     { name: 'publications.json', data: finalPublications },
     { name: 'citations-by-year.json', data: data.citationsByYear }
   ];
@@ -601,8 +612,8 @@ async function saveDataToFiles(data) {
 
   console.log(`📊 数据统计:`);
   console.log(`   论文数量: ${finalPublications.length}`);
-  console.log(`   总引用数: ${data.metrics.totalCitations}`);
-  console.log(`   H指数: ${data.metrics.hIndex}`);
+  console.log(`   总引用数: ${finalMetrics.totalCitations}`);
+  console.log(`   H指数: ${finalMetrics.hIndex}`);
 }
 
 /**
