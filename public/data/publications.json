@@ -13,7 +13,7 @@
     ],
     "venue": "IEEE Transactions on Computational Biology and Bioinformatics, 2025",
     "year": "2025",
-    "citations": 8,
+    "citations": 9,
     "citationsId": "5099728859865515737,7733828662904658466,3535118696762878037",
     "abstract": "",
     "urls": {
@@ -46,7 +46,7 @@
     ],
     "venue": "Cell Research 34 (12), 830-845, 2024",
     "year": "2024",
-    "citations": 105,
+    "citations": 122,
     "citationsId": "15912681120747030699",
     "abstract": "",
     "urls": {
@@ -79,12 +79,12 @@
     ],
     "venue": "arXiv preprint arxiv:2503.21460, 2025",
     "year": "2025",
-    "citations": 129,
-    "citationsId": "2553384233263415865,6686040006820538842,4543464159028255200,3511825580536173473",
+    "citations": 171,
+    "citationsId": "2553384233263415865,4543464159028255200,3511825580536173473",
     "abstract": "",
     "urls": {
       "paper": "https://scholar.google.com/citations?view_op=view_citation&hl=en&user=YGwukbUAAAAJ&pagesize=100&citation_for_view=YGwukbUAAAAJ:7BrZ7Jt4UNcC",
-      "citations": "https://scholar.google.com/scholar?oi=bibs&hl=en&cites=2553384233263415865,6686040006820538842,4543464159028255200,3511825580536173473"
+      "citations": "https://scholar.google.com/scholar?oi=bibs&hl=en&cites=2553384233263415865,4543464159028255200,3511825580536173473"
     },
     "venueType": "other",
     "keywords": [
@@ -110,7 +110,7 @@
     ],
     "venue": "arXiv preprint arXiv:2408.01107, 2024",
     "year": "2024",
-    "citations": 76,
+    "citations": 87,
     "citationsId": "6760124863574288334,17375686450664542083,9885407197037122924,2726936835234220227,15882021473251243073",
     "abstract": "",
     "urls": {
@@ -141,7 +141,7 @@
     ],
     "venue": "Journal of Spatial Science 64 (2), 221-238, 2019",
     "year": "2019",
-    "citations": 44,
+    "citations": 45,
     "citationsId": "926328246516518220",
     "abstract": "",
     "urls": {
@@ -170,7 +170,7 @@
     ],
     "venue": "2023 International Joint Conference on Artificial Intelligence (IJCAI), 2023",
     "year": "2023",
-    "citations": 47,
+    "citations": 52,
     "citationsId": "8095856175023135105",
     "abstract": "",
     "urls": {
@@ -199,7 +199,7 @@
     ],
     "venue": "Artificial Intelligence Journal, 2024",
     "year": "2024",
-    "citations": 61,
+    "citations": 67,
     "citationsId": "10863920213481238703",
     "abstract": "",
     "urls": {
@@ -226,7 +226,7 @@
     ],
     "venue": "The IEEE International Conference on Data Mining (ICDM) 2023, 956-961, 2023",
     "year": "2023",
-    "citations": 49,
+    "citations": 52,
     "citationsId": "9669930467170038570",
     "abstract": "",
     "urls": {
@@ -285,7 +285,7 @@
     ],
     "venue": "ACM Transactions on Knowledge Discovery from Data, 2024",
     "year": "2024",
-    "citations": 39,
+    "citations": 38,
     "citationsId": "6615326047713733595,1241716313002083917",
     "abstract": "",
     "urls": {
@@ -314,7 +314,7 @@
     ],
     "venue": "The IEEE International Conference on Data Mining (ICDM) 1 (1), 1-10, 2023",
     "year": "2023",
-    "citations": 38,
+    "citations": 37,
     "citationsId": "4039133266398073629",
     "abstract": "",
     "urls": {
@@ -403,7 +403,7 @@
     ],
     "venue": "IEEE Transactions on Knowledge and Data Engineering 35 (9), 9685-9699, 2023",
     "year": "2023",
-    "citations": 22,
+    "citations": 23,
     "citationsId": "3043400476458974115,17235107202730669356",
     "abstract": "",
     "urls": {
@@ -432,7 +432,7 @@
     ],
     "venue": "International Conference On Data Mining (ICDM) 2021, 757-767, 2021",
     "year": "2021",
-    "citations": 19,
+    "citations": 20,
     "citationsId": "18076838471781193904",
     "abstract": "",
     "urls": {
@@ -464,7 +464,7 @@
     ],
     "venue": "Proceedings of the 2025 International Conference on Multimedia Retrieval …, 2025",
     "year": "2025",
-    "citations": 26,
+    "citations": 31,
     "citationsId": "12840450703004098056,5818235308232295910",
     "abstract": "",
     "urls": {
@@ -552,7 +552,7 @@
     ],
     "venue": "IEEE Transactions on Big Data 9 (1), 186-187, 2022",
     "year": "2022",
-    "citations": 17,
+    "citations": 16,
     "citationsId": "3670312408068662990",
     "abstract": "",
     "urls": {
@@ -583,7 +583,7 @@
     ],
     "venue": "Accepted by IJCAI-24, 2024",
     "year": "2024",
-    "citations": 20,
+    "citations": 23,
     "citationsId": "6654659459105812857",
     "abstract": "",
     "urls": {
@@ -613,7 +613,7 @@
     ],
     "venue": "Accepted by Transactions on Knowledge Discovery from Data, 2024",
     "year": "2024",
-    "citations": 13,
+    "citations": 15,
     "citationsId": "11362247288105421797,1702467773286029028",
     "abstract": "",
     "urls": {
@@ -642,12 +642,12 @@
     ],
     "venue": "CIKM '24: Proceedings of the 33rd ACM International Conference on …, 2024",
     "year": "2024",
-    "citations": 20,
-    "citationsId": "11175020044088109149,13858498669539712293",
+    "citations": 25,
+    "citationsId": "11175020044088109149",
     "abstract": "",
     "urls": {
       "paper": "https://scholar.google.com/citations?view_op=view_citation&hl=en&user=YGwukbUAAAAJ&pagesize=100&citation_for_view=YGwukbUAAAAJ:u-coK7KVo8oC",
-      "citations": "https://scholar.google.com/scholar?oi=bibs&hl=en&cites=11175020044088109149,13858498669539712293"
+      "citations": "https://scholar.google.com/scholar?oi=bibs&hl=en&cites=11175020044088109149"
     },
     "venueType": "conference",
     "keywords": [
@@ -673,7 +673,7 @@
     ],
     "venue": "accepted by NeurIPS, 2025",
     "year": "2025",
-    "citations": 15,
+    "citations": 19,
     "citationsId": "5532038992782397291",
     "abstract": "",
     "urls": {
@@ -706,7 +706,7 @@
     ],
     "venue": "arXiv preprint arXiv:2501.10555, 2025",
     "year": "2025",
-    "citations": 13,
+    "citations": 16,
     "citationsId": "1363095295393607312",
     "abstract": "",
     "urls": {
@@ -766,7 +766,7 @@
     ],
     "venue": "DASFAA-2024, 2024",
     "year": "2024",
-    "citations": 10,
+    "citations": 13,
     "citationsId": "16898855061902045644",
     "abstract": "",
     "urls": {
@@ -827,7 +827,7 @@
     ],
     "venue": "Pattern Recognition 153, 110498, 2024",
     "year": "2024",
-    "citations": 9,
+    "citations": 11,
     "citationsId": "3697599400835262012",
     "abstract": "",
     "urls": {
@@ -854,7 +854,7 @@
     ],
     "venue": "COLING-2024, 2024",
     "year": "2024",
-    "citations": 9,
+    "citations": 12,
     "citationsId": "14659409203115987087",
     "abstract": "",
     "urls": {
@@ -887,7 +887,7 @@
     ],
     "venue": "Proceedings of the 31th ACM SIGKDD Conference on Knowledge Discovery and …, 2025",
     "year": "2025",
-    "citations": 10,
+    "citations": 15,
     "citationsId": "4593117441343030867",
     "abstract": "",
     "urls": {
@@ -948,7 +948,7 @@
     ],
     "venue": "The Thirteenth International Conference on Learning Representations, 2025",
     "year": "2025",
-    "citations": 7,
+    "citations": 9,
     "citationsId": "1963250201067067285,665646360071089846",
     "abstract": "",
     "urls": {
@@ -982,7 +982,7 @@
     ],
     "venue": "Advanced Science, 2500870, 2025",
     "year": "2025",
-    "citations": 10,
+    "citations": 14,
     "citationsId": "11762853906093734594,17225325221643716492",
     "abstract": "",
     "urls": {
@@ -1010,7 +1010,7 @@
     ],
     "venue": "DASFAA 2025, 2025",
     "year": "2025",
-    "citations": 6,
+    "citations": 8,
     "citationsId": "17234279651497737399",
     "abstract": "",
     "urls": {
@@ -1159,7 +1159,7 @@
     ],
     "venue": "Forty-Second International Conference on Machine Learning (ICML 2025), 2025",
     "year": "2025",
-    "citations": 3,
+    "citations": 6,
     "citationsId": "10846738215468634009",
     "abstract": "",
     "urls": {
@@ -1283,7 +1283,7 @@
     ],
     "venue": "BMC Bioinformatics, 2025",
     "year": "2025",
-    "citations": 2,
+    "citations": 4,
     "citationsId": "504131275419599987",
     "abstract": "",
     "urls": {
@@ -1339,7 +1339,7 @@
     ],
     "venue": "iMeta, 2025",
     "year": "2025",
-    "citations": 5,
+    "citations": 15,
     "citationsId": "5077486449361070010",
     "abstract": "",
     "urls": {
@@ -1397,12 +1397,12 @@
     ],
     "venue": "arXiv preprint arXiv:2504.17356, 2025",
     "year": "2025",
-    "citations": 0,
-    "citationsId": "",
+    "citations": 1,
+    "citationsId": "7003759190214102035",
     "abstract": "",
     "urls": {
       "paper": "https://scholar.google.com/citations?view_op=view_citation&hl=en&user=YGwukbUAAAAJ&pagesize=100&citation_for_view=YGwukbUAAAAJ:kw52XkFRtyQC",
-      "citations": ""
+      "citations": "https://scholar.google.com/scholar?oi=bibs&hl=en&cites=7003759190214102035"
     },
     "venueType": "other",
     "keywords": [

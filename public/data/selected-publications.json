@@ -113,7 +113,7 @@
     "venue": "IEEE Transactions on Computational Biology and Bioinformatics",
     "venueType": "journal",
     "year": 2025,
-    "citations": 8,
+    "citations": 9,
     "image": "/pubfiles/TCBB25.png",
     "keywords": [
       "knowledge-guided",
@@ -154,7 +154,7 @@
     "venue": "ACM SIGKDD",
     "venueType": "conference",
     "year": 2025,
-    "citations": 10,
+    "citations": 15,
     "image": "/pubfiles/SIGKDD2025.png",
     "keywords": [
       "AI4Science",
@@ -283,7 +283,7 @@
     "venue": "Cell Research",
     "venueType": "journal",
     "year": 2024,
-    "citations": 105,
+    "citations": 122,
     "image": "/pubfiles/CellRes2024.png",
     "keywords": [
       "gene regulation",
@@ -347,7 +347,7 @@
     "venue": "iMeta",
     "venueType": "journal",
     "year": 2025,
-    "citations": 5,
+    "citations": 15,
     "image": "/pubfiles/iMeta.png",
     "keywords": [
       "tuberculosis",
@@ -432,7 +432,7 @@
     "venue": "ICML",
     "venueType": "conference",
     "year": 2025,
-    "citations": 3,
+    "citations": 6,
     "image": "/pubfiles/ICML2025.png",
     "keywords": [
       "graph models",
@@ -459,7 +459,7 @@
     "venue": "DASFAA",
     "venueType": "conference",
     "year": 2025,
-    "citations": 6,
+    "citations": 8,
     "image": "/pubfiles/DASFAA2025.png",
     "keywords": [
       "dataset distillation",
@@ -491,7 +491,7 @@
     "venue": "ACM ICMR",
     "venueType": "conference",
     "year": 2025,
-    "citations": 26,
+    "citations": 31,
     "image": "/pubfiles/ICMR2025.jpg",
     "keywords": [
       "zero-shot hashing",
@@ -520,7 +520,7 @@
     "venue": "ACM TKDD",
     "venueType": "journal",
     "year": 2024,
-    "citations": 39,
+    "citations": 38,
     "image": "/pubfiles/TKDD24.png",
     "keywords": [
       "feature transformation",
@@ -551,7 +551,7 @@
     "venue": "ACM TKDD",
     "venueType": "journal",
     "year": 2024,
-    "citations": 13,
+    "citations": 15,
     "image": "/pubfiles/TKDD-2.png",
     "keywords": [
       "research proposal",
@@ -608,7 +608,7 @@
     "venue": "ACM CIKM",
     "venueType": "conference",
     "year": 2024,
-    "citations": 20,
+    "citations": 25,
     "image": "/pubfiles/CIKM24.jpg",
     "keywords": [
       "multimodal recommendation",
@@ -618,11 +618,11 @@
     "urls": {
       "paper": "https://arxiv.org/pdf/2407.12338",
       "project": "https://github.com/NanGongNingYi/GUME",
-      "citations": "https://scholar.google.com/scholar?oi=bibs&hl=en&cites=11175020044088109149,13858498669539712293"
+      "citations": "https://scholar.google.com/scholar?oi=bibs&hl=en&cites=11175020044088109149"
     },
     "authorRole": "corresponding-author",
     "highlighted": true,
-    "citationsId": "11175020044088109149,13858498669539712293"
+    "citationsId": "11175020044088109149"
   },
   {
     "id": "pub_2024_5",
@@ -696,7 +696,7 @@
     "venue": "LREC-COLING",
     "venueType": "conference",
     "year": 2024,
-    "citations": 9,
+    "citations": 12,
     "image": "/pubfiles/COLING24.png",
     "keywords": [
       "continual learning",
@@ -728,7 +728,7 @@
     "venue": "IEEE TKDE",
     "venueType": "journal",
     "year": 2023,
-    "citations": 22,
+    "citations": 23,
     "image": "/pubfiles/TKDE.png",
     "keywords": [
       "topic detection",
@@ -758,7 +758,7 @@
     "venue": "IEEE ICDM",
     "venueType": "conference",
     "year": 2023,
-    "citations": 38,
+    "citations": 37,
     "image": "/pubfiles/ICDM23-1.png",
     "keywords": [
       "feature selection",
@@ -818,7 +818,7 @@
     "venue": "IEEE ICDM",
     "venueType": "conference",
     "year": 2023,
-    "citations": 49,
+    "citations": 52,
     "image": "/pubfiles/ICDM23-2.png",
     "keywords": [
       "topic inference",
@@ -909,7 +909,7 @@
     "venue": "IJCAI",
     "venueType": "conference",
     "year": 2023,
-    "citations": 47,
+    "citations": 52,
     "image": "/pubfiles/IJCAI23.png",
     "keywords": [
       "domain adaptation",
