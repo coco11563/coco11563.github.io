@@ -17,16 +17,7 @@ export function HeroSection({ profile }: HeroSectionProps) {
   const [isDeleting, setIsDeleting] = useState(false)
 
   useEffect(() => {
-    const texts = [
-      "Data-centric AI Researcher",
-      "AI4LifeScience Expert", 
-      "Scientific Data Mining Specialist",
-      "Machine Learning Engineer",
-      "Code 4 Fun!",
-      "Good Beer Brewer",
-      "Rock Star",
-      "Cocktail Expert"
-    ]
+    const texts = profile.roles ?? ["Researcher"]
     const currentText = texts[currentIndex]
     const shouldDelete = isDeleting
     const timeout = shouldDelete ? 50 : 150
@@ -157,31 +148,27 @@ export function HeroSection({ profile }: HeroSectionProps) {
             </motion.div>
 
             {/* 快速链接 */}
-            <motion.div
-              initial={{ opacity: 0, y: 20 }}
-              animate={{ opacity: 1, y: 0 }}
-              transition={{ delay: 0.7 }}
-              className="flex flex-wrap gap-3"
-            >
-              <a
-                href="https://scholar.google.com/citations?user=YGwukbUAAAAJ&hl=en"
-                target="_blank"
-                rel="noopener noreferrer"
-                className="btn-primary"
+            {profile.socialLinks && profile.socialLinks.length > 0 && (
+              <motion.div
+                initial={{ opacity: 0, y: 20 }}
+                animate={{ opacity: 1, y: 0 }}
+                transition={{ delay: 0.7 }}
+                className="flex flex-wrap gap-3"
               >
-                <ExternalLink size={16} className="mr-2" />
-                Google Scholar
-              </a>
-              <a
-                href="https://github.com/coco11563"
-                target="_blank"
-                rel="noopener noreferrer"
-                className="btn-secondary"
-              >
-                <ExternalLink size={16} className="mr-2" />
-                GitHub
-              </a>
-            </motion.div>
+                {profile.socialLinks.slice(0, 2).map((link, index) => (
+                  <a
+                    key={link.label}
+                    href={link.url}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className={index === 0 ? "btn-primary" : "btn-secondary"}
+                  >
+                    <ExternalLink size={16} className="mr-2" />
+                    {link.label}
+                  </a>
+                ))}
+              </motion.div>
+            )}
           </motion.div>
 
           {/* 右侧：个人照片 */}
@@ -221,7 +208,7 @@ export function HeroSection({ profile }: HeroSectionProps) {
                     transition={{ delay: 1, type: "spring" }}
                     className="absolute bottom-4 right-4 w-12 h-12 bg-green-500 rounded-full flex items-center justify-center border-4 border-white shadow-lg"
                   >
-                    <svg className="w-6 h-6 text-white" fill="currentColor" viewBox="0 0 20 20">
+                    <svg className="w-6 h-6 text-white" fill="currentColor" viewBox="0 0 20 20" aria-label="Verified profile" role="img">
                       <path fillRule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clipRule="evenodd" />
                     </svg>
                   </motion.div>

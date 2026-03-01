@@ -1,14 +1,27 @@
 // Scholar 数据类型定义
 
+export interface SocialLink {
+  label: string;
+  url: string;
+}
+
+export interface AffiliationInfo {
+  name: string;
+  address?: string;
+}
+
 export interface ScholarProfile {
   name: string;
   nameZh?: string;
   affiliation: string[];
+  affiliationDetails?: AffiliationInfo[];
   email: string | string[];
   homepage?: string;
   interests: string[];
   image: string;
   verified: boolean;
+  socialLinks?: SocialLink[];
+  roles?: string[];
 }
 
 export interface Metrics {
