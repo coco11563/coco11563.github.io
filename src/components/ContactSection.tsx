@@ -175,22 +175,22 @@ export function ContactSection({ profile }: ContactSectionProps) {
               <div className="space-y-3 text-sm text-gray-600">
                 <div>
                   <p className="font-medium text-gray-900">Area Chair</p>
-                  <p>AISTAT 2025</p>
+                  <p>AISTATS</p>
                 </div>
-                
+
                 <div>
                   <p className="font-medium text-gray-900">Workshop Organizer</p>
                   <p>Data-Centric AI (ICDM 2023/2024, CIKM 2024)</p>
                 </div>
-                
+
                 <div>
                   <p className="font-medium text-gray-900">Reviewer</p>
                   <p>NeurIPS, ICML, ICLR, SIGKDD, and more</p>
                 </div>
-                
+
                 <div>
-                  <p className="font-medium text-gray-900">Guest Editor</p>
-                  <p>Electronics Special Issue</p>
+                  <p className="font-medium text-gray-900">Journal Reviewer</p>
+                  <p>Cell Research, Scientific Report, TKDD, and more</p>
                 </div>
               </div>
             </div>
