@@ -2,39 +2,14 @@
 
 import { motion } from 'framer-motion'
 import { ScholarProfile } from '@/types/scholar'
-import { Mail, MapPin, ExternalLink, Github, Users, Award } from 'lucide-react'
+import { Mail, MapPin, ExternalLink, Users, Award } from 'lucide-react'
 
 interface ContactSectionProps {
   profile: ScholarProfile
 }
 
 export function ContactSection({ profile }: ContactSectionProps) {
-  const socialLinks = [
-    {
-      icon: ExternalLink,
-      label: "Google Scholar",
-      url: "https://scholar.google.com/citations?user=YGwukbUAAAAJ&hl=en",
-      color: "text-blue-600 hover:text-blue-700"
-    },
-    {
-      icon: Github,
-      label: "GitHub",
-      url: "https://github.com/coco11563", 
-      color: "text-gray-800 hover:text-gray-900"
-    },
-    {
-      icon: ExternalLink,
-      label: "DBLP",
-      url: "https://dblp.org/pid/25/6475-1.html",
-      color: "text-orange-600 hover:text-orange-700"
-    },
-    {
-      icon: Award,
-      label: "ORCID",
-      url: "https://orcid.org/0000-0001-5294-5776",
-      color: "text-green-600 hover:text-green-700"
-    }
-  ]
+  const socialLinks = profile.socialLinks ?? []
 
   return (
     <section id="contact" className="py-20 bg-white">
@@ -106,19 +81,14 @@ export function ContactSection({ profile }: ContactSectionProps) {
 
                 {/* 地址 */}
                 <div className="space-y-3">
-                  {profile.affiliation.map((aff, index) => (
+                  {(profile.affiliationDetails ?? profile.affiliation.map(name => ({ name, address: undefined }))).map((aff, index) => (
                     <div key={index} className="flex items-start space-x-3">
                       <MapPin size={20} className="text-primary-600 flex-shrink-0 mt-0.5" />
                       <div>
-                        <p className="text-gray-700">{aff}</p>
-                        {index === 0 && (
+                        <p className="text-gray-700">{aff.name}</p>
+                        {aff.address && (
                           <p className="text-sm text-gray-500">
-                            No. 2 South Dongsheng Road, Haidian District, Beijing
-                          </p>
-                        )}
-                        {index === 1 && (
-                          <p className="text-sm text-gray-500">
-                            8 College Road, Singapore, 169857
+                            {aff.address}
                           </p>
                         )}
                       </div>
@@ -141,9 +111,9 @@ export function ContactSection({ profile }: ContactSectionProps) {
                     href={link.url}
                     target="_blank"
                     rel="noopener noreferrer"
-                    className={`flex items-center space-x-3 p-3 rounded-lg bg-gray-50 hover:bg-gray-100 transition-colors ${link.color}`}
+                    className="flex items-center space-x-3 p-3 rounded-lg bg-gray-50 hover:bg-gray-100 transition-colors text-gray-700 hover:text-primary-600"
                   >
-                    <link.icon size={20} />
+                    <ExternalLink size={20} />
                     <span className="text-sm font-medium">{link.label}</span>
                   </a>
                 ))}

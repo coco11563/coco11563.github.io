@@ -1,5 +1,11 @@
 [
   {
+    "date": "2026.03",
+    "title": "One paper \"Towards Data-Centric AI: A Comprehensive Survey of Traditional, Reinforcement, and Generative Approaches for Tabular Data Transformation\" accepted by ACM TKDD!",
+    "type": "publication",
+    "highlighted": true
+  },
+  {
     "date": "2026.02",
     "title": "One paper \"A Cross-Modal Hierarchical Contrastive Learning Framework for Protein-Protein Interaction Prediction\" accepted by DASFAA 2026!",
     "type": "publication",

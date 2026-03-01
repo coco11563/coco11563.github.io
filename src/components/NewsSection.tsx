@@ -1,13 +1,12 @@
 'use client';
 
-import React, { useState } from 'react';
+import { useState } from 'react';
 import { motion, AnimatePresence } from 'framer-motion';
 import { Calendar, ExternalLink, Star, Award, BookOpen, Zap, ChevronDown, ChevronUp } from 'lucide-react';
 import { NewsItem } from '@/types/scholar';
 
 interface NewsSectionProps {
   news: NewsItem[];
-  className?: string;
 }
 
 function getNewsIcon(type: string) {
@@ -30,18 +29,19 @@ function getNewsColor(type: string) {
   }
 }
 
-export function NewsSection({ news, className = "" }: NewsSectionProps) {
+export function NewsSection({ news }: NewsSectionProps) {
   const [showAll, setShowAll] = useState(false);
   const [isExpanding, setIsExpanding] = useState(false);
 
   const defaultNewsCount = 2;
   const displayedNews = showAll ? news : news.slice(0, defaultNewsCount);
 
-  const toggleShowAll = async () => {
+  const toggleShowAll = () => {
     if (!showAll) {
       setIsExpanding(true);
       setShowAll(true);
-      setTimeout(() => setIsExpanding(false), 600);
+      const timer = setTimeout(() => setIsExpanding(false), 600);
+      return () => clearTimeout(timer);
     } else {
       setShowAll(false);
     }
@@ -54,7 +54,7 @@ export function NewsSection({ news, className = "" }: NewsSectionProps) {
       whileInView={{ opacity: 1, y: 0 }}
       viewport={{ once: true }}
       transition={{ duration: 0.6 }}
-      className={`space-y-6 ${className}`}
+      className="space-y-6"
     >
       {/* 标题 */}
       <div className="flex items-center space-x-3 mb-8">

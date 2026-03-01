@@ -2,7 +2,7 @@
 
 import { motion } from 'framer-motion'
 import { Metrics, CitationsByYear } from '@/types/scholar'
-import { TrendingUp, BookOpen, Award, Calendar, Zap } from 'lucide-react'
+import { TrendingUp, BookOpen, Award, Zap } from 'lucide-react'
 
 interface MetricsSectionProps {
   metrics: Metrics

@@ -30,7 +30,6 @@ const ParticleBackground = memo(() => {
   }, []);
 
   const particlesLoaded = async (container?: Container): Promise<void> => {
-    console.log('Particles loaded:', container);
   };
 
   const particleOptions = useMemo((): ISourceOptions => {
@@ -60,10 +59,6 @@ const ParticleBackground = memo(() => {
           },
           push: {
             particles_nb: 1,
-          },
-          repulse: {
-            distance: 100,
-            duration: 0.4,
           },
         },
       },

@@ -1,13 +1,14 @@
 'use client'
 
 import { Heart } from 'lucide-react'
-import { NewsItem } from '@/types/scholar'
+import { NewsItem, ScholarProfile } from '@/types/scholar'
 
 interface FooterProps {
   news: NewsItem[]
+  profile: ScholarProfile
 }
 
-export function Footer({ news }: FooterProps) {
+export function Footer({ news, profile }: FooterProps) {
   const currentYear = new Date().getFullYear()
   const latestNews = news.slice(0, 3)
 
@@ -49,22 +50,17 @@ export function Footer({ news }: FooterProps) {
               <a href="#contact" className="text-gray-400 hover:text-white transition-colors">
                 Contact
               </a>
-              <a
-                href="https://scholar.google.com/citations?user=YGwukbUAAAAJ&hl=en"
-                target="_blank"
-                rel="noopener noreferrer"
-                className="text-gray-400 hover:text-white transition-colors"
-              >
-                Google Scholar
-              </a>
-              <a
-                href="https://github.com/coco11563"
-                target="_blank"
-                rel="noopener noreferrer"
-                className="text-gray-400 hover:text-white transition-colors"
-              >
-                GitHub
-              </a>
+              {profile.socialLinks?.slice(0, 2).map((link) => (
+                <a
+                  key={link.label}
+                  href={link.url}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="text-gray-400 hover:text-white transition-colors"
+                >
+                  {link.label}
+                </a>
+              ))}
             </div>
           </div>
 

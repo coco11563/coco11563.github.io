@@ -7,10 +7,10 @@ import { ExternalLink, FileText, Code, Quote, Calendar, Users, Award, Star } fro
 
 interface PublicationsSectionProps {
   publications: Publication[]
+  scholarUrl?: string
 }
 
-export function PublicationsSection({ publications }: PublicationsSectionProps) {
-  // 直接使用所有论文，不进行过滤
+export function PublicationsSection({ publications, scholarUrl }: PublicationsSectionProps) {
   const filteredPublications = publications
 
   // 按年份分组
@@ -274,15 +274,17 @@ export function PublicationsSection({ publications }: PublicationsSectionProps) 
           viewport={{ once: true }}
           className="text-center mt-12"
         >
-          <a
-            href="https://scholar.google.com/citations?user=YGwukbUAAAAJ&hl=en"
-            target="_blank"
-            rel="noopener noreferrer"
-            className="btn-primary"
-          >
-            <ExternalLink size={16} className="mr-2" />
-            View Full Publication List
-          </a>
+          {scholarUrl && (
+            <a
+              href={scholarUrl}
+              target="_blank"
+              rel="noopener noreferrer"
+              className="btn-primary"
+            >
+              <ExternalLink size={16} className="mr-2" />
+              View Full Publication List
+            </a>
+          )}
         </motion.div>
       </div>
     </section>
