@@ -5,16 +5,6 @@
     "Computer Network Information Center, CAS",
     "Duke-NUS Medical School, NUS"
   ],
-  "affiliationDetails": [
-    {
-      "name": "Computer Network Information Center, CAS",
-      "address": "No. 2 South Dongsheng Road, Haidian District, Beijing"
-    },
-    {
-      "name": "Duke-NUS Medical School, NUS",
-      "address": "8 College Road, Singapore, 169857"
-    }
-  ],
   "email": [
     "shaow.at.cnic.cn",
     "meng.xiao.at.nus.edu.sg"
@@ -26,21 +16,5 @@
     "Data Mining"
   ],
   "image": "/indexfiles/me.png",
-  "verified": true,
-  "socialLinks": [
-    { "label": "Google Scholar", "url": "https://scholar.google.com/citations?user=YGwukbUAAAAJ&hl=en" },
-    { "label": "GitHub", "url": "https://github.com/coco11563" },
-    { "label": "DBLP", "url": "https://dblp.org/pid/25/6475-1.html" },
-    { "label": "ORCID", "url": "https://orcid.org/0000-0001-5294-5776" }
-  ],
-  "roles": [
-    "Data-centric AI Researcher",
-    "AI4LifeScience Expert",
-    "Scientific Data Mining Specialist",
-    "Machine Learning Engineer",
-    "Code 4 Fun!",
-    "Good Beer Brewer",
-    "Rock Star",
-    "Cocktail Expert"
-  ]
+  "verified": true
 }
