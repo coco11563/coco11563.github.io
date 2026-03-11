@@ -520,7 +520,7 @@
     "venue": "ACM TKDD",
     "venueType": "journal",
     "year": 2024,
-    "citations": 39,
+    "citations": 40,
     "image": "/pubfiles/TKDD24.png",
     "keywords": [
       "feature transformation",
@@ -847,7 +847,7 @@
     "venue": "NeurIPS",
     "venueType": "conference",
     "year": 2023,
-    "citations": 36,
+    "citations": 37,
     "image": "/pubfiles/NIPS23.png",
     "keywords": [
       "autoregressive",
@@ -879,7 +879,7 @@
     "venue": "SIAM SDM",
     "venueType": "conference",
     "year": 2023,
-    "citations": 18,
+    "citations": 19,
     "image": "/pubfiles/SDM-2.png",
     "keywords": [
       "medical diagnosis",
