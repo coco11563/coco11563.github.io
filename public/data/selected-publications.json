@@ -283,7 +283,7 @@
     "venue": "Cell Research",
     "venueType": "journal",
     "year": 2024,
-    "citations": 124,
+    "citations": 125,
     "image": "/pubfiles/CellRes2024.png",
     "keywords": [
       "gene regulation",
@@ -347,7 +347,7 @@
     "venue": "iMeta",
     "venueType": "journal",
     "year": 2025,
-    "citations": 16,
+    "citations": 17,
     "image": "/pubfiles/iMeta.png",
     "keywords": [
       "tuberculosis",
@@ -670,7 +670,7 @@
     "venue": "IEEE BIBM",
     "venueType": "conference",
     "year": 2024,
-    "citations": 2,
+    "citations": 3,
     "image": "/pubfiles/BIBM24.jpg",
     "keywords": [
       "gene summary",
