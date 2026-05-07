@@ -57,7 +57,7 @@
     "venue": "The Innovation Life",
     "venueType": "journal",
     "year": 2026,
-    "citations": 0,
+    "citations": 1,
     "image": "/pubfiles/XINNLIFE2026.jpeg",
     "keywords": [
       "artificial intelligence",
@@ -66,10 +66,12 @@
       "drug discovery"
     ],
     "urls": {
-      "paper": "https://www.the-innovation.org/article/doi/10.59717/j.xinn-life.2026.100196"
+      "paper": "https://www.the-innovation.org/article/doi/10.59717/j.xinn-life.2026.100196",
+      "citations": "https://scholar.google.com/scholar?oi=bibs&hl=en&cites=4613471322009486040"
     },
     "authorRole": "corresponding-author",
-    "highlighted": true
+    "highlighted": true,
+    "citationsId": "4613471322009486040"
   },
   {
     "id": "pub_2025_tnnls",
@@ -113,7 +115,7 @@
     "venue": "IEEE Transactions on Computational Biology and Bioinformatics",
     "venueType": "journal",
     "year": 2025,
-    "citations": 10,
+    "citations": 11,
     "image": "/pubfiles/TCBB25.png",
     "keywords": [
       "knowledge-guided",
@@ -154,7 +156,7 @@
     "venue": "ACM SIGKDD",
     "venueType": "conference",
     "year": 2025,
-    "citations": 15,
+    "citations": 19,
     "image": "/pubfiles/SIGKDD2025.png",
     "keywords": [
       "AI4Science",
@@ -283,7 +285,7 @@
     "venue": "Cell Research",
     "venueType": "journal",
     "year": 2024,
-    "citations": 127,
+    "citations": 141,
     "image": "/pubfiles/CellRes2024.png",
     "keywords": [
       "gene regulation",
@@ -347,7 +349,7 @@
     "venue": "iMeta",
     "venueType": "journal",
     "year": 2025,
-    "citations": 18,
+    "citations": 22,
     "image": "/pubfiles/iMeta.png",
     "keywords": [
       "tuberculosis",
@@ -432,7 +434,7 @@
     "venue": "ICML",
     "venueType": "conference",
     "year": 2025,
-    "citations": 6,
+    "citations": 9,
     "image": "/pubfiles/ICML2025.png",
     "keywords": [
       "graph models",
@@ -551,7 +553,7 @@
     "venue": "ACM TKDD",
     "venueType": "journal",
     "year": 2024,
-    "citations": 15,
+    "citations": 16,
     "image": "/pubfiles/TKDD-2.png",
     "keywords": [
       "research proposal",
@@ -579,7 +581,7 @@
     "venue": "IEEE ICDM",
     "venueType": "conference",
     "year": 2024,
-    "citations": 7,
+    "citations": 9,
     "image": "/pubfiles/ICDM24.jpg",
     "keywords": [
       "scRNA-seq",
@@ -608,7 +610,7 @@
     "venue": "ACM CIKM",
     "venueType": "conference",
     "year": 2024,
-    "citations": 27,
+    "citations": 29,
     "image": "/pubfiles/CIKM24.jpg",
     "keywords": [
       "multimodal recommendation",
@@ -641,7 +643,7 @@
     "venue": "ACM CIKM",
     "venueType": "conference",
     "year": 2024,
-    "citations": 6,
+    "citations": 7,
     "image": "/pubfiles/CIKM-2024-2.png",
     "keywords": [
       "molecular graphs",
@@ -696,7 +698,7 @@
     "venue": "LREC-COLING",
     "venueType": "conference",
     "year": 2024,
-    "citations": 13,
+    "citations": 15,
     "image": "/pubfiles/COLING24.png",
     "keywords": [
       "continual learning",
@@ -728,7 +730,7 @@
     "venue": "IEEE TKDE",
     "venueType": "journal",
     "year": 2023,
-    "citations": 23,
+    "citations": 24,
     "image": "/pubfiles/TKDE.png",
     "keywords": [
       "topic detection",
@@ -758,7 +760,7 @@
     "venue": "IEEE ICDM",
     "venueType": "conference",
     "year": 2023,
-    "citations": 37,
+    "citations": 38,
     "image": "/pubfiles/ICDM23-1.png",
     "keywords": [
       "feature selection",
@@ -790,7 +792,7 @@
     "venue": "SIAM SDM",
     "venueType": "conference",
     "year": 2023,
-    "citations": 34,
+    "citations": 36,
     "image": "/pubfiles/SDM23-1.png",
     "keywords": [
       "feature transformation",
@@ -818,7 +820,7 @@
     "venue": "IEEE ICDM",
     "venueType": "conference",
     "year": 2023,
-    "citations": 52,
+    "citations": 55,
     "image": "/pubfiles/ICDM23-2.png",
     "keywords": [
       "topic inference",
@@ -847,7 +849,7 @@
     "venue": "NeurIPS",
     "venueType": "conference",
     "year": 2023,
-    "citations": 38,
+    "citations": 39,
     "image": "/pubfiles/NIPS23.png",
     "keywords": [
       "autoregressive",
@@ -909,7 +911,7 @@
     "venue": "IJCAI",
     "venueType": "conference",
     "year": 2023,
-    "citations": 54,
+    "citations": 59,
     "image": "/pubfiles/IJCAI23.png",
     "keywords": [
       "domain adaptation",
