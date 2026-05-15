@@ -57,7 +57,7 @@
     "venue": "The Innovation Life",
     "venueType": "journal",
     "year": 2026,
-    "citations": 1,
+    "citations": 2,
     "image": "/pubfiles/XINNLIFE2026.jpeg",
     "keywords": [
       "artificial intelligence",
@@ -349,7 +349,7 @@
     "venue": "iMeta",
     "venueType": "journal",
     "year": 2025,
-    "citations": 23,
+    "citations": 24,
     "image": "/pubfiles/iMeta.png",
     "keywords": [
       "tuberculosis",
@@ -672,7 +672,7 @@
     "venue": "IEEE BIBM",
     "venueType": "conference",
     "year": 2024,
-    "citations": 3,
+    "citations": 4,
     "image": "/pubfiles/BIBM24.jpg",
     "keywords": [
       "gene summary",
