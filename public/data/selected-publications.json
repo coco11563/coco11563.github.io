@@ -156,7 +156,7 @@
     "venue": "ACM SIGKDD",
     "venueType": "conference",
     "year": 2025,
-    "citations": 19,
+    "citations": 20,
     "image": "/pubfiles/SIGKDD2025.png",
     "keywords": [
       "AI4Science",
@@ -285,7 +285,7 @@
     "venue": "Cell Research",
     "venueType": "journal",
     "year": 2024,
-    "citations": 145,
+    "citations": 146,
     "image": "/pubfiles/CellRes2024.png",
     "keywords": [
       "gene regulation",
