@@ -434,7 +434,7 @@
     "venue": "ICML",
     "venueType": "conference",
     "year": 2025,
-    "citations": 9,
+    "citations": 10,
     "image": "/pubfiles/ICML2025.png",
     "keywords": [
       "graph models",
@@ -610,7 +610,7 @@
     "venue": "ACM CIKM",
     "venueType": "conference",
     "year": 2024,
-    "citations": 29,
+    "citations": 30,
     "image": "/pubfiles/CIKM24.jpg",
     "keywords": [
       "multimodal recommendation",
