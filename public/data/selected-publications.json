@@ -115,7 +115,7 @@
     "venue": "IEEE Transactions on Computational Biology and Bioinformatics",
     "venueType": "journal",
     "year": 2025,
-    "citations": 11,
+    "citations": 12,
     "image": "/pubfiles/TCBB25.png",
     "keywords": [
       "knowledge-guided",
@@ -126,11 +126,11 @@
     ],
     "urls": {
       "paper": "https://arxiv.org/pdf/2501.04718",
-      "citations": "https://scholar.google.com/scholar?oi=bibs&hl=en&cites=5099728859865515737,7733828662904658466,3535118696762878037"
+      "citations": "https://scholar.google.com/scholar?oi=bibs&hl=en&cites=7733828662904658466,5099728859865515737,3535118696762878037"
     },
     "authorRole": "first-author",
     "highlighted": true,
-    "citationsId": "5099728859865515737,7733828662904658466,3535118696762878037"
+    "citationsId": "7733828662904658466,5099728859865515737,3535118696762878037"
   },
   {
     "id": "pub_2025_1",
@@ -285,7 +285,7 @@
     "venue": "Cell Research",
     "venueType": "journal",
     "year": 2024,
-    "citations": 146,
+    "citations": 150,
     "image": "/pubfiles/CellRes2024.png",
     "keywords": [
       "gene regulation",
@@ -434,7 +434,7 @@
     "venue": "ICML",
     "venueType": "conference",
     "year": 2025,
-    "citations": 10,
+    "citations": 11,
     "image": "/pubfiles/ICML2025.png",
     "keywords": [
       "graph models",
@@ -493,7 +493,7 @@
     "venue": "ACM ICMR",
     "venueType": "conference",
     "year": 2025,
-    "citations": 32,
+    "citations": 33,
     "image": "/pubfiles/ICMR2025.jpg",
     "keywords": [
       "zero-shot hashing",
@@ -522,7 +522,7 @@
     "venue": "ACM TKDD",
     "venueType": "journal",
     "year": 2024,
-    "citations": 41,
+    "citations": 42,
     "image": "/pubfiles/TKDD24.png",
     "keywords": [
       "feature transformation",
@@ -610,7 +610,7 @@
     "venue": "ACM CIKM",
     "venueType": "conference",
     "year": 2024,
-    "citations": 30,
+    "citations": 31,
     "image": "/pubfiles/CIKM24.jpg",
     "keywords": [
       "multimodal recommendation",
@@ -643,7 +643,7 @@
     "venue": "ACM CIKM",
     "venueType": "conference",
     "year": 2024,
-    "citations": 7,
+    "citations": 8,
     "image": "/pubfiles/CIKM-2024-2.png",
     "keywords": [
       "molecular graphs",
@@ -760,7 +760,7 @@
     "venue": "IEEE ICDM",
     "venueType": "conference",
     "year": 2023,
-    "citations": 38,
+    "citations": 39,
     "image": "/pubfiles/ICDM23-1.png",
     "keywords": [
       "feature selection",
@@ -792,7 +792,7 @@
     "venue": "SIAM SDM",
     "venueType": "conference",
     "year": 2023,
-    "citations": 36,
+    "citations": 37,
     "image": "/pubfiles/SDM23-1.png",
     "keywords": [
       "feature transformation",
@@ -849,7 +849,7 @@
     "venue": "NeurIPS",
     "venueType": "conference",
     "year": 2023,
-    "citations": 39,
+    "citations": 40,
     "image": "/pubfiles/NIPS23.png",
     "keywords": [
       "autoregressive",
