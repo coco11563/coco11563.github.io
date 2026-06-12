@@ -285,7 +285,7 @@
     "venue": "Cell Research",
     "venueType": "journal",
     "year": 2024,
-    "citations": 151,
+    "citations": 152,
     "image": "/pubfiles/CellRes2024.png",
     "keywords": [
       "gene regulation",
@@ -698,7 +698,7 @@
     "venue": "LREC-COLING",
     "venueType": "conference",
     "year": 2024,
-    "citations": 15,
+    "citations": 16,
     "image": "/pubfiles/COLING24.png",
     "keywords": [
       "continual learning",
