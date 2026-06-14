@@ -285,7 +285,7 @@
     "venue": "Cell Research",
     "venueType": "journal",
     "year": 2024,
-    "citations": 152,
+    "citations": 154,
     "image": "/pubfiles/CellRes2024.png",
     "keywords": [
       "gene regulation",
@@ -522,7 +522,7 @@
     "venue": "ACM TKDD",
     "venueType": "journal",
     "year": 2024,
-    "citations": 43,
+    "citations": 44,
     "image": "/pubfiles/TKDD24.png",
     "keywords": [
       "feature transformation",
