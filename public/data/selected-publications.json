@@ -285,7 +285,7 @@
     "venue": "Cell Research",
     "venueType": "journal",
     "year": 2024,
-    "citations": 154,
+    "citations": 155,
     "image": "/pubfiles/CellRes2024.png",
     "keywords": [
       "gene regulation",
@@ -349,7 +349,7 @@
     "venue": "iMeta",
     "venueType": "journal",
     "year": 2025,
-    "citations": 24,
+    "citations": 25,
     "image": "/pubfiles/iMeta.png",
     "keywords": [
       "tuberculosis",
@@ -434,7 +434,7 @@
     "venue": "ICML",
     "venueType": "conference",
     "year": 2025,
-    "citations": 11,
+    "citations": 12,
     "image": "/pubfiles/ICML2025.png",
     "keywords": [
       "graph models",
@@ -610,7 +610,7 @@
     "venue": "ACM CIKM",
     "venueType": "conference",
     "year": 2024,
-    "citations": 31,
+    "citations": 32,
     "image": "/pubfiles/CIKM24.jpg",
     "keywords": [
       "multimodal recommendation",
