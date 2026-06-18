@@ -115,7 +115,7 @@
     "venue": "IEEE Transactions on Computational Biology and Bioinformatics",
     "venueType": "journal",
     "year": 2025,
-    "citations": 12,
+    "citations": 13,
     "image": "/pubfiles/TCBB25.png",
     "keywords": [
       "knowledge-guided",
@@ -285,7 +285,7 @@
     "venue": "Cell Research",
     "venueType": "journal",
     "year": 2024,
-    "citations": 157,
+    "citations": 158,
     "image": "/pubfiles/CellRes2024.png",
     "keywords": [
       "gene regulation",
@@ -730,7 +730,7 @@
     "venue": "IEEE TKDE",
     "venueType": "journal",
     "year": 2023,
-    "citations": 24,
+    "citations": 25,
     "image": "/pubfiles/TKDE.png",
     "keywords": [
       "topic detection",
