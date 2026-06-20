@@ -349,7 +349,7 @@
     "venue": "iMeta",
     "venueType": "journal",
     "year": 2025,
-    "citations": 25,
+    "citations": 24,
     "image": "/pubfiles/iMeta.png",
     "keywords": [
       "tuberculosis",
@@ -610,7 +610,7 @@
     "venue": "ACM CIKM",
     "venueType": "conference",
     "year": 2024,
-    "citations": 32,
+    "citations": 33,
     "image": "/pubfiles/CIKM24.jpg",
     "keywords": [
       "multimodal recommendation",
@@ -643,7 +643,7 @@
     "venue": "ACM CIKM",
     "venueType": "conference",
     "year": 2024,
-    "citations": 8,
+    "citations": 9,
     "image": "/pubfiles/CIKM-2024-2.png",
     "keywords": [
       "molecular graphs",
