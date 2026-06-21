@@ -349,7 +349,7 @@
     "venue": "iMeta",
     "venueType": "journal",
     "year": 2025,
-    "citations": 24,
+    "citations": 25,
     "image": "/pubfiles/iMeta.png",
     "keywords": [
       "tuberculosis",
@@ -493,7 +493,7 @@
     "venue": "ACM ICMR",
     "venueType": "conference",
     "year": 2025,
-    "citations": 36,
+    "citations": 37,
     "image": "/pubfiles/ICMR2025.jpg",
     "keywords": [
       "zero-shot hashing",
@@ -522,7 +522,7 @@
     "venue": "ACM TKDD",
     "venueType": "journal",
     "year": 2024,
-    "citations": 45,
+    "citations": 46,
     "image": "/pubfiles/TKDD24.png",
     "keywords": [
       "feature transformation",
@@ -820,7 +820,7 @@
     "venue": "IEEE ICDM",
     "venueType": "conference",
     "year": 2023,
-    "citations": 55,
+    "citations": 56,
     "image": "/pubfiles/ICDM23-2.png",
     "keywords": [
       "topic inference",
