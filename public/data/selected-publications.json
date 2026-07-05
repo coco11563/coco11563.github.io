@@ -285,7 +285,7 @@
     "venue": "Cell Research",
     "venueType": "journal",
     "year": 2024,
-    "citations": 163,
+    "citations": 164,
     "image": "/pubfiles/CellRes2024.png",
     "keywords": [
       "gene regulation",
@@ -434,7 +434,7 @@
     "venue": "ICML",
     "venueType": "conference",
     "year": 2025,
-    "citations": 12,
+    "citations": 13,
     "image": "/pubfiles/ICML2025.png",
     "keywords": [
       "graph models",
