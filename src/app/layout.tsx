@@ -1,8 +1,9 @@
 import type { Metadata } from 'next'
-import { Inter } from 'next/font/google'
+// 自托管字体（构建时打包，不依赖 Google Fonts 网络请求）
+import '@fontsource-variable/inter'
+import '@fontsource-variable/newsreader'
+import '@fontsource-variable/newsreader/wght-italic.css'
 import './globals.css'
-
-const inter = Inter({ subsets: ['latin'] })
 
 export const metadata: Metadata = {
   metadataBase: new URL('https://coco11563.github.io'),
@@ -64,18 +65,30 @@ export const metadata: Metadata = {
   },
 }
 
+// 在渲染前根据 localStorage / 系统偏好设置暗色模式，避免闪烁
+const themeInitScript = `
+(function () {
+  try {
+    var theme = localStorage.getItem('theme');
+    var dark = theme ? theme === 'dark' : window.matchMedia('(prefers-color-scheme: dark)').matches;
+    if (dark) document.documentElement.classList.add('dark');
+  } catch (e) {}
+})();
+`
+
 export default function RootLayout({
   children,
 }: {
   children: React.ReactNode
 }) {
   return (
-    <html lang="en" className="scroll-smooth">
-      <body className={`${inter.className} antialiased`}>
-        <div className="min-h-screen bg-gradient-to-br from-slate-50 to-blue-50">
-          {children}
-        </div>
-        
+    <html lang="en" suppressHydrationWarning>
+      <head>
+        <script dangerouslySetInnerHTML={{ __html: themeInitScript }} />
+      </head>
+      <body className="font-sans">
+        {children}
+
         {/* Schema.org structured data */}
         <script
           type="application/ld+json"
@@ -94,7 +107,7 @@ export default function RootLayout({
                   "name": "Computer Network Information Center, Chinese Academy of Sciences"
                 },
                 {
-                  "@type": "Organization", 
+                  "@type": "Organization",
                   "name": "DUKE-NUS Medical School, National University of Singapore"
                 }
               ],
@@ -104,7 +117,7 @@ export default function RootLayout({
               },
               "knowsAbout": [
                 "Data-centric AI",
-                "AI4LifeScience", 
+                "AI4LifeScience",
                 "Scientific Data Mining",
                 "Machine Learning",
                 "Deep Learning"

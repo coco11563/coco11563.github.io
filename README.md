@@ -6,10 +6,9 @@ Personal academic homepage built with Next.js, featuring automated Google Schola
 
 ## Tech Stack
 
-- **Framework**: Next.js 14 (Static Export)
+- **Framework**: Next.js 14 (Static Export, mostly React Server Components)
 - **Language**: TypeScript
-- **Styling**: Tailwind CSS
-- **Animation**: Framer Motion, tsParticles
+- **Styling**: Tailwind CSS (light/dark mode, self-hosted Inter & Newsreader fonts)
 - **Data Source**: Google Scholar via SerpAPI
 - **Deployment**: GitHub Pages + GitHub Actions
 
@@ -19,15 +18,18 @@ Personal academic homepage built with Next.js, featuring automated Google Schola
 src/
 ├── app/              # Next.js App Router pages
 ├── components/       # UI components
-│   ├── HeroSection        # Landing hero with particle background
-│   ├── AboutSection       # Bio and research interests
-│   ├── MetricsSection     # Citation stats & trend chart
-│   ├── PublicationsSection # Paper list from Scholar
-│   ├── ProjectsSection    # Research projects
-│   ├── NewsSection        # Recent updates
-│   ├── ContactSection     # Contact info
-│   ├── Navigation         # Top nav bar
+│   ├── Hero               # Landing hero with academic metrics strip
+│   ├── About              # Short bio and profile links
+│   ├── News               # Recent updates (client, expandable)
+│   ├── Publications       # Selected papers grouped by year
+│   ├── Projects           # Featured research projects
+│   ├── Experience         # Positions timeline + honors
+│   ├── Contact            # Contact, collaboration, academic service
+│   ├── Navigation         # Top nav bar with theme toggle (client)
+│   ├── Section / Reveal   # Section wrapper & scroll-reveal helper
 │   └── Footer
+├── data/
+│   └── site-content.ts    # All hand-maintained content (bio, timeline, projects...)
 ├── lib/              # Data loading utilities
 └── types/            # TypeScript type definitions
 scripts/
@@ -37,6 +39,13 @@ public/data/               # Static JSON data (auto-updated)
 ├── deploy.yml             # Build & deploy to GitHub Pages
 └── update-data.yml        # Scheduled Scholar data sync
 ```
+
+## Editing Content
+
+- **Text, timeline, projects, services**: edit `src/data/site-content.ts`
+- **Selected publications**: edit `public/data/selected-publications.json`
+- **News**: edit `public/data/news.json`
+- **Metrics / citations**: auto-updated daily, do not edit by hand
 
 ## Development
 
