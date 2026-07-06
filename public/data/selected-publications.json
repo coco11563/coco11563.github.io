@@ -115,7 +115,7 @@
     "venue": "IEEE Transactions on Computational Biology and Bioinformatics",
     "venueType": "journal",
     "year": 2025,
-    "citations": 13,
+    "citations": 14,
     "image": "/pubfiles/TCBB25.png",
     "keywords": [
       "knowledge-guided",
@@ -156,7 +156,7 @@
     "venue": "ACM SIGKDD",
     "venueType": "conference",
     "year": 2025,
-    "citations": 25,
+    "citations": 26,
     "image": "/pubfiles/SIGKDD2025.png",
     "keywords": [
       "AI4Science",
@@ -349,7 +349,7 @@
     "venue": "iMeta",
     "venueType": "journal",
     "year": 2025,
-    "citations": 27,
+    "citations": 28,
     "image": "/pubfiles/iMeta.png",
     "keywords": [
       "tuberculosis",
@@ -381,7 +381,7 @@
     "venue": "IEEE ICDE",
     "venueType": "conference",
     "year": 2025,
-    "citations": 7,
+    "citations": 8,
     "image": "/pubfiles/ICDE2025.png",
     "keywords": [
       "feature transformation",
@@ -522,7 +522,7 @@
     "venue": "ACM TKDD",
     "venueType": "journal",
     "year": 2024,
-    "citations": 46,
+    "citations": 47,
     "image": "/pubfiles/TKDD24.png",
     "keywords": [
       "feature transformation",
@@ -760,7 +760,7 @@
     "venue": "IEEE ICDM",
     "venueType": "conference",
     "year": 2023,
-    "citations": 39,
+    "citations": 40,
     "image": "/pubfiles/ICDM23-1.png",
     "keywords": [
       "feature selection",
@@ -792,7 +792,7 @@
     "venue": "SIAM SDM",
     "venueType": "conference",
     "year": 2023,
-    "citations": 37,
+    "citations": 38,
     "image": "/pubfiles/SDM23-1.png",
     "keywords": [
       "feature transformation",
@@ -849,7 +849,7 @@
     "venue": "NeurIPS",
     "venueType": "conference",
     "year": 2023,
-    "citations": 40,
+    "citations": 41,
     "image": "/pubfiles/NIPS23.png",
     "keywords": [
       "autoregressive",
@@ -881,7 +881,7 @@
     "venue": "SIAM SDM",
     "venueType": "conference",
     "year": 2023,
-    "citations": 19,
+    "citations": 20,
     "image": "/pubfiles/SDM-2.png",
     "keywords": [
       "medical diagnosis",

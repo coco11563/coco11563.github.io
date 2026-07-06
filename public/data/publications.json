@@ -13,7 +13,7 @@
     ],
     "venue": "IEEE Transactions on Computational Biology and Bioinformatics, 2025",
     "year": "2025",
-    "citations": 13,
+    "citations": 14,
     "citationsId": "7733828662904658466,5099728859865515737,3535118696762878037",
     "abstract": "",
     "urls": {
@@ -79,7 +79,7 @@
     ],
     "venue": "arXiv preprint arxiv:2503.21460, 2025",
     "year": "2025",
-    "citations": 371,
+    "citations": 374,
     "citationsId": "2553384233263415865,4543464159028255200,3511825580536173473,16138301441355881687,5027684542255437380,13568280504858049179,6081073648092053383,2813861920012432487,8052298606646584843,15827635912104646444",
     "abstract": "",
     "urls": {
@@ -199,7 +199,7 @@
     ],
     "venue": "Artificial Intelligence Journal, 2024",
     "year": "2024",
-    "citations": 88,
+    "citations": 89,
     "citationsId": "10863920213481238703",
     "abstract": "",
     "urls": {
@@ -255,7 +255,7 @@
     ],
     "venue": "NeurIPS 2023 Spotlight, 2023",
     "year": "2023",
-    "citations": 40,
+    "citations": 41,
     "citationsId": "5820154520915659664",
     "abstract": "",
     "urls": {
@@ -285,7 +285,7 @@
     ],
     "venue": "ACM Transactions on Knowledge Discovery from Data, 2024",
     "year": "2024",
-    "citations": 46,
+    "citations": 47,
     "citationsId": "6615326047713733595,1241716313002083917",
     "abstract": "",
     "urls": {
@@ -314,7 +314,7 @@
     ],
     "venue": "The IEEE International Conference on Data Mining (ICDM) 1 (1), 1-10, 2023",
     "year": "2023",
-    "citations": 39,
+    "citations": 40,
     "citationsId": "4039133266398073629",
     "abstract": "",
     "urls": {
@@ -344,7 +344,7 @@
     ],
     "venue": "Proceedings of the 2023 SIAM International Conference on Data Mining (SDM …, 2023",
     "year": "2023",
-    "citations": 37,
+    "citations": 38,
     "citationsId": "6728572511182266488",
     "abstract": "",
     "urls": {
@@ -522,7 +522,7 @@
     ],
     "venue": "Proceedings of the 2023 SIAM International Conference on Data Mining (SDM …, 2023",
     "year": "2023",
-    "citations": 19,
+    "citations": 20,
     "citationsId": "5139450937202533538",
     "abstract": "",
     "urls": {
@@ -799,12 +799,12 @@
     ],
     "venue": "arXiv preprint arXiv:2504.17355, 2025",
     "year": "2025",
-    "citations": 11,
-    "citationsId": "9900583851438116807,11188694279581744184,4393542771694372293,993993026473509146",
+    "citations": 12,
+    "citationsId": "9900583851438116807,4393542771694372293,11188694279581744184,993993026473509146",
     "abstract": "",
     "urls": {
       "paper": "https://scholar.google.com/citations?view_op=view_citation&hl=en&user=YGwukbUAAAAJ&pagesize=100&citation_for_view=YGwukbUAAAAJ:MhiOAD_qIWkC",
-      "citations": "https://scholar.google.com/scholar?oi=bibs&hl=en&cites=9900583851438116807,11188694279581744184,4393542771694372293,993993026473509146"
+      "citations": "https://scholar.google.com/scholar?oi=bibs&hl=en&cites=9900583851438116807,4393542771694372293,11188694279581744184,993993026473509146"
     },
     "venueType": "other",
     "keywords": [
@@ -887,7 +887,7 @@
     ],
     "venue": "Proceedings of the 31th ACM SIGKDD Conference on Knowledge Discovery and …, 2025",
     "year": "2025",
-    "citations": 25,
+    "citations": 26,
     "citationsId": "4593117441343030867",
     "abstract": "",
     "urls": {
@@ -919,7 +919,7 @@
     ],
     "venue": "The annual IEEE International Conference on Data Engineering (ICDE 2025), 2025",
     "year": "2025",
-    "citations": 7,
+    "citations": 8,
     "citationsId": "6261182078408259100",
     "abstract": "",
     "urls": {
@@ -1339,7 +1339,7 @@
     ],
     "venue": "iMeta, 2025",
     "year": "2025",
-    "citations": 27,
+    "citations": 28,
     "citationsId": "5077486449361070010",
     "abstract": "",
     "urls": {
@@ -1397,7 +1397,7 @@
     ],
     "venue": "arXiv preprint arXiv:2504.17356, 2025",
     "year": "2025",
-    "citations": 1,
+    "citations": 2,
     "citationsId": "7003759190214102035",
     "abstract": "",
     "urls": {
