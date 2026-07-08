@@ -1,55 +1,71 @@
-import { StaticDataLoader } from '@/lib/data-loader'
-import { HeroSection } from '@/components/HeroSection'
-import { AboutSection } from '@/components/AboutSection'
-import { MetricsSection } from '@/components/MetricsSection'
-import { PublicationsSection } from '@/components/PublicationsSection'
-import { ProjectsSection } from '@/components/ProjectsSection'
-import { ContactSection } from '@/components/ContactSection'
+import { loadAllData } from '@/lib/data-loader'
+import { siteContent } from '@/data/site-content'
 import { Navigation } from '@/components/Navigation'
+import { Hero } from '@/components/Hero'
+import { About } from '@/components/About'
+import { Section } from '@/components/Section'
+import { News } from '@/components/News'
+import { Publications } from '@/components/Publications'
+import { Projects } from '@/components/Projects'
+import { Experience } from '@/components/Experience'
+import { Contact } from '@/components/Contact'
 import { Footer } from '@/components/Footer'
 
 export default async function HomePage() {
-  // 在构建时获取所有数据 (Static Site Generation)
-  const { profile, metrics, publications, citationsByYear, news } =
-    await StaticDataLoader.loadAllData()
+  // 构建时读取 public/data 下的静态数据 (SSG)
+  const { profile, metrics, publications, citationsByYear, news } = await loadAllData()
+
+  const scholarUrl = siteContent.socialLinks.find(l => l.label === 'Google Scholar')?.url
 
   return (
     <>
-      {/* 导航栏 */}
       <Navigation />
 
-      {/* 主要内容 */}
-      <main className="relative">
-        {/* 英雄区域 */}
-        <HeroSection profile={profile} />
+      <main>
+        <Hero profile={profile} metrics={metrics} citationsByYear={citationsByYear} />
 
-        {/* 关于我 */}
-        <AboutSection profile={profile} news={news} />
+        <About />
 
-        {/* 联系方式 */}
-        <ContactSection profile={profile} />
+        <Section id="news" kicker="News" title="Latest Updates">
+          <News news={news} />
+        </Section>
 
-        {/* 学术指标 */}
-        <MetricsSection
-          metrics={metrics}
-          citationsByYear={citationsByYear}
-        />
+        <Section
+          id="publications"
+          kicker="Research"
+          title="Selected Publications"
+          lead={`${publications.length} selected first-author, co-first-author, and corresponding-author works. The full list lives on Google Scholar.`}
+        >
+          <Publications publications={publications} scholarUrl={scholarUrl} />
+        </Section>
 
-        {/* 项目展示 */}
-        <ProjectsSection />
+        <Section
+          id="projects"
+          kicker="Projects"
+          title="Featured Projects"
+          lead="Collaborative research platforms and open-source initiatives."
+        >
+          <Projects />
+        </Section>
 
-        {/* 论文发表 - 移到最后 */}
-        <PublicationsSection
-          publications={publications}
-          scholarUrl={profile.socialLinks?.find(l => l.label === 'Google Scholar')?.url}
-        />
+        <Section id="experience" kicker="Background" title="Experience & Honors">
+          <Experience />
+        </Section>
+
+        <Section
+          id="contact"
+          kicker="Contact"
+          title="Get in Touch"
+          lead="Interested in collaboration, research opportunities, or academic discussions?"
+        >
+          <Contact profile={profile} />
+        </Section>
       </main>
 
-      {/* 页脚 */}
-      <Footer news={news} profile={profile} />
+      <Footer />
     </>
   )
 }
 
-// 确保页面在构建时生成
+// 静态导出：页面在构建时生成
 export const dynamic = 'force-static'

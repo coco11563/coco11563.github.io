@@ -2,13 +2,13 @@
 
 import { useState, useEffect } from 'react'
 import { Menu, X } from 'lucide-react'
+import { ThemeToggle } from './ThemeToggle'
 
 const navigationItems = [
-  { name: 'About', href: '#about' },
   { name: 'News', href: '#news' },
   { name: 'Publications', href: '#publications' },
   { name: 'Projects', href: '#projects' },
-  { name: 'Services', href: '#services' },
+  { name: 'Experience', href: '#experience' },
   { name: 'Contact', href: '#contact' },
 ]
 
@@ -19,100 +19,89 @@ export function Navigation() {
 
   useEffect(() => {
     const handleScroll = () => {
-      setIsScrolled(window.scrollY > 50)
-      
-      // 检测当前所在区域
+      setIsScrolled(window.scrollY > 24)
+
       const sections = navigationItems.map(item => item.href.slice(1))
-      const currentSection = sections.find(section => {
+      const current = sections.find(section => {
         const element = document.getElementById(section)
-        if (element) {
-          const rect = element.getBoundingClientRect()
-          return rect.top <= 100 && rect.bottom >= 100
-        }
-        return false
+        if (!element) return false
+        const rect = element.getBoundingClientRect()
+        return rect.top <= 120 && rect.bottom >= 120
       })
-      
-      if (currentSection) {
-        setActiveSection(currentSection)
-      }
+      setActiveSection(current ?? '')
     }
 
-    window.addEventListener('scroll', handleScroll)
+    handleScroll()
+    window.addEventListener('scroll', handleScroll, { passive: true })
     return () => window.removeEventListener('scroll', handleScroll)
   }, [])
 
-  const scrollToSection = (href: string) => {
-    const element = document.querySelector(href)
-    if (element) {
-      element.scrollIntoView({
-        behavior: 'smooth',
-        block: 'start',
-      })
-    }
-    setIsOpen(false)
-  }
-
   return (
-    <nav className={`fixed top-0 left-0 right-0 z-50 transition-all duration-300 ${
-      isScrolled 
-        ? 'bg-white/95 backdrop-blur-sm shadow-lg border-b border-gray-200' 
-        : 'bg-transparent'
-    }`}>
-      <div className="container-custom">
-        <div className="flex justify-between items-center py-4">
+    <nav
+      className={`fixed inset-x-0 top-0 z-50 transition-all duration-300 ${
+        isScrolled
+          ? 'border-b border-stone-200/80 bg-paper-light/90 backdrop-blur-md dark:border-stone-800 dark:bg-paper-dark/90'
+          : 'bg-transparent'
+      }`}
+    >
+      <div className="container-page">
+        <div className="flex h-16 items-center justify-between">
           {/* Logo */}
-          <div className="flex items-center space-x-2">
-            <div className="w-8 h-8 bg-gradient-to-br from-primary-600 to-secondary-600 rounded-lg flex items-center justify-center">
-              <span className="text-white font-bold text-sm">M</span>
-            </div>
-            <span className="font-bold text-lg gradient-text">Meng Xiao</span>
-          </div>
+          <a href="#top" className="font-serif text-lg font-medium tracking-tight">
+            Meng Xiao
+            <span className="ml-2 text-stone-400 dark:text-stone-500">肖濛</span>
+          </a>
 
-          {/* Desktop Navigation */}
-          <div className="hidden md:flex items-center space-x-1">
-            {navigationItems.map((item) => (
-              <button
+          {/* 桌面端导航 */}
+          <div className="hidden items-center gap-1 md:flex">
+            {navigationItems.map(item => (
+              <a
                 key={item.name}
-                onClick={() => scrollToSection(item.href)}
-                className={`nav-link ${
-                  activeSection === item.href.slice(1) ? 'nav-link-active' : ''
+                href={item.href}
+                className={`rounded-lg px-3 py-2 text-sm font-medium transition-colors ${
+                  activeSection === item.href.slice(1)
+                    ? 'text-accent-700 dark:text-accent-400'
+                    : 'text-stone-600 hover:text-stone-900 dark:text-stone-400 dark:hover:text-stone-100'
                 }`}
               >
                 {item.name}
-              </button>
+              </a>
             ))}
+            <div className="ml-2 border-l border-stone-200 pl-2 dark:border-stone-800">
+              <ThemeToggle />
+            </div>
           </div>
 
-          {/* Mobile menu button */}
-          <div className="md:hidden">
+          {/* 移动端按钮 */}
+          <div className="flex items-center gap-1 md:hidden">
+            <ThemeToggle />
             <button
               onClick={() => setIsOpen(!isOpen)}
-              className="p-2 rounded-md text-gray-600 hover:text-primary-600 hover:bg-gray-100 transition-colors"
+              className="rounded-lg p-2 text-stone-600 transition-colors hover:bg-stone-100 dark:text-stone-400 dark:hover:bg-stone-800"
               aria-label="Toggle menu"
             >
-              {isOpen ? <X size={24} /> : <Menu size={24} />}
+              {isOpen ? <X size={20} /> : <Menu size={20} />}
             </button>
           </div>
         </div>
 
-        {/* Mobile Navigation */}
+        {/* 移动端菜单 */}
         {isOpen && (
-          <div className="md:hidden absolute top-full left-0 right-0 bg-white border-b border-gray-200 shadow-lg">
-            <div className="px-4 py-2 space-y-1">
-              {navigationItems.map((item) => (
-                <button
-                  key={item.name}
-                  onClick={() => scrollToSection(item.href)}
-                  className={`block w-full text-left px-3 py-2 rounded-md transition-colors ${
-                    activeSection === item.href.slice(1)
-                      ? 'text-primary-600 bg-primary-50'
-                      : 'text-gray-600 hover:text-primary-600 hover:bg-gray-50'
-                  }`}
-                >
-                  {item.name}
-                </button>
-              ))}
-            </div>
+          <div className="border-t border-stone-200 pb-4 md:hidden dark:border-stone-800">
+            {navigationItems.map(item => (
+              <a
+                key={item.name}
+                href={item.href}
+                onClick={() => setIsOpen(false)}
+                className={`block rounded-lg px-3 py-2.5 text-sm font-medium transition-colors ${
+                  activeSection === item.href.slice(1)
+                    ? 'text-accent-700 dark:text-accent-400'
+                    : 'text-stone-600 hover:bg-stone-100 dark:text-stone-400 dark:hover:bg-stone-800'
+                }`}
+              >
+                {item.name}
+              </a>
+            ))}
           </div>
         )}
       </div>

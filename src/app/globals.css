@@ -2,182 +2,123 @@
 @tailwind components;
 @tailwind utilities;
 
-/* 自定义基础样式 */
 @layer base {
   html {
     scroll-behavior: smooth;
+    scroll-padding-top: 5rem;
   }
-  
+
   body {
-    @apply text-gray-900 selection:bg-primary-200 selection:text-primary-900;
+    @apply bg-paper-light text-stone-900 antialiased;
+    @apply dark:bg-paper-dark dark:text-stone-200;
+    @apply selection:bg-accent-200 selection:text-accent-900;
+    @apply dark:selection:bg-accent-800 dark:selection:text-accent-100;
   }
-  
-  /* 自定义滚动条 */
+
   ::-webkit-scrollbar {
     width: 8px;
   }
-  
+
   ::-webkit-scrollbar-track {
-    @apply bg-gray-100;
+    @apply bg-transparent;
   }
-  
+
   ::-webkit-scrollbar-thumb {
-    @apply bg-gray-300 rounded-full hover:bg-gray-400;
-  }
-  
-  /* Firefox 滚动条 */
-  * {
-    scrollbar-width: thin;
-    scrollbar-color: rgb(209 213 219) rgb(243 244 246);
+    @apply bg-stone-300 rounded-full hover:bg-stone-400;
+    @apply dark:bg-stone-700 dark:hover:bg-stone-600;
   }
 }
 
-/* 自定义组件样式 */
 @layer components {
-  /* 按钮样式 */
-  .btn-primary {
-    @apply inline-flex items-center justify-center px-4 py-2 text-sm font-medium text-white bg-primary-600 border border-transparent rounded-md hover:bg-primary-700 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-primary-500 transition-colors duration-200;
+  /* 页面容器 */
+  .container-page {
+    @apply mx-auto max-w-page px-5 sm:px-8;
   }
-  
-  .btn-secondary {
-    @apply inline-flex items-center justify-center px-4 py-2 text-sm font-medium text-gray-700 bg-white border border-gray-300 rounded-md hover:bg-gray-50 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-primary-500 transition-colors duration-200;
+
+  /* 章节标题 */
+  .section-heading {
+    @apply font-serif text-3xl sm:text-4xl font-medium tracking-tight text-stone-900 dark:text-stone-100;
   }
-  
-  /* 卡片样式 */
+
+  .section-kicker {
+    @apply text-xs font-semibold uppercase tracking-[0.2em] text-accent-700 dark:text-accent-400;
+  }
+
+  /* 卡片：细边框 + 轻投影，弱化装饰 */
   .card {
-    @apply bg-white rounded-xl shadow-lg hover:shadow-xl transition-all duration-300 border border-gray-100;
+    @apply rounded-xl border border-stone-200/80 bg-white shadow-sm;
+    @apply dark:border-stone-800 dark:bg-stone-900/60;
   }
-  
-  .card-hover {
-    @apply transform hover:-translate-y-1 hover:scale-[1.02] transition-all duration-300;
+
+  /* 按钮 */
+  .btn-primary {
+    @apply inline-flex items-center justify-center gap-2 rounded-lg px-4 py-2 text-sm font-medium;
+    @apply bg-stone-900 text-white hover:bg-stone-700;
+    @apply dark:bg-stone-100 dark:text-stone-900 dark:hover:bg-white;
+    @apply transition-colors;
   }
-  
-  /* 渐变文字 */
-  .gradient-text {
-    @apply bg-gradient-to-r from-primary-600 to-secondary-600 bg-clip-text text-transparent;
+
+  .btn-secondary {
+    @apply inline-flex items-center justify-center gap-2 rounded-lg px-4 py-2 text-sm font-medium;
+    @apply border border-stone-300 text-stone-700 hover:border-stone-400 hover:bg-stone-100;
+    @apply dark:border-stone-700 dark:text-stone-300 dark:hover:border-stone-500 dark:hover:bg-stone-800;
+    @apply transition-colors;
   }
-  
-  /* 玻璃形态效果 */
-  .glass {
-    @apply backdrop-blur-sm bg-white/80 border border-white/20;
+
+  /* 小标签 */
+  .chip {
+    @apply inline-flex items-center gap-1 rounded-full px-2.5 py-0.5 text-xs font-medium;
   }
-  
-  /* 导航栏样式 */
-  .nav-link {
-    @apply text-gray-600 hover:text-primary-600 px-3 py-2 rounded-md text-sm font-medium transition-colors duration-200;
+
+  .chip-neutral {
+    @apply chip bg-stone-100 text-stone-600 dark:bg-stone-800 dark:text-stone-400;
   }
-  
-  .nav-link-active {
-    @apply text-primary-600 bg-primary-50;
+
+  .chip-accent {
+    @apply chip bg-accent-50 text-accent-800 ring-1 ring-inset ring-accent-600/20;
+    @apply dark:bg-accent-900/40 dark:text-accent-300 dark:ring-accent-400/20;
   }
-  
-  /* 论文卡片样式 */
-  .publication-card {
-    @apply card p-6 space-y-4 hover:border-primary-200;
-  }
-  
-  /* 标签样式 */
-  .tag {
-    @apply inline-flex items-center px-2.5 py-0.5 rounded-full text-xs font-medium;
-  }
-  
-  .tag-journal {
-    @apply bg-blue-100 text-blue-800;
-  }
-  
-  .tag-conference {
-    @apply bg-green-100 text-green-800;
-  }
-  
-  .tag-workshop {
-    @apply bg-yellow-100 text-yellow-800;
-  }
-  
-  .tag-preprint {
-    @apply bg-gray-100 text-gray-800;
-  }
-  
-  /* 指标卡片 */
-  .metric-card {
-    @apply card p-6 text-center space-y-2;
-  }
-  
-  .metric-value {
-    @apply text-3xl font-bold gradient-text;
-  }
-  
-  .metric-label {
-    @apply text-sm text-gray-600;
-  }
-  
-  /* 响应式文字大小 */
-  .text-responsive-sm {
-    @apply text-sm md:text-base;
-  }
-  
-  .text-responsive-lg {
-    @apply text-lg md:text-xl lg:text-2xl;
-  }
-  
-  .text-responsive-xl {
-    @apply text-xl md:text-2xl lg:text-3xl xl:text-4xl;
+
+  /* 正文内的文字链接 */
+  .link-inline {
+    @apply text-accent-700 underline decoration-accent-300 underline-offset-4 hover:decoration-accent-600;
+    @apply dark:text-accent-400 dark:decoration-accent-700 dark:hover:decoration-accent-400;
+    @apply transition-colors;
   }
 }
 
-/* 自定义工具类 */
 @layer utilities {
-  /* 背景模式 */
-  .bg-pattern {
-    background-image: radial-gradient(circle at 1px 1px, rgba(59, 130, 246, 0.1) 1px, transparent 0);
-    background-size: 20px 20px;
+  /* 滚动显现动画（由 Reveal 组件驱动） */
+  .reveal {
+    opacity: 0;
+    transform: translateY(16px);
+    transition: opacity 0.6s ease-out, transform 0.6s ease-out;
   }
-  
-  /* 文字截断 */
-  .text-clamp-2 {
-    display: -webkit-box;
-    -webkit-line-clamp: 2;
-    -webkit-box-orient: vertical;
-    overflow: hidden;
-  }
-  
-  /* 容器最大宽度 */
-  .container-custom {
-    @apply mx-auto max-w-7xl px-4 sm:px-6 lg:px-8;
-  }
-  
-  /* 分隔线 */
-  .divider {
-    @apply border-t border-gray-200 my-8;
-  }
-  
-  /* 焦点环 */
-  .focus-ring {
-    @apply focus:outline-none focus:ring-2 focus:ring-primary-500 focus:ring-offset-2;
+
+  .reveal.revealed {
+    opacity: 1;
+    transform: none;
   }
 }
 
-/* 打印样式 */
 @media print {
   .no-print {
     display: none !important;
   }
-  
-  .print-break-before {
-    page-break-before: always;
-  }
-  
-  .print-break-after {
-    page-break-after: always;
-  }
 }
 
-/* 暗色模式支持 (预留) */
-@media (prefers-color-scheme: dark) {
-  /* 可以在这里添加暗色模式的样式 */
-}
-
-/* 减少动画 (尊重用户偏好) */
+/* 尊重用户的减少动画偏好 */
 @media (prefers-reduced-motion: reduce) {
+  html {
+    scroll-behavior: auto;
+  }
+
+  .reveal {
+    opacity: 1;
+    transform: none;
+    transition: none;
+  }
+
   *,
   *::before,
   *::after {
