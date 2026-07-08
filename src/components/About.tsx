@@ -12,6 +12,19 @@ export function About() {
             {siteContent.bio.map((paragraph, index) => (
               <p key={index}>{paragraph}</p>
             ))}
+            <p>
+              He leads the{' '}
+              <a
+                href={siteContent.lab.url}
+                target="_blank"
+                rel="noopener noreferrer"
+                className="link-inline font-medium"
+              >
+                {siteContent.lab.name}
+                <ArrowUpRight size={14} className="ml-0.5 inline-block align-text-top" />
+              </a>
+              .
+            </p>
           </div>
         </Reveal>
 

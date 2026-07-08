@@ -54,6 +54,12 @@ export const siteContent = {
     'He has published over 40 papers in venues including iMeta, The Innovation Life, NeurIPS, ICLR, ICML, IEEE TKDE, IEEE ICDE, ACM SIGKDD, AIJ, and ACM TKDD, and serves the community as an (S)PC member and reviewer for premier conferences and journals.',
   ],
 
+  // 实验室
+  lab: {
+    name: 'Data Intelligence for Scientific Innovation Lab',
+    url: 'https://www.bigdatamining.cn',
+  },
+
   // 学术档案链接（scholar-profile.json 会被脚本覆盖，所以链接放这里）
   socialLinks: [
     { label: 'Google Scholar', url: 'https://scholar.google.com/citations?user=YGwukbUAAAAJ&hl=en' },
@@ -112,13 +118,22 @@ export const siteContent = {
   // 精选项目
   projects: [
     {
-      title: 'xCompass',
+      title: 'XCompass — Life Science AI Agent',
       description:
-        'An AI-ready portal unifying single-cell and gene foundation models (GeneCompass, scCompass) for cross-species biological discovery. A platform I lead, now live.',
+        'An intelligent search and knowledge-discovery platform for life science researchers, bringing together 6M full-text papers and 20M abstracts with cross-platform web search. Built on an AGI agent architecture, it understands research intent, decomposes complex tasks, and supports literature matching, trend analysis, and personalized recommendations. A platform I lead, now live.',
       status: 'Live 2026',
       image: '/pubfiles/xCompass.png',
       links: { project: 'https://xcompass.scimatrix.cn' },
-      tags: ['Foundation Model', 'Single-cell', 'Platform'],
+      tags: ['AI Agent', 'Life Science', 'Knowledge Discovery'],
+    },
+    {
+      title: 'Science Matrix',
+      description:
+        'A platform exploring a human–AI symbiotic scientific world — the home of our AI-for-science agents and tools for the research community.',
+      status: 'Live 2026',
+      image: '/pubfiles/ScienceMatrix.png',
+      links: { project: 'https://www.scimatrix.cn/#/en' },
+      tags: ['AI for Science', 'Human–AI', 'Platform'],
     },
     {
       title: 'SciHorizon',
