@@ -60,9 +60,9 @@ export const siteContent = {
 
   // 个人简介（About）
   bio: [
-    'Meng Xiao received joint doctoral training from the University of Chinese Academy of Sciences and the Institute for Infocomm Research, A*STAR, Singapore, earning his Ph.D. in June 2023.',
-    'He is currently an Associate Professor at the Computer Network Information Center, Chinese Academy of Sciences, and a Research Fellow at Duke-NUS Medical School, National University of Singapore.',
-    'He has published over 40 papers in venues including iMeta, The Innovation Life, NeurIPS, ICLR, ICML, IEEE TKDE, IEEE ICDE, ACM SIGKDD, AIJ, and ACM TKDD, and serves the community as an (S)PC member and reviewer for premier conferences and journals.',
+    'Meng Xiao received joint doctoral training at the University of Chinese Academy of Sciences and the Institute for Infocomm Research, A*STAR, Singapore, and earned his Ph.D. in June 2023. He is currently an Associate Professor at the Computer Network Information Center, Chinese Academy of Sciences, and a Joint Research Fellow at Duke-NUS Medical School, National University of Singapore.',
+    'Meng has published more than 40 papers in leading venues, including iMeta, The Innovation Life, NeurIPS, ICLR, ICML, IEEE TKDE, IEEE ICDE, ACM SIGKDD, AIJ, and ACM TKDD. He also serves the academic community as an (S)PC member and reviewer for leading conferences and journals.',
+    'His research has been supported by a national-level overseas talent program, the National Natural Science Foundation of China, the Beijing Natural Science Foundation, the Chinese Academy of Sciences, and the Beijing Association for Science and Technology.',
   ],
 
   // 实验室
