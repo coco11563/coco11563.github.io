@@ -37,7 +37,7 @@
 
   /* 章节标题 */
   .section-heading {
-    @apply font-serif text-3xl sm:text-4xl font-medium tracking-tight text-stone-900 dark:text-stone-100;
+    @apply font-serif text-2xl sm:text-3xl font-medium tracking-tight text-stone-900 dark:text-stone-100;
   }
 
   .section-kicker {

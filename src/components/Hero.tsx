@@ -49,7 +49,7 @@ export function Hero({ profile, metrics, citationsByYear }: HeroProps) {
   ]
 
   return (
-    <header id="top" className="relative overflow-hidden pt-28 sm:pt-36">
+    <header id="top" className="relative overflow-hidden pt-24 sm:pt-28">
       {/* 背景：非常轻的点阵 + 顶部渐隐 */}
       <div
         className="pointer-events-none absolute inset-0 opacity-[0.35] dark:opacity-[0.12]"
@@ -62,10 +62,10 @@ export function Hero({ profile, metrics, citationsByYear }: HeroProps) {
       />
 
       <div className="container-page relative">
-        <div className="grid items-center gap-12 lg:grid-cols-[1fr,auto]">
+        <div className="grid items-center gap-10 lg:grid-cols-[1fr,auto]">
           {/* 左侧：文字信息 */}
           <div className="max-w-2xl">
-            <p className="section-kicker mb-4">{siteContent.hero.overline}</p>
+            <p className="section-kicker mb-3 text-sm">{siteContent.hero.overline}</p>
 
             <h1 className="font-serif text-5xl font-medium tracking-tight sm:text-6xl lg:text-7xl">
               {profile.nameZh ? profile.name.replace(`(${profile.nameZh})`, '').trim() : profile.name}
@@ -77,7 +77,7 @@ export function Hero({ profile, metrics, citationsByYear }: HeroProps) {
             </h1>
 
             {/* 职位 */}
-            <div className="mt-6 space-y-2">
+            <div className="mt-5 space-y-2">
               {siteContent.hero.roles.map(role => (
                 <div key={role.title} className="flex flex-wrap items-center gap-x-2 gap-y-1 text-sm text-stone-700 dark:text-stone-300">
                   <MapPin size={15} className="shrink-0 text-accent-700 dark:text-accent-400" />
@@ -100,7 +100,7 @@ export function Hero({ profile, metrics, citationsByYear }: HeroProps) {
             </div>
 
             {/* 关键词标签：可点击跳转 Wikipedia */}
-            <div className="mt-6 flex flex-wrap gap-2">
+            <div className="mt-5 flex flex-wrap gap-2">
               {siteContent.keywords.map(keyword => (
                 <a
                   key={keyword.label}
@@ -115,7 +115,7 @@ export function Hero({ profile, metrics, citationsByYear }: HeroProps) {
             </div>
 
             {/* 行动按钮 */}
-            <div className="mt-8 flex flex-wrap items-center gap-3">
+            <div className="mt-6 flex flex-wrap items-center gap-3">
               {siteContent.socialLinks.slice(0, 2).map((link, index) => (
                 <a
                   key={link.label}
@@ -161,7 +161,7 @@ export function Hero({ profile, metrics, citationsByYear }: HeroProps) {
         </div>
 
         {/* 学术指标条 */}
-        <div className="card mt-16 flex flex-wrap items-center justify-between gap-x-10 gap-y-6 px-6 py-5 sm:px-8">
+        <div className="card mt-10 flex flex-wrap items-center justify-between gap-x-10 gap-y-5 px-6 py-4 sm:mt-12 sm:px-8">
           <div className="flex flex-wrap items-center gap-x-10 gap-y-4">
             {stats.map(stat => (
               <div key={stat.label}>

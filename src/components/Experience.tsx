@@ -4,13 +4,13 @@ import { Reveal } from './Reveal'
 
 export function Experience() {
   return (
-    <div className="grid gap-12 lg:grid-cols-2">
+    <div className="grid gap-10 lg:grid-cols-2">
       {/* 时间线 */}
       <Reveal>
         <h3 className="mb-6 text-sm font-semibold uppercase tracking-wider text-stone-500 dark:text-stone-400">
           Positions
         </h3>
-        <ol className="relative space-y-8 border-l border-stone-200 pl-6 dark:border-stone-800">
+        <ol className="relative space-y-6 border-l border-stone-200 pl-6 dark:border-stone-800">
           {siteContent.timeline.map(item => (
             <li key={item.period} className="relative">
               <span className="absolute -left-[1.85rem] top-1.5 h-2.5 w-2.5 rounded-full border-2 border-paper-light bg-accent-600 dark:border-paper-dark dark:bg-accent-400" />
