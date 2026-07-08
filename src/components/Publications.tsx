@@ -134,12 +134,12 @@ export function Publications({ publications, scholarUrl }: PublicationsProps) {
     <div>
       {/* 综述与评论 */}
       {surveys.length > 0 && (
-        <Reveal className="mb-14">
+        <Reveal className="mb-10">
           <div className="grid gap-6 sm:grid-cols-[5rem,1fr]">
             <h3 className="text-sm font-semibold uppercase tracking-wider text-accent-700 sm:sticky sm:top-24 sm:self-start dark:text-accent-400">
               Surveys &amp; Reviews
             </h3>
-            <div className="space-y-8">
+            <div className="space-y-6">
               {surveys.map(pub => (
                 <PublicationCard key={pub.id} pub={pub} />
               ))}
@@ -149,14 +149,14 @@ export function Publications({ publications, scholarUrl }: PublicationsProps) {
       )}
 
       {/* 按年份分组的研究论文 */}
-      <div className="space-y-14">
+      <div className="space-y-10">
         {years.map(year => (
           <Reveal key={year}>
             <div className="grid gap-6 sm:grid-cols-[5rem,1fr]">
               <div className="font-serif text-3xl font-medium text-stone-300 sm:sticky sm:top-24 sm:self-start dark:text-stone-700">
                 {year}
               </div>
-              <div className="space-y-8">
+              <div className="space-y-6">
                 {researchByYear[year].map(pub => (
                   <PublicationCard key={pub.id} pub={pub} />
                 ))}
@@ -167,7 +167,7 @@ export function Publications({ publications, scholarUrl }: PublicationsProps) {
       </div>
 
       {scholarUrl && (
-        <Reveal className="mt-14 text-center">
+        <Reveal className="mt-10 text-center">
           <a href={scholarUrl} target="_blank" rel="noopener noreferrer" className="btn-secondary">
             View full publication list on Google Scholar
             <ExternalLink size={15} />

@@ -30,21 +30,11 @@ export default async function HomePage() {
           <News news={news} />
         </Section>
 
-        <Section
-          id="publications"
-          kicker="Research"
-          title="Selected Publications"
-          lead={`${publications.length} selected first-author, co-first-author, and corresponding-author works. The full list lives on Google Scholar.`}
-        >
+        <Section id="publications" kicker="Research" title="Selected Publications">
           <Publications publications={publications} scholarUrl={scholarUrl} />
         </Section>
 
-        <Section
-          id="projects"
-          kicker="Projects"
-          title="Featured Projects"
-          lead="Collaborative research platforms and open-source initiatives."
-        >
+        <Section id="projects" kicker="Projects" title="Featured Projects">
           <Projects />
         </Section>
 
@@ -52,12 +42,7 @@ export default async function HomePage() {
           <Experience />
         </Section>
 
-        <Section
-          id="contact"
-          kicker="Contact"
-          title="Get in Touch"
-          lead="Interested in collaboration, research opportunities, or academic discussions?"
-        >
+        <Section id="contact" kicker="Contact" title="Get in Touch">
           <Contact profile={profile} />
         </Section>
       </main>
