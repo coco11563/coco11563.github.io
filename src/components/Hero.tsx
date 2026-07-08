@@ -79,9 +79,22 @@ export function Hero({ profile, metrics, citationsByYear }: HeroProps) {
             {/* 职位 */}
             <div className="mt-6 space-y-2">
               {siteContent.hero.roles.map(role => (
-                <div key={role} className="flex items-center gap-2 text-sm text-stone-700 dark:text-stone-300">
+                <div key={role.title} className="flex flex-wrap items-center gap-x-2 gap-y-1 text-sm text-stone-700 dark:text-stone-300">
                   <MapPin size={15} className="shrink-0 text-accent-700 dark:text-accent-400" />
-                  <span>{role}</span>
+                  <span>{role.title}</span>
+                  {role.lab && (
+                    <>
+                      <span className="text-stone-400 dark:text-stone-600">·</span>
+                      <a
+                        href={role.lab.url}
+                        target="_blank"
+                        rel="noopener noreferrer"
+                        className="link-inline"
+                      >
+                        {role.lab.name}
+                      </a>
+                    </>
+                  )}
                 </div>
               ))}
             </div>

@@ -35,15 +35,35 @@ export interface ServiceItem {
   detail: string
 }
 
+export interface Role {
+  title: string
+  lab?: { name: string; url: string }
+}
+
 export const siteContent = {
   // Hero 区域
   hero: {
     overline: 'Associate Professor · CNIC, Chinese Academy of Sciences',
     roles: [
-      'Associate Professor @ CNIC, CAS',
-      'Research Fellow @ Duke-NUS, NUS',
-    ],
+      {
+        title: 'Associate Professor @ CNIC, CAS',
+        lab: {
+          name: 'Data Intelligence for Scientific Innovation Lab',
+          url: 'https://www.bigdatamining.cn',
+        },
+      },
+      {
+        title: 'Research Fellow @ Duke-NUS, NUS',
+        lab: {
+          name: 'Faculty profile',
+          url: 'https://www.duke-nus.edu.sg/directory/detail/xiao-meng',
+        },
+      },
+    ] as Role[],
   },
+
+  // 会员身份
+  memberships: ['CCF', 'IEEE', 'ACM', 'CAAI'],
 
   // Hero 关键词标签：每个可点击，跳转到对应 Wikipedia 词条
   keywords: [
@@ -62,14 +82,8 @@ export const siteContent = {
   bio: [
     'Meng Xiao received joint doctoral training at the University of Chinese Academy of Sciences and the Institute for Infocomm Research, A*STAR, Singapore, and earned his Ph.D. in June 2023. He is currently an Associate Professor at the Computer Network Information Center, Chinese Academy of Sciences, and a Joint Research Fellow at Duke-NUS Medical School, National University of Singapore.',
     'Meng has published more than 40 papers in leading venues, including iMeta, The Innovation Life, NeurIPS, ICLR, ICML, IEEE TKDE, IEEE ICDE, ACM SIGKDD, AIJ, and ACM TKDD. He also serves the academic community as an (S)PC member and reviewer for leading conferences and journals.',
-    'His research has been supported by a national-level overseas talent program, the National Natural Science Foundation of China, the Beijing Natural Science Foundation, the Chinese Academy of Sciences, and the Beijing Association for Science and Technology.',
+    'His research has been supported by a National-level Overseas Talent Program, the Singapore Government, the National Natural Science Foundation of China, the Beijing Natural Science Foundation, the Chinese Academy of Sciences, and the Beijing Association for Science and Technology.',
   ],
-
-  // 实验室
-  lab: {
-    name: 'Data Intelligence for Scientific Innovation Lab',
-    url: 'https://www.bigdatamining.cn',
-  },
 
   // 学术档案链接（scholar-profile.json 会被脚本覆盖，所以链接放这里）
   socialLinks: [

@@ -44,7 +44,7 @@ export const metadata: Metadata = {
     siteName: 'Meng Xiao Academic Homepage',
     images: [
       {
-        url: '/indexfiles/me.png',
+        url: '/indexfiles/me.jpeg',
         width: 270,
         height: 270,
         alt: 'Meng Xiao Profile Photo',
@@ -55,7 +55,7 @@ export const metadata: Metadata = {
     card: 'summary_large_image',
     title: 'Meng Xiao (肖濛) - Academic Homepage',
     description: 'Personal academic homepage showcasing research in Data-centric AI and Scientific Data Mining.',
-    images: ['/indexfiles/me.png'],
+    images: ['/indexfiles/me.jpeg'],
   },
   verification: {
     google: 'b0739eb76fca0344',
@@ -99,7 +99,7 @@ export default function RootLayout({
               "name": "Meng Xiao",
               "alternateName": "肖濛",
               "url": "https://coco11563.github.io",
-              "image": "https://coco11563.github.io/indexfiles/me.png",
+              "image": "https://coco11563.github.io/indexfiles/me.jpeg",
               "jobTitle": "Associate Professor",
               "worksFor": [
                 {

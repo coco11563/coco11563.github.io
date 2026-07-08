@@ -20,15 +20,18 @@ const roleLabels: Record<string, string> = {
   'corresponding-author': 'Corresponding Author',
 }
 
-function AuthorList({ authors }: { authors: string[] }) {
+function AuthorList({ authors, collapse }: { authors: string[]; collapse?: boolean }) {
+  // 作者过多时只显示前 4 位 + … + 末位（完整列表仍保留在数据中）
+  const shown = collapse && authors.length > 6 ? [...authors.slice(0, 4), '…', authors[authors.length - 1]] : authors
+
   return (
     <p className="text-sm leading-relaxed text-stone-500 dark:text-stone-400">
-      {authors.map((author, i) => {
+      {shown.map((author, i) => {
         const isMe = author.includes('Meng Xiao') || author.includes('肖濛')
         return (
           <span key={i} className={isMe ? 'font-semibold text-stone-800 dark:text-stone-200' : ''}>
             {author}
-            {i < authors.length - 1 ? ', ' : ''}
+            {i < shown.length - 1 ? ', ' : ''}
           </span>
         )
       })}
@@ -90,7 +93,7 @@ function PublicationCard({ pub }: { pub: Publication }) {
         <h3 className="text-base font-semibold leading-snug text-stone-900 dark:text-stone-100">
           {pub.title}
         </h3>
-        <AuthorList authors={pub.authors} />
+        <AuthorList authors={pub.authors} collapse={pub.collapseAuthors} />
 
         <PublicationLinks urls={pub.urls} />
       </div>
