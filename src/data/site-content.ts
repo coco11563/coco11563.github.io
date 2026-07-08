@@ -39,19 +39,30 @@ export const siteContent = {
   // Hero 区域
   hero: {
     overline: 'Associate Professor · CNIC, Chinese Academy of Sciences',
-    tagline:
-      'Working on Data-centric AI and AI for Science — teaching machines to read, organize, and reason over scientific data.',
     roles: [
       'Associate Professor @ CNIC, CAS',
       'Research Fellow @ Duke-NUS, NUS',
     ],
   },
 
+  // Hero 关键词标签：每个可点击，跳转到对应 Wikipedia 词条
+  keywords: [
+    { label: 'AI for Life Science', url: 'https://en.wikipedia.org/wiki/Computational_biology' },
+    { label: 'Data-centric AI', url: 'https://en.wikipedia.org/wiki/Special:Search?search=Data-centric+AI&go=Go' },
+    { label: 'Data Mining', url: 'https://en.wikipedia.org/wiki/Data_mining' },
+    { label: 'Coder', url: 'https://en.wikipedia.org/wiki/Programmer' },
+    { label: 'Top-route Climbing', url: 'https://en.wikipedia.org/wiki/Top_rope_climbing' },
+    { label: 'Bouldering', url: 'https://en.wikipedia.org/wiki/Bouldering' },
+    { label: 'Rockstar', url: 'https://en.wikipedia.org/wiki/Rock_music' },
+    { label: 'Beer', url: 'https://en.wikipedia.org/wiki/Beer' },
+    { label: 'Cocktail', url: 'https://en.wikipedia.org/wiki/Cocktail' },
+  ] as SocialLink[],
+
   // 个人简介（About）
   bio: [
-    'Meng Xiao received joint doctoral training from the University of Chinese Academy of Sciences and the Institute for Infocomm Research, A*STAR, Singapore, earning his Ph.D. in June 2023.',
-    'He is currently an Associate Professor at the Computer Network Information Center, Chinese Academy of Sciences, and a Research Fellow at Duke-NUS Medical School, National University of Singapore.',
-    'He has published over 40 papers in venues including iMeta, The Innovation Life, NeurIPS, ICLR, ICML, IEEE TKDE, IEEE ICDE, ACM SIGKDD, AIJ, and ACM TKDD, and serves the community as an (S)PC member and reviewer for premier conferences and journals.',
+    'Meng Xiao received joint doctoral training at the University of Chinese Academy of Sciences and the Institute for Infocomm Research, A*STAR, Singapore, and earned his Ph.D. in June 2023. He is currently an Associate Professor at the Computer Network Information Center, Chinese Academy of Sciences, and a Joint Research Fellow at Duke-NUS Medical School, National University of Singapore.',
+    'Meng has published more than 40 papers in leading venues, including iMeta, The Innovation Life, NeurIPS, ICLR, ICML, IEEE TKDE, IEEE ICDE, ACM SIGKDD, AIJ, and ACM TKDD. He also serves the academic community as an (S)PC member and reviewer for leading conferences and journals.',
+    'His research has been supported by a national-level overseas talent program, the National Natural Science Foundation of China, the Beijing Natural Science Foundation, the Chinese Academy of Sciences, and the Beijing Association for Science and Technology.',
   ],
 
   // 实验室
