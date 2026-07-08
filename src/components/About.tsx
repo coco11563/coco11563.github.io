@@ -1,35 +1,19 @@
 import { Section } from './Section'
 import { Reveal } from './Reveal'
+import { AboutBio } from './AboutBio'
 import { ArrowUpRight } from 'lucide-react'
 import { siteContent } from '@/data/site-content'
 
 export function About() {
   return (
     <Section id="about" kicker="About" title="Short Bio">
-      <div className="grid gap-10 lg:grid-cols-[2fr,1fr]">
-        <Reveal>
-          <div className="space-y-5 text-base leading-relaxed text-stone-700 dark:text-stone-300">
-            {siteContent.bio.map((paragraph, index) => (
-              <p key={index}>{paragraph}</p>
-            ))}
-            <p>
-              He leads the{' '}
-              <a
-                href={siteContent.lab.url}
-                target="_blank"
-                rel="noopener noreferrer"
-                className="link-inline font-medium"
-              >
-                {siteContent.lab.name}
-                <ArrowUpRight size={14} className="ml-0.5 inline-block align-text-top" />
-              </a>
-              .
-            </p>
-          </div>
+      <div className="grid items-stretch gap-10 lg:grid-cols-[1fr,17rem]">
+        <Reveal className="h-full">
+          <AboutBio paragraphs={siteContent.bio} memberships={siteContent.memberships} />
         </Reveal>
 
-        <Reveal>
-          <div className="card p-6">
+        <Reveal className="h-full">
+          <div className="card flex h-full flex-col p-6">
             <h3 className="text-sm font-semibold uppercase tracking-wider text-stone-500 dark:text-stone-400">
               Find me on
             </h3>

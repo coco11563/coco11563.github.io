@@ -423,7 +423,8 @@
     },
     "authorRole": "co-author",
     "highlighted": true,
-    "citationsId": "15912681120747030699"
+    "citationsId": "15912681120747030699",
+    "collapseAuthors": true
   },
   {
     "id": "pub_2025_4",
