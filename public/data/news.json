@@ -1,5 +1,29 @@
 [
   {
+    "date": "2026.07",
+    "title": "One paper \"Comprehend, Divide, and Conquer: Feature Subspace Exploration via Multi-Agent Hierarchical Reinforcement Learning\" accepted by ACM TKDD!",
+    "type": "publication",
+    "highlighted": true
+  },
+  {
+    "date": "2026.06",
+    "title": "Our platform xCompass is now online — an AI-ready portal for single-cell and gene foundation models.",
+    "link": "https://xcompass.scimatrix.cn",
+    "type": "general",
+    "highlighted": true
+  },
+  {
+    "date": "2026.05",
+    "title": "One paper \"SciHorizon-GENE: Benchmarking LLM for Life Sciences Inference from Gene Knowledge to Functional Understanding\" accepted by ACM SIGKDD 2026!",
+    "type": "publication",
+    "highlighted": true
+  },
+  {
+    "date": "2026.05",
+    "title": "Our review \"Harnessing the Gut Microbiome to Combat Tuberculosis: A Technological and Clinical Review\" published in Frontiers in Cellular and Infection Microbiology!",
+    "type": "publication"
+  },
+  {
     "date": "2026.03",
     "title": "One paper \"Towards Data-Centric AI: A Comprehensive Survey of Traditional, Reinforcement, and Generative Approaches for Tabular Data Transformation\" accepted by ACM TKDD!",
     "type": "publication",
@@ -44,7 +68,7 @@
     "type": "publication"
   },
   {
-    "date": "2025.05", 
+    "date": "2025.05",
     "title": "New survey about Gut microbiota and tuberculosis published!",
     "link": "https://onlinelibrary.wiley.com/doi/10.1002/imt2.70054",
     "type": "publication"
@@ -68,7 +92,7 @@
   {
     "date": "2025.01",
     "title": "New survey about DCAI published!",
-    "link": "http://arxiv.org/abs/2501.10555", 
+    "link": "http://arxiv.org/abs/2501.10555",
     "type": "publication"
   },
   {

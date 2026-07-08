@@ -112,6 +112,15 @@ export const siteContent = {
   // 精选项目
   projects: [
     {
+      title: 'xCompass',
+      description:
+        'An AI-ready portal unifying single-cell and gene foundation models (GeneCompass, scCompass) for cross-species biological discovery. A platform I lead, now live.',
+      status: 'Live 2026',
+      image: '/pubfiles/xCompass.png',
+      links: { project: 'https://xcompass.scimatrix.cn' },
+      tags: ['Foundation Model', 'Single-cell', 'Platform'],
+    },
+    {
       title: 'SciHorizon',
       description:
         'A comprehensive benchmarking platform for evaluating AI systems in scientific applications, from data processing to large language model integration.',

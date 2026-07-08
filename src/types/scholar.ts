@@ -57,6 +57,7 @@ export interface Publication {
   authorRole?: 'first-author' | 'co-first-author' | 'corresponding-author' | 'co-author';  // 作者角色
   highlighted?: boolean;  // 是否为重点论文
   award?: string;  // 获奖信息
+  isSurvey?: boolean;  // 是否为综述/评论文章（单独归入 Surveys & Reviews 区块）
 }
 
 export interface NewsItem {

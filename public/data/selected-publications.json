@@ -1,5 +1,128 @@
 [
   {
+    "id": "pub_2026_tkdd_cdc",
+    "title": "Comprehend, Divide, and Conquer: Feature Subspace Exploration via Multi-Agent Hierarchical Reinforcement Learning",
+    "authors": [
+      "Weiliang Zhang",
+      "Xiaohan Huang",
+      "Yi Du",
+      "Ziyue Qiao",
+      "Qingqing Long",
+      "Zhen Meng",
+      "Yuanchun Zhou",
+      "Meng Xiao"
+    ],
+    "venue": "ACM TKDD",
+    "venueType": "journal",
+    "year": 2026,
+    "citations": 0,
+    "image": "/pubfiles/TKDD2026.png",
+    "keywords": [
+      "feature selection",
+      "reinforcement learning",
+      "multi-agent",
+      "hierarchical"
+    ],
+    "urls": {},
+    "authorRole": "corresponding-author",
+    "highlighted": true
+  },
+  {
+    "id": "pub_2026_sigkdd_gene",
+    "title": "SciHorizon-GENE: Benchmarking LLM for Life Sciences Inference from Gene Knowledge to Functional Understanding",
+    "authors": [
+      "Xiaohan Huang",
+      "Meng Xiao",
+      "Chuan Qin",
+      "Qingqing Long",
+      "Jinmiao Chen",
+      "Yuanchun Zhou",
+      "Hengshu Zhu"
+    ],
+    "venue": "ACM SIGKDD",
+    "venueType": "conference",
+    "year": 2026,
+    "citations": 0,
+    "image": "/pubfiles/SIGKDD2026.png",
+    "keywords": [
+      "benchmark",
+      "large language model",
+      "life science",
+      "gene understanding"
+    ],
+    "urls": {},
+    "authorRole": "corresponding-author",
+    "highlighted": true
+  },
+  {
+    "id": "pub_2026_tkdd_dcai_survey",
+    "title": "Toward Data-Centric AI: A Comprehensive Survey of Traditional, Reinforcement, and Generative Approaches for Tabular Data Transformation",
+    "authors": [
+      "Dongjie Wang",
+      "Yanyong Huang",
+      "Wangyang Ying",
+      "Haoyue Bai",
+      "Nanxu Gong",
+      "Xinyuan Wang",
+      "Sixun Dong",
+      "Tao Zhe",
+      "Kunpeng Liu",
+      "Meng Xiao",
+      "Pengfei Wang",
+      "Pengyang Wang",
+      "Hui Xiong",
+      "Yanjie Fu"
+    ],
+    "venue": "ACM TKDD",
+    "venueType": "journal",
+    "year": 2026,
+    "citations": 0,
+    "image": "/pubfiles/TKDD2026-DCAI.png",
+    "keywords": [
+      "data-centric AI",
+      "tabular data",
+      "feature transformation",
+      "survey"
+    ],
+    "urls": {},
+    "authorRole": "co-author",
+    "isSurvey": true,
+    "highlighted": true
+  },
+  {
+    "id": "pub_2026_fcim_tb",
+    "title": "Harnessing the Gut Microbiome to Combat Tuberculosis: A Technological and Clinical Review",
+    "authors": [
+      "Weiguo Sun",
+      "Meng Xiao",
+      "Syed Luqman Ali",
+      "Chanyuan Jin",
+      "Asifullah Khan",
+      "Shakirullah Shakirullah",
+      "Ruizi Ni",
+      "Yajing An",
+      "Mingming Zhang",
+      "Yuan Tian",
+      "Shradha Kaushik",
+      "Yuhang Zhang",
+      "Wenping Gong"
+    ],
+    "venue": "Front. Cell. Infect. Microbiol.",
+    "venueType": "journal",
+    "year": 2026,
+    "citations": 0,
+    "image": "/pubfiles/FCIM2026.png",
+    "keywords": [
+      "gut microbiome",
+      "tuberculosis",
+      "clinical review"
+    ],
+    "urls": {},
+    "authorRole": "co-first-author",
+    "isSurvey": true,
+    "highlighted": true
+  },
+  {
     "id": "pub_2026_dasfaa",
     "title": "A Cross-Modal Hierarchical Contrastive Learning Framework for Protein-Protein Interaction Prediction",
     "authors": [
@@ -71,7 +194,8 @@
     },
     "authorRole": "corresponding-author",
     "highlighted": true,
-    "citationsId": "4613471322009486040"
+    "citationsId": "4613471322009486040",
+    "isSurvey": true
   },
   {
     "id": "pub_2025_tnnls",
@@ -362,7 +486,8 @@
     },
     "authorRole": "co-first-author",
     "highlighted": true,
-    "citationsId": "5077486449361070010"
+    "citationsId": "5077486449361070010",
+    "isSurvey": true
   },
   {
     "id": "pub_2025_5",
