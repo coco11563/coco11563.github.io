@@ -39,13 +39,24 @@ export const siteContent = {
   // Hero 区域
   hero: {
     overline: 'Associate Professor · CNIC, Chinese Academy of Sciences',
-    tagline:
-      'Working on Data-centric AI and AI for Science — teaching machines to read, organize, and reason over scientific data.',
     roles: [
       'Associate Professor @ CNIC, CAS',
       'Research Fellow @ Duke-NUS, NUS',
     ],
   },
+
+  // Hero 关键词标签：每个可点击，跳转到对应 Wikipedia 词条
+  keywords: [
+    { label: 'AI for Life Science', url: 'https://en.wikipedia.org/wiki/Computational_biology' },
+    { label: 'Data-centric AI', url: 'https://en.wikipedia.org/wiki/Special:Search?search=Data-centric+AI&go=Go' },
+    { label: 'Data Mining', url: 'https://en.wikipedia.org/wiki/Data_mining' },
+    { label: 'Coder', url: 'https://en.wikipedia.org/wiki/Programmer' },
+    { label: 'Top-route Climbing', url: 'https://en.wikipedia.org/wiki/Top_rope_climbing' },
+    { label: 'Bouldering', url: 'https://en.wikipedia.org/wiki/Bouldering' },
+    { label: 'Rockstar', url: 'https://en.wikipedia.org/wiki/Rock_music' },
+    { label: 'Beer', url: 'https://en.wikipedia.org/wiki/Beer' },
+    { label: 'Cocktail', url: 'https://en.wikipedia.org/wiki/Cocktail' },
+  ] as SocialLink[],
 
   // 个人简介（About）
   bio: [

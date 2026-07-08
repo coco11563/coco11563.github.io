@@ -76,10 +76,6 @@ export function Hero({ profile, metrics, citationsByYear }: HeroProps) {
               )}
             </h1>
 
-            <p className="mt-6 text-lg leading-relaxed text-stone-600 dark:text-stone-400">
-              {siteContent.hero.tagline}
-            </p>
-
             {/* 职位 */}
             <div className="mt-6 space-y-2">
               {siteContent.hero.roles.map(role => (
@@ -90,12 +86,18 @@ export function Hero({ profile, metrics, citationsByYear }: HeroProps) {
               ))}
             </div>
 
-            {/* 研究方向 */}
+            {/* 关键词标签：可点击跳转 Wikipedia */}
             <div className="mt-6 flex flex-wrap gap-2">
-              {profile.interests.map(interest => (
-                <span key={interest} className="chip-accent">
-                  {interest}
-                </span>
+              {siteContent.keywords.map(keyword => (
+                <a
+                  key={keyword.label}
+                  href={keyword.url}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="chip-accent transition-colors hover:bg-accent-100 hover:ring-accent-600/40 dark:hover:bg-accent-900/60 dark:hover:ring-accent-400/40"
+                >
+                  {keyword.label}
+                </a>
               ))}
             </div>
 
@@ -126,12 +128,11 @@ export function Hero({ profile, metrics, citationsByYear }: HeroProps) {
               {/* 错位边框装饰 */}
               <div className="absolute -inset-0 translate-x-3 translate-y-3 rounded-full border border-accent-600/30 dark:border-accent-400/20" />
               <div className="relative h-56 w-56 overflow-hidden rounded-full border border-stone-200 shadow-lg sm:h-72 sm:w-72 dark:border-stone-800">
-                {/* 放大裁切，去掉照片自带的装饰边框 */}
                 <Image
                   src={profile.image}
                   alt={`${profile.name} profile photo`}
                   fill
-                  className="scale-[1.3] object-cover"
+                  className="object-cover object-top"
                   priority
                   sizes="(max-width: 640px) 224px, 288px"
                 />
