@@ -15,7 +15,7 @@
     "venue": "ACM TKDD",
     "venueType": "journal",
     "year": 2026,
-    "citations": 0,
+    "citations": 2,
     "image": "/pubfiles/TKDD2026.png",
     "keywords": [
       "feature selection",
@@ -23,9 +23,12 @@
       "multi-agent",
       "hierarchical"
     ],
-    "urls": {},
+    "urls": {
+      "citations": "https://scholar.google.com/scholar?oi=bibs&hl=en&cites=7003759190214102035"
+    },
     "authorRole": "corresponding-author",
-    "highlighted": true
+    "highlighted": true,
+    "citationsId": "7003759190214102035"
   },
   {
     "id": "pub_2026_sigkdd_gene",
@@ -42,7 +45,7 @@
     "venue": "ACM SIGKDD",
     "venueType": "conference",
     "year": 2026,
-    "citations": 0,
+    "citations": 1,
     "image": "/pubfiles/SIGKDD2026.png",
     "keywords": [
       "benchmark",
@@ -50,9 +53,12 @@
       "life science",
       "gene understanding"
     ],
-    "urls": {},
+    "urls": {
+      "citations": "https://scholar.google.com/scholar?oi=bibs&hl=en&cites=10823966477266825690"
+    },
     "authorRole": "corresponding-author",
-    "highlighted": true
+    "highlighted": true,
+    "citationsId": "10823966477266825690"
   },
   {
     "id": "pub_2026_tkdd_dcai_survey",
@@ -76,7 +82,7 @@
     "venue": "ACM TKDD",
     "venueType": "journal",
     "year": 2026,
-    "citations": 0,
+    "citations": 24,
     "image": "/pubfiles/TKDD2026-DCAI.png",
     "keywords": [
       "data-centric AI",
@@ -84,10 +90,13 @@
       "feature transformation",
       "survey"
     ],
-    "urls": {},
+    "urls": {
+      "citations": "https://scholar.google.com/scholar?oi=bibs&hl=en&cites=1363095295393607312,17564544498366473251"
+    },
     "authorRole": "co-author",
     "isSurvey": true,
-    "highlighted": true
+    "highlighted": true,
+    "citationsId": "1363095295393607312,17564544498366473251"
   },
   {
     "id": "pub_2026_fcim_tb",
