@@ -82,7 +82,7 @@
     "venue": "ACM TKDD",
     "venueType": "journal",
     "year": 2026,
-    "citations": 24,
+    "citations": 25,
     "image": "/pubfiles/TKDD2026-DCAI.png",
     "keywords": [
       "data-centric AI",
@@ -289,7 +289,7 @@
     "venue": "ACM SIGKDD",
     "venueType": "conference",
     "year": 2025,
-    "citations": 26,
+    "citations": 27,
     "image": "/pubfiles/SIGKDD2025.png",
     "keywords": [
       "AI4Science",
@@ -418,7 +418,7 @@
     "venue": "Cell Research",
     "venueType": "journal",
     "year": 2024,
-    "citations": 165,
+    "citations": 166,
     "image": "/pubfiles/CellRes2024.png",
     "keywords": [
       "gene regulation",
@@ -745,7 +745,7 @@
     "venue": "ACM CIKM",
     "venueType": "conference",
     "year": 2024,
-    "citations": 34,
+    "citations": 33,
     "image": "/pubfiles/CIKM24.jpg",
     "keywords": [
       "multimodal recommendation",
