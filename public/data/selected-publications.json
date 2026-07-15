@@ -82,7 +82,7 @@
     "venue": "ACM TKDD",
     "venueType": "journal",
     "year": 2026,
-    "citations": 25,
+    "citations": 26,
     "image": "/pubfiles/TKDD2026-DCAI.png",
     "keywords": [
       "data-centric AI",
@@ -418,7 +418,7 @@
     "venue": "Cell Research",
     "venueType": "journal",
     "year": 2024,
-    "citations": 168,
+    "citations": 170,
     "image": "/pubfiles/CellRes2024.png",
     "keywords": [
       "gene regulation",
@@ -569,7 +569,7 @@
     "venue": "ICML",
     "venueType": "conference",
     "year": 2025,
-    "citations": 13,
+    "citations": 14,
     "image": "/pubfiles/ICML2025.png",
     "keywords": [
       "graph models",
@@ -745,7 +745,7 @@
     "venue": "ACM CIKM",
     "venueType": "conference",
     "year": 2024,
-    "citations": 36,
+    "citations": 38,
     "image": "/pubfiles/CIKM24.jpg",
     "keywords": [
       "multimodal recommendation",
