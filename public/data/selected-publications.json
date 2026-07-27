@@ -82,7 +82,7 @@
     "venue": "ACM TKDD",
     "venueType": "journal",
     "year": 2026,
-    "citations": 26,
+    "citations": 28,
     "image": "/pubfiles/TKDD2026-DCAI.png",
     "keywords": [
       "data-centric AI",
@@ -248,7 +248,7 @@
     "venue": "IEEE Transactions on Computational Biology and Bioinformatics",
     "venueType": "journal",
     "year": 2025,
-    "citations": 14,
+    "citations": 13,
     "image": "/pubfiles/TCBB25.png",
     "keywords": [
       "knowledge-guided",
@@ -289,7 +289,7 @@
     "venue": "ACM SIGKDD",
     "venueType": "conference",
     "year": 2025,
-    "citations": 27,
+    "citations": 24,
     "image": "/pubfiles/SIGKDD2025.png",
     "keywords": [
       "AI4Science",
@@ -745,7 +745,7 @@
     "venue": "ACM CIKM",
     "venueType": "conference",
     "year": 2024,
-    "citations": 39,
+    "citations": 38,
     "image": "/pubfiles/CIKM24.jpg",
     "keywords": [
       "multimodal recommendation",
