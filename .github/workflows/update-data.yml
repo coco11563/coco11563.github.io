@@ -112,8 +112,10 @@ jobs:
           echo "📋 数据无变化"
         fi
     
+    # 数据落库仅在 main 分支执行；其他分支（如 PR 分支因 scripts/** 变更触发）
+    # 只验证脚本能成功运行，不提交数据
     - name: 🏷️ Generate commit message
-      if: steps.check-changes.outputs.changes == 'true'
+      if: steps.check-changes.outputs.changes == 'true' && github.ref == 'refs/heads/main'
       id: commit-msg
       run: |
         # 生成动态提交信息
@@ -165,7 +167,7 @@ jobs:
         echo "EOF" >> $GITHUB_OUTPUT
     
     - name: 💾 Commit and push changes
-      if: steps.check-changes.outputs.changes == 'true'
+      if: steps.check-changes.outputs.changes == 'true' && github.ref == 'refs/heads/main'
       run: |
         # 配置Git用户
         git config --local user.email "action@github.com"
@@ -190,7 +192,7 @@ jobs:
         echo "🧹 清理备份文件完成"
     
     - name: 🚀 Trigger deployment
-      if: steps.check-changes.outputs.changes == 'true'
+      if: steps.check-changes.outputs.changes == 'true' && github.ref == 'refs/heads/main'
       uses: peter-evans/repository-dispatch@v3
       with:
         token: ${{ secrets.GITHUB_TOKEN }}
@@ -202,7 +204,7 @@ jobs:
           }
     
     - name: 📄 Create update summary
-      if: steps.check-changes.outputs.changes == 'true'
+      if: steps.check-changes.outputs.changes == 'true' && github.ref == 'refs/heads/main'
       run: |
         echo "## 📊 学术数据更新摘要" >> $GITHUB_STEP_SUMMARY
         echo "" >> $GITHUB_STEP_SUMMARY
