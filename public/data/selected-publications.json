@@ -82,7 +82,7 @@
     "venue": "ACM TKDD",
     "venueType": "journal",
     "year": 2026,
-    "citations": 28,
+    "citations": 29,
     "image": "/pubfiles/TKDD2026-DCAI.png",
     "keywords": [
       "data-centric AI",
@@ -91,12 +91,12 @@
       "survey"
     ],
     "urls": {
-      "citations": "https://scholar.google.com/scholar?oi=bibs&hl=en&cites=1363095295393607312,17564544498366473251"
+      "citations": "https://scholar.google.com/scholar?oi=bibs&hl=en&cites=17564544498366473251"
     },
     "authorRole": "co-author",
     "isSurvey": true,
     "highlighted": true,
-    "citationsId": "1363095295393607312,17564544498366473251"
+    "citationsId": "17564544498366473251"
   },
   {
     "id": "pub_2026_fcim_tb",
@@ -248,7 +248,7 @@
     "venue": "IEEE Transactions on Computational Biology and Bioinformatics",
     "venueType": "journal",
     "year": 2025,
-    "citations": 13,
+    "citations": 14,
     "image": "/pubfiles/TCBB25.png",
     "keywords": [
       "knowledge-guided",
@@ -259,11 +259,11 @@
     ],
     "urls": {
       "paper": "https://arxiv.org/pdf/2501.04718",
-      "citations": "https://scholar.google.com/scholar?oi=bibs&hl=en&cites=7733828662904658466,5099728859865515737,3535118696762878037"
+      "citations": "https://scholar.google.com/scholar?oi=bibs&hl=en&cites=3535118696762878037,5099728859865515737,7733828662904658466"
     },
     "authorRole": "first-author",
     "highlighted": true,
-    "citationsId": "7733828662904658466,5099728859865515737,3535118696762878037"
+    "citationsId": "3535118696762878037,5099728859865515737,7733828662904658466"
   },
   {
     "id": "pub_2025_1",
@@ -289,7 +289,7 @@
     "venue": "ACM SIGKDD",
     "venueType": "conference",
     "year": 2025,
-    "citations": 24,
+    "citations": 28,
     "image": "/pubfiles/SIGKDD2025.png",
     "keywords": [
       "AI4Science",
@@ -418,7 +418,7 @@
     "venue": "Cell Research",
     "venueType": "journal",
     "year": 2024,
-    "citations": 177,
+    "citations": 182,
     "image": "/pubfiles/CellRes2024.png",
     "keywords": [
       "gene regulation",
@@ -483,7 +483,7 @@
     "venue": "iMeta",
     "venueType": "journal",
     "year": 2025,
-    "citations": 28,
+    "citations": 29,
     "image": "/pubfiles/iMeta.png",
     "keywords": [
       "tuberculosis",
@@ -542,16 +542,19 @@
     "venue": "Journal of Computer Research and Development",
     "venueType": "journal",
     "year": 2025,
-    "citations": 0,
+    "citations": 1,
     "image": "/pubfiles/CRAD2025.png",
     "keywords": [
       "feature generation",
       "reinforcement learning",
       "scientific data"
     ],
-    "urls": {},
+    "urls": {
+      "citations": "https://scholar.google.com/scholar?oi=bibs&hl=en&cites=5925323894691666268"
+    },
     "authorRole": "first-author",
-    "highlighted": true
+    "highlighted": true,
+    "citationsId": "5925323894691666268"
   },
   {
     "id": "pub_2025_7",
@@ -596,7 +599,7 @@
     "venue": "DASFAA",
     "venueType": "conference",
     "year": 2025,
-    "citations": 8,
+    "citations": 7,
     "image": "/pubfiles/DASFAA2025.png",
     "keywords": [
       "dataset distillation",
@@ -628,7 +631,7 @@
     "venue": "ACM ICMR",
     "venueType": "conference",
     "year": 2025,
-    "citations": 40,
+    "citations": 41,
     "image": "/pubfiles/ICMR2025.jpg",
     "keywords": [
       "zero-shot hashing",
@@ -636,11 +639,11 @@
       "multimedia retrieval"
     ],
     "urls": {
-      "citations": "https://scholar.google.com/scholar?oi=bibs&hl=en&cites=12840450703004098056,12773037298522406927,5818235308232295910,1245794009983581558"
+      "citations": "https://scholar.google.com/scholar?oi=bibs&hl=en&cites=12840450703004098056,12773037298522406927,5818235308232295910"
     },
     "authorRole": "corresponding-author",
     "highlighted": true,
-    "citationsId": "12840450703004098056,12773037298522406927,5818235308232295910,1245794009983581558"
+    "citationsId": "12840450703004098056,12773037298522406927,5818235308232295910"
   },
   {
     "id": "pub_2024_1",
@@ -657,7 +660,7 @@
     "venue": "ACM TKDD",
     "venueType": "journal",
     "year": 2024,
-    "citations": 47,
+    "citations": 48,
     "image": "/pubfiles/TKDD24.png",
     "keywords": [
       "feature transformation",
@@ -688,7 +691,7 @@
     "venue": "ACM TKDD",
     "venueType": "journal",
     "year": 2024,
-    "citations": 17,
+    "citations": 16,
     "image": "/pubfiles/TKDD-2.png",
     "keywords": [
       "research proposal",
@@ -745,7 +748,7 @@
     "venue": "ACM CIKM",
     "venueType": "conference",
     "year": 2024,
-    "citations": 38,
+    "citations": 39,
     "image": "/pubfiles/CIKM24.jpg",
     "keywords": [
       "multimodal recommendation",
@@ -895,7 +898,7 @@
     "venue": "IEEE ICDM",
     "venueType": "conference",
     "year": 2023,
-    "citations": 40,
+    "citations": 41,
     "image": "/pubfiles/ICDM23-1.png",
     "keywords": [
       "feature selection",
@@ -927,7 +930,7 @@
     "venue": "SIAM SDM",
     "venueType": "conference",
     "year": 2023,
-    "citations": 38,
+    "citations": 39,
     "image": "/pubfiles/SDM23-1.png",
     "keywords": [
       "feature transformation",
@@ -937,11 +940,11 @@
     "urls": {
       "paper": "https://epubs.siam.org/doi/pdf/10.1137/1.9781611977653.ch87",
       "project": "https://github.com/coco11563/Traceable_Automatic_Feature_Transformation_via_Cascading_Actor-Critic_Agents",
-      "citations": "https://scholar.google.com/scholar?oi=bibs&hl=en&cites=6728572511182266488"
+      "citations": "https://scholar.google.com/scholar?oi=bibs&hl=en&cites=13996729230004625208"
     },
     "authorRole": "first-author",
     "highlighted": true,
-    "citationsId": "6728572511182266488"
+    "citationsId": "13996729230004625208"
   },
   {
     "id": "pub_2023_4",
@@ -955,7 +958,7 @@
     "venue": "IEEE ICDM",
     "venueType": "conference",
     "year": 2023,
-    "citations": 56,
+    "citations": 54,
     "image": "/pubfiles/ICDM23-2.png",
     "keywords": [
       "topic inference",
@@ -984,7 +987,7 @@
     "venue": "NeurIPS",
     "venueType": "conference",
     "year": 2023,
-    "citations": 41,
+    "citations": 40,
     "image": "/pubfiles/NIPS23.png",
     "keywords": [
       "autoregressive",
@@ -1016,7 +1019,7 @@
     "venue": "SIAM SDM",
     "venueType": "conference",
     "year": 2023,
-    "citations": 20,
+    "citations": 21,
     "image": "/pubfiles/SDM-2.png",
     "keywords": [
       "medical diagnosis",
@@ -1046,7 +1049,7 @@
     "venue": "IJCAI",
     "venueType": "conference",
     "year": 2023,
-    "citations": 60,
+    "citations": 59,
     "image": "/pubfiles/IJCAI23.png",
     "keywords": [
       "domain adaptation",
