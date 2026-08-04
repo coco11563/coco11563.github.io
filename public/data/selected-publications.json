@@ -45,7 +45,7 @@
     "venue": "ACM SIGKDD",
     "venueType": "conference",
     "year": 2026,
-    "citations": 1,
+    "citations": 2,
     "image": "/pubfiles/SIGKDD2026.png",
     "keywords": [
       "benchmark",
@@ -418,7 +418,7 @@
     "venue": "Cell Research",
     "venueType": "journal",
     "year": 2024,
-    "citations": 182,
+    "citations": 185,
     "image": "/pubfiles/CellRes2024.png",
     "keywords": [
       "gene regulation",
@@ -631,7 +631,7 @@
     "venue": "ACM ICMR",
     "venueType": "conference",
     "year": 2025,
-    "citations": 41,
+    "citations": 42,
     "image": "/pubfiles/ICMR2025.jpg",
     "keywords": [
       "zero-shot hashing",
@@ -748,7 +748,7 @@
     "venue": "ACM CIKM",
     "venueType": "conference",
     "year": 2024,
-    "citations": 39,
+    "citations": 40,
     "image": "/pubfiles/CIKM24.jpg",
     "keywords": [
       "multimodal recommendation",
