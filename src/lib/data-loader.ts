@@ -32,7 +32,7 @@ const defaultProfile: ScholarProfile = {
   email: ['shaow.at.cnic.cn', 'meng.xiao.at.nus.edu.sg'],
   homepage: 'https://coco11563.github.io',
   interests: ['AI4S', 'AI4Data', 'Data Mining'],
-  image: '/indexfiles/me.png',
+  image: '/indexfiles/me.jpeg',
   verified: true,
 }
 
