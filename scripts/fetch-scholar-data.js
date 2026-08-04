@@ -227,24 +227,67 @@ function processScholarData(authorData) {
 }
 
 /**
+ * 标题归一化：统一 Unicode 变体（如 ‐ 与 -）、大小写、标点和空白，
+ * 使精选列表中手工录入的标题能匹配 Scholar 返回的标题
+ */
+function normalizeTitle(title) {
+  return (title || '')
+    .normalize('NFKC')
+    .toLowerCase()
+    .replace(/[^a-z0-9]+/g, ' ')
+    .replace(/\s+/g, ' ')
+    .trim();
+}
+
+/**
+ * 标题相似度：词集合重合度，对 Toward/Towards 这类细微措辞差异鲁棒
+ */
+function titleSimilarity(a, b) {
+  const tokensA = new Set(normalizeTitle(a).split(' ').filter(Boolean));
+  const tokensB = new Set(normalizeTitle(b).split(' ').filter(Boolean));
+  if (tokensA.size === 0 || tokensB.size === 0) return 0;
+  let common = 0;
+  for (const t of tokensA) if (tokensB.has(t)) common++;
+  return common / Math.max(tokensA.size, tokensB.size);
+}
+
+/**
  * 更新现有论文的引用数据
  */
 function updateCitationCounts(existingPublications, newPublications) {
   console.log('🔄 更新现有论文的引用数据...');
 
+  const FUZZY_THRESHOLD = 0.9;
   const newPubsMap = new Map();
   newPublications.forEach(pub => {
-    const titleKey = pub.title.toLowerCase().trim();
-    newPubsMap.set(titleKey, pub);
+    newPubsMap.set(normalizeTitle(pub.title), pub);
   });
 
   let updatedCount = 0;
+  const unmatched = [];
 
   const updatedPublications = existingPublications.map(existingPub => {
-    const titleKey = existingPub.title.toLowerCase().trim();
-    const matchedPub = newPubsMap.get(titleKey);
+    let matchedPub = newPubsMap.get(normalizeTitle(existingPub.title));
 
-    if (matchedPub && matchedPub.citations !== existingPub.citations) {
+    // 归一化后仍未命中时做保守模糊匹配：
+    // 要求唯一的高相似度候选，且发表年份接近，避免误配到别的论文
+    if (!matchedPub) {
+      const candidates = newPublications.filter(pub =>
+        titleSimilarity(existingPub.title, pub.title) >= FUZZY_THRESHOLD &&
+        (!existingPub.year || !pub.year || Math.abs(pub.year - existingPub.year) <= 1)
+      );
+      if (candidates.length === 1) {
+        matchedPub = candidates[0];
+        console.log(`🔎 模糊匹配: "${existingPub.title}" ≈ "${matchedPub.title}"`);
+      }
+    }
+
+    if (!matchedPub) {
+      unmatched.push(existingPub.title);
+      return existingPub;
+    }
+
+    if (matchedPub.citations !== existingPub.citations) {
       console.log(`📈 更新论文引用: "${existingPub.title}" (${existingPub.citations} -> ${matchedPub.citations})`);
       updatedCount++;
       return {
@@ -262,6 +305,10 @@ function updateCitationCounts(existingPublications, newPublications) {
   });
 
   console.log(`✅ 共更新了 ${updatedCount} 篇论文的引用数据`);
+  if (unmatched.length > 0) {
+    console.log(`⚠️  ${unmatched.length} 篇论文未在 Scholar 列表中找到匹配（引用数保持现有值）:`);
+    unmatched.forEach(title => console.log(`   - ${title}`));
+  }
   return updatedPublications;
 }
 

@@ -345,7 +345,7 @@
     "venue": "Advanced Sciences",
     "venueType": "journal",
     "year": 2025,
-    "citations": 0,
+    "citations": 20,
     "image": "/pubfiles/ADVSCI2025.png",
     "keywords": [
       "single-cell",
@@ -355,10 +355,12 @@
     ],
     "urls": {
       "paper": "https://advanced.onlinelibrary.wiley.com/doi/full/10.1002/advs.202500870",
-      "project": "http://www.bdbe.cn/kun#/"
+      "project": "http://www.bdbe.cn/kun#/",
+      "citations": "https://scholar.google.com/scholar?oi=bibs&hl=en&cites=11762853906093734594,17225325221643716492"
     },
     "authorRole": "co-author",
-    "highlighted": true
+    "highlighted": true,
+    "citationsId": "11762853906093734594,17225325221643716492"
   },
   {
     "id": "pub_2025_3",
@@ -1079,7 +1081,7 @@
     "venue": "IEEE ICDM",
     "venueType": "conference",
     "year": 2021,
-    "citations": 35,
+    "citations": 20,
     "image": "/pubfiles/ICDM21.png",
     "keywords": [
       "hierarchical classification",
@@ -1088,9 +1090,11 @@
     ],
     "urls": {
       "paper": "https://arxiv.org/pdf/2109.06661",
-      "project": "https://www.dropbox.com/sh/007s3yo1eldh359/AAC-yE_z6umInEI5rKMv0T8ca?dl=0"
+      "project": "https://www.dropbox.com/sh/007s3yo1eldh359/AAC-yE_z6umInEI5rKMv0T8ca?dl=0",
+      "citations": "https://scholar.google.com/scholar?oi=bibs&hl=en&cites=18076838471781193904"
     },
     "authorRole": "first-author",
-    "highlighted": true
+    "highlighted": true,
+    "citationsId": "18076838471781193904"
   }
 ]
