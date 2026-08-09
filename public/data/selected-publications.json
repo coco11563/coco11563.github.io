@@ -485,7 +485,7 @@
     "venue": "iMeta",
     "venueType": "journal",
     "year": 2025,
-    "citations": 29,
+    "citations": 30,
     "image": "/pubfiles/iMeta.png",
     "keywords": [
       "tuberculosis",
@@ -1051,7 +1051,7 @@
     "venue": "IJCAI",
     "venueType": "conference",
     "year": 2023,
-    "citations": 59,
+    "citations": 60,
     "image": "/pubfiles/IJCAI23.png",
     "keywords": [
       "domain adaptation",
