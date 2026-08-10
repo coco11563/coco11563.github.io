@@ -82,7 +82,7 @@
     "venue": "ACM TKDD",
     "venueType": "journal",
     "year": 2026,
-    "citations": 29,
+    "citations": 30,
     "image": "/pubfiles/TKDD2026-DCAI.png",
     "keywords": [
       "data-centric AI",
@@ -289,7 +289,7 @@
     "venue": "ACM SIGKDD",
     "venueType": "conference",
     "year": 2025,
-    "citations": 28,
+    "citations": 33,
     "image": "/pubfiles/SIGKDD2025.png",
     "keywords": [
       "AI4Science",
@@ -345,7 +345,7 @@
     "venue": "Advanced Sciences",
     "venueType": "journal",
     "year": 2025,
-    "citations": 20,
+    "citations": 21,
     "image": "/pubfiles/ADVSCI2025.png",
     "keywords": [
       "single-cell",
@@ -420,7 +420,7 @@
     "venue": "Cell Research",
     "venueType": "journal",
     "year": 2024,
-    "citations": 186,
+    "citations": 189,
     "image": "/pubfiles/CellRes2024.png",
     "keywords": [
       "gene regulation",
@@ -574,7 +574,7 @@
     "venue": "ICML",
     "venueType": "conference",
     "year": 2025,
-    "citations": 14,
+    "citations": 15,
     "image": "/pubfiles/ICML2025.png",
     "keywords": [
       "graph models",
@@ -662,7 +662,7 @@
     "venue": "ACM TKDD",
     "venueType": "journal",
     "year": 2024,
-    "citations": 48,
+    "citations": 49,
     "image": "/pubfiles/TKDD24.png",
     "keywords": [
       "feature transformation",
@@ -783,7 +783,7 @@
     "venue": "ACM CIKM",
     "venueType": "conference",
     "year": 2024,
-    "citations": 9,
+    "citations": 11,
     "image": "/pubfiles/CIKM-2024-2.png",
     "keywords": [
       "molecular graphs",
@@ -932,7 +932,7 @@
     "venue": "SIAM SDM",
     "venueType": "conference",
     "year": 2023,
-    "citations": 39,
+    "citations": 40,
     "image": "/pubfiles/SDM23-1.png",
     "keywords": [
       "feature transformation",
@@ -960,7 +960,7 @@
     "venue": "IEEE ICDM",
     "venueType": "conference",
     "year": 2023,
-    "citations": 54,
+    "citations": 56,
     "image": "/pubfiles/ICDM23-2.png",
     "keywords": [
       "topic inference",
@@ -989,7 +989,7 @@
     "venue": "NeurIPS",
     "venueType": "conference",
     "year": 2023,
-    "citations": 40,
+    "citations": 41,
     "image": "/pubfiles/NIPS23.png",
     "keywords": [
       "autoregressive",
@@ -1021,7 +1021,7 @@
     "venue": "SIAM SDM",
     "venueType": "conference",
     "year": 2023,
-    "citations": 21,
+    "citations": 22,
     "image": "/pubfiles/SDM-2.png",
     "keywords": [
       "medical diagnosis",
