@@ -45,7 +45,7 @@
     "venue": "ACM SIGKDD",
     "venueType": "conference",
     "year": 2026,
-    "citations": 2,
+    "citations": 5,
     "image": "/pubfiles/SIGKDD2026.png",
     "keywords": [
       "benchmark",
@@ -54,11 +54,11 @@
       "gene understanding"
     ],
     "urls": {
-      "citations": "https://scholar.google.com/scholar?oi=bibs&hl=en&cites=10823966477266825690"
+      "citations": "https://scholar.google.com/scholar?oi=bibs&hl=en&cites=18309170488845841937,10823966477266825690"
     },
     "authorRole": "corresponding-author",
     "highlighted": true,
-    "citationsId": "10823966477266825690"
+    "citationsId": "18309170488845841937,10823966477266825690"
   },
   {
     "id": "pub_2026_tkdd_dcai_survey",
@@ -289,7 +289,7 @@
     "venue": "ACM SIGKDD",
     "venueType": "conference",
     "year": 2025,
-    "citations": 33,
+    "citations": 37,
     "image": "/pubfiles/SIGKDD2025.png",
     "keywords": [
       "AI4Science",
@@ -301,11 +301,11 @@
       "paper": "https://dl.acm.org/doi/pdf/10.1145/3711896.3737403",
       "project": "https://www.scihorizon.cn/",
       "report": "https://www.nature.com/articles/d41586-025-02462-5",
-      "citations": "https://scholar.google.com/scholar?oi=bibs&hl=en&cites=4593117441343030867"
+      "citations": "https://scholar.google.com/scholar?oi=bibs&hl=en&cites=4593117441343030867,10190384078705115428"
     },
     "authorRole": "co-author",
     "highlighted": true,
-    "citationsId": "4593117441343030867"
+    "citationsId": "4593117441343030867,10190384078705115428"
   },
   {
     "id": "pub_2025_2",
@@ -601,7 +601,7 @@
     "venue": "DASFAA",
     "venueType": "conference",
     "year": 2025,
-    "citations": 7,
+    "citations": 8,
     "image": "/pubfiles/DASFAA2025.png",
     "keywords": [
       "dataset distillation",
@@ -610,11 +610,11 @@
     ],
     "urls": {
       "project": "https://www.dropbox.com/scl/fo/0127mpvenexo51n0rpp1m/AETMLlsul52jmDy2JhgEnoM?rlkey=1g6m3j4upiydanya9137fkpqi&st=6um1v8sg&dl=0",
-      "citations": "https://scholar.google.com/scholar?oi=bibs&hl=en&cites=17234279651497737399"
+      "citations": "https://scholar.google.com/scholar?oi=bibs&hl=en&cites=17234279651497737399,7681798785574904903"
     },
     "authorRole": "corresponding-author",
     "highlighted": true,
-    "citationsId": "17234279651497737399"
+    "citationsId": "17234279651497737399,7681798785574904903"
   },
   {
     "id": "pub_2025_9",
