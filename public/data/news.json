@@ -1,5 +1,11 @@
 [
   {
+    "date": "2026.08",
+    "title": "One paper \"BioDistil: Knowledge-Guided Agentic Distillation of Biomedical Question-Answering Corpora for Large Language Models\" accepted by IEEE ICDM 2026!",
+    "type": "publication",
+    "highlighted": true
+  },
+  {
     "date": "2026.07",
     "title": "One paper \"Comprehend, Divide, and Conquer: Feature Subspace Exploration via Multi-Agent Hierarchical Reinforcement Learning\" accepted by ACM TKDD!",
     "type": "publication",
