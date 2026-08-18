@@ -1,4 +1,34 @@
 [
+    {
+    "id": "pub_2026_sigkdd_gene",
+    "title": "SciHorizon-GENE: Benchmarking LLM for Life Sciences Inference from Gene Knowledge to Functional Understanding",
+    "authors": [
+      "Xiaohan Huang",
+      "Meng Xiao",
+      "Chuan Qin",
+      "Qingqing Long",
+      "Jinmiao Chen",
+      "Yuanchun Zhou",
+      "Hengshu Zhu"
+    ],
+    "venue": "ACM SIGKDD",
+    "venueType": "conference",
+    "year": 2026,
+    "citations": 5,
+    "image": "/pubfiles/SIGKDD2026.png",
+    "keywords": [
+      "benchmark",
+      "large language model",
+      "life science",
+      "gene understanding"
+    ],
+    "urls": {
+      "citations": "https://scholar.google.com/scholar?oi=bibs&hl=en&cites=18309170488845841937,10823966477266825690"
+    },
+    "authorRole": "corresponding-author",
+    "highlighted": true,
+    "citationsId": "18309170488845841937,10823966477266825690"
+  },
   {
     "id": "pub_2026_tkdd_cdc",
     "title": "Comprehend, Divide, and Conquer: Feature Subspace Exploration via Multi-Agent Hierarchical Reinforcement Learning",
@@ -31,34 +61,30 @@
     "citationsId": "7003759190214102035"
   },
   {
-    "id": "pub_2026_sigkdd_gene",
-    "title": "SciHorizon-GENE: Benchmarking LLM for Life Sciences Inference from Gene Knowledge to Functional Understanding",
+    "id": "pub_2026_icdm_biodistil",
+    "title": "BioDistil: Knowledge-Guided Agentic Distillation of Biomedical Question-Answering Corpora for Large Language Models",
     "authors": [
-      "Xiaohan Huang",
       "Meng Xiao",
-      "Chuan Qin",
+      "Xunxin Cai",
       "Qingqing Long",
-      "Jinmiao Chen",
+      "Chengrui Wang",
       "Yuanchun Zhou",
       "Hengshu Zhu"
     ],
-    "venue": "ACM SIGKDD",
+    "venue": "IEEE ICDM",
     "venueType": "conference",
     "year": 2026,
-    "citations": 5,
-    "image": "/pubfiles/SIGKDD2026.png",
+    "citations": 0,
+    "image": "/pubfiles/ICDM2026.jpg",
     "keywords": [
-      "benchmark",
-      "large language model",
-      "life science",
-      "gene understanding"
+      "biomedical question answering",
+      "agentic distillation",
+      "knowledge-guided",
+      "large language model"
     ],
-    "urls": {
-      "citations": "https://scholar.google.com/scholar?oi=bibs&hl=en&cites=18309170488845841937,10823966477266825690"
-    },
-    "authorRole": "corresponding-author",
-    "highlighted": true,
-    "citationsId": "18309170488845841937,10823966477266825690"
+    "urls": {},
+    "authorRole": "first-author",
+    "highlighted": true
   },
   {
     "id": "pub_2026_tkdd_dcai_survey",
