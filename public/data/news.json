@@ -1,6 +1,12 @@
 [
   {
     "date": "2026.08",
+    "title": "One paper \"SciRerankBench: Benchmarking Rerankers Towards Scientific Retrieval-Augmented Generated LLMs\" has been accepted as a Main Conference paper!",
+    "type": "publication",
+    "highlighted": true
+  },
+  {
+    "date": "2026.08",
     "title": "One paper \"BioDistil: Knowledge-Guided Agentic Distillation of Biomedical Question-Answering Corpora for Large Language Models\" accepted by IEEE ICDM 2026!",
     "type": "publication",
     "highlighted": true
